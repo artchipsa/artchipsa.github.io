@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Stem';
+    font-style: normal;
+    font-weight: 100;
+    src: url('fonts/STM35.woff2') format('woff2'),
+         url('fonts/STM35.woff') format('woff'),
+         url('fonts/STM35.ttf') format('ttf'),
+         url('fonts/STM35.eot') format('eot');
+}
+
+@font-face {
+    font-family: 'Stem';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/STM55.woff2') format('woff2'),
+         url('fonts/STM55.woff') format('woff'),
+         url('fonts/STM55.ttf') format('ttf'),
+         url('fonts/STM55.eot') format('eot');
+}
+
+@font-face {
+    font-family: 'Stem';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/STM65.woff2') format('woff2'),
+         url('fonts/STM65.woff') format('woff'),
+         url('fonts/STM65.ttf') format('ttf'),
+         url('fonts/STM65.eot') format('eot');
+}
+
+@font-face {
+    font-family: 'Stem';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/STM75.woff2') format('woff2'),
+         url('fonts/STM75.woff') format('woff'),
+         url('fonts/STM75.ttf') format('ttf'),
+         url('fonts/STM75.eot') format('eot');
+}

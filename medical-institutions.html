@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="utf-8">
+    <title>Медицинские учреждения в Новосибирске — Sibmeda</title>
+    <link rel="stylesheet" href="js/plugins/selectize/css/selectize.default.css">
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="page-wrapper">
+    <div class="substrate"></div>
+    <a href="javascript:void(0)" class="promo-block">
+        <img src="images/content/promo1.jpg" alt="promo1">
+    </a>
+    <header class="header">
+        <div class="container panel">
+            <form class="city-block">
+                <span class="caption">Ваш город:</span>
+                <select class="cs-select city-select">
+                    <option value="nsk">Новосибирск</option>
+                    <option value="barnaul">Барнаул</option>
+                    <option value="rostov">Ростов-на-Дону</option>
+                </select>
+            </form>
+            <div class="block">
+                <form class="search-block">
+                    <div class="input-wrap">
+                        <input class="input-text" type="text" placeholder="Поиск">
+                    </div>
+                    <select class="cs-select search-type-select align-left">
+                        <option value="wholeSite">По всему сайту</option>
+                        <option value="news">По новостям</option>
+                    </select>
+                    <button class="button search-button" type="submit">Найти</button>
+                </form>
+                <div class="view-switch-block">
+                    <a href="javascript:void(0)" class="link"><span class="text">Версия для слабовидящих</span></a>
+                </div>
+                <div class="user-block">
+                    <a href="javascript:void(0)" class="link registration">Регистрация</a>&nbsp;|&nbsp;<a href="javascript:void(0)" class="link login auth">Вход</a>
+                    <span class="restriction"><span class="age">18+</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="container gr-border nav-wrap">
+            <div class="logo-wrap">
+                <a href="/" class="logo"></a>
+            </div>
+            <nav class="menu">
+                <div class="item parent">
+                    <a href="/directory.html" class="link menu-link">Справочники</a>
+                    <div class="sub-menu">
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Словарь медицинских терминов</a>
+                        </div>
+                        <div class="item">
+                            <a href="disease-handbook.html" class="link">Справочник основных заболеваний</a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Справочник основных методов диагностики</a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Анатомический атлас</a>
+                        </div>
+                        <div class="item">
+                            <a href="drug-handbook.html" class="link">Справочник основных лекарственных препаратов</a>
+                        </div>
+                    </div>
+
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="link menu-link">Медучреждения</a>
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="link menu-link">Врачи</a>
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+                <div class="item parent">
+                    <a href="javascript:void(0)" class="link menu-link">Календарь здоровья</a>
+                    <div class="sub-menu">
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Справочник основных заболеваний 1</a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Справочник основных заболеваний 2</a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Справочник основных заболеваний 3</a>
+                        </div>
+                    </div>
+
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="link menu-link">МедПраво</a>
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="link menu-link">Музей Медицины</a>
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+                <div class="item parent">
+                    <a href="javascript:void(0)" class="link menu-link">Ординаторская</a>
+                    <div class="sub-menu">
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Справочник основных методов диагностики 1</a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Справочник основных методов диагностики 2</a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Справочник основных методов диагностики 3</a>
+                        </div>
+                    </div>
+
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container columns">
+        <aside class="aside left-col">
+            <a href="javascript:void(0)" class="item cs-promo cs-promo-200 center">
+                <div class="content">
+                    <div class="title">
+                        Музей <span class="arrow-orange">медицины</span>
+                    </div>
+                    <div class="text">история новосибирской медицины</div>
+                </div>
+            </a>
+
+            <div class="item blank-list">
+                <div class="title">
+                    Календарь здоровья
+                </div>
+                <div class="topics arrows">
+                    <div class="item">
+                        <a href="javascript:void(0)" class="link">
+                            Когда проходить обследования?
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="javascript:void(0)" class="link">
+                            Какие привики сделать перед путешествием?
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="javascript:void(0)" class="link">
+                            Сегодня - день отказа от курения
+                        </a>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="button border">
+                    Перейти в раздел
+                </a>
+            </div>
+
+            <a href="javascript:void(0)" class="promo-block item">
+                <img src="images/content/promo4.jpg" alt="promo">
+            </a>
+
+            <div class="item blank-list">
+                <div class="title">
+                    Консультация врача
+                </div>
+                <div class="author">
+                    <img src="images/ivanova-mi.jpg" alt="">
+                    <div>
+                        Иванова Мария Ивановна
+                        <a href="javascript:void(0)" class="link">врач-кардиолог</a>
+                    </div>
+                </div>
+                <div class="question">
+                    Здравствуйте доктор! Мне 21 год, вес 51. Серьезных проблем с сердцем не отмечалось....
+                </div>
+                <a href="javascript:void(0)" class="button border">
+                    Читать далее
+                </a>
+            </div>
+        </aside>
+
+        <section class="main-col">
+            <div class="breadcrumbs">
+                <a href="/" class="link">Главная</a> \
+                <span>Медицинские учреждения в&nbsp;Новосибирске</span>
+            </div>
+
+            <div class="h1">
+                <h1>Медицинские учреждения в&nbsp;Новосибирске</h1>
+            </div>
+            <div class="text-block">
+                <p>На СибМеда зарегистрировано 176 клиник и 929 врачей.<br>
+                    Вы можете выбрать хорошего врача на основе мнения других пациентов: в системе имеется 663 отзыва
+                    по клиникам и 1086 отзывов по врачам Новосибирска. Запись к врачу в Новосибирске возможна через
+                    электронную регистратуру. Не забудьте оставить отзыв о ней после записи к врачу Новосибирска.</p>
+            </div>
+
+            <div class="tab-control">
+                <div class="tabs top-tabs">
+                    <div class="tab">
+                        По типу учреждения
+                    </div>
+                    <div class="tab">
+                        По лечению заболевания
+                    </div>
+                    <div class="tab">
+                        По рейтингу
+                    </div>
+                    <div class="tab">
+                        На карте
+                    </div>
+                </div>
+                <div class="sheets">
+                    <div class="sheet">
+                        <div class="checkbox-wrap">
+                            <div class="item">
+                                <input id="item-1" type="checkbox" class="input-checkbox" checked>
+                                <label for="item-1">Лечение</label>
+                            </div>
+                            <div class="item">
+                                <input id="item-2" type="checkbox" class="input-checkbox">
+                                <label for="item-2">Мед товары</label>
+                            </div>
+                            <div class="item">
+                                <input id="item-3" type="checkbox" class="input-checkbox">
+                                <label for="item-3">Красота</label>
+                            </div>
+                            <div class="item">
+                                <input id="item-4" type="checkbox" class="input-checkbox">
+                                <label for="item-4">Рубрика 1</label>
+                            </div>
+                            <div class="item">
+                                <input id="item-5" type="checkbox" class="input-checkbox">
+                                <label for="item-5">Рубрика 2</label>
+                            </div>
+                            <div class="item">
+                                <input id="item-6" type="checkbox" class="input-checkbox">
+                                <label for="item-6">Рубрика 3</label>
+                            </div>
+                            <div class="item">
+                                <input id="item-7" type="checkbox" class="input-checkbox">
+                                <label for="item-7">Рубрика 4</label>
+                            </div>
+                            <div class="item">
+                                <input id="item-8" type="checkbox" class="input-checkbox">
+                                <label for="item-8">Рубрика 5</label>
+                            </div>
+                            <div class="item">
+                                <input id="item-9" type="checkbox" class="input-checkbox">
+                                <label for="item-9">Рубрика 6</label>
+                            </div>
+                            <div class="item">
+                                <input id="item-10" type="checkbox" class="input-checkbox">
+                                <label for="item-10">Рубрика 7</label>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="alphabet-categories">
+                            <div class="column">
+                                <div class="category">
+                                    <div class="title">А</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">аптеки</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">Б</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">бассейны</a>
+                                        <li><a class="link" href="javascript:void(0)">благотворительные фонды</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">В</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">ветклиники</a>
+                                        <li><a class="link" href="javascript:void(0)">взрослые больницы</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">Г</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">госпитали</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">Д</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">детские больницы</a>
+                                        <li><a class="link" href="javascript:void(0)">детские поликлиники</a>
+                                        <li><a class="link" href="javascript:void(0)">диагностические центры</a>
+                                        <li><a class="link" href="javascript:void(0)">диспансеры</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">Ж</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">женские консультации</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">Л</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">лаборатории</a>
+                                        <li><a class="link" href="javascript:void(0)">лечение зависимостей</a>
+                                        <li><a class="link" href="javascript:void(0)">лечение за рубежом</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">М</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">медико-социальные экспертизы</a>
+                                        <li><a class="link" href="javascript:void(0)">медицинское оборудование</a>
+                                        <li><a class="link" href="javascript:void(0)">медкомиссии</a>
+                                        <li><a class="link" href="javascript:void(0)">многопрофильные медицинские центры</a>
+                                        <li><a class="link" href="javascript:void(0)">молочные кухни</a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="category">
+                                    <div class="title">О</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">оптики</a>
+                                        <li><a class="link" href="javascript:void(0)">органы власти</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">П</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">психологическая помощь</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">Р</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">Роддома</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">С</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">санатории</a>
+                                        <li><a class="link" href="javascript:void(0)">стоматологические центры</a>
+                                        <li><a class="link" href="javascript:void(0)">салоны красоты</a>
+                                        <li><a class="link" href="javascript:void(0)">страховые компании</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">Т</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">травмпункты</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">Ф</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">фитнес-клубы</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">Х</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">хосписы</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">Ц</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">центры иммунизации</a>
+                                        <li><a class="link" href="javascript:void(0)">центры мануальной терапии</a>
+                                        <li><a class="link" href="javascript:void(0)">центры сдачи ГТО</a>
+                                        <li><a class="link" href="javascript:void(0)">центры диспансеризации</a>
+                                        <li><a class="link" href="javascript:void(0)">центры планирования семьи</a>
+                                        <li><a class="link" href="javascript:void(0)">центры борьбы со спидом</a>
+                                        <li><a class="link" href="javascript:void(0)">центры альтернативной медицины</a>
+                                        <li><a class="link" href="javascript:void(0)">центры диетологии и снижения веса</a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sheet">
+                        <div class="alphabet-categories gr-border">
+                            <div class="column">
+                                <div class="category">
+                                    <div class="title">Б</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">Беременность, роды и послеродовой период</a>
+                                        <li><a class="link" href="javascript:void(0)">Болезни глаза и его придаточного аппарата</a>
+                                        <li><a class="link" href="javascript:void(0)">Болезни желудочно-кишечного тракта</a>
+                                        <li><a class="link" href="javascript:void(0)">Болезни зубов и полости рта</a>
+                                        <li><a class="link" href="javascript:void(0)">Болезни кожи и подкожной клетчатки</a>
+                                        <li><a class="link" href="javascript:void(0)">Болезни костно-мышечной системы и соединительной ткани</a>
+                                        <li><a class="link" href="javascript:void(0)">Болезни крови, кроветворных органов и отдельные нарушения, вовлекающие иммунный механизм</a>
+                                        <li><a class="link" href="javascript:void(0)">Болезни мочеполовой системы</a>
+                                        <li><a class="link" href="javascript:void(0)">Болезни нервной системы</a>
+                                        <li><a class="link" href="javascript:void(0)">Болезни органов дыхания</a>
+                                        <li><a class="link" href="javascript:void(0)">Болезни ребенка (педиатрия)</a>
+                                        <li><a class="link" href="javascript:void(0)">Болезни системы кровообращения</a>
+                                        <li><a class="link" href="javascript:void(0)">Болезни уха и сосцевидного отростка</a>
+                                        <li><a class="link" href="javascript:void(0)">Болезни эндокринной системы, расстройства питания	и нарушения обмена веществ</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">В</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">Врожденные аномалии (пороки крови), деформации и хромосомные нарушения</a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="category">
+                                    <div class="title">И</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">Инфекции, передающиеся преимущественно половым путем</a>
+                                        <li><a class="link" href="javascript:void(0)">Инфекционные и паразитарные болезни</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">М</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">медико-социальные экспертизы</a>
+                                        <li><a class="link" href="javascript:void(0)">медицинское оборудование</a>
+                                        <li><a class="link" href="javascript:void(0)">медкомиссии</a>
+                                        <li><a class="link" href="javascript:void(0)">многопрофильные медицинские центры</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">О</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">Онкологические заболевания</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">П</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">Психические расстройства и расстройства поведения</a>
+                                    </ul>
+                                </div>
+                                <div class="category">
+                                    <div class="title">Т</div>
+                                    <ul>
+                                        <li><a class="link" href="javascript:void(0)">Травмы, отравления и некоторые другие последствия воздействия внешних причин</a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alphabet-categories common-diseases">
+                            <div class="title">Наиболее распространенные заболевания</div>
+                            <div class="column">
+                                <div class="item">
+                                    <a class="link" href="javascript:void(0)">Трахеит</a>
+                                </div>
+                                <div class="item">
+                                    <a class="link" href="javascript:void(0)">Ларингит</a>
+                                </div>
+                                <div class="item">
+                                    <a class="link" href="javascript:void(0)">Стоматит</a>
+                                </div>
+                                <div class="item">
+                                    <a class="link" href="javascript:void(0)">Коклюш</a>
+                                </div>
+                                <div class="item">
+                                    <a class="link" href="javascript:void(0)">Лямблиоз</a>
+                                </div>
+                                <div class="item">
+                                    <a class="link" href="javascript:void(0)">Фарингит</a>
+                                </div>
+                                <div class="item">
+                                    <a class="link" href="javascript:void(0)">Энтеровирусная инфекция</a>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="item">
+                                    <a class="link" href="javascript:void(0)">Трахеит</a>
+                                </div>
+                                <div class="item">
+                                    <a class="link" href="javascript:void(0)">Ларингит</a>
+                                </div>
+                                <div class="item">
+                                    <a class="link" href="javascript:void(0)">Стоматит</a>
+                                </div>
+                                <div class="item">
+                                    <a class="link" href="javascript:void(0)">Коклюш</a>
+                                </div>
+                                <div class="item">
+                                    <a class="link" href="javascript:void(0)">Лямблиоз</a>
+                                </div>
+                                <div class="item">
+                                    <a class="link" href="javascript:void(0)">Фарингит</a>
+                                </div>
+                                <div class="item">
+                                    <a class="link" href="javascript:void(0)">Энтеровирусная инфекция</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sheet">
+                        <table class="rating-table" cellpadding="0" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th>Медицинское учреждение</th>
+                                    <th>Рейтинг</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <div class="logo-wrap">
+                                            <div class="info">
+                                                <p class="name">
+                                                    <a class="link" href="javascript:void(0)">
+                                                        Здравица
+                                                    </a>
+                                                </p>
+                                                <p class="address">Шевченко, 31а</p>
+                                            </div>
+                                            <img src="images/content/logo-zdravica.jpg" alt="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="rating-stars">
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star half"></i>
+                                        </div>
+                                        <p class="rating">505 оценок</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <p class="name"><a class="link" href="javascript:void(0)">Алмита</a></p>
+                                        <p class="address">Железнодорожная, 12/1</p>
+                                    </td>
+                                    <td>
+                                        <div class="rating-stars">
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star half"></i>
+                                        </div>
+                                        <p class="rating">450 оценок</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <p class="name"><a class="link" href="javascript:void(0)">ЕвроМед клиника</a></p>
+                                        <p class="address">Гоголя, 42 — 2 этаж</p>
+                                    </td>
+                                    <td>
+                                        <div class="rating-stars">
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star empty"></i>
+                                        </div>
+                                        <p class="rating">450 оценок</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>
+                                        <p class="name"><a class="link" href="javascript:void(0)">УЗИ студия</a></p>
+                                        <p class="address">Коммунистическая, 48а — 3 этаж</p>
+                                    </td>
+                                    <td>
+                                        <div class="rating-stars">
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star empty"></i>
+                                        </div>
+                                        <p class="rating">350 оценок</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>
+                                        <p class="name"><a class="link" href="javascript:void(0)">СМИТРА</a></p>
+                                        <p class="address">Геодезическая, 2/1 </p>
+                                    </td>
+                                    <td>
+                                        <div class="rating-stars">
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star empty"></i>
+                                        </div>
+                                        <p class="rating">300 оценок</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>
+                                        <p class="name"><a class="link" href="javascript:void(0)">Здравица</a></p>
+                                        <p class="address">Шевченко, 31а</p>
+                                    </td>
+                                    <td>
+                                        <div class="rating-stars">
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star half"></i>
+                                        </div>
+                                        <p class="rating">450 оценок</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>
+                                        <p class="name"><a class="link" href="javascript:void(0)">Алмита</a></p>
+                                        <p class="address">Железнодорожная, 12/1</p>
+                                    </td>
+                                    <td>
+                                        <div class="rating-stars">
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star half"></i>
+                                            <i class="star empty"></i>
+                                        </div>
+                                        <p class="rating">250 оценок</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>
+                                        <p class="name"><a class="link" href="javascript:void(0)">ЕвроМед клиника</a></p>
+                                        <p class="address">Гоголя, 42 — 2 этаж</p>
+                                    </td>
+                                    <td>
+                                        <div class="rating-stars">
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star half"></i>
+                                            <i class="star empty"></i>
+                                        </div>
+                                        <p class="rating">200 оценок</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>
+                                        <p class="name"><a class="link" href="javascript:void(0)">УЗИ студия</a></p>
+                                        <p class="address">Коммунистическая, 48а — 3 этаж</p>
+                                    </td>
+                                    <td>
+                                        <div class="rating-stars">
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star half"></i>
+                                            <i class="star empty"></i>
+                                        </div>
+                                        <p class="rating">170 оценок</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>
+                                        <p class="name"><a class="link" href="javascript:void(0)">Здоровье и Материнство, ООО, медицинский центр</a></p>
+                                        <p class="address">Выборная, 125/1</p>
+                                    </td>
+                                    <td>
+                                        <div class="rating-stars">
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star full"></i>
+                                            <i class="star half"></i>
+                                            <i class="star empty"></i>
+                                        </div>
+                                        <p class="rating">150 оценок</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination">
+                            <div class="counter">
+                                <a class="link" href="javascript:void(0)">Всего клиник: 176</a>
+                            </div>
+                            <div class="paginator">
+                                <a class="item prev" href="javascript:void(0)"></a>
+                                <span class="item active">1</span>
+                                <a class="item" href="javascript:void(0)">2</a>
+                                <a class="item" href="javascript:void(0)">3</a>
+                                <a class="item" href="javascript:void(0)">4</a>
+                                <a class="item" href="javascript:void(0)">5</a>
+                                <a class="item" href="javascript:void(0)">6</a>
+                                <a class="item" href="javascript:void(0)">...</a>
+                                <a class="item" href="javascript:void(0)">18</a>
+                                <a class="item next" href="javascript:void(0)"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sheet">
+                        <div class="map-wrap">
+                            <div class="search-section">
+                                <form class="search-block">
+                                    <div class="item">
+                                        <p class="label">Искать рядом с адресом:</p>
+                                        <input class="input-text" type="text" placeholder="Поиск по справочнику">
+                                    </div>
+                                    <div class="item">
+                                        <p class="label">Тип учреждения:</p>
+                                        <select class="cs-select input-select align-left">
+                                            <option value="value1">Многопрофильные клиники</option>
+                                            <option value="value2">Малопрофильные клиники</option>
+                                        </select>
+                                    </div>
+                                    <div class="item">
+                                        <button class="button" type="submit">Показать</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d18293.175372609865!2d82.93962640320557!3d55.031879966364706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1457954462889" width="100%" height="620" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-solid">
+                <div class="title last-changes">
+                    <img src="images/last-changes.svg" alt="">Последние изменения в разделе
+                </div>
+                <a class="link" href="javascript:void(0)">Авиценна</a>
+                <a class="link" href="javascript:void(0)">Здравица</a>
+                <a class="link" href="javascript:void(0)">Инвитро</a>
+            </div>
+        </section>
+
+        <aside class="aside right-col">
+            <a href="javascript:void(0)" class="promo-block item">
+                <img src="images/content/promo7.jpg" alt="promo">
+            </a>
+
+            <a href="javascript:void(0)" class="promo-block item">
+                <img src="images/content/promo2.jpg" alt="promo">
+            </a>
+
+            <div class="item blank-list">
+                <div class="title">
+                    МедПраво
+                </div>
+                <div class="topics arrows">
+                    <div class="item">
+                        <a href="javascript:void(0)" class="link">
+                            Случаи из судебной практики
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="javascript:void(0)" class="link">
+                            Законодательные акты
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="javascript:void(0)" class="link">
+                            Права врачей
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="javascript:void(0)" class="link">
+                            Права пациентов
+                        </a>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="button border">
+                    Перейти в раздел
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <div class="popup-back">
+        <div class="popup auth">
+            <form  class="content form">
+                <a href="javascript:void(0)" class="close js-close"></a>
+                <div class="title-wrap gr-border">
+                    <div class="title h2">Авторизация</div>
+                </div>
+                <div class="field-wrap">
+                    <span class="caption">Логин</span>
+                    <input type="text" class="input-text">
+                </div>
+                <div class="field-wrap">
+                    <span class="caption">Пароль</span>
+                    <input type="password" class="input-text">
+                </div>
+                <div class="action-block">
+                    <div class="field-wrap remember-me">
+                        <input id="rememberMe" type="checkbox" class="input-checkbox">
+                        <label for="rememberMe">Запомнить меня</label>
+                        <a href="javascript:void(0)" class="link">Забыли пароль?</a>
+                    </div>
+                    <div class="field-wrap">
+                        <a href="javascript:void(0)" class="button">Войти</a>
+                    </div>
+                    <a href="javascript:void(0)" class="link">Зарегистрироваться</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="footer gr-border">
+    <div class="info-wrap">
+        <div class="container info">
+            <div class="block1">
+                <span class="copyright"><span class="c">&copy;</span>&nbsp2015—СИБМЕДА</span>
+                <span class="links">
+                    <a href="javascript:void(0)" class="link white border">Размещение рекламы</a>
+                    <a href="javascript:void(0)" class="link white border">Партнёры</a>
+                    <a href="javascript:void(0)" class="link white border">Контакты</a>
+                    <a href="javascript:void(0)" class="link white border">Медсовет</a>
+                    <a href="javascript:void(0)" class="link white border">О проекте</a>
+                    <a href="javascript:void(0)" class="link white border">Статистика</a>
+                </span>
+                <div class="license-info">
+                    Использование материалов сайта только при наличии ссылки на страницу расположения исходной
+                    статьи Все права на&nbsp;изображения и&nbsp;тексты принадлежат их авторам
+                </div>
+            </div>
+            <div class="block2">
+                <div class="social-links">
+                    <a href="javascript:void(0)" class="item livejournal"></a>
+                    <a href="javascript:void(0)" class="item facebook"></a>
+                    <a href="javascript:void(0)" class="item vk"></a>
+                    <a href="javascript:void(0)" class="item twitter"></a>
+                    <a href="javascript:void(0)" class="item instagram"></a>
+                    <a href="javascript:void(0)" class="item rss"></a>
+                </div>
+                <span class="restriction"><span class="age">18+</span></span>
+                <a href="javascript:void(0)" class="counter">
+                    <img src="images/content/counter.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="menu-wrap">
+        <div class="container menu">
+            <div class="item">
+                <a href="javascript:void(0)" class="link">Справочники</a>
+            </div>
+            <div class="item">
+                <a href="javascript:void(0)" class="link">Медучреждения</a>
+            </div>
+            <div class="item">
+                <a href="javascript:void(0)" class="link">Врачи</a>
+            </div>
+            <div class="item">
+                <a href="javascript:void(0)" class="link">Календарь здоровья</a>
+            </div>
+            <div class="item">
+                <a href="javascript:void(0)" class="link">МедПраво</a>
+            </div>
+            <div class="item">
+                <a href="javascript:void(0)" class="link">Музей Медицины</a>
+            </div>
+            <div class="item">
+                <a href="javascript:void(0)" class="link">Ординаторская</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/plugins/jquery/jquery-2.1.4.min.js"></script>
+<script src="js/plugins/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+<script src="js/plugins/selectize/js/standalone/selectize.min.js"></script>
+
+<script src="js/plugins/class.Popup.js"></script>
+
+<script src="js/main.js?1"></script>
+
+</body>
+</html>
