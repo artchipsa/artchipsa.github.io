@@ -3964,3 +3964,305 @@ select.cs-select {
     width: 70%;
     vertical-align: middle;
 }
+
+ /*----CONSULTATION----*/
+
+.consultation .text-block p {
+    margin-bottom: 25px;
+}
+
+.consultation .category{
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 30px;
+}
+
+.consultation .category a {
+    font: 500 22px/1.3 'Stem';
+}
+
+.questions .add-question {
+    display: flex;
+    margin-top: 24px;
+    padding: 30px 36px;
+    background: #f7f7f7;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.questions .add-question .title {
+    font: 500 30px/1.2 'Stem';
+    display: flex;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.questions .add-question.title * + * {
+    margin-left: 34px;
+}
+
+.questions .add-question .input-wrap {
+    width: calc(80% - 18px);
+}
+
+.questions .add-question .caption {
+    font: 14px/22px 'Stem';
+    display: block;
+    margin-bottom: 1px;
+}
+
+.questions .add-question .caption.mandatory:after {
+    content: '\00a0*';
+    color: #ec1d23;
+}
+
+.questions .add-question .input-wrap .input-text {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.questions .add-question .textarea-wrap {
+    width: calc(80% - 18px);
+    margin-top: 16px;
+    margin-bottom: 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.questions .add-question .textarea-wrap .input-textarea {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    border-radius: 2px;
+}
+
+.questions .add-question .send-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.questions .add-question .send-wrap .button {
+    width: 150px;
+    height: 36px;
+    margin-right: 23px;
+    padding: 0;
+    text-align: center;
+}
+
+.questions .add-question .send-wrap .notice {
+    font: 13px/18px 'Stem';
+}
+
+.questions .add-question.required-fields {
+    font: 13px/18px 'Stem';
+    margin-top: 22px;
+    margin-bottom: 2px;
+}
+
+.questions .add-question .required-fields span {
+    color: #ec1d23;
+    font-size: 14px;
+}
+
+.questions .upload-wrap {
+    position: relative;
+    overflow: hidden;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20%;
+    margin-top: 40px;
+    height: 118px;
+}
+
+.questions .upload-wrap button{
+    background-color: #E1E1E1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+    border-width: 0px;
+    font: 400 12px/1.2 'Stem', sans-serif!important;
+}
+
+.questions .upload-wrap button span{
+    font: 400 104px/63px 'Stem';
+    color: #fff;
+    display: block;
+    cursor: pointer;
+}
+
+.questions .upload-wrap input[type="file"]{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+    transform: scale(20);
+    letter-spacing: 10em;     /* IE 9 fix */
+    -ms-transform: scale(20); /* IE 9 fix */
+    opacity: 0;
+    cursor: pointer
+}
+.questions .upload-wrap .img-holder .thumb-image{
+    width:100px;
+    position:relative;
+}
+.questions .upload-wrap .img-holder span{
+    font-size: 12px;
+}
+
+.questions .upload-wrap .img-holder .refresh{
+    position: absolute;
+    top: 0;
+    right: 45px;
+    width: 28px
+}
+.questions .col2 {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+}
+.questions .sender-params-wrap{
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.questions .sender-params-wrap.no-margin{
+    margin-bottom: 0px;
+}
+.questions .sender-params-wrap span{
+    margin-right: 5px;
+}
+.questions .sender-params-wrap .gender{
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+.questions .sender-params-wrap .input-radio + label{
+    margin-right: 10px;
+}
+.questions .sender-params-wrap .age{
+    display: inline-block;
+    vertical-align: top;
+}
+.questions .sender-params-wrap .age .input-wrap{
+    width: 65px;
+    display: inline-block;
+}
+
+.questions .resultAgree{
+    width: 100%;
+    margin-bottom: 12px;
+}
+.questions .specialization{
+    width: 100%;    
+    margin-bottom: 30px;
+}
+.questions .specialization .item{
+    display: inline-block;
+    width: 100%;
+}
+
+.questions .specialization span{
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.questions .specialization .selectize-control{
+    display: inline-block!important;
+    width: 80%;
+}
+
+.questions .specialization .selectize-control.input-select .selectize-input{
+    width: 100%;
+}
+
+/*-----CONSULTATION DOCS-----*/
+
+.docs-list{
+    margin-bottom: 40px;
+}
+
+.docs-list .entity {
+    display: inline-block;
+    width: 45%;
+    margin-bottom: 40px;
+    margin-right: 4%;
+}
+.docs-list .entity .doc-img {
+    width: calc(45% - 15px);
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+}
+.docs-list .entity .doc-img img{
+    width: 100%;
+}
+.docs-list .entity .doc-content {
+    width: 55%;
+    display: inline-block;
+}
+.docs-list .entity .name {
+    display: inline;
+}
+.docs-list .entity span {
+    display: inline-block;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.docs-list .entity .hospital {
+    display: inline;
+}
+.docs-list .entity .button {
+    padding: 9px 28px 7px;
+    width: 100%;
+    white-space: normal;
+    margin-top: 10px;
+}
+
+.questions-list .entity .title{
+    font: 500 20px 'Stem';
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.questions-list .entity .question-info{
+    margin-bottom: 10px;
+}
+.questions-list .entity .question-info .asker{
+    font: 500 14px 'Stem';
+    margin-right: 15px;
+}
+.questions-list .entity .question-info .date {
+    color: #ACB6D1;
+    font: 400 12px 'Stem';
+}
+.questions-list .entity .text-block p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 25px;
+}
+
+.docs-list .inrow{
+    width: 23%;
+    margin-right: 1%;
+}
+.docs-list .inrow .doc-img{
+    width: 90%;
+    margin-bottom: 10px;
+}
+.docs-list .inrow .doc-content{
+    width: 100%;
+}
+.docs-list .inrow{
+    margin-bottom: 0px;
+}
+@media screen and (max-width: 1260px){
+    .questions .upload-wrap .img-holder .refresh{
+        right: 0px;
+    }
+}

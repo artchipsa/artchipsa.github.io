@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="utf-8">
+    <title>Медправо — Sibmeda</title>
+    <link rel="stylesheet" href="js/plugins/selectize/css/selectize.default.css">
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="page-wrapper">
+    <!--<div class="branding-block" style="height: 500px">
+        <a href="javascript:void(0)">
+            <img src="images/content/branding.jpg">
+        </a>
+    </div>-->
+    <header class="header">
+        <div class="container panel">
+            <form class="city-block">
+                <span class="caption">Ваш город:</span>
+                <select class="cs-select city-select">
+                    <option value="nsk">Новосибирск</option>
+                    <option value="barnaul">Барнаул</option>
+                    <option value="rostov">Ростов-на-Дону</option>
+                </select>
+            </form>
+            <div class="block">
+                <form class="search-block">
+                    <div class="input-wrap">
+                        <input class="input-text" type="text" placeholder="Поиск">
+                    </div>
+                    <select class="cs-select search-type-select align-left">
+                        <option value="wholeSite">По всему сайту</option>
+                        <option value="news">По новостям</option>
+                    </select>
+                    <button class="button search-button" type="submit">Найти</button>
+                </form>
+                <div class="view-switch-block">
+                    <a href="javascript:void(0)" class="link"><span class="text">Версия для слабовидящих</span></a>
+                </div>
+                <div class="user-block">
+                    <a href="javascript:void(0)" class="link registration">Регистрация</a>&nbsp;|&nbsp;<a href="javascript:void(0)" class="link login auth">Вход</a>
+                    <span class="restriction"><span class="age">18+</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="container gr-border nav-wrap">
+            <div class="logo-wrap">
+                <a href="/" class="logo"></a>
+            </div>
+            <nav class="menu">
+                <div class="item parent">
+                    <a href="/directory.html" class="link menu-link">Справочники</a>
+                    <div class="sub-menu">
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Словарь медицинских терминов</a>
+                        </div>
+                        <div class="item">
+                            <a href="disease-handbook.html" class="link">Справочник основных заболеваний</a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Справочник основных методов диагностики</a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Анатомический атлас</a>
+                        </div>
+                        <div class="item">
+                            <a href="drug-handbook.html" class="link">Справочник основных лекарственных препаратов</a>
+                        </div>
+                    </div>
+
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="link menu-link">Медучреждения</a>
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="link menu-link">Врачи</a>
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+                <div class="item parent">
+                    <a href="javascript:void(0)" class="link menu-link">Календарь здоровья</a>
+                    <div class="sub-menu">
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Справочник основных заболеваний 1</a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Справочник основных заболеваний 2</a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Справочник основных заболеваний 3</a>
+                        </div>
+                    </div>
+
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="link menu-link">МедПраво</a>
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="link menu-link">Музей Медицины</a>
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+                <div class="item parent">
+                    <a href="javascript:void(0)" class="link menu-link ordinatory">Ординаторская</a>
+                    <div class="sub-menu">
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Справочник основных методов диагностики 1</a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Справочник основных методов диагностики 2</a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="link">Справочник основных методов диагностики 3</a>
+                        </div>
+                    </div>
+
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container columns">
+        <aside class="aside left-col">
+            <a href="javascript:void(0)" class="promo-block item">
+                <img src="images/content/promo2.jpg" alt="promo">
+            </a>
+
+            <div class="item day-theme entity">
+                <div class="title">Тема дня</div>
+                <a href="javascript:void(0)" class="image" style="background-image:urL(images/content/moskit.jpg);"></a>
+                <a href="javascript:void(0)" class="link name">Какие прививки сделать перед путешествием?</a>
+
+                <div class="preview">
+                    Очень часто <a href="javascript:void(0)">люди</a>, едущие отдыхать в экзотическую страну спрашивают какие прививки необходимо сделать
+                    перед...
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="item cs-promo cs-promo-200 center">
+                <div class="content">
+                    <div class="title">
+                        Музей <span class="arrow-orange">медицины</span>
+                    </div>
+                    <div class="text">история новосибирской медицины</div>
+                </div>
+            </a>
+            <a href="javascript:void(0)" class="promo-block item">
+                <img src="images/content/promo4.jpg" alt="promo">
+            </a>
+
+            <div class="item questionnaire">
+                <div class="title">Как часто Вы проходите мед обследование?</div>
+                <form class="answers">
+                    <div class="answer">
+                        <a href="javascript:void(0)" class="link dotted green">Каждый месяц</a>
+                    </div>
+                    <div class="answer">
+                        <a href="javascript:void(0)" class="link dotted green">Раз в полгода</a>
+                    </div>
+                    <div class="answer">
+                        <a href="javascript:void(0)" class="link dotted green">Раз в год</a>
+                    </div>
+                    <div class="answer">
+                        <a href="javascript:void(0)" class="link dotted green">Раз в пять лет</a>
+                    </div>
+                    <div class="answer">
+                        <a href="javascript:void(0)" class="link dotted green">Не прохожу обследования</a>
+                    </div>
+                </form>
+                <a href="javascript:void(0)" class="button border">Все опросы</a>
+            </div>
+        </aside>
+        <section class="main-col wide">
+            <div class="breadcrumbs">
+                <a href="/" class="link">Главная</a> \
+                <span>Справочник</span>
+            </div>
+
+            <div class="h1">
+                <h1>Консультации</h1>
+            </div>
+            <div class="docs-list">
+                <div class="entity inrow">
+                    <a href="#" class="doc-img"><img src="./images/content/doc_2.png" alt=""></a>
+                    <div class="doc-content">
+                        <a href="#" class="link name">Иванов<br>Иван Иванович</a>
+                        <span>Врач педиатор</span>
+                    </div>
+                </div>
+                <div class="entity inrow">
+                    <a href="#" class="doc-img"><img src="./images/content/doc_2.png" alt=""></a>
+                    <div class="doc-content">
+                        <a href="#" class="link name">Иванов<br>Иван Иванович</a>
+                        <span>Врач педиатор</span>
+                    </div>
+                </div>
+                <div class="entity inrow">
+                    <a href="#" class="doc-img"><img src="./images/content/doc_2.png" alt=""></a>
+                    <div class="doc-content">
+                        <a href="#" class="link name">Иванов<br>Иван Иванович</a>
+                        <span>Врач педиатор</span>
+                    </div>
+                </div>
+                <div class="entity inrow">
+                    <a href="#" class="doc-img"><img src="./images/content/doc_2.png" alt=""></a>
+                    <div class="doc-content">
+                        <a href="#" class="link name">Иванов<br>Иван Иванович</a>
+                        <span>Врач педиатор</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-block">
+                <h2>Вопросы и ответы</h2>
+            </div>
+            <div class="questions-list">
+                <div class="entity">
+                    <a href="#" class="link title">Аллергия на подгузники</a>
+                    <div class="question-info"><span class="asker">Анонимно (Женщина, 31год)</span><span class="date">14 Ноябр. 2016 14:35</span></div>
+                    <div class="text-block">
+                        <p>После смены марки подгузников у ребёнка началась аллергия,покраснения,сильный зуд,подскажите пожалуйста чем лечить,уже неделю не можем вылечить.Ребёнку год и два месяца.</p>
+                    </div>
+                </div>
+                <div class="entity">
+                    <a href="#" class="link title">Аллергия на подгузники</a>
+                    <div class="question-info"><span class="asker">Анонимно (Женщина, 31год)</span><span class="date">14 Ноябр. 2016 14:35</span></div>
+                    <div class="text-block">
+                        <p>После смены марки подгузников у ребёнка началась аллергия,покраснения,сильный зуд,подскажите пожалуйста чем лечить,уже неделю не можем вылечить.Ребёнку год и два месяца.</p>
+                    </div>
+                </div>
+                <div class="entity">
+                    <a href="#" class="link title">Аллергия на подгузники</a>
+                    <div class="question-info"><span class="asker">Анонимно (Женщина, 31год)</span><span class="date">14 Ноябр. 2016 14:35</span></div>
+                    <div class="text-block">
+                        <p>После смены марки подгузников у ребёнка началась аллергия,покраснения,сильный зуд,подскажите пожалуйста чем лечить,уже неделю не можем вылечить.Ребёнку год и два месяца.</p>
+                    </div>
+                </div>
+                <div class="entity">
+                    <a href="#" class="link title">Аллергия на подгузники</a>
+                    <div class="question-info"><span class="asker">Анонимно (Женщина, 31год)</span><span class="date">14 Ноябр. 2016 14:35</span></div>
+                    <div class="text-block">
+                        <p>После смены марки подгузников у ребёнка началась аллергия,покраснения,сильный зуд,подскажите пожалуйста чем лечить,уже неделю не можем вылечить.Ребёнку год и два месяца.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">    
+                <div class="paginator">
+                    <a class="item prev" href="javascript:void(0)"></a>
+                    <a class="item" href="javascript:void(0)">...</a>
+                    <span class="item active">6</span>
+                    <a class="item" href="javascript:void(0)">7</a>
+                    <a class="item" href="javascript:void(0)">8</a>
+                    <a class="item" href="javascript:void(0)">9</a>
+                    <a class="item" href="javascript:void(0)">10</a>
+                    <a class="item" href="javascript:void(0)">...</a>
+                    <a class="item" href="javascript:void(0)">21</a>
+                    <a class="item next" href="javascript:void(0)"></a>
+                </div>
+            </div>
+            <div class="widget questions">
+                <form action="" method="post" class="-visor-no-click">
+                    <div class="add-question">
+                        <h2 class="title">Задать вопрос</h2>
+                        <div class="input-wrap">
+                            <label for="question-theme" class="caption mandatory">Тема вопроса</label>
+                            <input id="question-theme" type="text" class="input-text">
+                        </div>
+                        <div class="textarea-wrap">
+                            <label for="comment-text" class="caption mandatory">Комментарий</label>
+                            <textarea id="comment-text" class="input-textarea"></textarea>
+                        </div>
+                        <div class="upload-wrap">
+                            <button id="uploadBtn" type="button"><span>+</span>Добавить изображение</button> 
+                            <input id="imgUpload" type="file">
+                            <div class="img-holder"></div>
+                        </div>
+                        <div class="sender-params-wrap">
+                            <div class="gender">
+                                <span>Пол пциента:</span>
+                                <input type="radio" id="male" name="gender" class="input-radio" value="1" checked>
+                                <label for="male">Мужской</label>
+                                <input type="radio" id="female" name="gender" class="input-radio" value="2">
+                                <label for="female">Женский</label>
+                            </div>
+                            <div class="age">
+                                <span>Возраст:</span>
+                                <div class="input-wrap">
+                                    <input type="text" class="input-text" name="sender-age" id="sender-age">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="specialization">
+                            <div class="item">
+                                <span>Категория</span>
+                                <select class="cs-select input-select align-left js-im-type">
+                                    <option value="0">Все категории</option>
+                                    <option value="4974">Аптеки</option>
+                                    <option value="5106">Больницы</option>
+                                    <option value="5102">Врачи</option>
+                                </select>
+                            </div>
+                            <div class="item">
+                                <span>Специалист</span>
+                                <select class="cs-select input-select align-left js-im-type">
+                                    <option value="0">Все специалисты</option>
+                                    <option value="4974">Терапефт</option>
+                                    <option value="5106">Эндокринолог</option>
+                                    <option value="5105">Лор</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="resultAgree">
+                            <input id="rulesAgree" type="checkbox" class="input-checkbox" value="rulesAgree">
+                            <label for="rulesAgree">Я согласен с правилами</label>
+                        </div>
+                        <div class="send-wrap">
+                            <button type="submit" class="button">Отправить</button>
+                            <input id="anonymous" type="checkbox" class="input-checkbox" value="anonymous">
+                            <label for="anonymous">Задать вопрос анонимно</label>
+                        </div>
+                        <div class="required-fields">
+                            Поля, отмеченные <span>*</span>, обязательны для заполнения
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+    </div>
+    <div class="popup-back">
+        <div class="popup auth">
+            <form  class="content form">
+                <a href="javascript:void(0)" class="close js-close"></a>
+                <div class="title-wrap gr-border">
+                    <div class="title h2">Авторизация</div>
+                </div>
+                <div class="field-wrap">
+                    <span class="caption">Логин</span>
+                    <input type="text" class="input-text">
+                </div>
+                <div class="field-wrap">
+                    <span class="caption">Пароль</span>
+                    <input type="password" class="input-text">
+                </div>
+                <div class="action-block">
+                    <div class="field-wrap remember-me">
+                        <input id="rememberMe" type="checkbox" class="input-checkbox">
+                        <label for="rememberMe">Запомнить меня</label>
+                        <a href="javascript:void(0)" class="link">Забыли пароль?</a>
+                    </div>
+                    <div class="field-wrap">
+                        <a href="javascript:void(0)" class="button">Войти</a>
+                    </div>
+                    <a href="javascript:void(0)" class="link">Зарегистрироваться</a>
+                </div>
+                <div class="text"></div>
+            </form>
+        </div>
+    </div>
+    <div class="popup-back">
+        <div class="popup ordinatory">
+            <form  class="content form">
+                <a href="javascript:void(0)" class="close js-close"></a>
+                <div class="title-wrap gr-border">
+                    <div class="title h2">Внимание!</div>
+                </div>
+                <div class="text">Вы находитесь в разделе для врачей.<br>
+                    Если Вы не являетесь специалистом, покиньте, пожалуйста, данный раздел.</div>
+                <a href="javascript:void(0)" class="button">Я врач</a>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="footer gr-border">
+    <div class="info-wrap">
+        <div class="container info">
+            <div class="block1">
+                <span class="copyright"><span class="c">&copy;</span>&nbsp2015—СИБМЕДА</span>
+                <span class="links">
+                    <a href="javascript:void(0)" class="link white border">Размещение рекламы</a>
+                    <a href="javascript:void(0)" class="link white border">Партнёры</a>
+                    <a href="javascript:void(0)" class="link white border">Контакты</a>
+                    <a href="javascript:void(0)" class="link white border">Медсовет</a>
+                    <a href="javascript:void(0)" class="link white border">О проекте</a>
+                    <a href="javascript:void(0)" class="link white border">Статистика</a>
+                </span>
+                <div class="license-info">
+                    Использование материалов сайта только при наличии ссылки на страницу расположения исходной
+                    статьи Все права на&nbsp;изображения и&nbsp;тексты принадлежат их авторам
+                </div>
+            </div>
+            <div class="block2">
+                <div class="social-links">
+                    <a href="javascript:void(0)" class="item livejournal"></a>
+                    <a href="javascript:void(0)" class="item facebook"></a>
+                    <a href="javascript:void(0)" class="item vk"></a>
+                    <a href="javascript:void(0)" class="item twitter"></a>
+                    <a href="javascript:void(0)" class="item instagram"></a>
+                    <a href="javascript:void(0)" class="item rss"></a>
+                </div>
+                <span class="restriction"><span class="age">18+</span></span>
+                <a href="javascript:void(0)" class="counter">
+                    <img src="images/content/counter.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="menu-wrap">
+        <div class="container menu">
+            <div class="item">
+                <a href="javascript:void(0)" class="link">Справочники</a>
+            </div>
+            <div class="item">
+                <a href="javascript:void(0)" class="link">Медучреждения</a>
+            </div>
+            <div class="item">
+                <a href="javascript:void(0)" class="link">Врачи</a>
+            </div>
+            <div class="item">
+                <a href="javascript:void(0)" class="link">Календарь здоровья</a>
+            </div>
+            <div class="item">
+                <a href="javascript:void(0)" class="link">МедПраво</a>
+            </div>
+            <div class="item">
+                <a href="javascript:void(0)" class="link">Музей Медицины</a>
+            </div>
+            <div class="item">
+                <a href="javascript:void(0)" class="link">Ординаторская</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/plugins/jquery/jquery-2.1.4.min.js"></script>
+<script src="js/plugins/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+<script src="js/plugins/selectize/js/standalone/selectize.min.js"></script>
+<script src="js/plugins/class.Popup.js"></script>
+<script src="js/main.js?1"></script>
+<script src="js/upload.js"></script>
+</body>
+</html>
