@@ -284,74 +284,86 @@
                 </div>
             </div>
             <div class="widget questions">
-                <form action="" method="post" class="-visor-no-click">
-                    <div class="add-question">
-                        <h2 class="title">Задать вопрос</h2>
-                        <div class="input-wrap">
-                            <label for="question-theme" class="caption mandatory">Тема вопроса</label>
-                            <input id="question-theme" type="text" class="input-text">
-                        </div>
-                        <div class="textarea-wrap">
-                            <label for="comment-text" class="caption mandatory">Комментарий</label>
-                            <textarea id="comment-text" class="input-textarea"></textarea>
-                        </div>
-                        <div class="upload-wrap">
-                            <button id="uploadBtn" type="button"><span>+</span>Добавить изображение</button> 
-                            <input id="imgUpload" type="file">
-                            <div class="img-holder"></div>
-                        </div>
-                        <div class="sender-params-wrap">
-                            <div class="gender">
-                                <span>Пол пциента:</span>
-                                <input type="radio" id="male" name="gender" class="input-radio" value="1" checked>
-                                <label for="male">Мужской</label>
-                                <input type="radio" id="female" name="gender" class="input-radio" value="2">
-                                <label for="female">Женский</label>
+                    <form action="" method="post" class="-visor-no-click">
+                        <div class="add-question">
+                            <h2 class="title">Задать вопрос</h2>
+                            <div class="input-wrap">
+                                <label for="question-theme" class="caption mandatory">Тема вопроса</label>
+                                <input id="question-theme" type="text" class="input-text">
                             </div>
-                            <div class="age">
-                                <span>Возраст:</span>
-                                <div class="input-wrap">
-                                    <input type="text" class="input-text" name="sender-age" id="sender-age">
+                            <div class="textarea-wrap">
+                                <label for="comment-text" class="caption mandatory">Комментарий</label>
+                                <textarea id="comment-text" class="input-textarea"></textarea>
+                            </div>
+                            <div class="upload-wrap">
+                                <button id="uploadBtn" type="button"><span>+</span>Добавить изображение</button> 
+                                <input id="imgUpload" type="file">
+                                <div class="img-holder"></div>
+                            </div>
+                            <div class="col2">
+                               <div class="sender-params-wrap">
+                                    <div class="gender">
+                                        <label for="" class="caption">Пол пациента:</label>
+                                        <!-- <span>Пол пциента:</span> -->
+                                        <input type="radio" id="male" name="gender" class="input-radio" value="1" checked>
+                                        <label for="male">Мужской</label>
+                                        <input type="radio" id="female" name="gender" class="input-radio" value="2">
+                                        <label for="female">Женский</label>
+                                    </div>
+                                </div> 
+                                <div class="specialization">
+                                    <div class="item">
+                                        <!-- <span>Категория</span> -->
+                                        <label for="#" class="caption">Категория</label>
+                                        <select class="cs-select input-select align-left js-im-type">
+                                            <option value="0">Все категории</option>
+                                            <option value="4974">Аптеки</option>
+                                            <option value="5106">Больницы</option>
+                                            <option value="5102">Врачи</option>
+                                        </select>
+                                    </div>   
                                 </div>
                             </div>
-                        </div>
-                        <div class="specialization">
-                            <div class="item">
-                                <span>Категория</span>
-                                <select class="cs-select input-select align-left js-im-type">
-                                    <option value="0">Все категории</option>
-                                    <option value="4974">Аптеки</option>
-                                    <option value="5106">Больницы</option>
-                                    <option value="5102">Врачи</option>
-                                </select>
+                            <div class="col2">
+                               <div class="sender-params-wrap no-margin">
+                                   <div class="age">
+                                        <!-- <span>Возраст:</span> -->
+                                        <div class="input-wrap">
+                                            <label for="sender-age" class="caption">Возраст:</label>
+                                            <input type="number" max="999" class="input-text" name="sender-age" id="sender-age">
+                                        </div>
+                                    </div>
+                               </div> 
+                               <div class="specialization">
+                                    <div class="item">
+                                        <!-- <span>Специалист</span> -->
+                                        <label for="#" class="caption">Специалист</label>
+                                        <select class="cs-select input-select align-left js-im-type">
+                                            <option value="0">Все специалисты</option>
+                                            <option value="4974">Терапефт</option>
+                                            <option value="5106">Эндокринолог</option>
+                                            <option value="5105">Лор</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item">
-                                <span>Специалист</span>
-                                <select class="cs-select input-select align-left js-im-type">
-                                    <option value="0">Все специалисты</option>
-                                    <option value="4974">Терапефт</option>
-                                    <option value="5106">Эндокринолог</option>
-                                    <option value="5105">Лор</option>
-                                </select>
+                            <div class="resultAgree">
+                                <input id="rulesAgree" type="checkbox" class="input-checkbox" value="rulesAgree">
+                                <label for="rulesAgree">Я согласен с правилами</label>
+                            </div>
+                            <div class="send-wrap">
+                                <button type="submit" class="button">Отправить</button>
+                                <input id="anonymous" type="checkbox" class="input-checkbox" value="anonymous">
+                                <label for="anonymous">Задать вопрос анонимно</label>
+                            </div>
+                            <div class="required-fields">
+                                Поля, отмеченные <span>*</span>, обязательны для заполнения
                             </div>
                         </div>
-                        <div class="resultAgree">
-                            <input id="rulesAgree" type="checkbox" class="input-checkbox" value="rulesAgree">
-                            <label for="rulesAgree">Я согласен с правилами</label>
-                        </div>
-                        <div class="send-wrap">
-                            <button type="submit" class="button">Отправить</button>
-                            <input id="anonymous" type="checkbox" class="input-checkbox" value="anonymous">
-                            <label for="anonymous">Задать вопрос анонимно</label>
-                        </div>
-                        <div class="required-fields">
-                            Поля, отмеченные <span>*</span>, обязательны для заполнения
-                        </div>
-                    </div>
-                </form>
-            </div>
+                    </form>
+                </div>
         </section>
-        
+
     </div>
     <div class="popup-back">
         <div class="popup auth">
