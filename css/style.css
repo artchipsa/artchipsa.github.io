@@ -4282,3 +4282,196 @@ input::-webkit-inner-spin-button {
         right: 0px;
     }
 }
+
+
+
+/*-------DOCS---------*/
+
+.medways ul {
+    list-style: none;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    padding-left: 0px;
+}
+.medways ul li {
+    margin-bottom: 20px;
+    font: 400 16px/18px 'Stem';
+}
+
+.doc-search{
+    padding: 30px 36px;
+    background: #f7f7f7;
+}
+
+.doc-search .search-block span{
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.doc-search .search-block{
+    display: block!important;
+}
+.doc-search .search-block input[type="text"]{
+    vertical-align: middle;
+}
+.doc-search .search-block .button{
+    vertical-align: middle;
+}
+
+.mini-docs-rating .docs-category{
+    display: inline-block;
+    width: 48%;
+    margin-right: 1%;
+    margin-bottom: 25px;
+    vertical-align: top;
+}
+
+.mini-docs-rating .docs-category .title{
+    font: 500 22px 'Stem';
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 80%;
+}
+.mini-docs-rating .docs-category .doc-item{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.mini-docs-rating .docs-category .doc-item a{
+    font-size: 16px;
+    display: inline;
+    vertical-align: top;
+}
+.mini-docs-rating .docs-category .doc-item span {
+    font: 500 18px/20px 'Stem';
+    color: #00955E;
+    float: right;
+    margin-right: 10%;
+}
+.last-reviews .item {
+    margin-bottom: 35px;
+}
+.last-reviews .item .patient-link{
+    width: calc(20% - 25px);
+    margin-right: 25px;
+    display: inline-block;
+    vertical-align: top;
+    max-height: 170px;
+    overflow: hidden;   
+}
+.last-reviews .item .patient-link img{
+    width: 100%;
+}
+.last-reviews .item .review-content{
+    display: inline-block;
+    vertical-align: top;
+    width: 79%;
+}
+.last-reviews .item .review-content .review-info{
+    margin-bottom: 10px;
+}
+.last-reviews .item .review-content .review-info a{
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 20px;
+}
+.last-reviews .item .review-content .review-info span{
+    color: #ACB6D1;
+    font: 400 12px 'Stem';
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.last-reviews .item .review-content .text-block p{
+    font: 400 14px/18px 'Stem';
+}
+.item-solid ul{
+    list-style: none;
+    padding-left: 10px;
+}
+
+
+/*-------CATEGORY DOC LIST-------*/
+
+.category-docs-list .filter-list {
+    margin-bottom: 15px;
+}
+.category-docs-list .filter-list .filter {
+    display: inline-block;
+    margin-right: 15px;
+    border-bottom: 1px dashed #388dec;
+}
+.category-docs-list .filter-list .filter.active {
+    color: #3C8CED;
+    font-weight: bold;
+    border-color: transparent;
+}
+.category-docs-list .filter-list .filter:hover{
+    text-decoration: none!important;
+    background-image: none;
+    border-color: transparent;
+}
+.category-docs-list .premium-list {
+    padding: 25px;
+    background-color: #F0F7FF;
+    border-radius: 10px;
+    margin-bottom: 35px;
+}
+.category-docs-list .item{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #BEC5CD;
+}
+.category-docs-list .item .doc-link{
+    width: calc(15% - 20px);
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+.category-docs-list .item .doc-link img{
+    width: 100%;
+}
+.category-docs-list .item .doc-info{
+    width: calc(35% - 20px);
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: top;
+}
+.category-docs-list .item .doc-info .name{
+    font: 500 16px 'Stem';
+}
+.category-docs-list .item .doc-info .spec{
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font: 500 16px 'Stem';
+    color: #AAB1B9;
+}
+.category-docs-list .item .doc-info .work-place{
+    display: block;
+}
+.category-docs-list .item .rating-info{
+    width: calc(25% - 20px);
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.category-docs-list .item .rating-info p{
+    font: 500 16px 'Stem';
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.category-docs-list .item .rating-info .link{
+    font: 500 14px 'Stem';
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.category-docs-list .item .rating-info p span{
+    color: #00A06D;
+}
+.category-docs-list .item .button{
+    width: 27%;
+    white-space: normal;
+    vertical-align: middle;
+    display: inline-block;
+}
