@@ -4402,9 +4402,10 @@ input::-webkit-inner-spin-button {
     border-bottom: 1px dashed #388dec;
 }
 .category-docs-list .filter-list .filter.active {
-    color: #3C8CED;
+    color: #333;
     font-weight: bold;
     border-color: transparent;
+    cursor: text;
 }
 .category-docs-list .filter-list .filter:hover{
     text-decoration: none!important;
@@ -4417,10 +4418,16 @@ input::-webkit-inner-spin-button {
     border-radius: 10px;
     margin-bottom: 35px;
 }
+.category-docs-list .ordinary-list{
+    padding: 25px;
+}
 .category-docs-list .item{
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: 1px solid #BEC5CD;
+}
+.category-docs-list .premium-list .item:last-child, .category-docs-list .ordinary-list .item:last-child{
+    border-color: transparent
 }
 .category-docs-list .item .doc-link{
     width: calc(15% - 20px);
@@ -4474,4 +4481,93 @@ input::-webkit-inner-spin-button {
     white-space: normal;
     vertical-align: middle;
     display: inline-block;
+}
+
+
+/*-----DOCTOR------*/
+
+.doc-card{
+    margin-top: 25px;
+}
+
+.doc-card .doc-img{
+    display: inline-block;
+    width: 25%;
+    margin-right: 25px;
+    vertical-align: top;
+}
+.doc-card .doc-img a{
+    display: block;
+}
+.doc-card .doc-img a img{
+    width: 100%;
+}
+.doc-card .doc-img p {
+    font: 400 22px/24px 'Stem';
+}
+.doc-card .doc-img p span{
+    color: #009D65;
+}
+.doc-card .content{
+    width: 70%;
+    display: inline-block;
+}
+.doc-card .content .doc-name{
+    margin-bottom: 25px;
+}
+.doc-card .content .doc-name h2{
+    font: 500 24px/26px 'Stem';
+    margin-bottom: 5px;
+}
+.doc-card .content .doc-name .spec{
+    font: 400 15px/18px 'Stem';
+    color: #AAB1B9;
+    margin-right: 15px;
+}
+.doc-card .content .doc-name .city{
+    font: 400 15px/18px 'Stem';
+}
+.doc-card .content .item {
+    margin-bottom: 10px;
+}
+.doc-card .content .item .caption{
+    font: 500 16px/18px 'Stem';
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+.doc-card .content .item .info{
+    font: 400 15px/18px 'Stem';
+    display: inline-block;
+    width: 59%;
+}
+.publication-list .item{
+    margin-bottom: 35px;
+}
+.publication-list .item .authors{
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+.publication-list .item .link{
+    font-size: 15px;
+}
+.case-list .entity{
+    margin-bottom: 35px;
+}
+.case-list .entity .datetime {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+.case-list .entity a {
+    font-size: 15px;
+}
+.forum-list{
+    list-style: none;
+    padding-left: 5px;
+}
+.forum-list li {
+    margin-bottom: 10px;
+    font-size: 15px;
 }
