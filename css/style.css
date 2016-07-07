@@ -4318,7 +4318,7 @@ input::-webkit-inner-spin-button {
 }
 .doc-search .search-block input[type="text"]{
     vertical-align: middle;
-    width: calc(70% - 18px);
+    width: calc(68% - 18px);
 }
 @media screen and (max-width: 1260px){
     .doc-search .search-block input[type="text"]{
