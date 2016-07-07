@@ -4240,7 +4240,12 @@ input::-webkit-inner-spin-button {
 .questions-list{
     margin-bottom: 60px;
 }
-
+.questions-list .entity{
+    padding: 15px;
+}
+.questions-list .entity:nth-child(2n){
+    background-color: #f7f7f7;
+}
 .questions-list .entity .title{
     font: 500 20px 'Stem';
     display: inline-block;
@@ -4260,7 +4265,7 @@ input::-webkit-inner-spin-button {
 .questions-list .entity .text-block p {
     font-size: 16px;
     line-height: 22px;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
 }
 
 .docs-list .inrow{
@@ -4313,6 +4318,12 @@ input::-webkit-inner-spin-button {
 }
 .doc-search .search-block input[type="text"]{
     vertical-align: middle;
+    width: calc(70% - 18px);
+}
+@media screen and (max-width: 1260px){
+    .doc-search .search-block input[type="text"]{
+        width: calc(58% - 18px);
+    }
 }
 .doc-search .search-block .button{
     vertical-align: middle;
@@ -4427,7 +4438,9 @@ input::-webkit-inner-spin-button {
     border-bottom: 1px solid #BEC5CD;
 }
 .category-docs-list .premium-list .item:last-child, .category-docs-list .ordinary-list .item:last-child{
-    border-color: transparent
+    border-color: transparent;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 .category-docs-list .item .doc-link{
     width: calc(15% - 20px);
@@ -4570,4 +4583,8 @@ input::-webkit-inner-spin-button {
 .forum-list li {
     margin-bottom: 10px;
     font-size: 15px;
+}
+.news-articles-list .entity p {
+    float: right;
+    margin-top: 0px;
 }
