@@ -4588,3 +4588,120 @@ input::-webkit-inner-spin-button {
     float: right;
     margin-top: 0px;
 }
+
+/*----CALENDAR-----*/
+
+.calendar-legenda{
+    margin-bottom: 40px;
+}
+.calendar-legenda span{
+    font-size: 16px;
+    color: #929292;
+    margin-right: 35px;
+    position: relative;
+    margin-left: 20px;
+}
+.calendar-legenda span:before{
+    content: '';
+    top: 5px;
+    border: 5px solid #3890F2;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: -20px;
+}
+.calendar-legenda span:last-child:before{
+    border-color: #E98B05;
+}
+.switcher-block {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #F0F7FF;
+    text-align: center;
+}
+.switcher-block .switcher{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #3890F2;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.switcher-block .switcher.left{
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.switcher-block .switcher.left img{
+    margin-left: 3px;
+}
+.switcher-block .switcher img{
+    width: 10px;
+    margin-top: 10px;
+}
+.switcher-block .month{
+    display: inline-block;
+    font: 500 24px 'Stem';
+    vertical-align: middle;
+    margin-right: 30px;
+}
+
+#calendar {
+    width: 100%;
+    border-collapse: collapse
+}
+
+#calendar thead th{
+    text-align: left;
+    color: #929292;
+    font: 400 24px 'Stem';
+    padding-bottom: 20px;
+}
+#calendar tbody tr td{
+    height: 180px;
+    width: 10%;
+    text-align: left;
+    border: 1px solid #929292;
+}
+
+#calendar .day-content{
+    display: block;
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    position: relative;
+}
+#calendar .day-content span{
+    font: 400 22px 'Stem';
+    margin-bottom: 10px;
+    display: inline-block;
+}
+#calendar .today{
+    border: 3px solid #3890F2;
+}
+
+#calendar .day-content .event{
+    margin-bottom: 10px;
+}
+#calendar .day-content .event.self a{
+    color: #E98B05;
+}
+#calendar .day-content .event.self a:hover{
+    background-image: linear-gradient(90deg, #E98B05, #E98B05);
+}
+#calendar .day-content .more-events-block {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: auto;
+    padding: 10px;
+    height: 100%;
+    background-color: #F0F7FF;
+    z-index: 1;
+}
+#calendar .day-content .more-events-block .event{
+    display: block!important;
+}
