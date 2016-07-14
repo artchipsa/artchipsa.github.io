@@ -1,9 +1,10 @@
-$('#imgUpload').on('change', function(){
-
+$('.imgUpload').on('change', function(){
+     var upl = $(this);
      var countFiles = $(this)[0].files;
      var imgPath = $(this)[0].value;
      var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
-     var image_holder = $(".img-holder");
+     var image_holder = upl.parent().find('.img-holder');
+     var btn = upl.parent().find('#uploadBtn')
      image_holder.empty();
 
      if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
@@ -11,7 +12,7 @@ $('#imgUpload').on('change', function(){
  
              //loop for each file selected for uploaded.
              for (var i = 0; i < countFiles.length; i++) {
-             	$("#uploadBtn").hide();
+             	btn.hide();
  				var reader = new FileReader();
                  	reader.onload = function (e) {
                      	$("<img />", {
