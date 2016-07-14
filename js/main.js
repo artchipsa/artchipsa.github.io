@@ -109,19 +109,23 @@ $(function() {
     });
 
     var $tabControl = $(".tab-control");
-    $tabControl.find(".sheets .sheet").eq(0).addClass("active")
-        .siblings().removeClass("active");
-    $tabControl.find(".tabs .tab").eq(0).addClass("active")
-        .siblings().removeClass("active");
+    $tabControl.find(".sheets .sheet").eq(0).addClass("active").siblings().removeClass("active");
+    $tabControl.find(".tabs .tab").eq(0).addClass("active").siblings().removeClass("active");
+    $tabControl.find(".sheets-deep .sheet").eq(0).addClass("active").siblings().removeClass("active");
+    $tabControl.find(".tabs-deep .tab").eq(0).addClass("active").siblings().removeClass("active");
+    var $tabControlDeep = $('.tab-control .tab-control');
     $tabControl.each(function() {
        var $tc = $(this);
         $tc.find(".tabs .tab").on("click", function() {
             var index = $(this).index();
-            $tc.find(".sheets .sheet").eq(index).addClass("active")
-            .siblings().removeClass("active");
-            $tc.find(".tabs .tab").eq(index).addClass("active")
-                .siblings().removeClass("active");
-        })
+            $tc.find(".sheets .sheet").eq(index).addClass("active").siblings().removeClass("active");
+            $tc.find(".tabs .tab").eq(index).addClass("active").siblings().removeClass("active");
+        });
+        $tc.find(".tabs-deep .tab").on('click', function() {
+            var index = $(this).index();
+            $tc.find(".sheets-deep .sheet").eq(index).addClass("active").siblings().removeClass("active");
+            $tc.find(".tabs-deep .tab").eq(index).addClass("active").siblings().removeClass("active");
+        });
     });
 
     $(".add-comment").hide();

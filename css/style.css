@@ -1634,6 +1634,7 @@ select.cs-select {
     margin-top: 24px;
     margin-bottom: 34px;
     border-bottom: 3px solid #dce4f5;
+    position: relative;
 }
 
 .tabs.top-tabs .tab {
@@ -4705,3 +4706,154 @@ input::-webkit-inner-spin-button {
 #calendar .day-content .more-events-block .event{
     display: block!important;
 }
+
+/*----QESTIONS ANSWERS----*/
+
+.personal-account .section .filter span{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+.personal-account .section .filter .cs-select{
+    display: inline-block;
+    vertical-align: middle;
+}
+.personal-account .section .questions-list .entity {
+    padding: 25px 30px;
+}
+.personal-account .section .question-legenda{
+    position: absolute;
+    top: 16px;
+    right: 0;
+}
+.personal-account .section .question-legenda:before{
+    content: '';
+    top: 4px;
+    border: 5px solid #E98B05;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: -15px;
+}
+.personal-account .questions-list .entity .with{
+    position: relative;
+}
+.personal-account .questions-list .entity .with:before{
+    content: '';
+    top: 8px;
+    border: 5px solid #E98B05;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: -20px;
+}
+.personal-account .questions-list .entity .answer {
+    margin-top: 10px;
+}
+.personal-account .questions-list .entity .answer .link{
+    font-size: 16px;
+    color: #629140;
+    border-bottom: 1px dotted #629140;
+}
+.personal-account .questions-list .entity .answer .link:hover{
+    background-image: none;
+    border-color: transparent;
+}
+.tabs-deep.top-tabs {
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 34px;
+    border-bottom: 3px solid #dce4f5;
+    position: relative;
+}
+
+.tabs-deep.top-tabs .tab {
+    font: 500 18px/46px 'Stem';
+    font-size: 17px;
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    height: 52px;
+    margin-right: 10px;
+    padding: 0 15px 0 21px;
+    white-space: nowrap;
+    border-top: 3px solid #dce4f5;
+    border-left: 3px solid #dce4f5;
+    border-radius: 5px 0 0 0;
+    background: #fff;
+}
+
+.tabs-deep.top-tabs .tab:not(.active) {
+    line-height: 50px;
+    z-index: 1;
+    margin-right: 8px;
+    padding: 0 17px 0 23px;
+    cursor: pointer;
+    color: #77a4d7;
+    border-width: 1px;
+}
+
+.tabs-deep.top-tabs .tab:after {
+    position: absolute;
+    z-index: 2;
+    top: -3px;
+    right: -12px;
+    box-sizing: border-box;
+    width: 24px;
+    height: 55px;
+    content: '';
+    transform: skewX(18deg);
+    border-top: 3px solid #dce4f5;
+    border-right: 3px solid #dce4f5;
+    border-radius: 0 5px 0 0;
+}
+
+.tabs-deep.top-tabs .tab.active:after {
+    background: #fff;
+}
+
+.tabs-deep.top-tabs .tab:not(.active):after {
+    top: -1px;
+    border-width: 1px;
+}
+
+.tabs-deep.top-tabs .tab.active:before {
+    position: absolute;
+    right: -16px;
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    content: '';
+    background: #fff;
+}
+
+@media screen and (max-width: 1260px), print {
+    .tabs-deep.top-tabs {
+        flex-wrap: wrap;
+        border: none;
+    }
+    .tabs-deep.top-tabs .tab {
+        margin-bottom: 6px;
+        border-bottom: 3px solid #dce4f5;
+    }
+    .tabs-deep.top-tabs .tab:after {
+        height: 52px;
+        border-bottom: 3px solid #dce4f5;
+    }
+    .tabs-deep.top-tabs .tab:not(.active):after {
+        border-width: 1px;
+    }
+    .tabs-deep.top-tabs .tab.active:before {
+        background: none;
+    }
+}
+
+.personal-account .questions-list .entity .answer .answer-body{
+    display: none;
+}
+.personal-account .questions-list .entity .answer .answer-body .text-block{
+    margin-top: 20px;
+    padding-left: 40px;
+    border-left: 1px solid #E98B05;
+}
+.personal-account .section .pagination .item + .item{
+    margin-top: 0px;
+} 
