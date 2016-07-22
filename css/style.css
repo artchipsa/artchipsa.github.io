@@ -3942,19 +3942,14 @@ select.cs-select {
 }
 
 .act-number{
-    padding: 22px 18px 22px;
-    background-color: #F5F8FB;
-    color: #cacaca;
-    text-align: center;
-    font: 700 50px/52px 'Stem';
     display: inline-block;
     margin-right: 15px;
     vertical-align: top;
     width: 14%;
 }
 
-.act-number span{
-    font: 700 14px/16px 'Stem';
+.act-number img{
+    width: 100%;
 }
 
 .medpravo-article-list .entity{
