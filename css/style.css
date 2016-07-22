@@ -4702,6 +4702,9 @@ input::-webkit-inner-spin-button {
     height: 100%;
     background-color: #F0F7FF;
     z-index: 1;
+    -webkit-box-shadow: 0px 6px 10px 4px rgba(225, 225, 225, 0.75);
+    -moz-box-shadow:    0px 6px 10px 4px rgba(225, 225, 225, 0.75);
+    box-shadow:         0px 6px 10px 4px rgba(225, 225, 225, 0.75);
 }
 #calendar .day-content .more-events-block .event{
     display: block!important;
