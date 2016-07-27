@@ -90,6 +90,15 @@ $(function() {
         event.stopPropagation();
     });
 
+    var appointment = new Popup({
+        $popup: $('.popup.appointment')
+    });
+
+    $('.toAppointment').on('click', function(event){
+        appointment.open();
+        event.stopPropagation();
+    });
+
     $(".menu-link").on("mouseenter", function() {
         var $this = $(this);
         $this.addClass("js-hover");

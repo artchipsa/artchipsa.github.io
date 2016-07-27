@@ -4491,7 +4491,9 @@ input::-webkit-inner-spin-button {
     vertical-align: middle;
     display: inline-block;
 }
-
+.success-text{
+    display: none;
+}
 
 /*-----DOCTOR------*/
 
