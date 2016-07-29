@@ -4857,3 +4857,6 @@ input::-webkit-inner-spin-button {
 .personal-account .section .pagination .item + .item{
     margin-top: 0px;
 } 
+.appointment .text{
+    margin-bottom: 15px;
+}

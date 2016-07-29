@@ -1,6 +1,11 @@
 $(function() {
     $('.branding-block').find('img').attr('draggable', false);
 
+
+    //Маска телефона 
+
+    $('input[type="tel"]').inputmask("+7-(999)-999-99-99");
+
     $(".cs-select").each(function() {
         var options = $.extend({
             sortField: 'text',
