@@ -6,28 +6,30 @@ $(document).ready(function(){
 		specialImgPosition();
 	});
 	//car drive
-	var lastScrollTop = 0;
-	var car_offset = $('.car').offset();
-	$(window).scroll(function(){
-		var st = $(this).scrollTop();
-		var max_height = $('.article-wrap').height();
-		if (st > lastScrollTop){
-		   if ($(window).scrollTop() > car_offset.top ){
-				$('.car').addClass('fixed').stop().css({marginTop: parseInt($('.car').css('marginTop'))  + 70});
-			}
-			var current_offset = $('.car').offset();
-			if (max_height < current_offset.top - 250){
-				$('.car').stop().removeClass('fixed').addClass('finish');
-			}
-		} else {
-		   if ($(window).scrollTop() < max_height + 250 && $(window).scrollTop() > car_offset.top ){
-				$('.car').stop().removeClass('finish').addClass('fixed').css({marginTop: parseInt(($('.car').css('marginTop')) - 10) - 50});
+	if ($('.car').length > 0){
+		var lastScrollTop = 0;
+		var car_offset = $('.car').offset();
+		$(window).scroll(function(){
+			var st = $(this).scrollTop();
+			var max_height = $('.article-wrap').height();
+			if (st > lastScrollTop){
+			   if ($(window).scrollTop() > car_offset.top ){
+					$('.car').addClass('fixed').stop().css({marginTop: parseInt($('.car').css('marginTop'))  + 70});
+				}
+				var current_offset = $('.car').offset();
+				if (max_height < current_offset.top - 250){
+					$('.car').stop().removeClass('fixed').addClass('finish');
+				}
 			} else {
-				$('.car').stop().removeClass('fixed').css({marginTop: 0});
+			   if ($(window).scrollTop() < max_height + 250 && $(window).scrollTop() > car_offset.top ){
+					$('.car').stop().removeClass('finish').addClass('fixed').css({marginTop: parseInt(($('.car').css('marginTop')) - 10) - 50});
+				} else {
+					$('.car').stop().removeClass('fixed').css({marginTop: 0});
+				}
 			}
-		}
-		lastScrollTop = st;
-	});
+			lastScrollTop = st;
+		});
+	}
 
 	$(document).on('click', '.top', function(){
 		$('body, html').stop().animate({scrollTop: car_offset.top}, '3550');
@@ -37,14 +39,6 @@ $(document).ready(function(){
 
 
 	//like-func
-	var count = parseInt($('.count').text());
-	if (count >= 0){
-		$('.count').css('color', '#94bc90');
-	} 
-	if (count < 0) {
-		$('.count').css('color', '#f59790');
-	}
-
 
 	$('.count').each(function(){
 		var count = parseInt($(this).text());
@@ -76,6 +70,13 @@ $(document).ready(function(){
 		}
 		return false;
 	});
+
+	$(document).on('click', '.comments-show', function(){
+		$('.comment-body').slideToggle(350);
+	});
+
+
+
 });
 
 
