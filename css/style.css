@@ -4739,12 +4739,18 @@ input::-webkit-inner-spin-button {
     margin-right: 140px;
     min-width: 330px;
 }
-@media screen and (max-width: 1260px), print {
+.year-scale .scale:last-child{
+    margin-right: 0px;
+}
+
+@media (max-width: 1260px) {
     .scale{ 
         display: inline-block;
-        margin-right: 90px;
+        margin-right: 64px;
     }
+
 }
+
 .scale a{
     position: relative;
     display: inline-block;

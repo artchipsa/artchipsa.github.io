@@ -18,10 +18,12 @@ var Dlast = new Date(year,month+1,0).getDate(),
 	    if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
 	      calendar += '<td class="today">' + '<div class="day-content">' + '<span>' + i;
 	     //Эти 2 ифа для того, чтобы показать как будут вставляться события. Не знаю как это будет реализовано в связске с данными.
-	    }else if ( i == 7 && D.getMonth() == 8){
+	    }else if ( i == 7 && D.getMonth() == 7){
 	    	calendar += '<td>' + '<div class="day-content event-cont">' + '<span>' + i + '</span>' +'<div class="event self"><a href="#" class="link">День отказа от курения</a></div>' +
+	    	'<div class="event common"><a href="#" class="link">День закаливания</a></div>' +
+	    	'<div class="event common"><a href="#" class="link">День закаливания</a></div>' +
 	    	'<div class="event common"><a href="#" class="link">День закаливания</a></div>';
-	    } else if ( i == 3 && D.getMonth() == 8){
+	    } else if ( i == 11 && D.getMonth() == 7){
 	    	calendar += '<td>' + '<div class="day-content event-cont">' + '<span>' + i + '</span>' +'<div class="event self"><a href="#" class="link">День отказа от курения</a></div>' +
 	    	'<div class="event common"><a href="#" class="link">День закаливания</a></div>' + '<div class="event common"><a href="#" class="link">День закаливания</a></div>' +
 	    	'<div class="event common"><a href="#" class="link">День закаливания</a></div>';
@@ -43,51 +45,75 @@ var Dlast = new Date(year,month+1,0).getDate(),
 	}*/
 }
 calendar("calendar", new Date().getFullYear(), new Date().getMonth());
+eventday();
 //переключение месяца на один назад 
 $(document).on('click', '.calendar .switcher.left', function(){
-	eventday();
-	$('#calendar').fadeOut(function(){
+	setTimeout(function(){
 		var year = $('.month').attr('data-year');
 		var month = parseFloat($('.month').attr('data-month')) - 1;
 		calendar('calendar', year, month);
 		$('#calendar').fadeIn();	
-	});
+		eventday();
+	}, 250);
+	$('#calendar').fadeOut(250);
 });
 //переключатель месяца вперед
 $(document).on('click', '.calendar .switcher.right', function(){
-	eventday();
-	$('#calendar').fadeOut(function(){
+	$('#calendar').fadeOut(250);
+	setTimeout(function(){
 		var year = $('.month').attr('data-year');
 		var month = parseFloat($('.month').attr('data-month')) + 1;
 		calendar('calendar', year, month);
 		$('#calendar').fadeIn();
-	});
+		eventday();
+	}, 250);
 });
 //more 
 
 function eventday(){
-	$('.day-content').each(function(){
-	var ths = $(this);
-	var day = $(this).children('span');
-	if (ths.hasClass('event-cont')){
+	$('.day-content.event-cont').each(function(){
+		var ths = $(this);
+		var day = $(this).children('span').text();
 		var eventCount = ths.find('.event').length;
 		var elems = ths.find('.event')
 		var elems_to_hide = ths.find('.event:gt(1)');
 		if( eventCount > 3 ){
 			elems_to_hide.hide();
 			$('<div class="event more"><a href="#" class="link">Еще</a><div>').appendTo(ths);
-			$('.more a').click(function(e){
+			var link = $(this).find('.more a');
+			link.click(function(e){
 				e.preventDefault();
-				$('<div class="more-events-block"><a href="#" class="close">X</a></div>').appendTo(ths);
-				$(day).appendTo(ths);
+				var app_block = ths.find('.more-events-block');
+				app_block.remove();
+				$('<div class="more-events-block"><a href="#" class="close"><img src="images/close.svg" alt="" /></a></div>').appendTo(ths);
 				var more_events = ths.find('.more-events-block');
+				$('<span>'+day+'</span>').appendTo(more_events);
 				$(elems).each(function(){
 					$(this).clone().appendTo(more_events);
 				});
+				ths.find('.more-events-block').show().animate({opacity: 1}, 350);
 			});
 		}
-	}
 	});	
 }
 
-eventday();
+$(document).on('click', '.more-events-block .close', function(){
+	$(this).parent().animate({opacity: 0}, 350, function(){
+		$(this).hide();
+	});
+	return false;
+});
+
+$('a[data-role="tooltip"]').hover(function(){
+	var ths = $(this);
+	var text = $(this).data('text');
+	if (ths.find('.gradient-tooltip').length == 0){
+		$('<div class="gradient-tooltip"><div>'+text+'</dvi></div>').appendTo(ths);
+	}
+	ths.find('.gradient-tooltip').animate({opacity: 1}, 250);
+}, function(){
+	var ths = $(this);
+	ths.find('.gradient-tooltip').animate({opacity: 0}, 200, function(){
+		ths.find('.gradient-tooltip').remove();
+	});
+});
