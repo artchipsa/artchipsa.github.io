@@ -686,7 +686,7 @@ footer .links div a {
   height: 2px;
   z-index: -1;
   top: 32px;
-  transition: all .35s ease;
+  transition: all .15s ease;
 }
 .filters .filter-element .hover:before {
   content: '';
@@ -695,8 +695,8 @@ footer .links div a {
   left: 0;
   position: absolute;
   background-color: #e2e41a;
-  transition: all 0.35s ease-in-out;
-  transition-delay: .4s;
+  transition: all 0.15s ease-in-out;
+  transition-delay: .2s;
 }
 .filters .filter-element .hover:after {
   content: '';
@@ -706,8 +706,8 @@ footer .links div a {
   top: -2px;
   position: absolute;
   background-color: #e2e41a;
-  transition: all 0.35s ease-in-out;
-  transition-delay: .4s;
+  transition: all 0.15s ease-in-out;
+  transition-delay: .2s;
 }
 .filters .filter-element:hover .hover {
   transform: rotate(-45deg) translatex(0px);
@@ -799,6 +799,144 @@ footer .links div a {
 .article-element.recommend ul a {
   color: #1e1e1e;
   font-size: 0.57em;
+}
+.main {
+  padding-top: 75px;
+  text-align: center;
+}
+.main h1 {
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'Rubik-b';
+  font-size: 2.714em;
+  line-height: 1.4em;
+  display: inline-block;
+  width: 565px;
+  margin-top: 0px;
+  margin-bottom: 105px;
+}
+.main h1:after {
+  content: '';
+  border-bottom: 10px solid #e2e41a;
+  position: absolute;
+  width: 35%;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+.article-element.half {
+  width: 50%;
+  padding: 100px;
+  height: 415px;
+}
+.article-element.subscribe {
+  background-color: #1e1e1e;
+}
+.article-element.subscribe h2 span {
+  color: #e2e41a;
+}
+.tabs-section {
+  padding: 75px 0px;
+  background-image: url(../img/lether.jpg);
+}
+.nav-tabs {
+  border: none;
+  width: 338px;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  left: 60px;
+  right: 0;
+  top: 75px;
+}
+.nav-tabs > li {
+  width: 153px;
+  height: 153px;
+}
+.nav-tabs li {
+  margin-bottom: -5px;
+}
+.nav-tabs li a {
+  width: 153px;
+  height: 153px;
+  display: inline-block;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+.nav-tabs li a:hover,
+.nav-tabs li a:focus {
+  background-color: transparent!important;
+  border-color: transparent!important;
+}
+.nav-tabs li.active a {
+  border: none;
+  background-color: transparent!important;
+  border-color: transparent!important;
+}
+.nav-tabs li.active a:hover,
+.nav-tabs li.active a:focus {
+  background-color: transparent!important;
+  border-color: transparent!important;
+  border: none;
+}
+.nav > li > a:focus,
+.nav > li > a:hover {
+  background-color: transparent!important;
+  border-color: transparent!important;
+}
+.switcher {
+  width: 480px;
+  height: 470px;
+  position: relative;
+  background-image: url(../img/circle.png);
+  background-repeat: no-repeat;
+}
+.switcher li .left-top {
+  background-image: url(../img/left_up_normal.png);
+  background-size: cover;
+}
+.switcher li .left-top:active {
+  background-image: url(../img/left_up_pushed.png);
+}
+.switcher li .right-top {
+  background-image: url(../img/right_up_normal.png);
+  background-size: cover;
+}
+.switcher li .right-top:active {
+  background-image: url(../img/right_up_normal.png);
+}
+.switcher li .left-bottom {
+  background-image: url(../img/left_down_normal.png);
+  background-size: cover;
+}
+.switcher li .left-bottom:active {
+  background-image: url(../img/left_down_normal.png);
+}
+.switcher li .right-bottom {
+  background-image: url(../img/right_down_normal.png);
+  background-size: cover;
+}
+.switcher li .right-bottom:active {
+  background-image: url(../img/right_down_normal.png);
+}
+.switcher li.active .left-top {
+  background-image: url(../img/left_up_active.png);
+  background-size: cover;
+}
+.switcher li.active .right-top {
+  background-image: url(../img/right_up_active.png);
+  background-size: cover;
+}
+.switcher li.active .left-bottom {
+  background-image: url(../img/left_down_active.png);
+  background-size: cover;
+}
+.switcher li.active .right-bottom {
+  background-image: url(../img/right_down_active.png);
+  background-size: cover;
 }
 @media (max-width: 1199px) {
   .road {
