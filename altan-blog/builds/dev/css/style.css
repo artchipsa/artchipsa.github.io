@@ -48,6 +48,10 @@ body {
   content: "";
   display: block;
 }
+#header_placeholder {
+  width: 100%;
+  display: none;
+}
 .btn {
   color: #fff;
   border: 2px solid #e2e41a;
@@ -79,9 +83,12 @@ body {
 }
 header {
   background-color: #1e1e1e;
+}
+header.fixed {
   position: fixed;
   width: 100%;
   z-index: 10;
+  top: 0;
 }
 header .logo {
   display: block;
@@ -122,6 +129,9 @@ header .logo img {
   color: #e2e41a;
   background-color: transparent;
   border-bottom: 4px solid #e2e41a;
+}
+.navbar ul li a:focus {
+  background-color: transparent;
 }
 .navbar ul .active a {
   color: #e2e41a;

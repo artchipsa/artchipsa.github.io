@@ -31,6 +31,18 @@ $(document).ready(function(){
 		});
 	}
 
+	var header_width = $('header').height();
+	$('#header_placeholder').height(header_width);
+	$(window).scroll(function(){
+		if ($(window).scrollTop() > header_width){
+			$('header').addClass('fixed');
+			$('#header_width').css({display: 'block'});
+		} else {
+			$('header').removeClass('fixed');
+			$('#header_width').css({display: 'none'});
+		}
+	});
+
 	$(document).on('click', '.top', function(){
 		$('body, html').stop().animate({scrollTop: car_offset.top}, '3550');
 		return false;
