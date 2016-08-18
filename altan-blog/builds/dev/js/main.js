@@ -76,6 +76,20 @@ $(document).ready(function(){
 	});
 
 
+	//all news funcs
+	var grid = $('.grid').isotope({
+		itemSelector: '.article-element',
+		layoutMode: 'fitRows'
+	});
+
+	$(document).on('click', '.filter', function(){
+		var filterValue = $(this).data("filter");
+		console.log('filterValue', filterValue);
+	  	grid.isotope({ filter: filterValue });
+	  	$('.filter-element').removeClass('active');
+	  	$(this).parent().addClass('active');
+	  	return false;
+	});
 
 });
 

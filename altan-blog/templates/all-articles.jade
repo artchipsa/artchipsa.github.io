@@ -1,0 +1,124 @@
+doctype html
+html
+	include modules/head.jade
+	body
+		.page-wrap
+			include modules/header.jade
+			section.simple-section
+				.container
+					.filters
+						.filter-element.active
+							a.filter(href="#", data-filter="*") Все статьи
+							.hover
+						.filter-element
+							a.filter(href="#", data-filter=".test-drive") Тест-драйвы
+							.hover
+						.filter-element
+							a.filter(href="#", data-filter=".reportage") Репортажи
+							.hover
+						.filter-element
+							a.filter(href="#", data-filter=".tuning") Тюнинг
+							.hover
+						.filter-element
+							a.filter(href="#", data-filter=".interview") Интервью
+							.hover
+					.article-contnet.grid
+						.article-element.big.reportage
+							.article-img(style="background-image: url(img/sa1.jpg)")
+							.abs-hover
+							.article-info
+								a.tag(href="#")
+									span репортаж
+								h2.article-title Ночные гоночные движения хабаровска
+								a.link(href="#") читать статью
+							.activity-info
+								.activity-element
+									img(src="img/speech_bubble.svg")
+									span 23
+								.activity-element
+									img(src="img/eye.svg")
+									span 230
+						.article-element.small.reportage
+							.article-img(style="background-image: url(img/sa2.jpg)")
+							.abs-hover
+							.article-info
+								a.tag(href="#")
+									span репортаж
+								h2.article-title Выбор подходящего мотоцикла для города
+								a.link(href="#") читать статью
+							.activity-info
+								.activity-element
+									img(src="img/speech_bubble.svg")
+									span 23
+								.activity-element
+									img(src="img/eye.svg")
+									span 230
+						.article-element.small.test-drive
+							.article-img(style="background-image: url(img/sa2.jpg)")
+							.abs-hover
+							.article-info
+								a.tag(href="#")
+									span репортаж
+								h2.article-title Выбор подходящего мотоцикла для города
+								a.link(href="#") читать статью
+							.activity-info
+								.activity-element
+									img(src="img/speech_bubble.svg")
+									span 23
+								.activity-element
+									img(src="img/eye.svg")
+									span 230
+						.article-element.small.recommend.interview
+							p рекомендованные статьи
+							ul
+								li
+									a(href="#") Тестирование летней резины в различных условиях
+								li
+									a(href="") Тест-драйв нового внедорожника от Toyota
+								li
+									a(href="") Репортаж с четвертого этапа кубка России по дрифту
+								li
+									a(href="") Знакомимся с понятием чип-тюнинг
+								li
+									a(href="") Cравнительный тест-драйв Toyota Tundra
+
+						.article-element.middle.special.reportage
+							a(href="#")
+								img(src="img/sa3.jpg", alt="Специальное предложение")
+						.article-element.small.test-drive
+							.article-img(style="background-image: url(img/sa2.jpg)")
+							.abs-hover
+							.article-info
+								a.tag(href="#")
+									span репортаж
+								h2.article-title Выбор подходящего мотоцикла для города
+								a.link(href="#") читать статью
+							.activity-info
+								.activity-element
+									img(src="img/speech_bubble.svg")
+									span 23
+								.activity-element
+									img(src="img/eye.svg")
+									span 230
+					.paginator
+						a.btn(href="#")
+							img(src="img/arrows.svg", alt="")
+						.paginator-body
+							ul
+								li
+									a(href="").active 1
+								li
+									a(href="") 2
+								li
+									a(href="") 3
+								li
+									a(href="") 4
+								li
+									a(href="") 5
+								li
+									a(href="") 6
+								li
+									a(href="") 7
+
+		include modules/footer.jade
+
