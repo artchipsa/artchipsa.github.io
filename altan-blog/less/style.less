@@ -68,6 +68,9 @@ html, body{
 
 header{
 	background-color: @black;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
 	.logo{
 		display: block;
 		text-align: center;
@@ -390,6 +393,15 @@ header{
 	}
 	&.middle{
 		width: 66.667%;;
+		a{
+			z-index: 2;
+			position: relative;
+			height: 100%;
+			display: block;
+			img{
+				transition: transform 2.35s cubic-bezier(0, 1, 1, 1);
+			}
+		}
 	}
 	&.special{
 		img{
@@ -465,8 +477,17 @@ header{
 	&:hover .activity-info{
 		bottom: 0;
 	}
+	&.middle:hover{
+		a{
+			img{
+				transform: scale(1.15);
+			}
+		}
+	}
 }
-
+.comments-show{
+	cursor: pointer;
+}
 /* COMMENTS */
 .gray-block{
 	padding: 80px 0px;

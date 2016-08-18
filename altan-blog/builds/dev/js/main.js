@@ -22,7 +22,7 @@ $(document).ready(function(){
 				}
 			} else {
 			   if ($(window).scrollTop() < max_height + 250 && $(window).scrollTop() > car_offset.top ){
-					$('.car').stop().removeClass('finish').addClass('fixed').css({marginTop: parseInt(($('.car').css('marginTop')) - 10) - 50});
+					$('.car').stop().removeClass('finish').addClass('fixed').css({marginTop: 100});
 				} else {
 					$('.car').stop().removeClass('fixed').css({marginTop: 0});
 				}

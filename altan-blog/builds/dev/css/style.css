@@ -79,6 +79,9 @@ body {
 }
 header {
   background-color: #1e1e1e;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 header .logo {
   display: block;
@@ -376,6 +379,15 @@ header .logo img {
 .article-element.middle {
   width: 66.667%;
 }
+.article-element.middle a {
+  z-index: 2;
+  position: relative;
+  height: 100%;
+  display: block;
+}
+.article-element.middle a img {
+  transition: transform 2.35s cubic-bezier(0, 1, 1, 1);
+}
 .article-element.special img {
   width: 100%;
   max-height: 427px;
@@ -447,6 +459,12 @@ header .logo img {
 }
 .article-element:hover .activity-info {
   bottom: 0;
+}
+.article-element.middle:hover a img {
+  transform: scale(1.15);
+}
+.comments-show {
+  cursor: pointer;
 }
 /* COMMENTS */
 .gray-block {
