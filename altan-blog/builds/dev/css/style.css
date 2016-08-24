@@ -52,6 +52,9 @@ body {
   width: 100%;
   display: none;
 }
+.no-right-padding {
+  padding-right: 0px;
+}
 .btn {
   color: #fff;
   border: 2px solid #e2e41a;
@@ -99,6 +102,9 @@ header .logo {
 header .logo img {
   width: 165px;
 }
+.navbar-toggle span {
+  background-color: #e2e41a;
+}
 .navbar {
   margin-bottom: 0px;
   border: none;
@@ -130,7 +136,7 @@ header .logo img {
 .navbar ul li a:hover {
   color: #e2e41a;
   background-color: transparent;
-  border-bottom: 4px solid #e2e41a;
+  border-bottom: 4px solid #e2e41a !important;
 }
 .navbar ul li a:focus {
   background-color: transparent;
@@ -1371,6 +1377,9 @@ footer .links div a {
   .product-links .article-element.recommend .link {
     margin-top: 56px;
   }
+  .navbar-collapse {
+    padding: 0px;
+  }
 }
 @media (max-width: 991px) {
   .article-element.big {
@@ -1457,6 +1466,9 @@ footer .links div a {
   }
   header .logo img {
     width: 105px;
+  }
+  header .btn {
+    margin-right: 9px;
   }
   header .btn.default:last-child {
     margin-right: 0px;
@@ -1573,8 +1585,12 @@ footer .links div a {
     width: 70px;
     left: 60px;
   }
+  .no-right-padding {
+    padding-right: 15px;
+  }
   header {
-    padding: 20px 0px;
+    padding: 15px 0px;
+    padding-bottom: 0px;
   }
   header .btn.default.header {
     display: none;
@@ -1586,8 +1602,43 @@ footer .links div a {
     padding-top: 15px;
     padding-bottom: 13px;
   }
+  header .logo {
+    display: inline-block;
+    vertical-align: middle;
+  }
   header .logo img {
     width: 150px;
+  }
+  header .navbar-header {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    width: 47%;
+  }
+  header .navbar-header button {
+    margin: 0px;
+  }
+  header .navbar-collapse {
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  header .navbar-collapse .navbar-nav {
+    margin: 0px;
+  }
+  header .navbar-collapse .search {
+    display: none;
+  }
+  header .navbar-collapse #headerSearch input[type="text"] {
+    display: inline-block;
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 15px;
+    padding: 12px;
+  }
+  header .navbar-collapse .btn.default {
+    display: inline-block;
+    margin-right: 0px;
+    margin-bottom: 15px;
   }
   .article {
     padding-top: 20px;
