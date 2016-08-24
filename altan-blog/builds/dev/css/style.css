@@ -85,7 +85,6 @@ body {
 }
 header {
   background-color: #1e1e1e;
-  transition: all .35s ease;
 }
 header.fixed {
   position: fixed;
