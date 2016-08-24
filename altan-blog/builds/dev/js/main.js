@@ -14,7 +14,7 @@ $(document).ready(function(){
 			var max_height = $('.article-wrap').height();
 			if (st > lastScrollTop){
 			   if ($(window).scrollTop() > car_offset.top ){
-					$('.car').addClass('fixed').stop().css({marginTop: parseInt($('.car').css('marginTop'))  + 70});
+					$('.car').addClass('fixed').stop().css({marginTop: 115});
 				}
 				var current_offset = $('.car').offset();
 				if (max_height < current_offset.top - 550){
@@ -22,7 +22,7 @@ $(document).ready(function(){
 				}
 			} else {
 			   if ($(window).scrollTop() < max_height + 550 && $(window).scrollTop() > car_offset.top ){
-					$('.car').stop().removeClass('finish').addClass('fixed').css({marginTop: 100});
+					$('.car').stop().removeClass('finish').addClass('fixed').css({marginTop: 115});
 				} else {
 					$('.car').stop().removeClass('fixed').css({marginTop: 0});
 				}
