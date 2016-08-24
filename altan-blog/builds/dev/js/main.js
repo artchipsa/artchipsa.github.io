@@ -81,7 +81,7 @@ $(document).ready(function(){
 	var header_height = $('header').height();
 	$('#header_placeholder').height(header_height);
 	$(window).scroll(function(){
-		if ($(window).scrollTop() > header_height){
+		if ($(window).scrollTop() > 0){
 			$('header').addClass('fixed');
 			$('#header_placeholder').show();
 		} else {
