@@ -87,8 +87,7 @@ header .vcenter:nth-child(4n) {
   padding-top: 14px;
 }
 header .btn {
-  padding: 7px;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 .modal-sm {
   width: 365px;
