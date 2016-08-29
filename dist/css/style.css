@@ -4296,8 +4296,12 @@ input::-webkit-inner-spin-button {
     padding-left: 0px;
 }
 .medways ul li {
-    margin-bottom: 20px;
+    margin: 0 auto;
     font: 400 16px/18px 'Stem';
+}
+.medways ul li a{
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
 .doc-search{
