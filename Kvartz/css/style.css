@@ -353,6 +353,7 @@ header .btn {
 }
 .goods-tab {
   position: relative;
+  background-color: #f5f2ee;
   -webkit-box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
@@ -446,6 +447,7 @@ header .btn {
 }
 .goods-body .item .content .btn {
   margin-top: 15px;
+  font-size: 18px;
 }
 .goods-body .item .like {
   position: absolute;
