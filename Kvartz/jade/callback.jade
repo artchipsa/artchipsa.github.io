@@ -1,0 +1,14 @@
+.modal.fade.callback(rold="dialog", tabindex="-1" data-id="callback")
+	.modal-dialog.modal-sm(role="document")
+		.modal-content
+			a(href="#").close
+				span.glyphicon.glyphicon-remove
+			.simple-form
+				.before
+					h2 Закажите обратный звонок:
+					form
+						input(type="text", name="name", placeholder="Ваше имя")
+						input(type="tel", name="", placeholder="Ваш телефон")
+						input(type="submit", value="Отправить заявку").btn.default
+				.success
+					h2 Спасибо! В ближайшее время с вами свяжется наш оператор.
