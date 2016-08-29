@@ -26,6 +26,7 @@ body {
   border: none;
   border-radius: 0px;
   background-color: #a61b33;
+  font-size: 16px;
   display: inline-block;
   text-align: center;
   color: #ffffff;
@@ -42,14 +43,13 @@ body {
   position: relative;
 }
 header {
-  padding: 15px;
-  padding-bottom: 30px;
+  padding: 20px;
 }
 header .logo {
-  width: 100%;
+  width: 111%;
 }
 header .pseudo-link {
-  margin-left: 45px;
+  margin-left: 70px;
   margin-right: 40px;
 }
 header .dropdown {
@@ -60,7 +60,7 @@ header .dropdown .pseudo-link {
 }
 header .dropdown .dropdown-menu {
   padding: 0px;
-  background-color: #e8e2d9;
+  background-color: #f5f2ee;
   border-radius: 0px;
 }
 header .dropdown .dropdown-menu li a {
@@ -80,9 +80,62 @@ header .phone a {
   color: #000000;
   font-size: 26px;
 }
+header .vcenter:nth-child(2n),
 header .vcenter:nth-child(3n),
 header .vcenter:nth-child(4n) {
-  vertical-align: text-top;
+  vertical-align: top;
+  padding-top: 14px;
+}
+header .btn {
+  padding: 7px;
+  margin-top: 6px;
+}
+.modal-sm {
+  width: 365px;
+}
+/*
+.p2:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  border: 12px solid transparent;
+  border-top-color: #e8e2d9;
+  left: 33.5%;
+}
+.p3:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  border: 12px solid transparent;
+  border-top-color: #e8e2d9;
+  left: 49%;
+}
+.p4:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  border: 12px solid transparent;
+  border-top-color: #e8e2d9;
+  left: 64%;
+}
+.p5:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  border: 12px solid transparent;
+  border-top-color: #e8e2d9;
+  left: 79%;
+} */
+.pipka-block {
+  height: 20px;
+  background-color: #f5f2ee;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+}
+.tab-pane {
+  position: relative;
 }
 .promo-section {
   position: relative;
@@ -106,7 +159,7 @@ header .vcenter:nth-child(4n) {
 }
 .promo .item .info p {
   font-size: 18px;
-  line-height: 28px;
+  line-height: 30px;
   margin-bottom: 0px;
 }
 .owl-navigation {
@@ -193,6 +246,7 @@ header .vcenter:nth-child(4n) {
   z-index: -1;
   width: 131.5%;
   height: 100%;
+  background: linear-gradient(to bottom, #ffffff 10%, rgba(255, 255, 255, 0.66) 34%, rgba(255, 255, 255, 0) 100%);
 }
 .tabs-section:after {
   position: absolute;
@@ -227,7 +281,7 @@ header .vcenter:nth-child(4n) {
   margin-bottom: 30px;
   font-weight: bold;
   font-size: 26px;
-  line-height: 35px;
+  line-height: 40px;
 }
 .simple-form input[type="text"],
 .simple-form input[type="tel"] {
@@ -263,7 +317,7 @@ header .vcenter:nth-child(4n) {
 }
 .nav-tabs li {
   width: 172px;
-  height: 120px;
+  height: 140px;
   text-align: center;
   padding-top: 34px;
 }
@@ -281,6 +335,15 @@ header .vcenter:nth-child(4n) {
 .nav-tabs li a:focus {
   background-color: transparent;
   border-color: transparent;
+}
+.nav-tabs li.active:after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  border: 12px solid transparent;
+  border-top-color: #e8e2d9;
+  left: 42%;
+  z-index: 1;
 }
 .nav-tabs li.active a,
 .nav-tabs li.active a:focus {
@@ -322,7 +385,7 @@ header .vcenter:nth-child(4n) {
 .goods .goods-head {
   border-bottom: 1px solid #e8e2d9;
   padding: 0px 95px;
-  padding-bottom: 40px;
+  padding-bottom: 25px;
   margin-bottom: 35px;
 }
 .goods .goods-head h2 {
@@ -358,7 +421,7 @@ header .vcenter:nth-child(4n) {
 }
 .goods-body .item .content {
   padding: 25px 20px;
-  background-color: #ffffff;
+  background-color: #fefdfb;
 }
 .goods-body .item .content .price-block {
   font-size: 20px;
@@ -379,7 +442,7 @@ header .vcenter:nth-child(4n) {
   padding-left: 0px;
 }
 .goods-body .item .content ul li {
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 .goods-body .item .content .btn {
   margin-top: 15px;
@@ -478,7 +541,8 @@ header .vcenter:nth-child(4n) {
   background-repeat: no-repeat;
   background-position: 0px 10px;
   padding-left: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 .blue-section {
   background-image: linear-gradient(to bottom, #0c3649 55%, rgba(12, 54, 73, 0.65) 100%), url(../img/blue.jpg);
@@ -515,6 +579,9 @@ header .vcenter:nth-child(4n) {
   width: 75%;
   color: #ffffff;
 }
+.blue-section .benefits .item .text-block p {
+  line-height: 1.5;
+}
 .blue-section .map {
   margin-bottom: 35px;
 }
@@ -530,7 +597,7 @@ header .vcenter:nth-child(4n) {
 }
 .small-title {
   margin-top: 0px;
-  margin-bottom: 35px;
+  margin-bottom: 65px;
   color: #ffffff;
   text-align: center;
 }
@@ -580,6 +647,7 @@ header .vcenter:nth-child(4n) {
 .thankful {
   border: 3px solid #ebebeb;
   padding: 65px 100px;
+  position: relative;
 }
 .thankful .abs {
   color: #a61b33;
