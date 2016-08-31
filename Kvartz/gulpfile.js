@@ -3,7 +3,10 @@ var gulp = require('gulp'),
 	jade = require('gulp-jade'),
 	less = require('gulp-less'),
 	cssmin = require('gulp-cssmin'),
-	rename = require('gulp-rename');
+	rename = require('gulp-rename'),
+	svgstore = require('gulp-svgstore'),
+	svgmin = require('gulp-svgmin'),
+	path = require('path');
 
 
 gulp.task('jade', function(){
@@ -12,6 +15,24 @@ gulp.task('jade', function(){
 		.pipe(gulp.dest(''));
 });
 
+gulp.task('svgstore', function () {
+    return gulp
+        .src('assets/*.svg')
+        .pipe(svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+        .pipe(svgstore())
+        .pipe(gulp.dest('img'));
+});
+ 
 gulp.task('less', function(){
 	return gulp.src('less/*.less')
 		.pipe(less())

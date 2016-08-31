@@ -161,11 +161,19 @@ header .btn {
   line-height: 30px;
   margin-bottom: 0px;
 }
-.owl-navigation {
+.nav-pos {
+  width: 1170px;
   position: absolute;
   z-index: 10;
   bottom: 120px;
-  left: 385px;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+.owl-navigation {
+  z-index: 10;
+  margin-left: 15px;
 }
 .owl-navigation .pagination {
   display: inline-block;
@@ -741,11 +749,15 @@ footer .right-info .category,
 footer .right-info .fn {
   font-weight: bold;
 }
+footer .right-info a {
+  color: #ffffff;
+  text-decoration: none;
+}
 .about .modal-dialog {
   width: 1150px;
 }
 .about .modal-content {
-  padding: 85px 95px;
+  padding: 55px 95px;
 }
 .about .modal-content .subtitle {
   text-transform: uppercase;
@@ -771,6 +783,7 @@ footer .right-info .fn {
   width: 100%;
   margin-right: 2%;
   padding-right: 35px;
+  margin-bottom: 0px;
 }
 .list:last-child {
   margin-right: 0px;
@@ -780,7 +793,35 @@ footer .right-info .fn {
   background-repeat: no-repeat;
   background-position: 0px 10px;
   padding-left: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+}
+.list .list-item:last-child {
+  margin-bottom: 0px;
+}
+.icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  color: #000;
+  transition: all .35s ease;
+}
+.icon.tab-left,
+.icon.tab-right {
+  width: 40px;
+  height: 40px;
+  fill: #B2A595;
+}
+.icon.tab-left:hover,
+.icon.tab-right:hover {
+  fill: #a61b33;
+}
+.icon.top-arrow {
+  fill: #2a487f;
+  height: 22px;
+  transition: all .35s ease;
+}
+.icon.top-arrow:hover {
+  fill: #ffffff;
 }
 .good .modal-dialog {
   width: 1150px;
@@ -805,6 +846,10 @@ footer .right-info .fn {
 }
 .good .item img {
   margin-bottom: 25px;
+}
+.good .item p {
+  font-weight: bold;
+  font-size: 18px;
 }
 .good .footer .sides {
   display: inline-block;

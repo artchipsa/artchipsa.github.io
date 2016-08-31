@@ -72,34 +72,11 @@ $(document).ready(function(){
 	      })
 	    });
 
-
-
 	    if (!error) { // если ошибки нет
-/*	      var data = form.serialize(); // подготавливаем данные
-	      $.ajax({ // инициализируем ajax запрос
-	         type: 'POST', // отправляем в POST формате, можно GET
-	         url: 'callback.php', // путь до обработчика, у нас он лежит в той же папке
-	         data: data, // данные для отправки
-	           beforeSend: function(data) { // событие до отправки
-	                form.find('input[type="submit"]').attr('disabled', 'disabled'); // например, отключим кнопку, чтобы не жали по 100 раз
-	              },
-	           success: function(data){ // событие после удачного обращения к серверу и получения ответа
-	              if (data['error']) { // если обработчик вернул ошибку
-	                alert(data['error']); // покажем её текст
-	              } else { 
-	              	form.parent().fadeOut('fast');
-	              	$('.success').fadeIn('fast');
-	              }
-	             },
-	           error: function (xhr, ajaxOptions, thrownError) { // в случае неудачного завершения запроса к серверу
-
-	             },
-	           complete: function(data) { // событие после любого исхода
-	                form.find('input[type="submit"]').prop('disabled', false); // в любом случае включим кнопку обратно
-	             }     
-	           });*/
+        //Ajax
 	    }
 	    return false; // вырубаем стандартную отправку формы
   	});
+
 //end doc ready
 });

@@ -8,6 +8,7 @@ html
 		link(rel="stylesheet", href="css/style.css")
 		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600,800&subset=cyrillic")
 	body
+		include svg.html
 		header
 			.container
 				.col-lg-2.vcenter
@@ -33,12 +34,15 @@ html
 				.col-lg-2.vcenter 
 					a(href="#", data-id="callback").btn.default.callback Заказать звонок
 		section.promo-section
-			.owl-navigation
-				a(href="", data-nav="prev").arrow
-					span.glyphicon.glyphicon-menu-left
-				.pagination
-				a(href="", data-nav="next").arrow
-					span.glyphicon.glyphicon-menu-right
+			.nav-pos
+				.owl-navigation
+					a(href="", data-nav="prev").arrow
+						svg(viewBox="0 0 100 100", class="icon top-arrow")
+							use(xlink:href="#top-arrow-left")
+					.pagination
+					a(href="", data-nav="next").arrow
+						svg(viewBox="0 0 100 100", class="icon top-arrow")
+							use(xlink:href="#top-arrow-right")
 			.owl-carousel.promo
 				.item(style="background-image: url(img/promo.jpg);")
 					.container
@@ -69,9 +73,11 @@ html
 				h1.title КВАРЦЕВЫЙ ПЕСОК ПО НАЗНАЧЕНИЯМ
 				.goods-tab
 					a(href="#" data-nav="prev").arrow
-						span.glyphicon.glyphicon-menu-left
+						svg(viewBox="0 0 100 100", class="icon tab-left")
+							use(xlink:href="#tabs-arrow-left")
 					a(href="#" data-nav="next").arrow
-						span.glyphicon.glyphicon-menu-right
+						svg(viewBox="0 0 100 100", class="icon tab-right")
+							use(xlink:href="#tabs-arrow-right")
 					.tab-slider
 						.item
 							ul.nav.nav-tabs(role="tablist")
@@ -225,10 +231,8 @@ html
 									span.category Группа Компаний 
 									span.fn.org «РосКварц»
 								div
-									span.email info@rosquartz.ru
-								div Адресс #[sapn.street-address ул. Астраханская, д. 3Б, офис 12] 
-
-
+									span.email #[a(href="mailto:info@rosquartz.ru") info@rosquartz.ru]
+								div Адресс #[sapn.street-address ул. Астраханская, д. 3Б, офис 12]
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
 		script(src="js/bootstrap.min.js")
 		script(src="js/owl.carousel.min.js")

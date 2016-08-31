@@ -173,11 +173,19 @@ header{
 	}
 }
 
+.nav-pos{
+	width: 1170px;
+	position: absolute;
+	z-index: 10;
+	bottom: 120px;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+}
 .owl-navigation {
-    position: absolute;
     z-index: 10;
-    bottom: 120px;
-    left: 385px;
+    margin-left: 15px;
     .pagination{
     	display: inline-block;
     	margin: 0px;
@@ -753,6 +761,10 @@ footer{
 		.category, .fn{
 			font-weight: bold;
 		}
+		a{
+			color: @white;
+			text-decoration: none;
+		}
 	}
 }
 .about{
@@ -760,7 +772,7 @@ footer{
 		width: 1150px;
 	}
 	.modal-content{
-		padding: 85px 95px;
+		padding: 55px 95px;
 		.subtitle{
 			text-transform: uppercase;
 			font-weight: bold;
@@ -787,6 +799,7 @@ footer{
 	width: 100%;
 	margin-right: 2%;
 	padding-right: 35px;
+	margin-bottom: 0px;
 
 	&:last-child{
 		margin-right: 0px;
@@ -796,8 +809,34 @@ footer{
 		background-repeat: no-repeat;
 	    background-position: 0px 10px;
 		padding-left: 25px;
-		margin-bottom: 25px;
+		margin-bottom: 10px;
+		&:last-child{
+			margin-bottom: 0px;
+		}
 	}
+}
+.icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  color: #000;
+  transition: all .35s ease;
+  &.tab-left, &.tab-right{
+  	width: 40px;
+  	height: 40px;
+  	fill: #B2A595;
+  	&:hover{
+  		fill: @red;
+  	}
+  }
+  &.top-arrow{
+  	fill: @blue;
+  	height: 22px;
+  	transition: all .35s ease;
+  	&:hover{
+  		fill: @white;
+  	}
+  }
 }
 .good{
 	.modal-dialog{
@@ -822,6 +861,10 @@ footer{
 		}
 		img{
 			margin-bottom: 25px;
+		}
+		p{
+			font-weight: bold;
+			font-size: 18px;
 		}
 	}
 	.footer{
