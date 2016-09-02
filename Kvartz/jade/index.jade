@@ -7,32 +7,33 @@ html
 		link(rel="stylesheet", href="css/owl.carousel.css")
 		link(rel="stylesheet", href="css/style.css")
 		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600,800&subset=cyrillic")
-	body
+	body.unresponsive
 		include svg.html
 		header
 			.container
-				.col-lg-2.vcenter
-					img.logo(src="img/logo.jpg", alt="Лого")
-				.col-lg-5.vcenter
-					a.pseudo-link.about-show(href="#", data-id="about") О компании
-					span.gray-text ваш город:
-					.dropdown
-						a(href="#", data-toggle="dropdown", role="button", aria-expanded="false").pseudo-link Каменск-Уральский  
-						ul.dropdown-menu
-							li
-								a(href="") Красноярск 
-							li
-								a(href="") Калининград
-							li
-								a(href="") Уфа
-							li
-								a(href="") Железногорск
-				.col-lg-3.vcenter
-					div.phone
-						span.gray-text Звонок по России бесплатный
-						a(href="tel:+7-495-565-3088") +7-495-565-3088
-				.col-lg-2.vcenter 
-					a(href="#", data-id="callback").btn.default.callback Заказать звонок
+				.row
+					.col-lg-2.vcenter
+						img.logo(src="img/logo.jpg", alt="Лого")
+					.col-lg-5.vcenter
+						a.pseudo-link.about-show(href="#", data-id="about") О компании
+						span.gray-text ваш город:
+						.dropdown
+							a(href="#", data-toggle="dropdown", role="button", aria-expanded="false").pseudo-link Каменск-Уральский  
+							ul.dropdown-menu
+								li
+									a(href="") Красноярск 
+								li
+									a(href="") Калининград
+								li
+									a(href="") Уфа
+								li
+									a(href="") Железногорск
+					.col-lg-3.vcenter
+						div.phone
+							span.gray-text Звонок по России бесплатный
+							a(href="tel:+7-495-565-3088") +7-495-565-3088
+					.col-lg-2.vcenter 
+						a(href="#", data-id="callback").btn.default.callback Заказать звонок
 		section.promo-section
 			.nav-pos
 				.owl-navigation
