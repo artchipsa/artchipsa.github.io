@@ -1136,6 +1136,9 @@ footer .right-info a {
   header {
     padding: 20px 0px;
   }
+  .partners .item {
+    margin-right: 63px;
+  }
 }
 @media (max-width: 1199px) {
   .container {
