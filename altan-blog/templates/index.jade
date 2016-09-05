@@ -60,8 +60,8 @@ html
 						.article-element.small.subscribe
 							.abs-hover
 							.article-info
-								h2.article-title Хочешь оставаться в курсе событий вместе с нами? #[span подпишись!]
-								a.link(href="#") подписаться
+								h2.article-title Быстрая запись в автосервис на любые работы #[span подпишись!]
+								a.link(href="#", data-toggle="modal", data-target=".service-modal") записаться
 			section.tabs-section
 				.container
 					.row
@@ -121,7 +121,7 @@ html
 				.people-item.p4
 					h2 За колёса–отвечаю! Переобую и сохраню до следующего сезона
 				.people-item.p5
-					h2 Барахлит автоэлектрика? Заезжайте, выручу.
+					h2 Барахлит электрика? Заезжайте, выручу.
 			section.main-articles
 				.container
 					.article-contnet
@@ -268,7 +268,7 @@ html
 							div
 								a(href="mailto:adsa@mail.ru").mail altan-shina@mail.ru
 							div
-								a(href="#").link Задать вопрос
+								a(href="#", data-toggle="modal", data-target=".callback-modal").link Задать вопрос
 			section.contacts-wrap
 				div#map
 				.contacts
@@ -320,7 +320,5 @@ html
 										.adr
 											#[sapn.bold АДРЕС:] #[span.locality г. Биробиджан,] #[span.street-address ул. Советская, 123]
 										div #[span.bold Телефон:] #[span.tel (42622) 46-704, 98-999]
-							
-		include modules/modal.jade
-		include modules/modal_2.jade
+
 		include modules/footer.jade

@@ -1,23 +1,32 @@
+#header_placeholder
 header
 	.container
-		.row
-			.col-xs-12.col-sm-2.col-md-3.col-lg-3.vcenter
-				a.logo(href="#")
-					img(src="../dev/img/logo.svg")
-			.col-xs-8.col-sm-3.col-md-3.col-lg-4.vcenter
-				nav.navbar
-					ul.nav.navbar-nav
-						li
-							a(href="#") Все статьи
-						li
-							a(href="#") О нас
+		nav.navbar
+			.row
+				.col-xs-12.col-sm-2.col-md-3.col-lg-3.vcenter
+					a.logo(href="#")
+						img(src="../dev/img/logo.svg")
+					div.navbar-header
+						button.navbar-toggle.collapsed(type="button", data-toggle="collapse", aria-expanded="false", data-target="#bs-example-navbar-collapse-1")
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+				.col-xs-12.col-sm-10.col-md-9.col-lg-9.vcenter.no-right-padding
+					.collapse.navbar-collapse#bs-example-navbar-collapse-1
+						.col-xs-12.col-sm-4.col-md-4.col-lg-4.vcenter
 
-			.col-xs-3.col-sm-7.col-md-6.col-lg-5.vcenter
-				form#headerSearch(action="#", method="#")
-					input(type="text")
-					a.btn(href="#")
-						span.glyphicon.glyphicon-search
-				a.btn.default(href="#") Наш магазин
-				a.btn.default(href="#") Подписаться
+							ul.nav.navbar-nav
+								li
+									a(href="#") Все статьи
+								li
+									a(href="#") О нас
+
+						.col-xs-12.col-sm-8.col-md-8.col-lg-8.vcenter
+							form#headerSearch(action="#", method="#")
+								input(type="text", placeholder="Поиск")
+								a.btn.search(href="#")
+									span.glyphicon.glyphicon-search
+							a.btn.default.header(href="http://altan-shina.ru/", target="_blank") Наш магазин
+							a.btn.default.header.m-subscribe(href="#", data-toggle="modal", data-target=".modal-subscribe") Подписаться
 
 

@@ -7,7 +7,9 @@ var gulp = require('gulp'),
 
 gulp.task('jade', function(){
 	return gulp.src('templates/**/*.jade')
-		.pipe(jade())
+		.pipe(jade({
+			pretty: true
+		}))
 		.pipe(gulp.dest('builds/dev'));
 });
 

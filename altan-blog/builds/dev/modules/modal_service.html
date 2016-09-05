@@ -1,16 +1,17 @@
 
-<div tabindex="-1" role="dialog" class="modal fade modal-subscribe">
+<div tabindex="-1" role="dialog" class="modal fade service-modal">
   <div role="document" class="modal-dialog">
     <div class="modal-content"><a href="#" data-dismiss="modal" class="modal-close"><span class="glyphicon glyphicon-remove"></span></a>
       <div class="modal-header"> 
-        <h2>Подписка на блог</h2>
-        <p>Для подписки на наш блог укажите адрес вашей <span>электронной почты</span></p>
+        <h2>Запись на сервис</h2>
       </div>
       <div class="modal-body"> 
         <form action="">
-          <input type="email" name="email" placeholder="example@mail.ru" required="required"/>
+          <input type="text" name="name" placeholder="Ф. И. О." required="required"/>
+          <input type="tel" name="phone" required="required"/>
           <input type="submit" value="Подписаться" class="link"/>
         </form>
+        <p class="success">Спасибо за обращение. Наш менеджер свяжется с вами.</p>
       </div>
     </div>
   </div>

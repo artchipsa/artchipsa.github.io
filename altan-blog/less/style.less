@@ -21,10 +21,20 @@ html, body{
 	font-family: 'Rubik-n';
 	font-size: 14px;
 	height: 100%;
+	letter-spacing : -.36em;
+}
+a, p, span, h1, h2, h3, h4, h5, li, .line, .credits, .quote-body, .comment-time, .article div {
+	letter-spacing: normal;
+}
+a:focus{
+	outline: none;
+}
+a:focus, a:hover {
+    color: #fff;
+    text-decoration: none;
 }
 .page-wrap {
   min-height: 100%;
-  /* equal to footer height */
   padding-bottom: 176px;
   margin-bottom: -176px;
 }
@@ -316,8 +326,9 @@ header{
 	img{
 	    position: absolute;
     	left: 18px;
-    	top: 31%;
-
+	    top: 0;
+    	bottom: 0;
+    	margin: auto;
 	}
 }
 .promo-img{
@@ -344,13 +355,19 @@ header{
 		color: @black;
 		vertical-align: middle;
 		position: relative;
-		margin-right: 0px;
-		float: right;
 	}
 	.half-width{
 		display: inline-block;
 		vertical-align: middle;
-		width: 49%
+		width: 49%;
+	}
+	.subscribe-block{
+		text-align: center;
+		margin-top: 55px;
+		p{
+			padding-right: 0px;
+			margin-bottom: 15px;
+		}
 	}
 }
 
@@ -902,7 +919,7 @@ footer{
 			border-bottom: 10px solid @yellow;
 			position: absolute;
 			width: 35%;
-			bottom: -25px;
+			bottom: -40px;
 			left: 0;
 			right: 0;
 			margin-right: auto;
@@ -1362,7 +1379,7 @@ footer{
 .modal-body{
 	padding: 0px;
 	text-align: center;
-	input[type="email"]{
+	input[type="email"], input[type="text"], input[type="tel"]{
 		padding: 8px;
 		border: 2px solid @white;
 		background-color: transparent;
@@ -1407,6 +1424,99 @@ footer{
 		position: absolute;
 		top: 93%;
     	left: -2px;
+	}
+}
+.success{
+	display: none;
+}
+
+
+// Search block  
+
+.search-result{
+	padding: 75px 0px; 
+	h1{
+		font-size: 2.7em;
+		line-height: 1.3em;
+		margin-bottom: 105px;
+		position: relative;
+		text-align: center;
+		&:after{
+			content: '';
+			border-bottom: 10px solid @yellow;
+			position: absolute;
+			width: 55%;
+			bottom: -40px;
+			left: 0;
+			right: 0;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+}
+
+.search-container{
+	.item{
+		margin-bottom: 40px;
+		p{
+			font-size: 16px;
+			line-height: 24px;
+			margin-bottom: 22px;
+			span{
+				font-weight: bold;
+			}
+		}
+		.btn{
+			color: #000;
+		}
+		.divider{
+			margin-top: 20px;
+			display: block;
+			&:before{
+			    content: "";
+			    width: 45%;
+			    left: 0px;
+			}
+			&:after{
+				content: "";
+				width: 45%;
+				right: 0px;
+			}
+		}
+		.item-head{
+			margin-bottom: 15px;
+			.default{
+				float: right;
+				margin-top: -2px;
+			}
+			.title{
+				font-size: 2em;
+				color: @blue;
+				font-weight: bold;
+				margin-bottom: 0px;
+				margin-right: 25px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.date{
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 14px;
+				color: @gray;
+				display: block;
+			}
+		}
+	}
+	.item-wrap{
+		padding: 0px 120px;
+	}
+}
+
+
+
+@media (max-width: 1338px){
+	.people-item h2{
+		font-size: 1.55em;
 	}
 }
 @media (max-width: 1199px) {

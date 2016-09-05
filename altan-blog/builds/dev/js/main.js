@@ -281,6 +281,34 @@ $(document).ready(function(){
 	    $(this).find('.dropdown-menu').first().stop(true, true).slideUp('fast');
   	});
 
+  	//forms check
+
+  	$('input[type="tel"]').mask('+7 (000) 000 00 00', {placeholder: '+7 (___) ___ __ __'});
+
+
+  	$('.modal-body form').submit(function(){
+  		var form = $(this);
+  		var error = false;
+  		form.find('input').each(function(){
+  			if ($(this).val() == ''){
+  				$(this).css('border-color', 'red');
+  				error = true;
+  			}
+  			$(this).keydown(function(){
+		      	$(this).css('border-color', '#ffffff');
+		    });
+  		});
+
+  		if (!error) {
+  			//Ajax функция
+
+  			//Событие на саксес.
+  			$('.modal-body form').fadeOut(300, function(){
+  				$('.success').fadeIn(300);
+  			});
+  		}
+  		return false;
+  	});
 
 });
 
