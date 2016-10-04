@@ -19,15 +19,18 @@
     </div>-->
     <header class="header">
         <div class="container panel">
-            <form class="city-block">
-                <span class="caption">Ваш город:</span>
-                <select class="cs-select city-select">
-                    <option value="nsk">Новосибирск</option>
-                    <option value="barnaul">Барнаул</option>
-                    <option value="rostov">Ростов-на-Дону</option>
-                </select>
-            </form>
+            <div class="logo-wrap">
+                <a href="/" class="logo"></a>
+            </div>
             <div class="block">
+            	<form class="city-block">
+	                <span class="caption">Ваш город:</span>
+	                <select class="cs-select city-select">
+	                    <option value="nsk">Новосибирск</option>
+	                    <option value="barnaul">Барнаул</option>
+	                    <option value="rostov">Ростов-на-Дону</option>
+	                </select>
+	            </form>
                 <form class="search-block">
                     <div class="input-wrap">
                         <input class="input-text" type="text" placeholder="Поиск">
@@ -38,9 +41,6 @@
                     </select>
                     <button class="button search-button" type="submit">Найти</button>
                 </form>
-                <div class="view-switch-block">
-                    <a href="javascript:void(0)" class="link"><span class="text">Версия для слабовидящих</span></a>
-                </div>
                 <div class="user-block">
                     <a href="javascript:void(0)" class="link registration">Регистрация</a>&nbsp;|&nbsp;<a href="javascript:void(0)" class="link login auth">Вход</a>
                     <span class="restriction"><span class="age">18+</span></span>
@@ -48,9 +48,7 @@
             </div>
         </div>
         <div class="container gr-border nav-wrap">
-            <div class="logo-wrap">
-                <a href="/" class="logo"></a>
-            </div>
+            
             <nav class="menu">
                 <div class="item parent">
                     <a href="/directory.html" class="link menu-link">Справочники</a>
@@ -86,6 +84,13 @@
                 </div>
                 <div class="item">
                     <a href="javascript:void(0)" class="link menu-link">Врачи</a>
+                    <div class="tooltip">
+                        В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
+                        методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
+                    </div>
+                </div>
+                 <div class="item">
+                    <a href="javascript:void(0)" class="link menu-link">Календарь здоровья</a>
                     <div class="tooltip">
                         В данном разделе можно получить информацию о том или ином заболевании, лекарственном препарате,
                         методе диагностике, лечения, клиническом случае и получить консультацию специалиста.
