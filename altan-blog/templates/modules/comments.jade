@@ -1,0 +1,78 @@
+section.gray-block
+	.container
+		.row
+			.col-lg-offset-2.col-lg-8
+				.comments-wrap
+					.comment-head
+						h2 комментарии #[span (#[span 3])] 
+						span.glyphicon.glyphicon-chevron-right.comments-show
+					.comment-body
+						.row
+							.col-xs-3.col-sm-2.col-md-2.col-lg-2
+								.commentator-img
+									img(src="img/anon.jpg", alt="аноним")
+							.col-xs-9.col-sm-10.col-md-10.col-lg-10
+								.comment-content
+									h2 Аркадий Варламович
+									p Занятное интервью, есть над чем подумать. "Как часто упоминают, современный человек в день видит больше изображений, чем его давние предшественники за всю жизнь." Уже не в первый раз слышу эту фразу, вроде как было исследование на эту тему, поделитесь ссылкой, пожалуйста.
+								.comment-controls
+									.comment-time ВЧЕРА в 18:45
+									.like-block 
+										a(href="#").like-btn.dislike -
+										.like-count
+											span.glyphicon.glyphicon-stats
+											span.count 2
+										a(href="#").like-btn.like +
+									.reply
+										a(href="#") Ответить
+					.comment-body
+						.row
+							.col-xs-3.col-sm-2.col-md-2.col-lg-2
+								.commentator-img
+									img(src="img/anon.jpg", alt="аноним")
+							.col-xs-9.col-sm-10.col-md-10.col-lg-10
+								.comment-content
+									h2 Константин Константинопольский
+									p Отличный обзор. Хотелось бы видеть чаще различные тест-драйвы
+								.comment-controls
+									.comment-time ВЧЕРА в 18:45
+									.like-block 
+										a(href="#").like-btn.dislike -
+										.like-count
+											span.glyphicon.glyphicon-stats
+											span.count 20
+										a(href="#").like-btn.like +
+									.reply
+										a(href="#") Ответить
+					.comment-body
+						.row
+							.col-xs-3.col-sm-2.col-md-2.col-lg-2
+								.commentator-img
+									img(src="img/anon.jpg", alt="аноним")
+							.col-xs-9.col-sm-10.col-md-10.col-lg-10
+								.comment-content
+									h2 Theredempt1oN
+									p Нвписано каким-то делетантом, нужно больше технической стороны в обзоре
+								.comment-controls
+									.comment-time ВЧЕРА в 18:45
+									.like-block 
+										a(href="#").like-btn.dislike -
+										.like-count
+											span.glyphicon.glyphicon-stats
+											span.count -3
+										a(href="#").like-btn.like +
+									.reply
+										a(href="#") Ответить
+					.comment-body.add-comment
+						.row
+							.col-xs-3.col-sm-2.col-md-2.col-lg-2
+								.commentator-img
+									img(src="img/anon.jpg", alt="аноним")
+							.col-xs-9.col-sm-10.col-md-10.col-lg-10
+								.comment-content
+									form(action="#")
+										textarea(name="comment-text", rows="6")
+										input.link(type="submit", value="Комментировать")
+					.auth-block
+						a(href="#").btn.default.black авторизируйтесь
+						span чтобы можно было оставлять комментарии

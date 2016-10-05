@@ -1,0 +1,324 @@
+doctype html
+html
+	include modules/head.jade
+	body
+		.page-wrap
+			include modules/header.jade
+			section.main
+				.container
+					h1 Мы рождены, чтоб сказку сделать былью!
+					.article-contnet
+						.article-element.big
+							.article-img(style="background-image: url(img/ma1.jpg)")
+							.abs-hover
+							.article-info
+								a.tag(href="#")
+									span репортаж
+								h2.article-title Заниженные двенашки. Все ли в порядке в головах у владельцев?
+								a.link(href="#") читать статью
+							.activity-info
+								.activity-element
+									img(src="img/speech_bubble.svg")
+									span 23
+								.activity-element
+									img(src="img/eye.svg")
+									span 230
+						.article-element.half
+							.article-img(style="background-image: url(img/ma2.jpg)")
+							.abs-hover
+							.article-info
+								a.tag(href="#")
+									span тест-драйв
+								h2.article-title Тест–драйв toyota tundra от алтаншина
+								a.link(href="#") читать статью
+							.activity-info
+								.activity-element
+									img(src="img/speech_bubble.svg")
+									span 23
+								.activity-element
+									img(src="img/eye.svg")
+									span 230
+						.article-element.half
+							.article-img(style="background-image: url(img/sa2.jpg)")
+							.abs-hover
+							.article-info
+								a.tag(href="#")
+									span репортаж
+								h2.article-title Выбор подходящего мотоцикла для города
+								a.link(href="#") читать статью
+							.activity-info
+								.activity-element
+									img(src="img/speech_bubble.svg")
+									span 23
+								.activity-element
+									img(src="img/eye.svg")
+									span 230
+						.article-element.middle.special
+							a(href="#")
+								.abs-hover
+								img(src="img/sa3.jpg", alt="Специальное предложение")
+						.article-element.small.subscribe
+							.abs-hover
+							.article-info
+								h2.article-title Быстрая запись в автосервис на любые работы #[span подпишись!]
+								a.link(href="#", data-toggle="modal", data-target=".service-modal") записаться
+			section.tabs-section
+				.container
+					.row
+						.col-md-12.col-lg-5.vcenter
+							.switcher
+								ul.nav.nav-tabs(role="tablist")
+									li(role="presentation")
+										a(href="#autumn", role="tab", data-toggle="tab").left-top
+									li(role="presentation").active
+										a(href="#winter", role="tab", data-toggle="tab").right-top
+									li(role="presentation")
+										a(href="#summer", role="tab", data-toggle="tab").left-bottom
+									li(role="presentation")
+										a(href="#fall", role="tab", data-toggle="tab").right-bottom
+						.col-md-12.col-lg-7.vcenter
+							.switcher-screen
+								.tab-content
+									.screen.tab-pane.fade#autumn(role="tabpanel")
+										.screen-header
+											span Это календарь сервисного обслуживания
+											p Нажми на кнопку вемени года и узнай, какие сервисные работы необходимо сделать
+										.line.autumn Обслуживание зимой
+										.screen-body
+											p При обслуживании автомобиля зимой крайне важно следить за состоянием консистенции моторного масла. Чтобы оценить в каком состоянии находится смазочный материал, нужно оставить его на холоде. Для очень холодной погоды оптимально применять синтетические, а также полусинтетические масла.
+											p Чтобы увеличить поворот коленвала, можно попробовать «энергосберегающее» масло, но из-за него может протекать мотор, поэтому использовать его при обслуживании автомобиля зимой довольно рискованно.
+									.screen.tab-pane.fade.in.active#winter(role="tabpanel")
+										.screen-header
+											span Это календарь сервисного обслуживания
+											p Нажми на кнопку вемени года и узнай, какие сервисные работы необходимо сделать
+										.line Обслуживание зимой
+										.screen-body
+											p При обслуживании автомобиля зимой крайне важно следить за состоянием консистенции моторного масла. Чтобы оценить в каком состоянии находится смазочный материал, нужно оставить его на холоде. Для очень холодной погоды оптимально применять синтетические, а также полусинтетические масла.
+											p Чтобы увеличить поворот коленвала, можно попробовать «энергосберегающее» масло, но из-за него может протекать мотор, поэтому использовать его при обслуживании автомобиля зимой довольно рискованно.
+									.screen.tab-pane.fade#summer(role="tabpanel")
+										.screen-header
+											span Это календарь сервисного обслуживания
+											p Нажми на кнопку вемени года и узнай, какие сервисные работы необходимо сделать
+										.line.summer Обслуживание зимой
+										.screen-body
+											p При обслуживании автомобиля зимой крайне важно следить за состоянием консистенции моторного масла. Чтобы оценить в каком состоянии находится смазочный материал, нужно оставить его на холоде. Для очень холодной погоды оптимально применять синтетические, а также полусинтетические масла.
+											p Чтобы увеличить поворот коленвала, можно попробовать «энергосберегающее» масло, но из-за него может протекать мотор, поэтому использовать его при обслуживании автомобиля зимой довольно рискованно.
+									.screen.tab-pane.fade#fall(role="tabpanel")
+										.screen-header
+											span Это календарь сервисного обслуживания
+											p Нажми на кнопку вемени года и узнай, какие сервисные работы необходимо сделать
+										.line.fall Обслуживание зимой
+										.screen-body
+											p При обслуживании автомобиля зимой крайне важно следить за состоянием консистенции моторного масла. Чтобы оценить в каком состоянии находится смазочный материал, нужно оставить его на холоде. Для очень холодной погоды оптимально применять синтетические, а также полусинтетические масла.
+											p Чтобы увеличить поворот коленвала, можно попробовать «энергосберегающее» масло, но из-за него может протекать мотор, поэтому использовать его при обслуживании автомобиля зимой довольно рискованно.
+			section.people
+				.people-item
+					h2 Заменить жидкость? проверить ходовую? Это ко мне!
+				.people-item.p2
+					h2 Подберу резину под ваш стиль езды
+				.people-item.p3
+					h2 Мою вашу тачку, как свою
+				.people-item.p4
+					h2 За колёса–отвечаю! Переобую и сохраню до следующего сезона
+				.people-item.p5
+					h2 Барахлит электрика? Заезжайте, выручу.
+			section.main-articles
+				.container
+					.article-contnet
+						.article-element.medium
+								.article-img(style="background-image: url(img/ma1.jpg)")
+								.abs-hover
+								.article-info
+									a.tag(href="#")
+										span репортаж
+									h2.article-title Заниженные двенашки. Все ли в порядке в головах у владельцев?
+									a.link(href="#") читать статью
+								.activity-info
+									.activity-element
+										img(src="img/speech_bubble.svg")
+										span 23
+									.activity-element
+										img(src="img/eye.svg")
+										span 230
+						.article-element.small.special
+							a(href="#", data-toggle="modal", data-target=".modal-card")
+								.abs-hover
+								img(src="img/card.jpg", alt="Специальное предложение")
+						.article-element.small.recommend.blue
+							p Почему в алтан шина выгодно? 
+							ul
+								li
+									a(href="#") Индивидуальный подход к каждому клиенту
+								li
+									a(href="") Огромный ассортимент продукции
+								li
+									a(href="") Команда настоящих профессионалов
+								li
+									a(href="") Команда настоящих профессионалов
+						.article-element.small
+							.article-img(style="background-image: url(img/sa2.jpg)")
+							.abs-hover
+							.article-info
+								a.tag(href="#")
+									span репортаж
+								h2.article-title Выбор подходящего мотоцикла для города
+								a.link(href="#") читать статью
+							.activity-info
+								.activity-element
+									img(src="img/speech_bubble.svg")
+									span 23
+								.activity-element
+									img(src="img/eye.svg")
+									span 230
+						.article-element.small
+							.article-img(style="background-image: url(img/sa2.jpg)")
+							.abs-hover
+							.article-info
+								a.tag(href="#")
+									span репортаж
+								h2.article-title Выбор подходящего мотоцикла для города
+								a.link(href="#") читать статью
+							.activity-info
+								.activity-element
+									img(src="img/speech_bubble.svg")
+									span 23
+								.activity-element
+									img(src="img/eye.svg")
+									span 230
+			section.product-links
+				.container
+					.links-wrapper
+						.link-block
+							div
+								a(href="#")
+									img(src="img/prod1.png", alt="")
+							a(href="").link автошины
+						.link-block
+							div
+								a(href="#")
+									img(src="img/prod2.png", alt="")
+							a(href="").link Диски
+						.link-block
+							div
+								a(href="#")
+									img(src="img/prod3.png", alt="")
+							a(href="").link аккумуляторы
+						.link-block
+							div
+								a(href="#")
+									img(src="img/prod4.png", alt="")
+							a(href="").link Автокосметика
+						.link-block
+							div
+								a(href="#")
+									img(src="img/prod5.png", alt="")
+							a(href="").link Масла и смаски
+						.link-block
+							div
+								a(href="#")
+									img(src="img/prod6.png", alt="")
+							a(href="").link Тех. жидкости
+						.link-block
+							div
+								a(href="#")
+									img(src="img/prod7.png", alt="")
+							a(href="").link Ремонт
+						.link-block
+							div
+								a(href="#")
+									img(src="img/prod8.png", alt="")
+							a(href="").link шиномонтаж
+					.article-contnet
+						.article-element.small.recommend.blue
+							p Наши услуги
+							ul
+								li
+									a(href="#") Диагностика автомобиля
+								li
+									a(href="") Техническое обслуживание автомобиля
+								li
+									a(href="") Поставка запчастей
+								li
+									a(href="") Замена тех. жидкостей
+								li
+									a(href="") Ремонт авто
+								li
+									a(href="") Шиномонтаж
+								li
+									a(href="") Защита кузова
+						.article-element.small
+							.article-img(style="background-image: url(img/sa2.jpg)")
+							.abs-hover
+							.article-info
+								a.tag(href="#")
+									span репортаж
+								h2.article-title Выбор подходящего мотоцикла для города
+								a.link(href="#") читать статью
+							.activity-info
+								.activity-element
+									img(src="img/speech_bubble.svg")
+									span 23
+								.activity-element
+									img(src="img/eye.svg")
+									span 230
+						.article-element.small.recommend
+							p ЕСТЬ ВОПРОСЫ? 
+							div
+								a(href="#").phone 8-800-2000-500
+							div
+								a(href="mailto:adsa@mail.ru").mail altan-shina@mail.ru
+							div
+								a(href="#", data-toggle="modal", data-target=".callback-modal").link Задать вопрос
+			section.contacts-wrap
+				div#map
+				.contacts
+					.contacts-head
+						span Ваш город: 
+						.dropdown
+							a.dropdown-link(href="#", data-toggle="dropdown", aria-expanded="false", aria-haspopup="true") #[span.text Хабаровск] #[span.caret]
+							ul.dropdown-menu
+								li
+									a.city(href="", data-city="Khabarovsk") Хабаровск
+								li
+									a.city(href="", data-city="Komsomolsk") Комсомольск-на-Амуре
+								li
+										a.city(href="", data-city="Beerobidjan") Биробиджан
+					.shops-body
+						.shops(data-city="Khabarovsk").active
+							ul
+								li
+									a(href="#", data-id="habar1").marker
+									.item.vcard
+										.adr
+											#[sapn.bold АДРЕС:] #[span.locality г. Хабаровск,] #[span.street-address проспект 60-летия Октября, 204]
+										div #[span.bold Телефон:] #[span.tel (4212) 27-37-37]
+								li
+									a(href="#", data-id="habar2").marker
+									.item.vcard
+										.adr
+											#[sapn.bold АДРЕС:] #[span.locality г. Хабаровск,] #[span.street-address  ул. Воронежская, 144]
+										div #[span.bold Телефон:] #[span.tel (4212) 76-26-24]
+								li
+									a(href="#", data-id="habar3").marker
+									.item.vcard
+										.adr
+											#[sapn.bold АДРЕС:] #[span.locality г. Хабаровск,] #[span.street-address  60 лет Октября проспект, 2/2]
+										div #[span.bold Телефон:] #[span.tel (4212) 94-44-43]
+						.shops(data-city="Komsomolsk")
+							ul
+								li
+									a(href="#", data-id="Komsomol").marker
+									.item.vcard
+										.adr
+											#[sapn.bold АДРЕС:] #[span.locality г. Комсомольск-на-Амуре,] #[span.street-address ул. Кирова, 12 "Б"]
+										div #[span.bold Телефон:] #[span.tel (4217) 33-60-60]
+						.shops(data-city="Beerobidjan")
+							ul
+								li
+									a(href="#", data-id="Beer").marker
+									.item.vcard
+										.adr
+											#[sapn.bold АДРЕС:] #[span.locality г. Биробиджан,] #[span.street-address ул. Советская, 123]
+										div #[span.bold Телефон:] #[span.tel (42622) 46-704, 98-999]
+
+		include modules/footer.jade
