@@ -63,6 +63,7 @@
     font-size: 14px;
     display: flex;
     height: 82px;
+    margin-bottom: 26px;
 }
 
 .header .city-block {
@@ -202,7 +203,8 @@
 }
 
 .header .nav-wrap {
-    height: 95px;
+    height: 56px;
+    background-color: #F0F7FF;
 }
 
 .header .logo-wrap {
@@ -226,7 +228,8 @@
     float: left;
     width: 100%;
     height: 100%;
-    justify-content: space-between;
+    
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -343,9 +346,9 @@
 
 .menu .item.parent:before {
     position: absolute;
-    top: -16px;
+    top: -20px;
     right: -15px;
-    bottom: -16px;
+    bottom: -20px;
     left: -15px;
     visibility: hidden;
     content: '';
