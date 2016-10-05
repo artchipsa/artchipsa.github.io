@@ -154,13 +154,13 @@ $(function() {
             marginRight: 100
         }, 350);
         $searchButton.animate({
-            width: 100,
-            right: -120
+            width: 95,
+            right: -100
         }, 350);
     });
     $searchInput.on('focusout', function() {
         $('.header .search-block').animate({
-          width: 400,
+          width: 380,
           marginRight: 0
         }, 350);
         $searchButton.animate({
