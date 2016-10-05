@@ -241,7 +241,7 @@
 .header .logo {
     display: block;
     width: 175px;
-    height: 65%;
+    height: 100%;
     margin-top: 24px;
     background-image: url(../images/logo.png);
     background-size: contain;
