@@ -1,4 +1,4 @@
-/* ========================================
+    /* ========================================
     			#main-layout
 ======================================== */
 .page-wrapper {
@@ -5285,4 +5285,31 @@ input::-webkit-inner-spin-button {
 } 
 .appointment .text{
     margin-bottom: 15px;
+}
+.review-answer{
+    margin-top: 20px;
+    padding: 20px 25px;
+    background-color: #f7f7f7;
+}
+.review-answer .answer-body{
+    border-left: 1px solid #E98B05;
+    padding-left: 25px;
+}
+.review-answer .answer-body .datetime{
+    font: 12px/18px 'Stem';
+    display: block;
+    color: #879abf;
+}
+.review-answer .answer-body p{
+    margin-bottom: 0px;
+}
+.review-answer img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 10%;
+    margin-right: 20px;
+}
+.review-answer .answer-info{
+    display: inline-block;
+    vertical-align: middle;
 }
