@@ -17,8 +17,8 @@ $(document).ready(function(){
 
   //мотаем видео от начала до конца, пока висит прелоадер
   setTimeout(function(){
-      window.scrollBy(0, 30000);
-  },1500);
+      window.scrollBy(0, 33000);
+  },1000);
 
   setTimeout(function(){
     $(window).scrollTop(0);
