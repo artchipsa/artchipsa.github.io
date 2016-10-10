@@ -67,7 +67,7 @@ $(document).ready(function(){
 
   //показывание различных элементов на скролл
   function scrolling(){
-    var doc = $(window);
+   /* var doc = $(window);
     if (doc.scrollTop() > 1400 && doc.scrollTop() < 3500 ) {
         $('.first').css("display", "block").removeClass('fadeOutUp').addClass('animated fadeInUp');
     } else {
@@ -116,7 +116,7 @@ $(document).ready(function(){
     }
     if (doc.scrollTop() < 11600){
       $('.p4').removeClass('active');
-    }
+    }*/
   }
 
   function pointSwitcher(scroll, point){
