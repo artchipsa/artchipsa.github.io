@@ -1,0 +1,7 @@
+@baseFontSize: 18;
+
+.font-size(@font-size: @baseFontSize) {
+	@rem: (@font-size / @baseFontSize);
+	font-size: @font-size * 1px;
+	font-size: ~"@{rem}rem"; 
+}

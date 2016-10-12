@@ -1,6 +1,7 @@
 @import "bootstrap.min.css";
 @import "bootstrap-theme.min.css";
 @import "modules/variables.less";
+@import "modules/mixins.less";
 
 //COMMON STYLES
 
@@ -29,17 +30,31 @@
   src: url(../fonts/Akrobat/Akrobat-ExtraBold.otf);
   font-weight: 800;
 }
+@font-face{
+  font-family: Gilroy;
+  src: url(../fonts/Gilroy/Gilroy-Light.otf);
+  font-weight: 300;
+}
+@font-face{
+  font-family: Gilroy;
+  src: url(../fonts/Gilroy/Gilroy-ExtraBold.otf);
+  font-weight: 800;
+}
+
+html{
+  font-size: 18px;
+}
 
 body{
   font-family: Akrobat, sans-serif;
-  font-size: 18px;
+  font-size: inherit;
 }
 
 //VIDEO CONTENT
 
 #set-height {
   display: block;
-  height: 30000px;
+  height: 27000px;
 }
 #v0 {
   position: fixed;
@@ -110,14 +125,14 @@ body{
   z-index: 20;
 }
 .controls #progress-bar{
- background-color: rgba(0,0,0,.9);
- width: 250px;
- height: 3px;
- transform: rotate(90deg);
- margin-left: -124px;
- margin-top: 123px;
- position: absolute;
- z-index: -1;
+  background-color: rgba(0,0,0,.9);
+  width: 250px;
+  height: 3px;
+  transform: rotate(90deg);
+  margin-left: -124px;
+  margin-top: 123px;
+  position: absolute;
+  z-index: -1;
 }
 .controls ul{
   list-style: none;
@@ -163,7 +178,6 @@ audio, canvas, progress, video {
   position: relative;
   z-index: 2;
   /* margin-top: 47000px; */
-  height: 1000px;
   background-color: #f2f2f2;
 }
 
@@ -197,7 +211,8 @@ audio, canvas, progress, video {
     color: @white;
     margin-top: 0px;
     margin-bottom: 40px;
-    font-size: 34px;
+    .font-size(34);
+    // font-size: 34px;
     line-height: 48px;
     letter-spacing: 4px;
     font-weight: 400;
@@ -207,5 +222,108 @@ audio, canvas, progress, video {
       color: @cyan;
     }
   }
+  p{
+    font-family: Gilroy;
+    font-weight: 300;
+    line-height: 26px;
+    color: @text;
+    padding-right: 15%;
+    margin-bottom: 50px;
+  }
 }
-
+.btn{
+  position: relative;
+  &.standart{
+    border: 1px solid @cyan;
+    color: @white;
+    padding: 16px 26px;
+    border-radius: 0px;
+    .font-size(16);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    .lt{
+      position: absolute;
+      line-height: normal;
+      top: -12px;
+      left: -4px;
+    }
+    .rt{
+      position: absolute;
+      line-height: normal;
+      top: -12px;
+      right: -6px;
+    }
+    .lb{
+      position: absolute;
+      line-height: normal;
+      bottom: -8px;
+      left: -4px;
+    }
+    .rb{
+      position: absolute;
+      line-height: normal;
+      bottom: -8px;
+      right: -6px;
+    }
+  }
+}
+.keyfeatures-block{
+  width: 100%;
+  height: 100vh;
+  letter-spacing: -0.35em;
+  .item{
+    width: 25%;
+    height: 100%;
+    color: @white;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    letter-spacing: normal;
+    background-image: url(../img/f3.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all .35s ease-out;
+    &.f1{
+      background-image: url(../img/f1.jpg);
+    }
+    &.f2{
+      background-image: url(../img/f2.jpg);
+    }
+    &.f3{
+      background-image: url(../img/f3.jpg);
+    }
+    &.f4{
+      background-image: url(../img/f4.jpg);
+    }
+    &.hovered{
+      width: 40%!important;
+    }
+    &.another-hovered{
+      width: 20%;
+    }
+    .gray-bg{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: fade(@black, 55%);
+      transition: all .35s ease-in;
+      z-index: 1;
+    }
+    &:hover .gray-bg{
+      background-color: transparent;
+    }
+    .content{
+      position: absolute;
+      z-index: 2;
+      line-height: 100vh;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      h2{
+        text-transform: uppercase;
+        .font-size(38);
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

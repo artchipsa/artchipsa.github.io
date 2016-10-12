@@ -10,6 +10,10 @@ html
 				h2 Мы разрабатываем беспилотную авиационную технику #[span «под ключ»]
 				p От конструкции, до системы управления, связи и полезной нагрузки. Имеем серийные изделия: DELTA-M GAMMA
 				a.btn.standart(href="#") Перейти в каталог
+					span.lt +
+					span.rt +
+					span.lb +
+					span.rb +
 			div.second.video-message
 				h2 Второй появивщийся заголовок
 				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores enim repellendus illum, officiis fuga nemo amet quaerat quam nulla nobis! Totam dolorum officia vitae debitis modi libero, doloribus repellat eveniet.
@@ -32,8 +36,26 @@ html
 					a.point.p4(href="")
 		div.divvideo
 			video#v0(tabindex="0", autobuffer="autobuffer", preload="auto", muted)
-				source(type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"', src="Sample_1_720_2_3_29_main_3.mp4")
-				source(type='video/webm; codecs="vp8, vorbis"', src="Sample_1_720_2_3_29_main_3.webm")
+				source(type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"', src="Test_all.mp4")
+				//- source(type='video/webm; codecs="vp8, vorbis"', src="Sample_1_720_2_3_29_main_3.webm")
 		div.main-content
+			.keyfeatures-block
+				a(href="#").item.f1
+					.gray-bg
+					.content
+						h2 Беспилотные<br> летательные<br> аппараты
+				a(href="#").item.f2
+					.gray-bg
+					.content
+						h2 Системы связи
+				a(href="#").item.f3
+					.gray-bg
+					.content
+						h2 системы автопилотирования
+				a(href="#").item.f4
+					.gray-bg
+					.content
+						h2 двигатели
+
 
 		include modules/footer.jade
