@@ -141,7 +141,7 @@ $(document).ready(function(){
 
 
   // ---- Values you can tweak: ----
-  var accelamount = 0.1; //How fast the video will try to catch up with the target position. 1 = instantaneous, 0 = do nothing.
+  var accelamount = 0.79; //How fast the video will try to catch up with the target position. 1 = instantaneous, 0 = do nothing.
 
   // pause video on load
   vid.pause();
