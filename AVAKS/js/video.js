@@ -8,13 +8,6 @@ $(document).ready(function(){
 
   var vid = document.getElementById('v0');
   var windowheight = $(window).height();
-
-  var scrollpos = window.pageYOffset/400;
-  var targetscrollpos = scrollpos;
-  var accel = 0;
-  var accelamount = 0; //How fast the video will try to catch up with the target position. 1 = instantaneous, 0 = do nothing.
-  var bounceamount = 0.8; //value from 0 to 1 for how much backlash back and forth you want in the easing. 0 = no bounce whatsoever, 1 = lots and lots of bounce
-
   //мотаем видео от начала до конца, пока висит прелоадер
   setTimeout(function(){
       window.scrollBy(0, 40000);
@@ -140,20 +133,20 @@ $(document).ready(function(){
   var vid = document.getElementById('v0');
   var windowheight = $(window).height();
 
-  var scrollpos = window.pageYOffset/400;
+  var scrollpos = window.pageYOffset/350;
   var targetscrollpos = scrollpos;
   var accel = 0;
 
   // ---- Values you can tweak: ----
   var accelamount = 0; //How fast the video will try to catch up with the target position. 1 = instantaneous, 0 = do nothing.
-  var bounceamount = 0.8; //value from 0 to 1 for how much backlash back and forth you want in the easing. 0 = no bounce whatsoever, 1 = lots and lots of bounce
+  var bounceamount = 0.9; //value from 0 to 1 for how much backlash back and forth you want in the easing. 0 = no bounce whatsoever, 1 = lots and lots of bounce
 
   // pause video on load
   vid.pause();
    
   window.onscroll = function(){
       //Set the video position that we want to end up at:
-      targetscrollpos = window.pageYOffset/400;
+      targetscrollpos = window.pageYOffset/350;
       updateProgressBar();
   };
   //Progress bar
