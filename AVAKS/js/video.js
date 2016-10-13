@@ -141,36 +141,11 @@ $(document).ready(function(){
 
 
   // ---- Values you can tweak: ----
-  var accelamount = 0.59; //How fast the video will try to catch up with the target position. 1 = instantaneous, 0 = do nothing.
+  var accelamount = 0.69; //How fast the video will try to catch up with the target position. 1 = instantaneous, 0 = do nothing.
 
   // pause video on load
   vid.pause();
-  
-  //Test for new technique
-  // shim layer with setTimeout fallback
-  window.requestAnimFrame = (function(){
-    return  window.requestAnimationFrame       ||
-            window.webkitRequestAnimationFrame ||
-            window.mozRequestAnimationFrame    ||
-            function( callback ){
-              window.setTimeout(callback, 1000 / 60);
-            };
-  })();
-
-
-  (function animloop(){
-    requestAnimFrame(animloop);
-    //Accelerate towards the target:
-    scrollpos += (targetscrollpos - scrollpos)*accelamount;
-
-
-    //update video playback
-    vid.currentTime = scrollpos;
-    vid.pause();
-  })(); 
-
-
-
+   
   window.onscroll = function(){
       //Set the video position that we want to end up at:
       targetscrollpos = window.pageYOffset/400;
@@ -187,7 +162,7 @@ $(document).ready(function(){
       }
   }
 
-/*  setInterval(function(){  
+  setInterval(function(){  
           
         
       //Accelerate towards the target:
@@ -198,11 +173,8 @@ $(document).ready(function(){
       vid.currentTime = scrollpos;
       vid.pause();
       
-  }, 40);  */
+  }, 40);  
 });
-
-
-
 
 //video resize
 $(function () {
