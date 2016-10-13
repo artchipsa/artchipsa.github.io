@@ -4,9 +4,25 @@ var images = [];
 var length = $('#load').data('img');
 //preloader
 setTimeout(function(){
+    window.scrollBy(0, 40000);
+},1500);
+
+setTimeout(function(){
+    $(window).scrollTop(0);
+}, 2000);
+
+setTimeout(function(){
+    window.scrollBy(0, 40000);
+},3000);
+
+setTimeout(function(){
+    $(window).scrollTop(0);
+}, 4000);  
+
+setTimeout(function(){
     $('.preloader').fadeOut();
     window.preventAction = false;
-},2000);
+},5000);
 
 // THIS LOOKS AT THE DATA ATTRIBUTES IN THE load element AND GENERATES 
 // THE IMAGE NAMES BASED ON A GIVEN RANGE 
