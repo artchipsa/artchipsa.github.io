@@ -28,7 +28,7 @@ setTimeout(function(){
 // THE IMAGE NAMES BASED ON A GIVEN RANGE 
 // THEN PUSHES THEM INTO THE ARRAY
 for (var i = 1; i <= length; i++) {
-    images.push('Track/1_' + i + '.jpg');
+    images.push('Track/Track_' + i + '.jpg');
 }
 
 
