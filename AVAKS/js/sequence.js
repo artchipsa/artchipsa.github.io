@@ -21,6 +21,12 @@ setTimeout(function(){
 // THEN PUSHES THEM INTO THE ARRAY
 for (var i = 1; i <= length; i++) {
     images.push('Track/Track_' + i + '.jpg');
+    var image = document.images[0];
+    var downloadingImage = new Image();
+    downloadingImage.onload = function(){
+        image.src = this.src;   
+    };
+    downloadingImage.src = "Track/Track_' + i + '.jpg";
 }
 
 
