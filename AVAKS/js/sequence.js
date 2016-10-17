@@ -2,14 +2,6 @@
 // Array of images to swap between
 var images = [];
 var length = $('#load').data('img');
-/*//preloader
-setTimeout(function(){
-    window.scrollBy(0, 40000);
-},1500);
-
-setTimeout(function(){
-    $(window).scrollTop(0);
-}, 2000);*/
 
 setTimeout(function(){
     $('.preloader').fadeOut();
@@ -47,11 +39,6 @@ viewport.on('scroll', function () {
     // Show the corresponding image from the array
     $('.divvideo img').attr('src', images[i]);
     //$('b').text('Frame: ' + i);
-
-    // IN THIS EXAMPLE WE WANT TO START OUR IMAGE SEQUENCE AT 160 AND ADVANCE TO THE NEXT IMAGE
-    // AFTER WE SCROLL 20 PIXELS
-    slowdown = Math.ceil(viewport.scrollTop() / 20);
-
 
 
     // THIS IS WHERE WE'RE SETTING OUR ACTIVE STATES FOR THE SIDE NAVIGATION BASED ON 
