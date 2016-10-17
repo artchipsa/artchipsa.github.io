@@ -12,17 +12,9 @@ setTimeout(function(){
 }, 2000);
 
 setTimeout(function(){
-    window.scrollBy(0, 40000);
-},3000);
-
-setTimeout(function(){
-    $(window).scrollTop(0);
-}, 4000);  
-
-setTimeout(function(){
     $('.preloader').fadeOut();
     window.preventAction = false;
-},5000);
+},5500);
 
 // THIS LOOKS AT THE DATA ATTRIBUTES IN THE load element AND GENERATES 
 // THE IMAGE NAMES BASED ON A GIVEN RANGE 
