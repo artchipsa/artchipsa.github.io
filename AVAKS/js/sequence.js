@@ -2,14 +2,14 @@
 // Array of images to swap between
 var images = [];
 var length = $('#load').data('img');
-//preloader
+/*//preloader
 setTimeout(function(){
     window.scrollBy(0, 40000);
 },1500);
 
 setTimeout(function(){
     $(window).scrollTop(0);
-}, 2000);
+}, 2000);*/
 
 setTimeout(function(){
     $('.preloader').fadeOut();
@@ -21,12 +21,6 @@ setTimeout(function(){
 // THEN PUSHES THEM INTO THE ARRAY
 for (var i = 1; i <= length; i++) {
     images.push('Track/Track_' + i + '.jpg');
-    var image = document.images[0];
-    var downloadingImage = new Image();
-    downloadingImage.onload = function(){
-        image.src = this.src;   
-    };
-    downloadingImage.src = "Track/Track_' + i + '.jpg";
 }
 
 
@@ -38,7 +32,6 @@ $(images).each(function () {
 
 
 var totalImages = images.length;
-console.log('totalImages', totalImages);
 
 var pageHeight = $(document).height();
 
@@ -51,7 +44,6 @@ var viewport = $(window),
 viewport.on('scroll', function () {
     // Which one should we show at this scroll point?
     i = Math.floor($(this).scrollTop() / scrollInterval);
-    console.log('i', i);
     // Show the corresponding image from the array
     $('.divvideo img').attr('src', images[i]);
     //$('b').text('Frame: ' + i);
