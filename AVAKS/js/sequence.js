@@ -17,7 +17,6 @@ console.log(fill);*/
 //TEST
 $.preloadImages = function() {
   for (var i = 2; i < arguments.length-2; i++) {
-    $("<img />").attr("src", arguments[0]+'Track_'+arguments[i]+arguments[1]);
     images.push(arguments[0]+'Track_'+arguments[i]+arguments[1]);
   }
 }
@@ -32,14 +31,14 @@ $.preloadImages("Track3/", ".jpg", "607","608","609","610","611","612","613","61
 // THEN PUSHES THEM INTO THE ARRAY
 for (var i = 1; i <= length; i++) {
     images.push('Track/Track_' + i + '.jpg');
-}
+}*/
 
 
 // THIS TAKES EACH IMAGE NAME FROM THE ARRAY AND CREATES A CLUSTER OF
 // PRELOADED HIDDEN IMAGES ON THE PAGE USING JQUERY
 $(images).each(function () {
     $('<img />')[0].src = this;
-});*/
+});
 
 
 var totalImages = images.length;
