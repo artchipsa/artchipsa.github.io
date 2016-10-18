@@ -34,17 +34,24 @@ $.preloadImages("Track3/", ".jpg", "607","608","609","610","611","612","613","61
 // THIS LOOKS AT THE DATA ATTRIBUTES IN THE load element AND GENERATES 
 // THE IMAGE NAMES BASED ON A GIVEN RANGE 
 // THEN PUSHES THEM INTO THE ARRAY
-for (var i = 1; i <= length; i++) {
+var i = 0;
+for (i = 1; i <= 450; i++) {
     images.push('Track/Track_' + i + '.jpg');
+    preload();
 }
-
+for (i = 451; i <= 700; i++){
+    images.push('Track/Track_' + i + '.jpg');
+    preload();    
+}
 
 // THIS TAKES EACH IMAGE NAME FROM THE ARRAY AND CREATES A CLUSTER OF
 // PRELOADED HIDDEN IMAGES ON THE PAGE USING JQUERY
-$(images).each(function () {
-    $('<img />')[0].src = this;
-});
 
+function preload(){
+    $(images).each(function () {
+        $('<img />')[0].src = this;
+    });
+}
 
 var totalImages = images.length;
 
