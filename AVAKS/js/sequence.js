@@ -11,11 +11,10 @@ setTimeout(function(){
     $(window).scrollTop(0);
 }, 2000);
 
-$(window).load(function(){
+setTimeout(function(){
     $('.preloader').fadeOut();
     window.preventAction = false;
-});
-
+},6800);
 
 
 /*var fill = "";
