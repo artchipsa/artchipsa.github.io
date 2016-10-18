@@ -4,14 +4,6 @@ var images = [];
 var length = $('#load').data('img');
 
 setTimeout(function(){
-    window.scrollBy(0, 40000);
-},1500);
-
-setTimeout(function(){
-    $(window).scrollTop(0);
-}, 2000);
-
-setTimeout(function(){
     $('.preloader').fadeOut();
     window.preventAction = false;
 },6800);
