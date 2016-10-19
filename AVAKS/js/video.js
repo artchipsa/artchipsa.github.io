@@ -14,10 +14,6 @@ $(document).ready(function(){
   },1500);
 
   setTimeout(function(){
-    $(window).scrollTop(0);
-  }, 2000);
-
-  setTimeout(function(){
       window.scrollBy(0, 40000);
   },3000);
 
