@@ -9,7 +9,7 @@ $(document).ready(function(){
   var vid = document.getElementById('v0');
   var windowheight = $(window).height();
   //мотаем видео от начала до конца, пока висит прелоадер
-  setTimeout(function(){
+/*  setTimeout(function(){
       window.scrollBy(0, 40000);
   },1500);
 
@@ -24,8 +24,8 @@ $(document).ready(function(){
   setTimeout(function(){
     $('.preloader').fadeOut();
     window.preventAction = false;
-  },5000);
-
+  },2000);
+*/
 
   //появление всякой всячины
   $(window).scroll(function(){  

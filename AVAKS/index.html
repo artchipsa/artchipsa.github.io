@@ -2,65 +2,303 @@
 <html>
   <head>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css"/>
     <link rel="stylesheet" href="css/animate.css"/>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
   </head>
   <body>
-    <div class="preloader">loading...</div>
     <div style="position: absolute; width: 100%; height: 100%; background: #000; display:none;" class="black"></div>
     <div id="load" data-img="1757"></div>
     <div id="set-height"></div>
+    <header>
+      <div class="container-r">
+        <div class="row">
+          <div class="col-md-4 vcenter header-logo"><img src="img/logo.svg" alt="" class="logo"/></div>
+          <div class="col-md-4 vcenter center header-text"><span class="logo-text">Автономные аэрокосмические системы</span></div>
+          <div class="col-md-4 col-sm-12 col-xs-12 vcenter menu-block">
+            <div class="menu"><span class="burger-bar"></span><span class="burger-bar"></span><span class="burger-bar"></span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="mouse"><img src="img/mouse.png" alt="" class="floating"/><span>Крутите<br> колесиком</span></div>
+    <div class="line-block">
+      <div class="big-lines"></div>
+      <div class="big-lines"></div>
+      <div class="big-lines">
+        <div class="circle"><span></span></div>
+      </div>
+      <div class="little-lines"><span>+ </span></div>
+      <div class="little-lines"><span>+</span></div>
+    </div>
     <div class="info">
-      <div class="first video-message">
-        <h2>Мы разрабатываем беспилотную авиационную технику <span>«под ключ»</span></h2>
+      <div data-id="0" class="animated m0 first video-message">
+        <h2>Беспилотная авиационная техника <span>«под ключ»</span></h2>
         <p>От конструкции, до системы управления, связи и полезной нагрузки. Имеем серийные изделия: DELTA-M GAMMA</p><a href="#" class="btn standart">Перейти в каталог<span class="lt">+</span><span class="rt">+</span><span class="lb">+</span><span class="rb">+</span></a>
       </div>
-      <div class="second video-message">
+      <div data-id="1" class="animated m1 second video-message">
         <h2>Второй появивщийся заголовок</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores enim repellendus illum, officiis fuga nemo amet quaerat quam nulla nobis! Totam dolorum officia vitae debitis modi libero, doloribus repellat eveniet.</p>
       </div>
-      <div class="third video-message">
+      <div data-id="2" class="animated m2 third video-message">
         <h2>Третий появивщийся заголовок</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aliquam veniam deleniti dolore. Facilis dolorum explicabo natus ut quam labore, sapiente magni quidem vitae quis error fugiat, dolor, quo molestiae.</p>
       </div>
-      <div class="four video-message">
+      <div data-id="3" class="animated m3 four video-message">
         <h2>Четвертый появивщийся заголовок</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, ipsam, rerum facere unde ratione ab. Amet dicta magnam laudantium consequatur ab quaerat labore corporis culpa consectetur facere, cupiditate, illo cum!</p>
       </div>
     </div>
-    <div class="controls">
-      <progress id="progress-bar" min="0" max="100" value="0"></progress>
+    <div class="new-controlls">
+      <div class="axis"></div>
       <ul>
-        <li><a href="#" class="point p1"></a></li>
-        <li><a href="" class="point p2"></a></li>
-        <li><a href="" class="point p3"></a></li>
-        <li><a href="" class="point p4"></a></li>
+        <li>
+          <div data-id="0" class="li-cont p0"><a href="#" class="section">
+              <div class="fill"></div></a><span class="section-number animated">01</span><span class="section-name animated">особенности</span></div>
+        </li>
+        <li>
+          <div data-id="1" class="li-cont p1"><a href="#" class="section">
+              <div class="fill"></div></a><span class="section-number animated">02</span><span class="section-name animated">супер самолетики</span></div>
+        </li>
+        <li>
+          <div data-id="2" class="li-cont p2"><a href="#" class="section">
+              <div class="fill"></div></a><span class="section-number animated">03</span><span class="section-name animated">кайфуха небес</span></div>
+        </li>
+        <li>
+          <div data-id="3" class="li-cont p3"><a href="#" class="section">
+              <div class="fill"></div></a><span class="section-number animated">04</span><span class="section-name animated">небольшой расход</span></div>
+        </li>
       </ul>
     </div>
     <div class="divvideo"><img async src="Track1/Track_0.jpg" /></div>
+    <div class="mobile-block">
+      <div class="container-fluid"></div>
+    </div>
     <div class="main-content">
       <div class="keyfeatures-block"><a href="#" class="item f1">
-          <div class="gray-bg"></div>
-          <div class="content">
-            <h2>Беспилотные<br> летательные<br> аппараты</h2>
-          </div></a><a href="#" class="item f2">
-          <div class="gray-bg"></div>
-          <div class="content">
-            <h2>Системы связи</h2>
-          </div></a><a href="#" class="item f3">
-          <div class="gray-bg"></div>
-          <div class="content">
-            <h2>системы автопилотирования</h2>
-          </div></a><a href="#" class="item f4">
-          <div class="gray-bg"></div>
-          <div class="content">
-            <h2>двигатели</h2>
+          <div class="number-container"><span class="blue-line"></span><span class="number">01</span></div>
+          <div class="text-container">
+            <h2>Беспилотные летательные аппараты</h2>
+            <p>Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности</p>
+          </div></a><a href="#" class="item f1">
+          <div class="number-container"><span class="blue-line"></span><span class="number">02</span></div>
+          <div class="text-container">
+            <h2>Cредства <br> связи</h2>
+            <p>Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности</p>
+          </div></a><a href="#" class="item f1">
+          <div class="number-container"><span class="blue-line"></span><span class="number">03</span></div>
+          <div class="text-container">
+            <h2>Авионика</h2>
+            <p>Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности</p>
+          </div></a><a href="#" class="item f1">
+          <div class="number-container"><span class="blue-line"></span><span class="number">04</span></div>
+          <div class="text-container">
+            <h2>Системы <br> связи</h2>
+            <p>Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности</p>
           </div></a></div>
+      <div class="tech-task">
+        <div class="container-fluid"><img src="img/tech.jpg" alt="" class="blueprint"/>
+          <div class="line-block">
+            <div class="big-lines"></div>
+            <div class="big-lines"></div>
+            <div class="little-lines"><span>+</span></div>
+            <div class="little-lines">
+              <div class="circle"><span></span></div>
+            </div>
+            <div class="little-lines"><span>+</span></div>
+            <div class="diagonal-lines"></div>
+          </div>
+          <div class="row tech-row">
+            <div class="col-md-offset-6 col-md-6">
+              <div class="tt-info">
+                <h2 class="title">Техническое задания</h2>
+                <p>Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности</p><a href="#" class="btn standart invert">отправить техническое задание <span class="lt">+</span><span class="rt">+</span><span class="lb">+</span><span class="rb">+</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="turns-block">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+              <h2 class="title">Услуги</h2>
+              <div class="turn-tabs">
+                <div class="turn-head">
+                  <div class="line">
+                    <div class="handler"><span></span></div>
+                  </div><a href="#" data-id="1" class="active">01 <br> горное дело</a><a href="#" data-id="2">02 <br> геодезия</a><a href="#" data-id="3">03 <br> дорожное хозяйство</a><a href="#" data-id="4">04 <br> строительство</a><a href="#" data-id="5">05 <br> земледелие</a><a href="#" data-id="6">06 <br> спутниковая съемка</a><a href="#" data-id="1" class="mobile active"> </a><a href="#" data-id="2" class="mobile"> </a><a href="#" data-id="3" class="mobile"> </a><a href="#" data-id="4" class="mobile"> </a><a href="#" data-id="5" class="mobile"> </a><a href="#" data-id="6" class="mobile"> </a>
+                </div>
+                <div class="turn-body">
+                  <div class="turn-tab tab1 active">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="turn-content animated">
+                          <h2 class="subtitle">Горное дело</h2>
+                          <p>Технология мониторинга открытых горных работ с использованием БПЛА готова к внедрению и предлагает заказчикам следующие услуги:</p><a href="#" class="btn standart black">читать подробнее<span class="lt">+</span><span class="rt">+</span><span class="lb">+</span><span class="rb">+</span></a>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="turn-img animated"><img src="img/turn1.jpg" alt=""/></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turn-tab tab2">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="turn-content animated">
+                          <h2 class="subtitle">Горное дело</h2>
+                          <p>Технология мониторинга открытых горных работ с использованием БПЛА готова к внедрению и предлагает заказчикам следующие услуги:</p><a href="#" class="btn standart black">читать подробнее<span class="lt">+</span><span class="rt">+</span><span class="lb">+</span><span class="rb">+</span></a>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="turn-img animated"><img src="img/turn1.jpg" alt=""/></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turn-tab tab3">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="turn-content animated">
+                          <h2 class="subtitle">Горное дело</h2>
+                          <p>Технология мониторинга открытых горных работ с использованием БПЛА готова к внедрению и предлагает заказчикам следующие услуги:</p><a href="#" class="btn standart black">читать подробнее<span class="lt">+</span><span class="rt">+</span><span class="lb">+</span><span class="rb">+</span></a>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="turn-img animated"><img src="img/turn1.jpg" alt=""/></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turn-tab tab4">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="turn-content animated">
+                          <h2 class="subtitle">Горное дело</h2>
+                          <p>Технология мониторинга открытых горных работ с использованием БПЛА готова к внедрению и предлагает заказчикам следующие услуги:</p><a href="#" class="btn standart black">читать подробнее<span class="lt">+</span><span class="rt">+</span><span class="lb">+</span><span class="rb">+</span></a>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="turn-img animated"><img src="img/turn1.jpg" alt=""/></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turn-tab tab5">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="turn-content animated">
+                          <h2 class="subtitle">Горное дело</h2>
+                          <p>Технология мониторинга открытых горных работ с использованием БПЛА готова к внедрению и предлагает заказчикам следующие услуги:</p><a href="#" class="btn standart black">читать подробнее<span class="lt">+</span><span class="rt">+</span><span class="lb">+</span><span class="rb">+</span></a>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="turn-img animated"><img src="img/turn1.jpg" alt=""/></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turn-tab tab6">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="turn-content animated">
+                          <h2 class="subtitle">Горное дело</h2>
+                          <p>Технология мониторинга открытых горных работ с использованием БПЛА готова к внедрению и предлагает заказчикам следующие услуги:</p><a href="#" class="btn standart black">читать подробнее<span class="lt">+</span><span class="rt">+</span><span class="lb">+</span><span class="rb">+</span></a>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="turn-img animated"><img src="img/turn1.jpg" alt=""/></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="news-block">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+              <h2 class="title">Статьи и новости</h2>
+              <div id="frame" class="news-feed">
+                <ul class="slidee">
+                  <li><a href="#" class="news-item">
+                      <div class="time">1 мая 2016</div><img src="img/new1.jpg" alt=""/>
+                      <div class="news-content">
+                        <h2 class="news-title">международная авиационная конференция в москве 2016</h2>
+                        <p>Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности</p>
+                      </div></a></li>
+                  <li><a href="#" class="news-item">
+                      <div class="time">1 мая 2016</div><img src="img/new1.jpg" alt=""/>
+                      <div class="news-content">
+                        <h2 class="news-title">международная авиационная конференция в москве 2016</h2>
+                        <p>Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности</p>
+                      </div></a></li>
+                  <li><a href="#" class="news-item">
+                      <div class="time">1 мая 2016</div><img src="img/new1.jpg" alt=""/>
+                      <div class="news-content">
+                        <h2 class="news-title">международная авиационная конференция в москве 2016</h2>
+                        <p>Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности</p>
+                      </div></a></li>
+                  <li><a href="#" class="news-item">
+                      <div class="time">1 мая 2016</div><img src="img/new1.jpg" alt=""/>
+                      <div class="news-content">
+                        <h2 class="news-title">международная авиационная конференция в москве 2016</h2>
+                        <p>Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности</p>
+                      </div></a></li>
+                  <li><a href="#" class="news-item">
+                      <div class="time">1 мая 2016</div><img src="img/new1.jpg" alt=""/>
+                      <div class="news-content">
+                        <h2 class="news-title">международная авиационная конференция в москве 2016</h2>
+                        <p>Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности</p>
+                      </div></a></li>
+                  <li><a href="#" class="news-item">
+                      <div class="time">1 мая 2016</div><img src="img/new1.jpg" alt=""/>
+                      <div class="news-content">
+                        <h2 class="news-title">международная авиационная конференция в москве 2016</h2>
+                        <p>Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности</p>
+                      </div></a></li>
+                </ul>
+              </div>
+              <div class="scrollbar">
+                <div class="handle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="partners-block">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+              <div class="row">
+                <div class="col-lg-3 col-md-2">
+                  <h2 class="title-partners">Нам доверяют</h2>
+                </div>
+                <div class="col-lg-9 col-md-10"><a href="#" target="_blank" class="partner-img"><img src="img/pp1.jpg" alt=""/></a><a href="#" target="_blank" class="partner-img"><img src="img/pp4.jpg" alt=""/></a><a href="#" target="_blank" class="partner-img"><img src="img/pp1.jpg" alt=""/></a><a href="#" target="_blank" class="partner-img"><img src="img/pp4.jpg" alt=""/></a><a href="#" target="_blank" class="partner-img"><img src="img/pp1.jpg" alt=""/></a></div>
+              </div>
+              <div class="partners-line"></div>
+              <div class="row">
+                <div class="col-lg-3 col-md-2">
+                  <h2 class="title-partners">Наc поддер<wbr>живают</h2>
+                </div>
+                <div class="col-lg-9 col-md-10"><a href="#" target="_blank" class="partner-img"><img src="img/pp1.jpg" alt=""/></a><a href="#" target="_blank" class="partner-img"><img src="img/pp4.jpg" alt=""/></a><a href="#" target="_blank" class="partner-img"><img src="img/pp1.jpg" alt=""/></a><a href="#" target="_blank" class="partner-img"><img src="img/pp4.jpg" alt=""/></a><a href="#" target="_blank" class="partner-img"><img src="img/pp1.jpg" alt=""/></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="map"></div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/utils/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="js/sly.js"></script>
     <script src="js/sequence.js"></script>
     <script src="js/main.js"></script>
   </body>
