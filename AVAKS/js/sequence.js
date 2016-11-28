@@ -36,6 +36,8 @@ $.preloadImages("Track3/", ".jpg", "607","608","609","610","611","612","613","61
 // THEN PUSHES THEM INTO THE ARRAY
 for (var i = 1; i <= length; i++) {
     images.push('Track/Track_' + i + '.jpg');
+    img = new Image();
+    img.src = "'Track/Track_' + i + '.jpg'";
 }
 
 
