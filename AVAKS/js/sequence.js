@@ -4,14 +4,14 @@ var images = [];
 var length = $('#load').data('img');
 
 
-/*setTimeout(function(){
+setTimeout(function(){
     $(window).scrollTop(0);
 }, 500);
 
 setTimeout(function(){
     $('.preloader').fadeOut();
     window.preventAction = false;
-},6800);*/
+},6800);
 
 
 /*var fill = "";
