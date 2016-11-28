@@ -11,7 +11,7 @@ setTimeout(function(){
 setTimeout(function(){
     $('.preloader').fadeOut();
     window.preventAction = false;
-},6800);
+},12800);
 
 
 /*var fill = "";

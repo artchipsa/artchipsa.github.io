@@ -52,6 +52,12 @@ body{
 p,span,a,h1,h2,h3,{
   letter-spacing: normal!important;
 }
+canvas{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
 //VIDEO CONTENT
 
 #set-height {
@@ -173,7 +179,7 @@ audio, canvas, progress, video {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #333;
+  background-color: @white;
   text-align: center;
   display: block;
   z-index: 999;

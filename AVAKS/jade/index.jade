@@ -1,7 +1,8 @@
 html
 	include modules/head.jade
 	body
-		//- div.preloader loading...
+		div.preloader
+			canvas#scene Загрузка...
 		div.black(style="position: absolute; width: 100%; height: 100%; background: #000; display:none;")
 		div#load(data-img="1757")
 		div#set-height

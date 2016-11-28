@@ -50,6 +50,12 @@ h2,
 h3 {
   letter-spacing: normal!important;
 }
+canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 #set-height {
   display: block;
   height: 27000px;
@@ -172,7 +178,7 @@ video {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #333;
+  background-color: #fff;
   text-align: center;
   display: block;
   z-index: 999;
