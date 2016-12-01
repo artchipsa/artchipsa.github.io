@@ -1,3 +1,12 @@
+/*setTimeout(function(){
+    $(window).scrollTop(0);
+}, 500);
+
+setTimeout(function(){
+    $('.preloader').fadeOut();
+    window.preventAction = false;
+},12800);*/
+
 var canvas = document.getElementById('scene'),
 	ctx = canvas.getContext('2d'),
 	particles = [];

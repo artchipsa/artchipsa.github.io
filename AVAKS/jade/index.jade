@@ -1,8 +1,42 @@
 html
 	include modules/head.jade
 	body(onload="sequencePreload();")
-		div.preloader
+		//- div.preloader
 			canvas#scene Загрузка...
+		.main-menu
+			div.line-block
+				.big-lines
+				.big-lines
+				.big-lines
+					div.circle
+						span
+				.little-lines
+					span + 
+				.little-lines
+					span +
+			.container-fluid.menu-content
+				.menu-list
+					ul
+						li
+							a(href="#") ТЕХНИЧЕСКОЕ ЗАДАНИЕ
+								span.blue-line
+						li
+							a(href="#") УСЛУГИ
+								span.blue-line
+						li
+							a(href="#") ВИДЫ ТЕХНИКИ
+								span.blue-line
+						li
+							a(href="#") СТАТЬИ И НОВОСТИ
+								span.blue-line
+						li
+							a(href="#") КОНТАКТЫ
+								span.blue-line
+			.social
+				a(href="#", target="_blank") VKONTAKTE
+				a(href="#", target="_blank") facebook
+				a(href="#", target="_blank") twitter
+				a(href="#", target="_blank") instagram
 		div.black(style="position: absolute; width: 100%; height: 100%; background: #000; display:none;")
 		div#load(data-img="1757")
 		div#set-height
@@ -88,6 +122,15 @@ html
 				//- source(type='video/webm; codecs="vp8, vorbis"', src="Sample_1_720_2_3_29_main_3.webm")
 		div.mobile-block
 			div.container-fluid
+				div.info
+					div.animated.m0.first.video-message(data-id="0")
+						h2 Беспилотная авиационная техника #[span «под ключ»]
+						p От конструкции, до системы управления, связи и полезной нагрузки. Имеем серийные изделия: DELTA-M GAMMA
+						a.btn.standart(href="#") Перейти в каталог
+							span.lt +
+							span.rt +
+							span.lb +
+							span.rb +
 		div.main-content
 			.keyfeatures-block
 				a(href="#").item.f1
@@ -120,7 +163,8 @@ html
 						p Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности
 			.tech-task
 				div.container-fluid
-					img.blueprint(src="img/tech.jpg", alt="")
+					img.tech.animated(src="img/tech.jpg")
+					img.blueprint.animate(src="img/UI.png", alt="")
 					.line-block
 						.big-lines
 						.big-lines

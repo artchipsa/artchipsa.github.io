@@ -3,17 +3,6 @@
 var images = [];
 var length = $('#load').data('img');
 
-
-setTimeout(function(){
-    $(window).scrollTop(0);
-}, 500);
-
-setTimeout(function(){
-    $('.preloader').fadeOut();
-    window.preventAction = false;
-},12800);
-
-
 /*var fill = "";
 for (var i = 607; i < 731; i++){
     fill = fill+'"'+i+'"'+',';
