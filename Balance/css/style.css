@@ -825,6 +825,7 @@ header.load {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 65%;
     transform: translate(-50%, -50%);
   }
   .content h2 {
