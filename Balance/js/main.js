@@ -140,16 +140,16 @@ $(document).ready(function(){
 		$(this).toggleClass('active');
 		if ($(this).hasClass('active')){
 			$('#menu').stop().fadeIn(350);
-			// setTimeout(function(){
-			// 	$('.fade').addClass('in');
-			// 	$('#menu .side').addClass('menu-in');
-			// }, 250)
+			setTimeout(function(){
+				$('.fade').addClass('in');
+				$('#menu .side').addClass('menu-in');
+			}, 250)
 		} else {
-			// $('.fade').removeClass('in');
-			// $('#menu .side').removeClass('menu-in');
-			// setTimeout(function(){
+			$('.fade').removeClass('in');
+			$('#menu .side').removeClass('menu-in');
+			setTimeout(function(){
 				$('#menu').stop().fadeOut(350);
-			// }, 1100);
+			}, 1400);
 		}
 		return false;
 	});

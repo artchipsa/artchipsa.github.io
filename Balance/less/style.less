@@ -601,7 +601,7 @@ header{
 
 #menu{
 	position: fixed;
-	background-color: @blue;
+	// background-color: @blue;
 	z-index: 20;
 	width: 100%;
 	height: 100%; 
@@ -613,47 +613,47 @@ header{
     	position: absolute;
     	left: 0;
 		transform: translateX(-100%);
-		transition: transform 800ms cubic-bezier(0.455, 0.030, 0.515, 0.955) 95s;
+		transition: transform 200ms cubic-bezier(0.245, 0.005, 0.005, 0.995) .3s;
     	&:nth-child(2n){
     		right: 0;
 			transform: translateX(100%)
     	}
-/*     	&.in{
-	transform: translateX(0);
-	transition-delay: 0s;
-	&:nth-child(2){
+    	&.in{
+    		transform: translateX(0);
+    		transition-delay: 0s;
+    		&:nth-child(2){
 	    		top: 20%;
-				transition-delay: .15s;
+				transition-delay: .10s;
 	    	}
 	    	&:nth-child(3){
 	    		top: 40%;
-				transition-delay: .3s;
+				transition-delay: .15s;
 	    	}
 	    	&:nth-child(4){
 	    		top: 60%;
-				transition-delay: .45s;
+				transition-delay: .20s;
 	    	}
 	    	&:nth-child(5){
 	    		top: 80%;
-	    		transition-delay: .60s;
+	    		transition-delay: .25s;
 	    	}
-}
-&:nth-child(2){
-	top: 20%;
-			transition: transform 800ms cubic-bezier(0.455, 0.030, 0.515, 0.955) .80s;
-}
-&:nth-child(3){
-	top: 40%;
-			transition: transform 800ms cubic-bezier(0.455, 0.030, 0.515, 0.955) .65s;
-}
-&:nth-child(4){
-	top: 60%;
-			transition: transform 800ms cubic-bezier(0.455, 0.030, 0.515, 0.955) .40s;
-}
-&:nth-child(5){
-	top: 80%;
-	transition: transform 800ms cubic-bezier(0.455, 0.030, 0.515, 0.955) .25s;
-} */
+    	}
+    	&:nth-child(2){
+    		top: 20%;
+			transition: transform 200ms cubic-bezier(0.245, 0.005, 0.005, 0.995) .25s;
+    	}
+    	&:nth-child(3){
+    		top: 40%;
+			transition: transform 200ms cubic-bezier(0.245, 0.005, 0.005, 0.995) .20s;
+    	}
+    	&:nth-child(4){
+    		top: 60%;
+			transition: transform 200ms cubic-bezier(0.245, 0.005, 0.005, 0.995) .15s;
+    	}
+    	&:nth-child(5){
+    		top: 80%;
+    		transition: transform 200ms cubic-bezier(0.245, 0.005, 0.005, 0.995) .10s;
+    	}
     }
 	ul{
 		list-style: none;
@@ -686,11 +686,11 @@ header{
 	}
 	.side{
 		transform: translate(0%)!important;
-		// opacity: 0;
+		opacity: 0;
 		transition: opacity .45s ease-out 0s;
 		&.menu-in{
 			opacity: 1;
-			transition-delay: 1s;
+			transition-delay: .2s;
 		}
 	}
 }
