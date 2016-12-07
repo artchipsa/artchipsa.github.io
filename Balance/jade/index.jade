@@ -1,0 +1,144 @@
+html
+	include modules/head.jade
+	body.pagescroll
+		include modules/header.jade
+		#menu
+			.fade
+			.fade
+			.fade
+			.fade
+			.fade
+			.side
+				ul
+					li
+						a(href="#", target="_blank") О клубе
+					li
+						a(href="#", target="_blank") Wellness 
+					li
+						a(href="#", target="_blank") Фитнес
+					li
+						a(href="#", target="_blank") Диагностика
+					li
+						a(href="#", target="_blank") SPA & косметология
+					li
+						a(href="#", target="_blank") банный комплекс
+					li
+						a(href="#", target="_blank") питание
+					li
+						a(href="#", target="_blank") контакты
+			.side
+		#faq
+			img(src="img/logoblue.svg", alt="")
+			a(href="").close
+				span
+				span
+			div.faq-content
+				h2 Задать вопрос
+				form
+					div.info-row
+						div.field
+							label(for="name") Как вас зовут?
+							input(type="text", name="name")
+						div.field		
+							label(for="contact") Ваш номер телефона или электронная почта
+							input(type="text", name="contact", required)
+					div.info-row
+						div.field.full
+							label(for="question") Текст вопроса
+							textarea(name="question", required)
+					input(type="submit", value="Отправить").btn
+
+		#navigator
+			span.where 
+			ul
+				li(data-id="0", data-where="главная").active 
+				li(data-id="1", data-where="о клубе") 
+				li(data-id="2", data-where="wellness")
+				li(data-id="3", data-where="услуги") 
+				li(data-id="4", data-where="контакты") 
+		#fullpage
+			.section.main.active(data-id="0")
+				.main-text
+					h1 balance
+					p Первый настоящий WELLNESS в Красноярске
+				a.scroll-down(href="#")
+					img(src="img/ad.png", alt="")
+					span SCROLL
+			.section.main-about(data-id="1")
+				.side
+				.side
+					div.content
+						h2 BALANCE SPORT & SPA
+						p Мы объединили проверенные технологии и усилия ведущих специалистов 4 индустрий: медицины, питания, фитнеса и спа в общее wellness пространство, чтобы обеспечить здоровье, красоту и уверенность в завтрашнем дне неравнодушным к себе людям.
+						a.btn(href="#") подробнее о клубе
+			.section.main-wellness(data-id="2")
+				.side
+					div.content
+						h2 WELLNESS – это…
+						p поддержание хорошей физической и духовной формы без сверх-напряжения, тяжелых физических нагрузок и изнурительных диет.
+						a.btn(href="#") подробнее о клубе
+				.side
+			.section.main-services(data-id="3")
+				.fullside
+					a.left(href="#")
+						img(src="img/al.png", alt="")
+						span LEFT
+					a.right(href="#")
+						img(src="img/ar.png", alt="")
+						span RIGHT
+					.owl-carousel
+						.item
+							a(href="#").s1
+							p Фитнесс
+						.item
+							a(href="#").s2 
+							p Диагностика
+						.item
+							a(href="#").s3 
+							p Банный<br> копмлекс
+						.item
+							a(href="#").s4 
+							p SPA &<br> Косметология
+						.item
+							a(href="#").s5 
+							p Питание
+
+			.section.main-footer(data-id="4")
+				.fullside
+					.footer
+						.f-content
+							.table
+								table
+									tr
+										td.label
+											span Мобильный телефон:
+										td.info
+											span + 7 934 345 34 65
+									tr
+										td.label
+											span Электронная почта: 
+										td.info
+											span balance@gmail.com
+									tr
+										td.label
+											span Городской телефон:    
+										td.info
+											span (391) 234–44–34
+									tr
+										td.label
+											span Адрес:
+										td.info
+											span г. Красноярск, ул. Маерчака, д. 123
+							.socials
+								ul
+									li
+										a(href="#", target="_blank") VKONTAKTE
+									li
+										a(href="#", target="_blank") FACEBOOK
+									li
+										a(href="#", target="_blank") TWITTER
+									li
+										a(href="#", target="_blank") INSTAGRAM
+
+
+		include modules/scripts.jade
