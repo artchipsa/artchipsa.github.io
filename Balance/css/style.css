@@ -268,7 +268,7 @@ header.load {
   transition: bottom 0.45s cubic-bezier(0.245, 0, 0, 1.005) 0.3s, transform 0.45s cubic-bezier(0.245, 0, 0, 1.005), width 0.45s cubic-bezier(0.245, 0, 0, 1.005);
 }
 .menu.active span {
-  background: 0 0;
+  background: 0 0!important;
 }
 .menu.active span:after {
   bottom: 0px;
