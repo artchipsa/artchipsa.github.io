@@ -1,0 +1,270 @@
+html
+	include modules/head.jade
+	body.pagescroll.fullscroll
+		include modules/header.jade
+		include modules/menu.jade
+		include modules/faq.jade
+		#navigator
+			span.where 
+			ul
+				li(data-id="0", data-where="фитнес").active 
+				li(data-id="1", data-where="тренажерный зал") 
+				li(data-id="2", data-where="фитнес тренеры")
+				li(data-id="3", data-where="групповые занятия") 
+				li(data-id="4", data-where="групповые тренеры")
+				li(data-id="5", data-where="бассейн")
+				li(data-id="6", data-where="бассейн тренеры")
+				li(data-id="7", data-where="контакты")
+
+		#fullpage
+			.section.main.active.serv-main(data-id="0")
+				.main-text
+					h1 Фитнес
+					p Balance – это великолепный wellness–комплекс общей площадью 2 000 м2, который включает в себя спа-центр, бассейн, сауны, бани, купели с теплой и холодной водой, тропический душ, зоны отдыха, студию красоты, фитобар, фитнес-центр, оборудованный тренажерами Technogym 
+				a.scroll-down(href="#")
+					img(src="img/da.png", alt="")
+					span SCROLL
+			.section(data-id="1")
+				.side.blacky
+					div.content
+						h2 Тренажерный зал
+						p Это пример простого текста его можно вставлять в качестве «рыбного» текста и просто его копировать несколько раз. Но луше всего для ключевых текстов либо вставлять текст от заказчика, либо писать какой-то текст осмысленный, но не тратить на это много время.
+				.side(style="background-image: url(img/serv1.jpg)")
+			.section.trainer-slider-section(data-id="2")
+				.side
+					.img-container
+						div.trainer-img(data-trener="0", style="background-image: url(img/trainer1.jpg)").active
+						div.trainer-img(data-trener="1", style="background-image: url(img/trainer1.jpg)")
+				.side.white
+					a.left.half-slider(href="#")
+						img(src="img/dark-al.png", alt="")
+						span LEFT
+					a.right.half-slider(href="#")
+						img(src="img/dark-ar.png", alt="")
+						span RIGHT
+					.trainer-cont(data-trener='0').active
+						.header
+							h2 инструктор<br> тренажерного зала 1
+							span.name Анастасия Козловская
+							span.text Тренер по силовой нагрузки, залсуженный мастер спорта по легкой атлетике
+						.blue-tabs.lefty
+							div.tabs-cont
+								a(href="#", data-id="0") направления работы
+								a(href="#", data-id="1").active награды и достижения  
+								div.blue-line
+						.tabs-content
+							.trainer(data-id="0")
+								ul
+									li Функциональный тренинг
+									li Коррекция фигуры и улучшение физического состояния
+									li Исправление осанки и развитие гибкости
+									li Увеличение мышечной массы, развитие силы и выносливости
+									li Занятие классической и современной хореографией с детьми и взрослыми
+							.trainer(data-id="1").active-in
+								ul
+									li Функциональный тренинг
+									li Коррекция фигуры и улучшение физического состояния
+									li Исправление осанки и развитие гибкости
+									li Увеличение мышечной массы, развитие силы и выносливости
+									li Занятие классической и современной хореографией с детьми и взрослыми
+					.trainer-cont(data-trener='1')
+						.header
+							h2 инструктор<br> тренажерного зала 2
+							span.name Анастасия Козловская
+							span.text Тренер по силовой нагрузки, залсуженный мастер спорта по легкой атлетике
+						.blue-tabs.lefty
+							div.tabs-cont
+								a(href="#", data-id="0") направления работы
+								a(href="#", data-id="1").active награды и достижения  
+								div.blue-line
+						.tabs-content
+							.trainer(data-id="0")
+								ul
+									li Функциональный тренинг
+									li Коррекция фигуры и улучшение физического состояния
+									li Исправление осанки и развитие гибкости
+									li Увеличение мышечной массы, развитие силы и выносливости
+									li Занятие классической и современной хореографией с детьми и взрослыми
+							.trainer(data-id="1").active-in
+								ul
+									li Функциональный тренинг
+									li Коррекция фигуры и улучшение физического состояния
+									li Исправление осанки и развитие гибкости
+									li Увеличение мышечной массы, развитие силы и выносливости
+									li Занятие классической и современной хореографией с детьми и взрослыми
+			.section(data-id="3")
+				.side.blacky
+					div.content
+						h2 групповые занятия
+						p Это пример простого текста его можно вставлять в качестве «рыбного» текста и просто его копировать несколько раз. Но луше всего для ключевых текстов либо вставлять текст от заказчика, либо писать какой-то текст осмысленный, но не тратить на это много время.
+				.side(style="background-image: url(img/serv2.jpg)")
+			.section.trainer-slider-section(data-id="4")
+				.side
+					.img-container
+						div.trainer-img(data-trener="0", style="background-image: url(img/trainer2.jpg)").active
+						div.trainer-img(data-trener="1", style="background-image: url(img/trainer2.jpg)")
+				.side.white
+					a.left.half-slider(href="#")
+						img(src="img/dark-al.png", alt="")
+						span LEFT
+					a.right.half-slider(href="#")
+						img(src="img/dark-ar.png", alt="")
+						span RIGHT
+					.trainer-cont(data-trener='0').active
+						.header
+							h2 инструктор<br> тренажерного зала 1
+							a.btn(href="#") записаться
+							span.name Константин Василевский
+							span.text Тренер по силовой нагрузки, залсуженный мастер спорта по легкой атлетике
+						.blue-tabs.lefty
+							div.tabs-cont
+								a(href="#", data-id="0") направления работы
+								a(href="#", data-id="1").active награды и достижения  
+								div.blue-line
+						.tabs-content
+							.trainer(data-id="0")
+								ul
+									li Функциональный тренинг
+									li Коррекция фигуры и улучшение физического состояния
+									li Исправление осанки и развитие гибкости
+									li Увеличение мышечной массы, развитие силы и выносливости
+									li Занятие классической и современной хореографией с детьми и взрослыми
+							.trainer(data-id="1").active-in
+								ul
+									li Функциональный тренинг
+									li Коррекция фигуры и улучшение физического состояния
+									li Исправление осанки и развитие гибкости
+									li Увеличение мышечной массы, развитие силы и выносливости
+									li Занятие классической и современной хореографией с детьми и взрослыми
+					.trainer-cont(data-trener='1')
+						.header
+							h2 инструктор<br> тренажерного зала 2
+							a.btn(href="#") записаться
+							span.name Константин Василевский
+							span.text Тренер по силовой нагрузки, залсуженный мастер спорта по легкой атлетике
+						.blue-tabs.lefty
+							div.tabs-cont
+								a(href="#", data-id="0") направления работы
+								a(href="#", data-id="1").active награды и достижения  
+								div.blue-line
+						.tabs-content
+							.trainer(data-id="0")
+								ul
+									li Функциональный тренинг
+									li Коррекция фигуры и улучшение физического состояния
+									li Исправление осанки и развитие гибкости
+									li Увеличение мышечной массы, развитие силы и выносливости
+									li Занятие классической и современной хореографией с детьми и взрослыми
+							.trainer(data-id="1").active-in
+								ul
+									li Функциональный тренинг
+									li Коррекция фигуры и улучшение физического состояния
+									li Исправление осанки и развитие гибкости
+									li Увеличение мышечной массы, развитие силы и выносливости
+									li Занятие классической и современной хореографией с детьми и взрослыми
+			.section(data-id="5")
+				.side.blacky
+					div.content
+						h2 Бассейн
+						p Это пример простого текста его можно вставлять в качестве «рыбного» текста и просто его копировать несколько раз. Но луше всего для ключевых текстов либо вставлять текст от заказчика, либо писать какой-то текст осмысленный, но не тратить на это много время.
+				.side(style="background-image: url(img/serv3.jpg)")
+			.section.trainer-slider-section(data-id="6")
+				.side
+					.img-container
+						div.trainer-img(data-trener="0", style="background-image: url(img/trainer3.jpg)").active
+						div.trainer-img(data-trener="1", style="background-image: url(img/trainer3.jpg)")
+				.side.white
+					a.left.half-slider(href="#")
+						img(src="img/dark-al.png", alt="")
+						span LEFT
+					a.right.half-slider(href="#")
+						img(src="img/dark-ar.png", alt="")
+						span RIGHT
+					.trainer-cont(data-trener='0').active
+						.header
+							h2 инструктор<br> тренажерного зала 1
+							span.name Эльдар Мухамедзянов
+							span.text Тренер по силовой нагрузки, залсуженный мастер спорта по легкой атлетике
+						.blue-tabs.lefty
+							div.tabs-cont
+								a(href="#", data-id="0") направления работы
+								a(href="#", data-id="1").active награды и достижения  
+								div.blue-line
+						.tabs-content
+							.trainer(data-id="0")
+								ul
+									li Функциональный тренинг
+									li Коррекция фигуры и улучшение физического состояния
+									li Исправление осанки и развитие гибкости
+									li Увеличение мышечной массы, развитие силы и выносливости
+									li Занятие классической и современной хореографией с детьми и взрослыми
+							.trainer(data-id="1").active-in
+								ul
+									li Функциональный тренинг
+									li Коррекция фигуры и улучшение физического состояния
+									li Исправление осанки и развитие гибкости
+									li Увеличение мышечной массы, развитие силы и выносливости
+									li Занятие классической и современной хореографией с детьми и взрослыми
+					.trainer-cont(data-trener='1')
+						.header
+							h2 инструктор<br> тренажерного зала 2
+							a.btn(href="#") записаться
+							span.name Эльдар Мухамедзянов
+							span.text Тренер по силовой нагрузки, залсуженный мастер спорта по легкой атлетике
+						.blue-tabs.lefty
+							div.tabs-cont
+								a(href="#", data-id="0") направления работы
+								a(href="#", data-id="1").active награды и достижения  
+								div.blue-line
+						.tabs-content
+							.trainer(data-id="0")
+								ul
+									li Функциональный тренинг
+									li Коррекция фигуры и улучшение физического состояния
+									li Исправление осанки и развитие гибкости
+									li Увеличение мышечной массы, развитие силы и выносливости
+									li Занятие классической и современной хореографией с детьми и взрослыми
+							.trainer(data-id="1").active-in
+								ul
+									li Функциональный тренинг
+									li Коррекция фигуры и улучшение физического состояния
+									li Исправление осанки и развитие гибкости
+									li Увеличение мышечной массы, развитие силы и выносливости
+									li Занятие классической и современной хореографией с детьми и взрослыми
+			.section.main-footer(data-id="7")
+				.fullside
+					.footer
+						.f-content
+							.table
+								table
+									tr
+										td.label
+											span Мобильный телефон:
+										td.info
+											span + 7 934 345 34 65
+									tr
+										td.label
+											span Электронная почта: 
+										td.info
+											span balance@gmail.com
+									tr
+										td.label
+											span Городской телефон:    
+										td.info
+											span (391) 234–44–34
+									tr
+										td.label
+											span Адрес:
+										td.info
+											span г. Красноярск, ул. Маерчака, д. 123
+							.socials
+								ul
+									li
+										a(href="#", target="_blank") VKONTAKTE
+									li
+										a(href="#", target="_blank") FACEBOOK
+									li
+										a(href="#", target="_blank") TWITTER
+									li
+										a(href="#", target="_blank") INSTAGRAM
+	include modules/scripts.jade

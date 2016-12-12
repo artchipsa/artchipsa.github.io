@@ -1,0 +1,113 @@
+html
+	include modules/head.jade
+	body
+		include modules/header.jade
+		include modules/menu.jade
+		include modules/faq.jade
+		#fullpage.no-fullpage
+			.section.main.wellness-main
+				.main-text
+					h1 Wellness
+					p Balance – это великолепный wellness–комплекс общей площадью 2 000 м2, который включает в себя спа-центр, бассейн, сауны, бани, купели с теплой и холодной водой, тропический душ, зоны отдыха, студию красоты, фитобар, фитнес-центр, оборудованный тренажерами Technogym
+			.section.article-wrapper
+				div.group-filter
+					button(data-filter="*").filter.is-checked все статьи
+					button(data-filter=".diagnostic").filter диагностика
+					button(data-filter=".training").filter тренинг
+					button(data-filter=".eating").filter питание
+					button(data-filter=".recovering").filter восстановление
+					button(data-filter=".aesthetics").filter эстетика
+				div.grid
+					.item.special
+						.content
+							h2 ЧТО ТАКОЕ настоящий WELLNESS?
+							a(href="").btn подробнее
+					.item.training(style="background-image: url(img/i1.jpg);")
+						.overlay
+						span.tag тренинг
+						.item-content
+							p PILATES. Эффективная система дыхания и восстановления организма 
+							a(href="#", target="_blank").btn подробнее
+					.item.training(style="background-image: url(img/i2.jpg);")
+						.overlay
+						span.tag тренинг
+						.item-content
+							p Основные принципы кардио-тренинга 
+							a(href="#", target="_blank").btn подробнее
+					.item.eating(style="background-image: url(img/i3.jpg);")
+						.overlay
+						span.tag питание
+						.item-content
+							p Правильное питание – основа здорового образа жизни
+							a(href="#", target="_blank").btn подробнее
+					.item.aesthetics(style="background-image: url(img/i4.jpg);")
+						.overlay
+						span.tag эстетика
+						.item-content
+							p Основные правила интенсивного тренинга для проработки рельфефности 
+							a(href="#", target="_blank").btn подробнее
+					.item.training(style="background-image: url(img/i5.jpg);")
+						.overlay
+						span.tag Тренинг
+						.item-content
+							p Упражнения для растяжки мышц - видео-комплекс и йога для начинающих
+							a(href="#", target="_blank").btn подробнее
+					.item.diagnostic(style="background-image: url(img/i6.jpg);")
+						.overlay
+						span.tag Диагностика
+						.item-content
+							p Живете ли вы в стиле wellness? Всего 10 вопросов
+							a(href="#", target="_blank").btn подробнее
+					.item.diagnostic(style="background-image: url(img/i7.jpg);")
+						.overlay
+						span.tag эстетика
+						.item-content
+							p Основные правила интенсивного тренинга для проработки рельфефности 
+							a(href="#", target="_blank").btn подробнее
+					.item.eating(style="background-image: url(img/i8.jpg);")
+						.overlay
+						span.tag Питание
+						.item-content
+							p Таблица содержания белков, жиров, углеводов и калорий в продуктах питания
+							a(href="#", target="_blank").btn подробнее
+				.more-articles
+					a(href="").btn Показать больше статей
+			.section.main-footer
+				.fullside
+					.footer
+						.f-content
+							.table
+								table
+									tr
+										td.label
+											span Мобильный телефон:
+										td.info
+											span + 7 934 345 34 65
+									tr
+										td.label
+											span Электронная почта: 
+										td.info
+											span balance@gmail.com
+									tr
+										td.label
+											span Городской телефон:    
+										td.info
+											span (391) 234–44–34
+									tr
+										td.label
+											span Адрес:
+										td.info
+											span г. Красноярск, ул. Маерчака, д. 123
+							.socials
+								ul
+									li
+										a(href="#", target="_blank") VKONTAKTE
+									li
+										a(href="#", target="_blank") FACEBOOK
+									li
+										a(href="#", target="_blank") TWITTER
+									li
+										a(href="#", target="_blank") INSTAGRAM 
+
+
+		include modules/scripts.jade

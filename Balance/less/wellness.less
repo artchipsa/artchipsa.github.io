@@ -1,0 +1,132 @@
+@import 'modules/vars.less';
+
+.wellness-main{
+	background-image: url(../img/main-wellness.jpg);
+}
+
+.article-wrapper{
+	background-color: @white;
+	height: auto;
+}
+.group-filter{
+	text-align: center;
+	padding: 60px 0px;
+	button{
+		font-family: Ubuntu;
+		display: inline-block;
+		border: none;
+		background-color: transparent;
+		padding: 0px;
+		font-size: 14px;
+		font-weight: 800;
+		margin-right: 80px;
+		letter-spacing: 1.5!important;
+		text-transform: uppercase;
+		color: @onWhite;
+		outline: none;
+		cursor: pointer;
+		&:last-child{
+			margin-right: 0px;
+		}
+		&.is-checked{
+			color: @cyan;
+		}
+		&:hover{
+			color: @cyan;
+		}
+	}
+}
+.grid{
+	.item{
+		display: inline-block;
+		vertical-align: top;
+		width: 33.33%;
+		height: 540px;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+		overflow: hidden;
+		&:hover{
+			.overlay{
+				opacity: 1;
+			}
+			.item-content{
+				bottom: 40px;
+			}
+		}
+		.tag{
+			position: absolute;
+			left: 100px;
+			top: 75px;
+			font-family: Gilroy;
+			font-size: 18px;
+			font-weight: bold;
+			color: @white;
+			z-index: 2;
+			text-transform: uppercase;
+			letter-spacing: 5!important;
+		}
+		.overlay{
+			z-index: 1;
+			background-color: fade(@blue, 80%);
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: all .45s cubic-bezier(0.245, 0.000, 0.000, 1.005);
+		}
+		.item-content{
+			z-index: 2;
+			position: absolute;
+			width: 69%;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: -110px;
+			overflow: hidden;
+			transition: all .45s cubic-bezier(0.245, 0.000, 0.000, 1.005);
+			p{
+				color: @white;
+				font-size: 26px;
+				line-height: 46px;
+				font-weight: 300;
+				margin-top: 0px;
+				margin-bottom: 85px;
+			}
+			.btn{
+			    width: 69%;
+				border: none;
+				border-top: 1px solid @gray;
+				text-align: center;
+				color: @white;
+				&:hover{
+					border-color: @cyan;
+					background-color: transparent;
+					color: @cyan;
+				}
+			}
+		}
+		&.special{
+			background-color: @cyan;
+			.content{
+				padding: 18%;
+				h2{
+					color: @white;
+					text-transform: uppercase;
+					line-height: 62px;
+				}
+				.btn{
+					color: @white;
+					border-color: @white;
+				    padding: 20px 50px;
+				    &:hover{
+				    	color: @cyan;
+				    	background-color: @white;
+				    }
+				}
+			}
+		}
+	}
+}
+.more-articles{
+	margin: 60px 0px;
+	text-align: center;
+}

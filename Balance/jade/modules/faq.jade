@@ -1,0 +1,20 @@
+#faq
+	img(src="img/logoblue.svg", alt="")
+	a(href="").close
+		span
+		span
+	div.faq-content
+		h2.anim Задать вопрос
+		form
+			div.info-row
+				div.field.anim
+					label(for="name") Как вас зовут?
+					input(type="text", name="name")
+				div.field.anim
+					label(for="contact") Ваш номер телефона или электронная почта
+					input(type="text", name="contact", required)
+			div.info-row
+				div.field.full.anim
+					label(for="question") Текст вопроса
+					textarea(name="question", required)
+			input(type="submit", value="Отправить").btn.anim

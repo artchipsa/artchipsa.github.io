@@ -1,30 +1,60 @@
 $(document).ready(function(){
-	// Появление элементов на экране
+	// Появление элементов на главном экране
 	setTimeout(function(){
 		$('header, .main-text, .scroll-down, #navigator').addClass('load');
 	}, 100)
 
-	//Постраничный скролл МОЙ КОД МОИ КОСТЫЛИ, ЙОУ
+	
 
 	//определяем направление скролла
-	$(document).bind('mousewheel DOMMouseScroll', function(event) {
-	   event.preventDefault();
-	   var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-	   init_scroll(event, delta);
+	if ($('body').hasClass('fullscroll')){
+		$(document).bind('mousewheel DOMMouseScroll', function(event) {
+			var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+			var currentWidth = checkWidth();
+			if (currentWidth > 1024){
+				event.preventDefault();
+				init_scroll(event, delta);
+			}  
+		});
+	}
+	
+	// убираем и добавляем элементу боди дефолтный скролл
+	var bodyWidth = checkWidth();
+	if ($('body').hasClass('fullscroll')){
+		if (bodyWidth > 1025){
+			$('body').addClass('pagescroll');
+		} else {
+			$('body').removeClass('pagescroll');
+		}
+	}
+	$(window).resize(function(){
+		bodyWidth = $(this).width();
+		console.log('bodyWidth', bodyWidth);
+		if ($('body').hasClass('fullscroll')){
+			if (bodyWidth > 1025){
+				$('body').addClass('pagescroll');
+			} else {
+				$('body').removeClass('pagescroll');
+			}
+		}
 	});
-
-	document.addEventListener('touchmove', function(event) {
-		event.preventDefault();
-	   	var currentY = event.originalEvent.touches[0].clientY;
-	   	init_scroll(event, currentY);
-	}, false);
+	
+	// // TODO такой же скролл на ипедах.
+	// document.addEventListener('touchmove', function(event) {
+	// 	event.preventDefault();
+	//    	var currentY = event.originalEvent.touches[0].clientY;
+	//    	init_scroll(event, currentY);
+	// }, false);
 
 	//перекючение слайда
 
-
+	//изменение цвета элементов хеадера, когада они заходят на блоки с белым бэкграундом
 	switchWhere($('#navigator li[data-id="0"]'));
 
+	//Постраничный скролл МОЙ КОД МОИ КОСТЫЛИ, ЙОУ
 	$(document).on('click', '#navigator li', function(){
+
+
 		var id = $(this).data('id');
 		var active_id = $('#navigator li.active').data('id');
 		var active_li = $('#navigator li.active');
@@ -106,7 +136,8 @@ $(document).ready(function(){
 	});*/
 
 	// Карусель
-	var owl = $('.owl-carousel');
+
+	var owl = $('.main-carousel');
 	owl.owlCarousel({
 	    loop:true,
 	    margin:0,
@@ -134,37 +165,290 @@ $(document).ready(function(){
 	    owl.trigger('next.owl.carousel');
 	});
 
+	$('.sertificates').lightGallery({
+		selector: '.pic'
+	});
+
+	// сертификаты
+
+	var owl2 = $('.sertificates');
+	owl2.owlCarousel({
+	    loop:false,
+	    margin:100,
+	    nav:false,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+	        600:{
+	            items:3
+	        },
+	        1000:{
+	            items:4
+	        }
+	    }
+	});
+
+	$('.left').click(function(e) {
+		e.preventDefault();
+	    owl.trigger('prev.owl.carousel');
+	});
+
+	$('.right').click(function(e) {
+		e.preventDefault();
+	    owl.trigger('next.owl.carousel');
+	});
+
+	// партнеры
+
+	var partner1 = $('.partner1');
+	partner1.owlCarousel({
+	    loop:false,
+	    margin:100,
+	    nav:false,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+	        600:{
+	            items:3
+	        },
+	        1000:{
+	            items:4
+	        }
+	    }
+	});
+	var partner2 = $('.partner2');
+	partner2.owlCarousel({
+	    loop:false,
+	    margin:100,
+	    nav:false,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+	        600:{
+	            items:3
+	        },
+	        1000:{
+	            items:4
+	        }
+	    }
+	});
+	var partner3 = $('.partner3');
+	partner3.owlCarousel({
+	    loop:false,
+	    margin:100,
+	    nav:false,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+	        600:{
+	            items:3
+	        },
+	        1000:{
+	            items:4
+	        }
+	    }
+	});
+
 	// всплывахи
 
 	$('.menu').click(function(){
 		$(this).toggleClass('active');
 		if ($(this).hasClass('active')){
-			$('#menu').stop().fadeIn(350);
+			$('#menu').fadeIn(350);
 			setTimeout(function(){
-				$('.fade').addClass('in');
-				$('#menu .side').addClass('menu-in');
+				$('.fade').stop().addClass('in');
+				$('#menu .side').stop().addClass('menu-in');
 			}, 250)
 		} else {
-			$('.fade').removeClass('in');
-			$('#menu .side').removeClass('menu-in');
+			$('.fade').stop().removeClass('in');
+			$('#menu .side').stop().removeClass('menu-in');
 			setTimeout(function(){
 				$('#menu').stop().fadeOut(350);
-			}, 1400);
+			}, 1300);
 		}
 		return false;
 	});
 
 	$('.header-btn').click(function(){
 		$('#faq').stop().fadeIn(350);
+		setTimeout(function(){
+			$('.anim').addClass('in');
+		}, 350)
 		return false;
 	});
 
 	$('#faq .close').click(function(){
 		$('#faq').stop().fadeOut(350);
+		$('.anim').removeClass('in');
 		return false;
 	});
 
+	// панорама на страничке клуба
+	$('.cycle').cyclotron({continuous:0,dampingFactor:1,autorotation:1});
+
+	$(window).scroll(function(){
+		var st = $(this).scrollTop();
+		$('.no-fullpage .section').each(function(){
+			if ($(this).css('background-color').toLowerCase() == 'rgba(0, 0, 0, 0)'){
+					console.log('1');
+					$('.header-btn, .menu, .st0').addClass('onWhite');
+				} else {
+					$('.header-btn, .menu, .st0').removeClass('onWhite');
+				}
+		});
+
+	});
+
+	// синие табы с линией
+	setTimeout(function(){
+		$('.blue-tabs-content .cont').css('display', 'none');
+	}, 100);
+	
+
+	$('.blue-tabs a').click(function(e){
+		e.preventDefault();
+		var id = $(this).data('id');
+		if ($('.blue-tabs').hasClass('lefty')){
+			var right = $(this).parent().width() - $(this).outerWidth();
+			if ($(this).hasClass('active')){
+				return;
+			} else {
+				$('.blue-tabs a').removeClass('active');
+				$(this).addClass('active');
+				$('.blue-line').css('right', right);
+				if (id == 1){
+					$('.blue-line').css('right', 0);
+				}
+				$('.tabs-content .trainer').fadeOut(300).removeClass('active-in');
+				setTimeout(function(){
+					$('.tabs-content div[data-id='+id+']').fadeIn(300).addClass('active-in');
+				}, 300);
+			}
+		} else {
+			var left = $(this).position().left;
+			if ($(this).hasClass('active')){
+				return;
+			} else {
+				$('.blue-tabs a').removeClass('active');
+				$(this).addClass('active');
+				$('.blue-line').css('left', left);
+				$('.blue-tabs-content .cont').fadeOut(300).removeClass('active');
+				setTimeout(function(){
+					$('.blue-tabs-content div[data-id='+id+']').fadeIn(300).addClass('active');
+				}, 450);
+			}
+		}
+	});
+
+	// показывание контента в партнерах
+
+	$('.partner').click(function(e){
+		e.preventDefault();
+		var self = $(this);
+		$('.partner-info').fadeOut(250)
+		$(self).next().fadeIn(250);
+	});
+
+	// фильтрация статей
+
+	var grid = $('.grid').isotope({
+		itemSelector: '.item',
+		layoutMode: 'fitRows'
+	});
+
+	$(document).on('click', '.filter', function(){
+		var filterValue = $(this).data("filter");
+	  	grid.isotope({ filter: filterValue });
+	  	$('.filter').removeClass('is-cheked');
+	  	$(this).addClass('is-cheked');
+	  	return false;
+	});
+
+	// слайдер тренеров
+
+	$('.half-slider').click(function(){
+
+		var active_img = $(this).parents('.trainer-slider-section').find('.img-container div.active');
+		var active_content = $(this).parents('.trainer-slider-section').find('.trainer-cont.active');
+		var active_id = active_img.data('trener');
+		var next_id = active_id + 1;
+		var prev_id = active_id - 1;
+
+		if ($(this).hasClass('right')){
+			if (active_img.next('.trainer-img').length){
+				active_img.fadeOut(300, function(){
+					active_img.removeClass('active');
+					active_img.next().fadeIn(300).addClass('active');
+				});
+				active_content.fadeOut(300, function(){
+					active_content.removeClass('active');
+					active_content.next().fadeIn(300).addClass('active');
+				});
+			}
+		}
+
+		if ($(this).hasClass('left')){
+			if (active_img.prev('.trainer-img').length){
+				active_img.fadeOut(300, function(){
+					active_img.removeClass('active');
+					active_img.prev().fadeIn(300).addClass('active');
+				});
+				active_content.fadeOut(300, function(){
+					active_content.removeClass('active');
+					active_content.prev().fadeIn(300).addClass('active');
+				});
+			}
+		}
+
+	});
+
+	checkWhite($('.text'));
+
+	$(".scrolled").mCustomScrollbar({
+		scrollbarPosition: 'outside', 
+		autoDraggerLength: false
+	});
+
 });
+
+/*function reinitOwl(id){
+	partner1 = $('.partner1');
+	partner1.trigger('destroy.owl.carousel');
+	// After destory, the markup is still not the same with the initial.
+	// The differences are:
+	//   1. The initial content was wrapped by a 'div.owl-stage-outer';
+	//   2. The '.owl-carousel' itself has an '.owl-loaded' class attached;
+	//   We have to remove that before the new initialization.
+	partner1.html(partner1.find('.owl-stage-outer').html()).removeClass('owl-loaded');
+	partner1.owlCarousel({
+	    loop:false,
+	    margin:100,
+	    nav:false,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+	        600:{
+	            items:3
+	        },
+	        1000:{
+	            items:4
+	        }
+	    }
+	});
+}*/
+
+function checkWidth(){
+	var retval = $(window).width(); 
+	$(window).resize(function(){
+		retval = $(this).width();
+	});
+	return retval;
+}
 
 var lastAnimation = 0;
 function init_scroll(event, delta) {
@@ -173,7 +457,7 @@ function init_scroll(event, delta) {
 	   quietPeriod = 500;
    
 	// Cancel scroll if currently animating or within quiet period
-   if(timeNow - lastAnimation < quietPeriod + 500) {
+   if(timeNow - lastAnimation < quietPeriod + 555) {
       event.preventDefault();
       return;
    }

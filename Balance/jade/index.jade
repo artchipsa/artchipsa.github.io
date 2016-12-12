@@ -1,53 +1,9 @@
 html
 	include modules/head.jade
-	body.pagescroll
+	body.pagescroll.fullscroll
 		include modules/header.jade
-		#menu
-			.fade
-			.fade
-			.fade
-			.fade
-			.fade
-			.side
-				ul
-					li
-						a(href="#", target="_blank") О клубе
-					li
-						a(href="#", target="_blank") Wellness 
-					li
-						a(href="#", target="_blank") Фитнес
-					li
-						a(href="#", target="_blank") Диагностика
-					li
-						a(href="#", target="_blank") SPA & косметология
-					li
-						a(href="#", target="_blank") банный комплекс
-					li
-						a(href="#", target="_blank") питание
-					li
-						a(href="#", target="_blank") контакты
-			.side
-		#faq
-			img(src="img/logoblue.svg", alt="")
-			a(href="").close
-				span
-				span
-			div.faq-content
-				h2 Задать вопрос
-				form
-					div.info-row
-						div.field
-							label(for="name") Как вас зовут?
-							input(type="text", name="name")
-						div.field		
-							label(for="contact") Ваш номер телефона или электронная почта
-							input(type="text", name="contact", required)
-					div.info-row
-						div.field.full
-							label(for="question") Текст вопроса
-							textarea(name="question", required)
-					input(type="submit", value="Отправить").btn
-
+		include modules/menu.jade
+		include modules/faq.jade
 		#navigator
 			span.where 
 			ul
@@ -62,22 +18,22 @@ html
 					h1 balance
 					p Первый настоящий WELLNESS в Красноярске
 				a.scroll-down(href="#")
-					img(src="img/ad.png", alt="")
+					img(src="img/da.png", alt="")
 					span SCROLL
 			.section.main-about(data-id="1")
 				.side
-				.side
+				.side.white
 					div.content
 						h2 BALANCE SPORT & SPA
 						p Мы объединили проверенные технологии и усилия ведущих специалистов 4 индустрий: медицины, питания, фитнеса и спа в общее wellness пространство, чтобы обеспечить здоровье, красоту и уверенность в завтрашнем дне неравнодушным к себе людям.
 						a.btn(href="#") подробнее о клубе
-			.section.main-wellness(data-id="2")
+			.section.main-wellness.second(data-id="2")
 				.side
 					div.content
 						h2 WELLNESS – это…
 						p поддержание хорошей физической и духовной формы без сверх-напряжения, тяжелых физических нагрузок и изнурительных диет.
 						a.btn(href="#") узнать подробнее
-				.side
+				.side.blacky
 			.section.main-services(data-id="3")
 				.fullside
 					a.left(href="#")
@@ -86,7 +42,7 @@ html
 					a.right(href="#")
 						img(src="img/ar.png", alt="")
 						span RIGHT
-					.owl-carousel
+					.owl-carousel.main-carousel
 						.item
 							a(href="#").s1
 							p Фитнес
