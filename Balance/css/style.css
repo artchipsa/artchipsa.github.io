@@ -1610,6 +1610,29 @@ header.load {
   margin-bottom: 50px;
   text-transform: uppercase;
   display: inline-block;
+  transition: all 0.45s cubic-bezier(0.245, 0, 0, 1.005);
+}
+.text .content .back:hover {
+  opacity: 1;
+}
+.text .content h1 {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: 800;
+  color: #566880;
+  text-transform: uppercase;
+}
+.text .content p {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  line-height: 42px;
+  font-weight: 400;
+  color: #566880;
+}
+.text .content img {
+  margin-bottom: 50px;
 }
 .mCSB_outside + .mCSB_scrollTools {
   left: -8px;
@@ -1636,4 +1659,7 @@ header.load {
 }
 .mCSB_outside + .mCSB_scrollTools {
   height: 88%;
+}
+.disabled {
+  display: none!important;
 }

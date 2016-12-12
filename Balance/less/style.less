@@ -1206,6 +1206,29 @@ header{
 			margin-bottom: 50px;
 			text-transform: uppercase;
 			display: inline-block;
+			transition: all .45s cubic-bezier(0.245, 0.000, 0.000, 1.005);
+			&:hover{
+				opacity: 1;
+			}
+		}
+		h1{
+			margin-top: 0px;
+			margin-bottom: 50px;
+			font-size: 36px;
+			line-height: 54px;
+			font-weight: 800;
+			color: @onWhite;
+			text-transform: uppercase;
+		}
+		p{
+			margin-top: 0px;
+			margin-bottom: 50px;
+			line-height: 42px;
+			font-weight: 400;
+			color: @onWhite;
+		}
+		img{
+			margin-bottom: 50px;
 		}	
 	}
 }
@@ -1237,4 +1260,8 @@ header{
 }
 .mCSB_outside + .mCSB_scrollTools{
 	height: 88%;
+}
+
+.disabled{
+	display: none!important;
 }

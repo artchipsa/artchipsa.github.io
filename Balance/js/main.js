@@ -29,7 +29,6 @@ $(document).ready(function(){
 	}
 	$(window).resize(function(){
 		bodyWidth = $(this).width();
-		console.log('bodyWidth', bodyWidth);
 		if ($('body').hasClass('fullscroll')){
 			if (bodyWidth > 1025){
 				$('body').addClass('pagescroll');
@@ -189,14 +188,14 @@ $(document).ready(function(){
 	    }
 	});
 
-	$('.left').click(function(e) {
+	$('.left.serts').click(function(e) {
 		e.preventDefault();
-	    owl.trigger('prev.owl.carousel');
+	    owl2.trigger('prev.owl.carousel');
 	});
 
-	$('.right').click(function(e) {
+	$('.right.serts').click(function(e) {
 		e.preventDefault();
-	    owl.trigger('next.owl.carousel');
+	    owl2.trigger('next.owl.carousel');
 	});
 
 	// партнеры
@@ -218,6 +217,15 @@ $(document).ready(function(){
 	        }
 	    }
 	});
+	$('.left.arrow-partner1').click(function(e) {
+		e.preventDefault();
+	    partner1.trigger('prev.owl.carousel');
+	});
+
+	$('.right.arrow-partner1').click(function(e) {
+		e.preventDefault();
+	    partner1.trigger('next.owl.carousel');
+	});
 	var partner2 = $('.partner2');
 	partner2.owlCarousel({
 	    loop:false,
@@ -235,6 +243,15 @@ $(document).ready(function(){
 	        }
 	    }
 	});
+	$('.left.arrow-partner2').click(function(e) {
+		e.preventDefault();
+	    partner2.trigger('prev.owl.carousel');
+	});
+
+	$('.right.arrow-partner2').click(function(e) {
+		e.preventDefault();
+	    partner2.trigger('next.owl.carousel');
+	});
 	var partner3 = $('.partner3');
 	partner3.owlCarousel({
 	    loop:false,
@@ -251,6 +268,15 @@ $(document).ready(function(){
 	            items:4
 	        }
 	    }
+	});
+	$('.left.arrow-partner3').click(function(e) {
+		e.preventDefault();
+	    partner3.trigger('prev.owl.carousel');
+	});
+
+	$('.right.arrow-partner3').click(function(e) {
+		e.preventDefault();
+	    partner3.trigger('next.owl.carousel');
 	});
 
 	// всплывахи
@@ -312,6 +338,7 @@ $(document).ready(function(){
 	$('.blue-tabs a').click(function(e){
 		e.preventDefault();
 		var id = $(this).data('id');
+		var active_id =  $('.blue-tabs a.active').data('id');
 		if ($('.blue-tabs').hasClass('lefty')){
 			var right = $(this).parent().width() - $(this).outerWidth();
 			if ($(this).hasClass('active')){
@@ -337,6 +364,8 @@ $(document).ready(function(){
 				$(this).addClass('active');
 				$('.blue-line').css('left', left);
 				$('.blue-tabs-content .cont').fadeOut(300).removeClass('active');
+				var arrows_id = id + 1; 
+				$('.left, .right').removeClass('arrow-partner'+(active_id+1)).addClass('arrow-partner'+arrows_id);
 				setTimeout(function(){
 					$('.blue-tabs-content div[data-id='+id+']').fadeIn(300).addClass('active');
 				}, 450);
@@ -415,32 +444,6 @@ $(document).ready(function(){
 
 });
 
-/*function reinitOwl(id){
-	partner1 = $('.partner1');
-	partner1.trigger('destroy.owl.carousel');
-	// After destory, the markup is still not the same with the initial.
-	// The differences are:
-	//   1. The initial content was wrapped by a 'div.owl-stage-outer';
-	//   2. The '.owl-carousel' itself has an '.owl-loaded' class attached;
-	//   We have to remove that before the new initialization.
-	partner1.html(partner1.find('.owl-stage-outer').html()).removeClass('owl-loaded');
-	partner1.owlCarousel({
-	    loop:false,
-	    margin:100,
-	    nav:false,
-	    responsive:{
-	        0:{
-	            items:1
-	        },
-	        600:{
-	            items:3
-	        },
-	        1000:{
-	            items:4
-	        }
-	    }
-	});
-}*/
 
 function checkWidth(){
 	var retval = $(window).width(); 
