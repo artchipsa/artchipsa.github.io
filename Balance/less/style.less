@@ -392,7 +392,7 @@ header{
 		font-weight: 300;
 		font-size: 18px;
 		color: @black;
-		line-height: 34px;
+		line-height: 42px;
 		margin-bottom: 12%;
 	}
 	.btn{
@@ -628,60 +628,60 @@ header{
 
 #menu{
 	position: fixed;
-	// background-color: @blue;
+	background-color: @blue;
 	z-index: 20;
 	width: 100%;
 	height: 100%; 
 	display: none;
-    .fade{
+    /* .fade{
     	width: 100%;
     	height: 20%;
     	background-color: @blue;
     	position: absolute;
     	left: 0;
-		transform: translateX(-100%);
-		transition: transform 200ms cubic-bezier(0.245, 0.005, 0.005, 0.995) .3s;
+    		transform: translateX(-100%);
+    		transition: transform 200ms cubic-bezier(0.245, 0.005, 0.005, 0.995) .3s;
     	&:nth-child(2n){
     		right: 0;
-			transform: translateX(100%)
+    			transform: translateX(100%)
     	}
     	&.in{
     		transform: translateX(0);
     		transition-delay: 0s;
     		&:nth-child(2){
-	    		top: 20%;
-				transition-delay: .10s;
-	    	}
-	    	&:nth-child(3){
-	    		top: 40%;
-				transition-delay: .15s;
-	    	}
-	    	&:nth-child(4){
-	    		top: 60%;
-				transition-delay: .20s;
-	    	}
-	    	&:nth-child(5){
-	    		top: 80%;
-	    		transition-delay: .25s;
-	    	}
+    	    		top: 20%;
+    				transition-delay: .10s;
+    	    	}
+    	    	&:nth-child(3){
+    	    		top: 40%;
+    				transition-delay: .15s;
+    	    	}
+    	    	&:nth-child(4){
+    	    		top: 60%;
+    				transition-delay: .20s;
+    	    	}
+    	    	&:nth-child(5){
+    	    		top: 80%;
+    	    		transition-delay: .25s;
+    	    	}
     	}
     	&:nth-child(2){
     		top: 20%;
-			transition: transform 200ms cubic-bezier(0.245, 0.005, 0.005, 0.995) .25s;
+    			transition: transform 200ms cubic-bezier(0.245, 0.005, 0.005, 0.995) .25s;
     	}
     	&:nth-child(3){
     		top: 40%;
-			transition: transform 200ms cubic-bezier(0.245, 0.005, 0.005, 0.995) .20s;
+    			transition: transform 200ms cubic-bezier(0.245, 0.005, 0.005, 0.995) .20s;
     	}
     	&:nth-child(4){
     		top: 60%;
-			transition: transform 200ms cubic-bezier(0.245, 0.005, 0.005, 0.995) .15s;
+    			transition: transform 200ms cubic-bezier(0.245, 0.005, 0.005, 0.995) .15s;
     	}
     	&:nth-child(5){
     		top: 80%;
     		transition: transform 200ms cubic-bezier(0.245, 0.005, 0.005, 0.995) .10s;
     	}
-    }
+    } */
 	ul{
 		list-style: none;
 		padding: 0px;
@@ -713,21 +713,71 @@ header{
 	}
 	.side{
 		transform: translate(0%)!important;
-		opacity: 0;
+		opacity: 1;
 		transition: opacity .45s ease-out 0s;
-		&.menu-in{
-			opacity: 1;
-			transition-delay: .2s;
+	}
+	.switcher{
+		position: absolute;
+		left: 40px;
+		bottom: 40px;
+		a{
+			font-family: Gilroy;
+			font-size: 16px;
+			margin-right: 27px;
+			font-weight: 300;
+			color: @onWhite;
+			text-transform: uppercase;
+			text-decoration: none;
+			letter-spacing: 5!important;
+			transition: all .35s cubic-bezier(0.245, 0.005, 0.005, 0.995);
+			&.active{
+				color: @white;
+				font-weight: 800;
+			}
+			&:hover{
+				color: @white;
+			}
 		}
 	}
+	.copyright{
+		position: absolute;
+		right: 40px;
+		bottom: 40px;
+		font-family: Gilroy;
+		font-weight: 800;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: @onWhite;
+		letter-spacing: 5!important;
+	}
 }
-#faq{
+.white-modal{
 	position: fixed;
 	z-index: 23;
 	width: 100%;
 	height: 100%;
 	background-color: @white;
 	display: none;
+	.success{
+		display: none;
+		p{
+			font-size: 18;
+			font-weight: 300;
+			line-height: 42px;
+			width: 40%;
+		}
+	}
+	.copyright{
+		position: absolute;
+		left: 40px;
+		bottom: 40px;
+		font-family: Gilroy;
+		font-weight: 800;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 5!important;
+		color: #B5B8BE;
+	}
 	.anim{
 		transition: all .35s cubic-bezier(0.245, 0.005, 0.005, 0.995);
 		opacity: 0;
@@ -837,6 +887,69 @@ header{
 	}
 	.btn{
 		transition-delay: .40s;
+	}
+}
+.record{
+	.service-list{
+		margin-top: 60px;
+		input[type="checkbox"]{
+			visibility: hidden;
+			display: inline-block;
+			width: 0px; 
+			height: 0px;
+		    margin-left: -5px;
+		}
+		label{
+			display: inline-block;
+			text-transform: none;
+			font-size: 18px;
+			transition: all .45s ease-out;
+			cursor: pointer;
+			margin-right: 70px;
+		}
+		input[type="checkbox"]:checked + label{
+			color: @onWhite;
+		}
+	}
+}
+.preloader{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: @blue;
+	z-index: 123;
+	h2{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		color: @white;
+		font-family: Gilroy;
+		font-weight: 300;
+		font-size: 86px;
+		text-transform: uppercase;
+		margin: 0;
+		opacity: 0;
+		&:nth-child(1){
+			animation: preloader 1.5s linear;
+		}
+		&:nth-child(2){
+			animation: preloader 1.5s linear 1.5s;
+		}
+	}
+}
+@keyframes preloader{
+	0%{
+		opacity: 0;
+		letter-spacing: 1px;
+	}
+	80%{
+		opacity: 0.8;
+		letter-spacing: 100px;
+	}
+	100%{
+		opacity: 0;
+		letter-spacing: 120px;
 	}
 }
 .btn{
@@ -1264,4 +1377,90 @@ header{
 
 .disabled{
 	display: none!important;
+}
+
+
+
+// 404 styles 
+
+.fail-page{
+	background-image: url(../img/404.jpg);
+	background-position: 0% 100%;
+	.content{
+		padding: 20%;
+		h1{
+			font-family: Gilroy;
+			font-weight: 300;
+			font-size: 156px;
+			line-height: 156px;
+			margin-top: 0px;
+			margin-bottom: 40px;
+			letter-spacing: 5!important;
+			color: @white;
+		}
+		h2{
+			text-transform: uppercase;
+			line-height: 72px;
+			margin-bottom: 80px;
+		}
+		a{
+			color: @white;
+		}
+	}
+}
+
+// map 
+
+.abs-map-content{
+	position: absolute;
+	z-index: 25;
+	top: 18%;
+	left: 18%;
+	h1{
+		margin-top: 0px;
+		margin-bottom: 100px;
+		font-family: Gilroy;
+		font-weight: 300;
+		font-size: 42px;
+		letter-spacing: 10!important;
+		text-transform: uppercase;
+		color: @white;
+	}
+	ul{
+		list-style: none;
+		padding-left: 0px;
+		margin-bottom: 100px;
+		li{
+			color: @white;
+			font-size: 24px;
+			font-weight: 300;
+			margin-bottom: 50px;
+		}
+	}
+	.social{
+		width: 430px;
+		a{
+			display: inline-block;
+		    text-align: center;
+		    width: 180px;
+		    border: 1px solid #2c94ff;
+		    padding: 15px 0px;
+		    font-size: 12px;
+		    font-weight: 300;
+		    text-transform: uppercase;
+		    letter-spacing: 2.5!important;
+		    color: #fff;
+		    text-decoration: none;
+		    background-color: transparent;
+		    transition: all 0.45s ease-out;
+		    margin-right: 60px;
+		    margin-bottom: 55px;
+		    &:hover{
+		    	background-color: @cyan;
+		    }
+		    &:nth-child(2n){
+		    	margin-right: 0px;
+		    }
+		}
+	}
 }

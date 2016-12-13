@@ -1,12 +1,12 @@
 
-<div id="faq"><img src="img/logoblue.svg" alt=""/><a href="" class="close"><span></span><span></span></a>
+<div class="white-modal faq"><img src="img/logoblue.svg" alt=""/><a href="" class="close"><span></span><span></span></a>
   <div class="faq-content">
-    <h2 class="anim">Задать вопрос</h2>
     <form>
+      <h2 class="anim">запись на прием</h2>
       <div class="info-row">
         <div class="field anim">
           <label for="name">Как вас зовут?</label>
-          <input type="text" name="name"/>
+          <input type="text" name="name" required="required"/>
         </div>
         <div class="field anim">
           <label for="contact">Ваш номер телефона или электронная почта</label>
@@ -15,11 +15,15 @@
       </div>
       <div class="info-row">
         <div class="field full anim">
-          <label for="question">Текст вопроса</label>
-          <textarea name="question" required="required"></textarea>
+          <label for="question">выберите, какой вид услуг вас интересует</label>
+          <textarea name="question"></textarea>
         </div>
       </div>
       <input type="submit" value="Отправить" class="btn anim"/>
     </form>
+    <div class="success">
+      <h2>Спасибо!</h2>
+      <p>Это пример простого текста его можно вставлять в качестве «рыбного» текста и просто его копировать несколько раз. Но луше всего для ключевых текстов либо вставлять текст от заказчика, либо писать какой-то текст осмысленный, но не тратить на это много время.</p>
+    </div>
   </div>
 </div>

@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
+  <div class="preloader">
+    <h2 class="anim">Здровье </h2>
+    <h2 class="anim">Красота</h2>
+  </div>
   <body class="pagescroll fullscroll">
     <header>
       <div class="logo">
@@ -21,11 +25,6 @@
       </div>
     </header>
     <div id="menu">
-      <div class="fade"></div>
-      <div class="fade"></div>
-      <div class="fade"></div>
-      <div class="fade"></div>
-      <div class="fade"></div>
       <div class="side">
         <ul>
           <li><a href="#" target="_blank">О клубе</a></li>
@@ -39,15 +38,17 @@
         </ul>
       </div>
       <div class="side"></div>
+      <div class="switcher"><a href="#" class="active">rus</a><a href="#">eng</a></div>
+      <div class="copyright">BALANCE wellness & spa  © 2016</div>
     </div>
-    <div id="faq"><img src="img/logoblue.svg" alt=""/><a href="" class="close"><span></span><span></span></a>
+    <div class="white-modal faq"><img src="img/logoblue.svg" alt=""/><a href="" class="close"><span></span><span></span></a>
       <div class="faq-content">
-        <h2 class="anim">Задать вопрос</h2>
         <form>
+          <h2 class="anim">запись на прием</h2>
           <div class="info-row">
             <div class="field anim">
               <label for="name">Как вас зовут?</label>
-              <input type="text" name="name"/>
+              <input type="text" name="name" required="required"/>
             </div>
             <div class="field anim">
               <label for="contact">Ваш номер телефона или электронная почта</label>
@@ -56,12 +57,16 @@
           </div>
           <div class="info-row">
             <div class="field full anim">
-              <label for="question">Текст вопроса</label>
-              <textarea name="question" required="required"></textarea>
+              <label for="question">выберите, какой вид услуг вас интересует</label>
+              <textarea name="question"></textarea>
             </div>
           </div>
           <input type="submit" value="Отправить" class="btn anim"/>
         </form>
+        <div class="success">
+          <h2>Спасибо!</h2>
+          <p>Это пример простого текста его можно вставлять в качестве «рыбного» текста и просто его копировать несколько раз. Но луше всего для ключевых текстов либо вставлять текст от заказчика, либо писать какой-то текст осмысленный, но не тратить на это много время.</p>
+        </div>
       </div>
     </div>
     <div id="navigator"><span class="where"> </span>
@@ -160,7 +165,7 @@
     <script src="js/lightgallery.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/isotope-docs.min.js"></script>
-    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js"></script><script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

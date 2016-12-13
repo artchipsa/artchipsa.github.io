@@ -2,9 +2,11 @@ $(document).ready(function(){
 	// Появление элементов на главном экране
 	setTimeout(function(){
 		$('header, .main-text, .scroll-down, #navigator').addClass('load');
-	}, 100)
+	}, 3300)
 
-	
+	setTimeout(function(){
+		$('.preloader').fadeOut(250);
+	}, 3000)
 
 	//определяем направление скролла
 	if ($('body').hasClass('fullscroll')){
@@ -292,40 +294,83 @@ $(document).ready(function(){
 		} else {
 			$('.fade').stop().removeClass('in');
 			$('#menu .side').stop().removeClass('menu-in');
-			setTimeout(function(){
+			// setTimeout(function(){
 				$('#menu').stop().fadeOut(350);
-			}, 1300);
+/*			}, 1300);*/
 		}
 		return false;
 	});
 
 	$('.header-btn').click(function(){
-		$('#faq').stop().fadeIn(350);
+		$('.faq').stop().fadeIn(350);
 		setTimeout(function(){
 			$('.anim').addClass('in');
 		}, 350)
 		return false;
 	});
 
-	$('#faq .close').click(function(){
-		$('#faq').stop().fadeOut(350);
+	$('.white-modal .close').click(function(){
+		$('.white-modal').stop().fadeOut(350);
 		$('.anim').removeClass('in');
+		return false;
+	});
+
+	$('.trainer-cont .btn').click(function(){
+		$('.record').stop().fadeIn(350);
+		setTimeout(function(){
+			$('.anim').addClass('in');
+		}, 350)
+		return false;
+	});
+
+	// отправка белой модалки 
+
+	$('.white-modal form').submit(function(){
+		var form = $(this);
+		var error = false;
+
+		if (form.find('input[type="text"]').val() == ''){
+			form.find('input[type="text"]').css('border-bottom-color', 'red');
+			error = true;
+		}
+
+		if (!error){
+			// Ajax как тебе удобно
+
+			// событие саксеса
+			form.fadeOut(300, function(){
+				$('.success').fadeIn(300);
+			});
+		}
+
 		return false;
 	});
 
 	// панорама на страничке клуба
 	$('.cycle').cyclotron({continuous:0,dampingFactor:1,autorotation:1});
 
+
+
+	// смена цвета хедера при скролле
+	var section = [];
+	$('.section').each(function(){
+		var self = $(this)
+		section.push(self);
+	});
+
 	$(window).scroll(function(){
-		var st = $(this).scrollTop();
-		$('.no-fullpage .section').each(function(){
-			if ($(this).css('background-color').toLowerCase() == 'rgba(0, 0, 0, 0)'){
-					console.log('1');
+		var st = $('header').offset().top;
+		var sb = 0; 
+		for (var i = 0; i < section.length; i++){
+			sb = sb + section[i].height();
+			if (st > section[i].offset().top && st <= sb){ 
+				if  (section[i].css('background-color').toLowerCase() == 'rgb(255, 255, 255)') {
 					$('.header-btn, .menu, .st0').addClass('onWhite');
 				} else {
 					$('.header-btn, .menu, .st0').removeClass('onWhite');
 				}
-		});
+			}
+		}
 
 	});
 
@@ -442,8 +487,240 @@ $(document).ready(function(){
 		autoDraggerLength: false
 	});
 
+
+	// контакты
+	if ($('#map').length){
+		initMap();
+	}
+
+
+	//scroll animation
+
+	$(window).scroll(function(){
+		var st = $(this).scrollTop();
+		scrollAnimation(st);
+	});
+
 });
 
+function scrollAnimation(st){
+	var scroll_elems = [];
+	$('.scrollAnim').each(function(){
+		scroll_elems.push($(this));
+	});
+	for (var i = 0; i < scroll_elems.length; i++){
+		if (st >= scroll_elems[i].parents('.section').offset().top){
+			scroll_elems[i].addClass('in');
+		}
+	}
+
+}
+
+
+var map;
+var marker;
+function initMap(){
+	var balance = {lat: 56.019911, lng: 92.83868600000005};
+	var style = [
+	    {
+	        "featureType": "all",
+	        "elementType": "labels.text.fill",
+	        "stylers": [
+	            {
+	                "saturation": 40
+	            },
+	            {
+	                "color": "#000000"
+	            },
+	            {
+	                "lightness": 60
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "all",
+	        "elementType": "labels.text.stroke",
+	        "stylers": [
+	            {
+	                "visibility": "on"
+	            },
+	            {
+	                "color": "#17212e"
+	            },
+	            {
+	                "lightness": 1
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "all",
+	        "elementType": "labels.icon",
+	        "stylers": [
+	            {
+	                "visibility": "off"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "administrative",
+	        "elementType": "geometry.fill",
+	        "stylers": [
+	            {
+	                "color": "#000000"
+	            },
+	            {
+	                "lightness": 20
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "administrative",
+	        "elementType": "geometry.stroke",
+	        "stylers": [
+	            {
+	                "color": "#000000"
+	            },
+	            {
+	                "lightness": 17
+	            },
+	            {
+	                "weight": 1.2
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "landscape",
+	        "elementType": "geometry",
+	        "stylers": [
+	        	{
+	                "saturation": 1
+	            },
+	            {
+	                "color": "#2b3542"
+	            },
+	            {
+	                "lightness": 1
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "landscape.natural.landcover",
+	        "elementType": "geometry",
+	        "stylers": [
+	            {
+	                "visibility": "off"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "poi",
+	        "elementType": "geometry",
+	        "stylers": [
+	            {
+	                "color": "#2b3542"
+	            },
+	            {
+	                "lightness": 1
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.highway",
+	        "elementType": "geometry.fill",
+	        "stylers": [
+	            {
+	                "color": "#17212e"
+	            },
+	            {
+	                "lightness": 1
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.highway",
+	        "elementType": "geometry.stroke",
+	        "stylers": [
+	            {
+	                "color": "#26303d"
+	            },
+	            {
+	                "lightness": 1
+	            },
+	            {
+	                "weight": 0.2
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.arterial",
+	        "elementType": "geometry",
+	        "stylers": [
+	            {
+	                "color": "#26303d"
+	            },
+	            {
+	                "lightness": 1
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.local",
+	        "elementType": "geometry",
+	        "stylers": [
+	            {
+	                "color": "#202a37"
+	            },
+	            {
+	                "lightness": 1
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "transit",
+	        "elementType": "geometry",
+	        "stylers": [
+	            {
+	                "color": "#26303d"
+	            },
+	            {
+	                "lightness": 1
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "water",
+	        "elementType": "geometry",
+	        "stylers": [
+	            {
+	                "color": "#17212e"
+	            },
+	            {
+	                "lightness": 1
+	            }
+	        ]
+	    }
+	];
+
+	var icon = {
+		url: 'http://blog.chipsa.ru/temp/marker.png',
+		origin: new google.maps.Point(0, 0),
+	    anchor: new google.maps.Point(32.5, 32.5)
+	};
+	map = new google.maps.Map(document.getElementById('map'), {
+	    zoom: 15,
+	    center: {lat: 56.01824396548129, lng: 92.82528568376165},
+	    styles: style
+	});
+
+	marker = new google.maps.Marker({
+		position: balance,
+		map: map, 
+		icon: icon,
+		optimized: false
+	});
+
+
+}
 
 function checkWidth(){
 	var retval = $(window).width(); 

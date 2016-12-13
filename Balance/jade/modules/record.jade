@@ -1,0 +1,31 @@
+.white-modal.record
+	img(src="img/logoblue.svg", alt="")
+	a(href="").close
+		span
+		span
+	div.faq-content
+		h2.anim Запись
+		form
+			div.info-row
+				div.field.anim
+					label(for="name") Как вас зовут?
+					input(type="text", name="name", required)
+				div.field.anim
+					label(for="contact") Ваш номер телефона или электронная почта
+					input(type="text", name="contact", required)
+			div.info-row
+				div.field.full.anim
+					label(for="question") выберите, какой вид услуг вас интересует
+					.service-list
+						input(type="checkbox", name="fitness", id="fitness", value="")
+						label(for="fitness") Фитнес
+						input(type="checkbox", name="fitness", id="diagnostic", value="")
+						label(for="diagnostic") Диагностика
+						input(type="checkbox", name="fitness", id="spa", value="")
+						label(for="spa") Косметология & spa
+						input(type="checkbox", name="fitness", id="bath", value="")
+						label(for="bath") Банный комплекс
+						input(type="checkbox", name="fitness", id="eating", value="")
+						label(for="eating") Питание
+			input(type="submit", value="Отправить").btn.anim
+	.copyright BALANCE wellness & spa  © 2016

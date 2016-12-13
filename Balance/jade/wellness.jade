@@ -1,5 +1,6 @@
 html
 	include modules/head.jade
+	include modules/preloader.jade
 	body
 		include modules/header.jade
 		include modules/menu.jade
@@ -18,7 +19,7 @@ html
 					button(data-filter=".recovering").filter восстановление
 					button(data-filter=".aesthetics").filter эстетика
 				div.grid
-					.item.special
+					.item.special.diagnostic.training.eating.recovering.aesthetics
 						.content
 							h2 ЧТО ТАКОЕ настоящий WELLNESS?
 							a(href="").btn подробнее

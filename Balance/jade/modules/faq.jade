@@ -1,20 +1,23 @@
-#faq
+.white-modal.faq
 	img(src="img/logoblue.svg", alt="")
 	a(href="").close
 		span
 		span
 	div.faq-content
-		h2.anim Задать вопрос
 		form
+			h2.anim запись на прием
 			div.info-row
 				div.field.anim
 					label(for="name") Как вас зовут?
-					input(type="text", name="name")
+					input(type="text", name="name", required)
 				div.field.anim
 					label(for="contact") Ваш номер телефона или электронная почта
 					input(type="text", name="contact", required)
 			div.info-row
 				div.field.full.anim
-					label(for="question") Текст вопроса
-					textarea(name="question", required)
+					label(for="question") выберите, какой вид услуг вас интересует
+					textarea(name="question")
 			input(type="submit", value="Отправить").btn.anim
+		.success
+			h2 Спасибо!
+			p Это пример простого текста его можно вставлять в качестве «рыбного» текста и просто его копировать несколько раз. Но луше всего для ключевых текстов либо вставлять текст от заказчика, либо писать какой-то текст осмысленный, но не тратить на это много время.
