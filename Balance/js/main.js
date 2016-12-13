@@ -301,7 +301,7 @@ $(document).ready(function(){
 		return false;
 	});
 
-	$('.header-btn').click(function(){
+	$('.header-btn, .quest').click(function(){
 		$('.faq').stop().fadeIn(350);
 		setTimeout(function(){
 			$('.anim').addClass('in');
