@@ -927,6 +927,7 @@ header{
 		font-family: Gilroy;
 		font-weight: 300;
 		font-size: 86px;
+		text-indent: 86px;
 		text-transform: uppercase;
 		margin: 0;
 		opacity: 0;
@@ -972,7 +973,24 @@ header{
 		color: @white;
 	}
 }
-
+.divvideo{
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+}
+.video-overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: fade(@blue, 30%);
+}
 @media (max-width: 1367px){
 	.main h1{
 		margin-bottom: 22px;
@@ -1039,6 +1057,12 @@ header{
 }
 
 @media (max-width: 1025px){
+	.divvideo{
+		display: none;
+	}
+	.video-overlay{
+		display: none;
+	}
 	.content .btn{
 	    font-size: 12px;
 	    line-height: 14px;
@@ -1066,6 +1090,9 @@ header{
 	.footer .f-content .socials ul li{
 		margin-right: 30px;
 		float: left;
+		&:last-child{
+			margin-right: 0px;
+		}
 	}
 	.footer .f-content .socials ul li a{
 		width: 172px;
@@ -1141,6 +1168,50 @@ header{
 	}
 }
 @media (max-width: 479px){
+	.preloader{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: @blue;
+		z-index: 123;
+		h2{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			color: @white;
+			font-family: Gilroy;
+			font-weight: 300;
+			font-size: 26px;
+			text-indent: 26px;
+			text-transform: uppercase;
+			margin: 0;
+			opacity: 0;
+			&:nth-child(1){
+				animation: preloader 1.5s linear;
+			}
+			&:nth-child(2){
+				animation: preloader 1.5s linear 1.5s;
+			}
+		}
+	}
+	@keyframes preloader{
+		0%{
+			opacity: 0;
+			letter-spacing: 1px;
+		}
+		80%{
+			opacity: 0.8;
+			letter-spacing: 20px;
+		}
+		100%{
+			opacity: 0;
+			letter-spacing: 30px;
+		}
+	}
+	.main{
+		background-position: 75% 50%;
+	}
 	header .logo img {
 	    display: inline-block;
 	    width: 96px;

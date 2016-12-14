@@ -33,6 +33,9 @@
 .group-filter button:hover {
   color: #2c94ff;
 }
+.grid {
+  background-color: #566880;
+}
 .grid .item {
   display: inline-block;
   vertical-align: top;

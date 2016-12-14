@@ -215,7 +215,8 @@ $(document).ready(function(){
 	            items:3
 	        },
 	        1000:{
-	            items:4
+	            items:4,
+	            margin: 50
 	        }
 	    }
 	});
@@ -241,7 +242,8 @@ $(document).ready(function(){
 	            items:3
 	        },
 	        1000:{
-	            items:4
+	            items:4,
+	            margin: 50
 	        }
 	    }
 	});
@@ -267,7 +269,8 @@ $(document).ready(function(){
 	            items:3
 	        },
 	        1000:{
-	            items:4
+	            items:4,
+	            margin: 50
 	        }
 	    }
 	});
@@ -282,6 +285,19 @@ $(document).ready(function(){
 	});
 
 	// всплывахи
+
+	$(document).keyup(function(e){
+		if ($('.menu').hasClass('active')){
+			if (e.keyCode === 27){
+				$('.menu').click();
+			} 
+		}
+
+		if (e.keyCode === 27){
+			$('.close').click();
+		}
+	});
+
 
 	$('.menu').click(function(){
 		$(this).toggleClass('active');
@@ -442,6 +458,11 @@ $(document).ready(function(){
 	  	return false;
 	});
 
+	$(document).on('click', '.group-filter button', function(){
+		$('.group-filter button').removeClass('is-checked');
+		$(this).addClass('is-checked');
+	});
+
 	// слайдер тренеров
 
 	$('.half-slider').click(function(){
@@ -500,6 +521,39 @@ $(document).ready(function(){
 		var st = $(this).scrollTop();
 		scrollAnimation(st);
 	});
+
+
+	//video 
+
+
+    $(function () {
+        var outerDiv = $('.section.main');
+        var videoTag = outerDiv.find('video');
+        $(window).resize(resize);
+        resize();
+        function resize() {
+            var width = outerDiv.width();
+            var height = outerDiv.height();
+            var aspectW = 16;
+            var aspectH = 9;
+            var scaleX = width / aspectW;
+            var scaleY = height / aspectH;
+            var scale = Math.max(scaleX, scaleY);
+            var w = Math.ceil(aspectW * scale);
+            var h = Math.ceil(aspectH * scale);
+            var x = 0;
+            var y = 0;
+            if (w > width) x = -(w - width) * 0.5;
+            if (h > height) y = -(h - height) * 0.5;
+            videoTag.css({
+                width: w,
+                height: h,
+                top: y,
+                left: x
+            });
+        }
+    });
+
 
 });
 
@@ -737,7 +791,7 @@ function init_scroll(event, delta) {
 	   quietPeriod = 500;
    
 	// Cancel scroll if currently animating or within quiet period
-   if(timeNow - lastAnimation < quietPeriod + 555) {
+   if(timeNow - lastAnimation < quietPeriod + 1000) {
       event.preventDefault();
       return;
    }

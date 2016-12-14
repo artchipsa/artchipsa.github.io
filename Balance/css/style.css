@@ -917,6 +917,7 @@ header.load {
   font-family: Gilroy;
   font-weight: 300;
   font-size: 86px;
+  text-indent: 86px;
   text-transform: uppercase;
   margin: 0;
   opacity: 0;
@@ -960,6 +961,24 @@ header.load {
 .btn:hover {
   background-color: #2c94ff;
   color: #fff;
+}
+.divvideo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+}
+.video-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 33, 46, 0.3);
 }
 @media (max-width: 1367px) {
   .main h1 {
@@ -1026,6 +1045,12 @@ header.load {
   }
 }
 @media (max-width: 1025px) {
+  .divvideo {
+    display: none;
+  }
+  .video-overlay {
+    display: none;
+  }
   .content .btn {
     font-size: 12px;
     line-height: 14px;
@@ -1053,6 +1078,9 @@ header.load {
   .footer .f-content .socials ul li {
     margin-right: 30px;
     float: left;
+  }
+  .footer .f-content .socials ul li:last-child {
+    margin-right: 0px;
   }
   .footer .f-content .socials ul li a {
     width: 172px;
@@ -1124,6 +1152,50 @@ header.load {
   }
 }
 @media (max-width: 479px) {
+  .preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #17212e;
+    z-index: 123;
+  }
+  .preloader h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: Gilroy;
+    font-weight: 300;
+    font-size: 26px;
+    text-indent: 26px;
+    text-transform: uppercase;
+    margin: 0;
+    opacity: 0;
+  }
+  .preloader h2:nth-child(1) {
+    animation: preloader 1.5s linear;
+  }
+  .preloader h2:nth-child(2) {
+    animation: preloader 1.5s linear 1.5s;
+  }
+  @keyframes preloader {
+    0% {
+      opacity: 0;
+      letter-spacing: 1px;
+    }
+    80% {
+      opacity: 0.8;
+      letter-spacing: 20px;
+    }
+    100% {
+      opacity: 0;
+      letter-spacing: 30px;
+    }
+  }
+  .main {
+    background-position: 75% 50%;
+  }
   header .logo img {
     display: inline-block;
     width: 96px;
@@ -1529,6 +1601,77 @@ header.load {
 .question .quest-container p {
   margin-bottom: 100px;
 }
+@media (max-width: 1025px) {
+  .main h1 {
+    margin-bottom: 22px;
+    font-size: 6vw;
+  }
+  .no-fullpage .main .main-text p {
+    width: 55%;
+  }
+  .title {
+    font-size: 42px;
+    line-height: 60px;
+    margin-bottom: 50px;
+  }
+  .simple-text {
+    font-size: 16px;
+    line-height: 36px;
+  }
+  .mission .mission-text {
+    width: 45%;
+  }
+  .serts {
+    height: auto;
+  }
+  .serts .container {
+    padding: 14% 8%;
+  }
+  .serts .sertificates {
+    height: auto;
+    width: 100%;
+  }
+  .partners {
+    min-height: 100vh;
+    height: auto;
+  }
+  .blue-tabs-content .cont a img {
+    margin-bottom: 25px;
+  }
+  .blue-tabs-content .cont .partner-info p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 769px) {
+  .main h1 {
+    margin-bottom: 50px;
+    font-size: 6vw;
+  }
+  .mission {
+    background-position: 25%;
+  }
+  .mission .mission-text {
+    position: relative;
+  }
+  .mission .mission-text.in {
+    transform: translate(0%, 0%);
+  }
+  .serts .container {
+    padding-top: 12%;
+    padding-right: 6%;
+    padding-bottom: 18%;
+    padding-left: 6%;
+  }
+  .question .quest-container {
+    position: relative;
+    padding: 10%;
+    left: auto;
+    right: auto;
+    transform: translate(0%);
+  }
+}
 .wellness-main {
   background-image: url(../img/main-wellness.jpg);
 }
@@ -1563,6 +1706,9 @@ header.load {
 }
 .group-filter button:hover {
   color: #2c94ff;
+}
+.grid {
+  background-color: #566880;
 }
 .grid .item {
   display: inline-block;
