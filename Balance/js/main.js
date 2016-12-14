@@ -378,10 +378,13 @@ $(document).ready(function(){
 			error = true;
 		}
 
-		if (!form.find('.changed').length >= 1){
-			form.find('input[type="checkbox"]').next('label').css('color', 'red');
-			error = true;
+		if (form.parents('.white-modal').hasClass('record')){
+			if (!form.find('.changed').length >= 1){
+				form.find('input[type="checkbox"]').next('label').css('color', 'red');
+				error = true;
+			}
 		}
+		
 
 		if (!error){
 			// Ajax как тебе удобно
