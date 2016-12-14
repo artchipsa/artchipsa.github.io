@@ -4,6 +4,7 @@ $(document).ready(function(){
 		$('header, .main-text, .scroll-down, #navigator').addClass('load');
 	}, 3300)
 
+
 	setTimeout(function(){
 		$('.preloader').fadeOut(250);
 	}, 3000)
@@ -345,6 +346,11 @@ $(document).ready(function(){
 	$('.white-modal .close').click(function(){
 		$('.white-modal').stop().fadeOut(350);
 		$('.anim').removeClass('in');
+		$('.white-modal .success').fadeOut(200);
+		$('.white-modal form input[type="text"]').val('');
+		$('.white-modal form textarea').val('');
+		$('.white-modal form input[type="checkbox"]').prop('checked', false);
+		$('.white-modal form').fadeIn(200);
 		return false;
 	});
 
@@ -358,12 +364,22 @@ $(document).ready(function(){
 
 	// отправка белой модалки 
 
+	$('.service-list input[type="checkbox"]').change(function(){
+		$(this).addClass('changed')
+		$('.service-list label').css('color', '#B5B8BE');
+	});
+
 	$('.white-modal form').submit(function(){
 		var form = $(this);
 		var error = false;
 
 		if (form.find('input[type="text"]').val() == ''){
 			form.find('input[type="text"]').css('border-bottom-color', 'red');
+			error = true;
+		}
+
+		if (!form.find('.changed').length >= 1){
+			form.find('input[type="checkbox"]').next('label').css('color', 'red');
 			error = true;
 		}
 
@@ -413,21 +429,30 @@ $(document).ready(function(){
 	}, 100);
 	
 
+
+/*	var clone = $('.blue-tabs').clone();
+	clone.css('visibility', 'hidden');
+	$('.section.trainer-slider-section .side.white').append(clone);
+	var width = clone.outerWidth();
+	console.log('width', width);
+	var left = clone.find('.active').position().left;
+	console.log('left', left);
+	var left_width = clone.find('.active').outerWidth();
+	console.log('left_width', left_width);
+*/
 	$('.blue-tabs a').click(function(e){
 		e.preventDefault();
 		var id = $(this).data('id');
 		var active_id =  $('.blue-tabs a.active').data('id');
 		if ($('.blue-tabs').hasClass('lefty')){
-			var right = $(this).parent().width() - $(this).outerWidth();
+			var right = $(this).parent().outerWidth() - ($(this).position().left + $(this).outerWidth());
 			if ($(this).hasClass('active')){
+				$('.blue-line').css('right', right);
 				return;
 			} else {
 				$('.blue-tabs a').removeClass('active');
 				$(this).addClass('active');
 				$('.blue-line').css('right', right);
-				if (id == 1){
-					$('.blue-line').css('right', 0);
-				}
 				$('.tabs-content .trainer').fadeOut(300).removeClass('active-in');
 				setTimeout(function(){
 					$('.tabs-content div[data-id='+id+']').fadeIn(300).addClass('active-in');
@@ -573,6 +598,7 @@ $(document).ready(function(){
 
 
 });
+
 
 function scrollAnimation(st){
 	var scroll_elems = [];
@@ -775,7 +801,7 @@ function initMap(){
 	var icon = {
 		url: 'http://blog.chipsa.ru/temp/marker.png',
 		origin: new google.maps.Point(0, 0),
-	    anchor: new google.maps.Point(32.5, 32.5)
+	    anchor: new google.maps.Point(77.5, 77.5)
 	};
 	map = new google.maps.Map(document.getElementById('map'), {
 	    zoom: 15,

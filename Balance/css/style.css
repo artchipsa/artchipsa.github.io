@@ -443,6 +443,7 @@ header.load {
 .main-services .fullside .item {
   position: relative;
   overflow: hidden;
+  cursor: url(../img/Cursor.svg), pointer;
 }
 .main-services .fullside .item a {
   width: 100%;
@@ -453,6 +454,7 @@ header.load {
   background-size: cover;
   transform: scale(1.01);
   transition: all 1000ms cubic-bezier(0.245, 0, 0, 1.005);
+  cursor: url(../img/Cursor.svg), pointer;
 }
 .main-services .fullside .item a.s1 {
   background-image: url(../img/s1.jpg);
@@ -901,7 +903,7 @@ header.load {
   margin-right: 70px;
 }
 .record .service-list input[type="checkbox"]:checked + label {
-  color: #566880;
+  color: #566880 !important;
 }
 .preloader {
   position: fixed;
@@ -929,6 +931,9 @@ header.load {
 }
 .preloader h2:nth-child(2) {
   animation: preloader 1.5s linear 1.5s;
+}
+.main-carousel .owl-item {
+  cursor: url(../img/Cursor.svg), pointer;
 }
 @keyframes preloader {
   0% {
@@ -1429,6 +1434,7 @@ header.load {
   background-image: url(../img/pano.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  cursor: url(../img/Cursor.svg), pointer;
 }
 .panorama .title {
   position: absolute;
