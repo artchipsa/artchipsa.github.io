@@ -10,6 +10,9 @@
 .img-container div {
   height: 100%;
   display: none;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .img-container div.active {
   display: block;

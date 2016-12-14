@@ -109,6 +109,8 @@ body {
   height: 100vh;
   letter-spacing: -0.45em;
   display: none;
+  background-size: cover;
+  background-position: center;
 }
 .section.active {
   display: block;
@@ -322,7 +324,7 @@ header.load {
 .main .main-text {
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 50%;
   transform: translate(-50%, -55%) scale(0.5);
   opacity: 0;
   text-align: center;
@@ -1424,7 +1426,9 @@ header.load {
 }
 .panorama .cycle {
   height: 100%;
-  background: url(../img/pano.jpg);
+  background-image: url(../img/pano.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .panorama .title {
   position: absolute;
@@ -1707,9 +1711,6 @@ header.load {
 .group-filter button:hover {
   color: #2c94ff;
 }
-.grid {
-  background-color: #566880;
-}
 .grid .item {
   display: inline-block;
   vertical-align: top;
@@ -1812,6 +1813,9 @@ header.load {
 .img-container div {
   height: 100%;
   display: none;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .img-container div.active {
   display: block;

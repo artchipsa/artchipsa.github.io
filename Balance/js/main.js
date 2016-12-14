@@ -79,16 +79,19 @@ $(document).ready(function(){
 					$('#fullpage div[data-id='+active_id+']').find('.side').removeClass('in').addClass('out');
 				}, 0)
 				setTimeout(function(){
-					$('#fullpage div[data-id='+id+']').find('.side').removeClass('outBack').addClass('in');
+					$('#fullpage div[data-id='+id+']').find('.side').removeClass('out').removeClass('outBack').addClass('in').addClass('touched');
 				}, 0);
 			}
 
 			if (active_id > id){
+				if (!$('#fullpage div[data-id='+id+']').find('.side').hasClass('touched')){
+					$('#fullpage div[data-id='+id+']').find('.side').addClass('out');
+				}
 				setTimeout(function(){
 					$('#fullpage div[data-id='+active_id+']').find('.side').removeClass('in').addClass('outBack');
 				}, 0)	
 				setTimeout(function(){
-					$('#fullpage div[data-id='+id+']').find('.side').removeClass('out').addClass('in');
+					$('#fullpage div[data-id='+id+']').find('.side').removeClass('outBack').removeClass('out').addClass('in').addClass('touched');
 				}, 0);
 			}
 
@@ -99,11 +102,20 @@ $(document).ready(function(){
 				$('#fullpage div[data-id='+active_id+'] .side').parent().next().find('.fullside').addClass('noTransIn');
 				setTimeout(function(){
 					$('#fullpage div[data-id='+active_id+'] .side').parent().next().find('.fullside').removeClass('noTransIn').addClass('fullInNext');
+					$('#fullpage div[data-id='+active_id+']').css('z-index', 'auto');
 				}, 1000);
 			} else {
 				$('#fullpage div[data-id='+active_id+']').css('z-index', 'auto');
 				$('#fullpage div').removeClass('noTransIn');
 			}
+
+			if ($('#fullpage div[data-id='+active_id+'] .fullside').parent().prev().find('.side').length){
+				$('#fullpage div[data-id='+active_id+'] .fullside').parent().prev().css('z-index', 2);
+			} else {
+				$('#fullpage div[data-id='+active_id+'] .fullside').parent().prev().css('z-index', 'auto');
+			}
+
+
 
 			// TODO переключение табов с фулл на фулл
 		 	if (active_id < id){
@@ -129,6 +141,11 @@ $(document).ready(function(){
 		}
 
 	});
+
+
+/*	function returnNext(elem){
+		if (elem.next().find())
+	}*/
 
 	// ховер на элемент навигатора 
 
@@ -563,7 +580,7 @@ function scrollAnimation(st){
 		scroll_elems.push($(this));
 	});
 	for (var i = 0; i < scroll_elems.length; i++){
-		if (st >= scroll_elems[i].parents('.section').offset().top){
+		if (st >= (scroll_elems[i].parents('.section').offset().top - (scroll_elems[i].height()/1.5))){
 			scroll_elems[i].addClass('in');
 		}
 	}
@@ -796,11 +813,14 @@ function init_scroll(event, delta) {
       return;
    }
 
-   if (deltaOfInterest < 0) {
-      moveDown();
-   } else {
-      moveUp();
-   }
+   setTimeout(function(){
+		if (deltaOfInterest < 0) {
+	      	moveDown();
+	   	} else {
+	      	moveUp();
+	   	}
+   }, 100)
+   
    lastAnimation = timeNow;
 }
 
