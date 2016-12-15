@@ -103,7 +103,6 @@ $(document).ready(function(){
 				$('#fullpage div[data-id='+active_id+'] .side').parent().next().find('.fullside').addClass('noTransIn');
 				setTimeout(function(){
 					$('#fullpage div[data-id='+active_id+'] .side').parent().next().find('.fullside').removeClass('noTransIn').addClass('fullInNext');
-					$('#fullpage div[data-id='+active_id+']').css('z-index', 'auto');
 				}, 1000);
 			} else {
 				$('#fullpage div[data-id='+active_id+']').css('z-index', 'auto');

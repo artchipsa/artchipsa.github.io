@@ -910,6 +910,9 @@ header{
 			transition: all .45s ease-out;
 			cursor: pointer;
 			margin-right: 70px;
+			&:last-child{
+				margin-right: 0px;
+			}
 		}
 		input[type="checkbox"]:checked + label{
 			color: @onWhite!important;
@@ -998,387 +1001,7 @@ header{
 	height: 100%;
 	background-color: fade(@blue, 30%);
 }
-@media (max-width: 1367px){
-	.main h1{
-		margin-bottom: 22px;
-	}
-	#navigator{
-		right: 3%;
-	}
-	.main p{
-		margin-top: 0px;
-	    font-size: 16px;
-    	line-height: 30px;
-	}
-	.content {
-        padding: 0%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 65%;
-        transform: translate(-50%, -50%);
-	}
-	.content h2{
-	    font-size: 36px;
-        margin-bottom: 10%;
-	}
-	.content p{
-		font-size: 16px;
-		line-height: 32px;
-	}
-	.side{
-		position: relative;
-	}
-	.main-services .fullside .item p{
-	    font-size: 34px;
-    	line-height: 54px;
-	}
-	.footer .f-content .table tr td{
-	    padding: 25px 20px;
-	}
-	.footer .f-content .table{
-	    width: 420px;
-	}
-	.footer .f-content .socials ul li{
-		margin-bottom: 30px;
-	}
-	.footer .f-content .socials ul{
-		margin-left: 80px;
-	}
-	#menu ul li{
-		margin-bottom: 10%;
-	}
-	#menu ul li a{
-		font-size: 20px;
-	}
-	#faq .faq-content {
-	    padding: 7% 16%;
-	}
-	#faq h2{
-	    font-size: 34px;
-        margin-bottom: 60px;
-	}
-	#faq .info-row {
-	    margin-bottom: 55px;
-	}
-	.fail-page{
-		overflow: hidden;
-	}
-}
 
-@media (max-width: 1025px){
-	.divvideo{
-		display: none;
-	}
-	.video-overlay{
-		display: none;
-	}
-	.content .btn{
-	    font-size: 12px;
-	    line-height: 14px;
-	    letter-spacing: 2.5!important;
-	    padding: 20px 30px;
-	}
-	.main-services .fullside .item p {
-	    font-size: 20px;
-	    line-height: 36px;
-        letter-spacing: 4!important;
-	}
-	.footer .f-content{
-		width: 800px;
-	}
-	.footer .f-content .table{
-		display: block;
-		width: auto;
-		table{
-			margin: 0 auto;
-		}
-	}
-	.footer .f-content .socials ul{
-		margin-left: 0px;
-	}
-	.footer .f-content .socials ul li{
-		margin-right: 30px;
-		float: left;
-		&:last-child{
-			margin-right: 0px;
-		}
-	}
-	.footer .f-content .socials ul li a{
-		width: 172px;
-	}
-	.footer .f-content .socials{
-	    margin-top: 45px;
-	}
-}
-@media (max-width: 769px){
-	#fullpage{
-		height: 100%;
-	}
-	#navigator{
-		display: none;
-	}
-	.scroll-down{
-		display: none!important;
-	}
-	.section{
-		display: block;
-		position: relative;
-		height: auto;
-		&.main{
-			height: 100vh;
-		}
-		&.second{
-			.side{
-				&:nth-child(1){
-					transform: translateY(100%)!important;
-				}
-				&:nth-child(2){
-					transform: translateY(-100%)!important;
-				}
-			}
-		}
-	}
-	.side{
-		transform: translateY(0%)!important;
-		width: 100%;
-		height: 55vh;
-		background-position: 50% 50%;
-	}
-	.fullside{
-		transform: translateY(0%)!important;
-	}
-	.footer .f-content{
-		width: 585px;
-	}
-	.footer .f-content .socials {
-	    display: block;
-	    margin: 0 auto;
-	    margin-top: 45px;
-	    min-height: 10px;
-	    width: 379px;
-	}
-	.footer .f-content .socials ul li:nth-child(2n){
-		margin-right: 0px;
-	}
-	#menu .side{
-		height: 100vh;
-	}
-	#menu ul li a {
-	    font-size: 30px;
-	}
-	#faq .faq-content{
-	    padding: 25% 16%;
-	}
-	#faq .field{
-		width: 100%!important;
-	}
-	#faq .field:nth-child(1) {
-	    margin-bottom: 55px;
-	}
-}
-@media (max-width: 479px){
-	.preloader{
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		background-color: @blue;
-		z-index: 123;
-		h2{
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			color: @white;
-			font-family: Gilroy;
-			font-weight: 300;
-			font-size: 26px;
-			text-indent: 26px;
-			text-transform: uppercase;
-			margin: 0;
-			opacity: 0;
-			&:nth-child(1){
-				animation: preloader 1.5s linear;
-			}
-			&:nth-child(2){
-				animation: preloader 1.5s linear 1.5s;
-			}
-		}
-	}
-	@keyframes preloader{
-		0%{
-			opacity: 0;
-			letter-spacing: 1px;
-		}
-		80%{
-			opacity: 0.8;
-			letter-spacing: 20px;
-		}
-		100%{
-			opacity: 0;
-			letter-spacing: 30px;
-		}
-	}
-	.main{
-		background-position: 75% 50%;
-	}
-	header .logo img {
-	    display: inline-block;
-	    width: 96px;
-	}
-	.footer .f-content{
-		width: 310px;
-	}
-	header .logo{
-		width: 40%;
-	}
-	header .header-controls{
-   		width: 58%;
-	}
-	.header-btn{
-	    font-size: 8px;
-	    line-height: 12px;
-	    padding: 10px;
-	}
-	.menu{
-	    padding: 16px 16px;
-	    height: 0px;
-	    width: 3px;
-	}
-	.footer .f-content .table tr td{
-		padding: 20px 18px; 
-	}
-	.footer .f-content .table tr .label span{
-		font-size: 14px;
-	}
-	.footer .f-content .table tr td:last-child{
-		font-size: 14px;
-	}
-	.footer .f-content .socials{
-		width: 310px;
-	}
-	.footer .f-content .socials ul li{
-		margin-right: 25px;
-		margin-bottom: 25px;
-	}
-	.footer .f-content .socials ul li a{
-		font-size: 10px;
-		width: 140px;
-		padding: 20px 0px;
-	}
-	.menu span{
-	    height: 2px;
-        width: 11px;
-	    left: 10px;
-	    top: 15px;
-	}
-	.menu span:after{
-		width: 17px;
-		bottom: -7px;
-	}
-	.menu span:before{
-		top: -7px;
-		width: 14px;
-	}
-	.menu{
-		&:hover span, &:hover span:after, &:hover span:before{
-			width: 17px;
-		}
-	}
-	header{
-	    margin-top: 18px;
-	}
-	header .header-controls .btn-block{
-		margin-right: -2px;
-	}
-	.main h1{
-		font-size: 8vw;
-	}
-	.main p{
-		font-size: 12px;
-		font-weight: 12px;
-	}
-	.side{
-		transform: translateY(0%)!important;
-		width: 100%;
-		height: 70vh;
-	}
-	.content{
-		width: 80%;
-	}
-	.content h2 {
-	    font-size: 25px;
-	    margin-bottom: 8%;
-	}
-	.content p {
-	    font-size: 14px;
-	    line-height: 28px;
-        margin-bottom: 10%;
-	}
-	#faq h2 {
-	    font-size: 28px;
-	    margin-bottom: 40px;
-	}
-	#faq .info-row{
-	    margin-bottom: 30px;
-	}
-	#faq .field{
-		width: 100%!important;
-	}
-	#faq .field label{
-		margin-bottom: 10px;
-		font-size: 10px;
-	}
-	#faq .field input[type='text']{
-	    padding: 5px 5px;
-	}
-	#faq .field:nth-child(1) {
-	    width: 100%;
-	    margin-bottom: 30px;
-	}
-	#faq .field textarea{
-		padding: 5px;
-	}
-	#faq .field.full{
-		margin-bottom: 0px;
-	}
-	#faq img {
-	    position: absolute;
-	    left: 2%;
-        top: 26px;
-	    width: 96px;
-	}
-	#faq .close{
-	    padding: 16px 16px;
-	    height: 0px;
-	    width: 3px;
-        top: 16px;
-	}
-	#faq .close span{
-	    top: 15px;
-	    left: 10px;
-    	width: 17px;
-	}
-	#faq .faq-content {
-	    padding: 22% 8%;
-	}
-}
-@media (max-width: 321px){
-	.side{
-		transform: translateY(0%)!important;
-		width: 100%;
-		height: 78vh;
-	}
-	.main-services .fullside .left{
-		left: 15px;
-	}
-	.main-services .fullside .right{
-		right: 15px;
-	}
-	#menu .side{
-		height: 100vh;
-	}
-}
 
 @import 'about.less';
 @import 'wellness.less';
@@ -1543,5 +1166,567 @@ header{
 		    	margin-right: 0px;
 		    }
 		}
+	}
+}
+.header{
+	.left, .right{
+		display: none;
+	}
+}
+
+
+@media (max-width: 1367px){
+	.main h1{
+		margin-bottom: 22px;
+	}
+	#navigator{
+		right: 3%;
+	}
+	.main p{
+		margin-top: 0px;
+	    font-size: 16px;
+    	line-height: 30px;
+	}
+	.content {
+        padding: 0%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 65%;
+        transform: translate(-50%, -50%);
+	}
+	.content h2{
+	    font-size: 36px;
+        margin-bottom: 10%;
+	}
+	.content p{
+		font-size: 16px;
+		line-height: 32px;
+	}
+	.side{
+		position: relative;
+	}
+	.main-services .fullside .item p{
+	    font-size: 34px;
+    	line-height: 54px;
+	}
+	.footer .f-content .table tr td{
+	    padding: 25px 20px;
+	}
+	.footer .f-content .table{
+	    width: 420px;
+	}
+	.footer .f-content .socials ul li{
+		margin-bottom: 30px;
+	}
+	.footer .f-content .socials ul{
+		margin-left: 80px;
+	}
+	#menu ul li{
+		margin-bottom: 10%;
+	}
+	#menu ul li a{
+		font-size: 20px;
+	}
+	#faq .faq-content {
+	    padding: 7% 16%;
+	}
+	#faq h2{
+	    font-size: 34px;
+        margin-bottom: 60px;
+	}
+	#faq .info-row {
+	    margin-bottom: 55px;
+	}
+	.fail-page{
+		overflow: hidden;
+	}
+		.panorama .cycle{
+		background-size: initial;
+	}
+ 	.serts{
+ 		min-height: 100vh;
+ 		height: auto;
+		.container{
+		    padding: 6% 8%;
+		}
+	}
+	.serts .sertificates{
+	    height: 430px;
+	}
+	.partners{
+		height: 150vh;
+	} 
+	.footer .f-content{
+		width: 55%;
+	}
+	.footer .f-content .socials{
+		float: right;
+	}
+	.footer .f-content .socials ul{
+		margin-left: 30px;
+	}
+}
+
+@media (max-width: 1025px){
+	.divvideo{
+		display: none;
+	}
+	.video-overlay{
+		display: none;
+	}
+	.content .btn{
+	    font-size: 12px;
+	    line-height: 14px;
+	    letter-spacing: 2.5!important;
+	    padding: 20px 30px;
+	}
+	.main-services .fullside .item p {
+	    font-size: 20px;
+	    line-height: 36px;
+        letter-spacing: 4!important;
+	}
+	.footer .f-content{
+		width: 800px;
+	}
+	.footer .f-content .table{
+		display: block;
+		width: auto;
+		table{
+			margin: 0 auto;
+		}
+	}
+	.footer .f-content .socials ul{
+		margin-left: 0px;
+	}
+	.footer .f-content .socials ul li{
+		margin-right: 30px;
+		float: left;
+		&:last-child{
+			margin-right: 0px;
+		}
+	}
+	.footer .f-content .socials ul li a{
+		width: 172px;
+	}
+	.footer .f-content .socials{
+	    margin-top: 45px;
+	}
+	.white-modal .faq-content {
+	    padding: 14% 5%;
+	}
+	.white-modal .field label{
+		font-size: 12px;
+	}
+	.record .service-list label{
+		font-size: 16px;
+		margin-right: 55px;
+	}
+	.white-modal h2{
+		font-size: 36px;
+		margin-bottom: 65px;
+	}
+	.white-modal h2{
+		margin-top: 40px;
+	}
+	.main h1 {
+	    margin-bottom: 22px;
+        font-size: 6vw;
+	}
+	.no-fullpage .main .main-text p{
+		width: 55%;
+	}
+	.title{
+	    font-size: 42px;
+    	line-height: 60px;
+   		margin-bottom: 50px;
+	}
+	.simple-text{
+	    font-size: 16px;
+    	line-height: 36px;
+	}
+	.mission .mission-text{
+		width: 45%;
+	}
+	.serts{
+		height: auto;
+		.container {
+		    padding: 14% 8%;
+		}
+	}
+	.serts .sertificates {
+		height: auto;
+		width: 100%;
+	}
+	.partners{
+		min-height: 100vh;
+		height: auto;
+	}
+	.blue-tabs-content .cont a img {
+	    margin-bottom: 25px;
+	}
+	.blue-tabs-content .cont .partner-info p {
+	    line-height: 24px;
+	    font-size: 14px;
+	    margin-bottom: 30px;
+	}	
+}
+@media (max-width: 769px){
+	#fullpage{
+		height: 100%;
+	}
+	#navigator{
+		display: none;
+	}
+	.scroll-down{
+		display: none!important;
+	}
+	.section{
+		display: block;
+		position: relative;
+		height: auto;
+		&.main{
+			height: 100vh;
+		}
+		&.second{
+			.side{
+				&:nth-child(1){
+					transform: translateY(100%)!important;
+				}
+				&:nth-child(2){
+					transform: translateY(-100%)!important;
+				}
+			}
+		}
+	}
+	.side{
+		transform: translateY(0%)!important;
+		width: 100%;
+		height: 55vh;
+		background-position: 50% 50%;
+	}
+	.fullside{
+		transform: translateY(0%)!important;
+	}
+	.footer .f-content{
+		width: 585px;
+	}
+	.footer .f-content .socials {
+	    display: block;
+	    margin: 0 auto;
+	    margin-top: 45px;
+	    min-height: 10px;
+	    width: 379px;
+	}
+	.footer .f-content .socials ul li:nth-child(2n){
+		margin-right: 0px;
+	}
+	#menu .side{
+		height: 100vh;
+	}
+	#menu ul li a {
+	    font-size: 30px;
+	}
+	#faq .faq-content{
+	    padding: 25% 16%;
+	}
+	#faq .field{
+		width: 100%!important;
+	}
+	#faq .field:nth-child(1) {
+	    margin-bottom: 55px;
+	}
+	.main h1 {
+	    margin-bottom: 50px;
+	    font-size: 6vw;
+	}
+	.mission{
+		background-position: 25%;
+		.mission-text{
+			position: relative;
+			&.in{
+				transform: translate(0%, 0%);
+			}
+		}
+	}
+	.serts .container {
+	    padding-top: 12%;
+	    padding-right: 6%;
+	    padding-bottom: 18%;
+	    padding-left: 6%;
+	}
+	.question .quest-container {
+	    position: relative;
+	    padding: 10%;
+	    left: auto;
+	    right: auto;
+	    transform: translate(0%);
+	}
+	.main .main-text p{
+		width: 84%;
+	}
+	.side:nth-child(1){
+	    transform: translateY(100%)!important;
+	}
+	.side:nth-child(2) {
+	    transform: translateY(-100%)!important;
+	}
+	.trainer-slider-section{
+		background-color: @white;
+		.side:nth-child(1){
+			display: none;
+		}
+		.side:nth-child(2){
+			transform: translateY(0%)!important;
+			height: auto;
+			min-height: 100vh;
+		}
+		.img-container{
+			display: block;
+			div{
+			    height: 35%;
+			    background-position: top;
+			    margin-bottom: 30px;
+			    display: block!important;
+			}
+		}
+		.left, .right{
+			display: none;
+		}
+		.header{
+			position: relative;
+			.left{
+				display: block!important;
+				top: 0px;
+				left: auto;
+				right: 86px;
+				bottom: auto;
+				img{
+					width: 30px;
+				}
+			}
+			.right{
+				display: block!important;
+				top: 0px;
+				right: 0px;
+				bottom: auto;
+				img{
+					width: 30px;
+				}
+			}
+
+		}
+		.trainer-cont{
+			padding: 16% 0px 10% 0px;
+		}
+	}
+	.footer .f-content .socials{
+		float: none;
+	}
+	.trainer-cont .blue-tabs .tabs-cont{
+		width: 47%;
+	}
+}
+@media (max-width: 479px){
+	.preloader{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: @blue;
+		z-index: 123;
+		h2{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			color: @white;
+			font-family: Gilroy;
+			font-weight: 300;
+			font-size: 26px;
+			text-indent: 26px;
+			text-transform: uppercase;
+			margin: 0;
+			opacity: 0;
+			&:nth-child(1){
+				animation: preloader 1.5s linear;
+			}
+			&:nth-child(2){
+				animation: preloader 1.5s linear 1.5s;
+			}
+		}
+	}
+	@keyframes preloader{
+		0%{
+			opacity: 0;
+			letter-spacing: 1px;
+		}
+		80%{
+			opacity: 0.8;
+			letter-spacing: 20px;
+		}
+		100%{
+			opacity: 0;
+			letter-spacing: 30px;
+		}
+	}
+	.main{
+		background-position: 75% 50%;
+	}
+	header .logo img {
+	    display: inline-block;
+	    width: 96px;
+	}
+	.footer .f-content{
+		width: 310px;
+	}
+	header .logo{
+		width: 40%;
+	}
+	header .header-controls{
+   		width: 58%;
+	}
+	.header-btn{
+	    font-size: 8px;
+	    line-height: 12px;
+	    padding: 10px;
+	}
+	.menu{
+	    padding: 16px 16px;
+	    height: 0px;
+	    width: 3px;
+	}
+	.footer .f-content .table tr td{
+		padding: 20px 18px; 
+	}
+	.footer .f-content .table tr .label span{
+		font-size: 14px;
+	}
+	.footer .f-content .table tr td:last-child{
+		font-size: 14px;
+	}
+	.footer .f-content .socials{
+		width: 310px;
+	}
+	.footer .f-content .socials ul li{
+		margin-right: 25px;
+		margin-bottom: 25px;
+	}
+	.footer .f-content .socials ul li a{
+		font-size: 10px;
+		width: 140px;
+		padding: 20px 0px;
+	}
+	.menu span{
+	    height: 2px;
+        width: 11px;
+	    left: 10px;
+	    top: 15px;
+	}
+	.menu span:after{
+		width: 17px;
+		bottom: -7px;
+	}
+	.menu span:before{
+		top: -7px;
+		width: 14px;
+	}
+	.menu{
+		&:hover span, &:hover span:after, &:hover span:before{
+			width: 17px;
+		}
+	}
+	header{
+	    margin-top: 18px;
+	}
+	header .header-controls .btn-block{
+		margin-right: -2px;
+	}
+	.main h1{
+		font-size: 8vw;
+		margin-bottom: 30px;
+	}
+	.main p{
+		font-size: 12px;
+		font-weight: 12px;
+	}
+	.side{
+		transform: translateY(0%)!important;
+		width: 100%;
+		height: 70vh;
+	}
+	.content{
+		width: 80%;
+	}
+	.content h2 {
+	    font-size: 25px;
+	    margin-bottom: 8%;
+	}
+	.content p {
+	    font-size: 14px;
+	    line-height: 28px;
+        margin-bottom: 10%;
+	}
+	#faq h2 {
+	    font-size: 28px;
+	    margin-bottom: 40px;
+	}
+	#faq .info-row{
+	    margin-bottom: 30px;
+	}
+	#faq .field{
+		width: 100%!important;
+	}
+	#faq .field label{
+		margin-bottom: 10px;
+		font-size: 10px;
+	}
+	#faq .field input[type='text']{
+	    padding: 5px 5px;
+	}
+	#faq .field:nth-child(1) {
+	    width: 100%;
+	    margin-bottom: 30px;
+	}
+	#faq .field textarea{
+		padding: 5px;
+	}
+	#faq .field.full{
+		margin-bottom: 0px;
+	}
+	#faq img {
+	    position: absolute;
+	    left: 2%;
+        top: 26px;
+	    width: 96px;
+	}
+	#faq .close{
+	    padding: 16px 16px;
+	    height: 0px;
+	    width: 3px;
+        top: 16px;
+	}
+	#faq .close span{
+	    top: 15px;
+	    left: 10px;
+    	width: 17px;
+	}
+	#faq .faq-content {
+	    padding: 22% 8%;
+	}
+}
+@media (max-width: 321px){
+	.side{
+		transform: translateY(0%)!important;
+		width: 100%;
+		height: 78vh;
+	}
+	.main-services .fullside .left{
+		left: 15px;
+	}
+	.main-services .fullside .right{
+		right: 15px;
+	}
+	#menu .side{
+		height: 100vh;
 	}
 }

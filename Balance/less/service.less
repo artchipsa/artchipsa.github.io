@@ -28,6 +28,9 @@
 	padding: 10% 0px;
 	overflow: hidden;
 	display: none;
+	.img-container{
+		display: none;
+	}
 	&.active{
 		display: block;
 	}
@@ -104,3 +107,67 @@
 	height: 100px; 
 }
 #mCSB_3_dragger_vertical .mCSB_dragger_bar{ background-color: @cyan; }
+
+@media (max-width: 1025px){
+	.main .main-text p{
+		width: 70%;
+	}
+	.main .main-text{
+		top: 53%;
+	}
+	.trainer-cont .header h2{
+	    font-size: 30px;
+    	line-height: 42px;
+    	margin-bottom: 20px;
+	}
+	.trainer-cont .header .name{
+	    font-size: 18px;
+    	line-height: 24px;
+	    margin-bottom: 20px;
+	}
+	.trainer-cont .header .text{
+	    font-size: 16px;
+    	line-height: 22px;
+	    width: 70%;
+	}
+	.trainer-cont .blue-tabs .tabs-cont{
+		width: 66%;
+	}
+	.blue-tabs a{
+		font-size: 13px;
+		margin-right: 20px;
+		margin-bottom: 30px;
+	}
+	.trainer-cont .blue-tabs{
+		margin-bottom: 30px;
+	}
+	.trainer-cont .trainer ul li{
+	    font-size: 14px;
+	    color: #566880;
+	    margin-bottom: 20px;
+	}
+	.trainer-slider-section .left{
+		left: 25px;
+		bottom: 30px;
+	}
+	.trainer-slider-section .right{
+		right: 25px;
+		bottom: 30px;
+	}
+	.trainer-cont{
+		padding: 17% 0%;
+	}
+	.trainer-cont .header{
+		width: 80%;
+	}
+	.trainer-cont .blue-tabs .tabs-cont{
+		padding-left: 10%;
+	}
+	.trainer-cont .trainer ul{
+	    width: 80%;
+	}
+	.trainer-cont .header .btn{
+		font-size: 12px;
+		padding: 17px 55px;
+	}
+}
