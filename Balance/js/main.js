@@ -14,7 +14,7 @@ $(document).ready(function(){
 		$(document).bind('mousewheel DOMMouseScroll', function(event) {
 			var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
 			var currentWidth = checkWidth();
-			if (currentWidth > 1024){
+			if (currentWidth > 1023){
 				event.preventDefault();
 				init_scroll(event, delta);
 			}  
@@ -208,12 +208,12 @@ $(document).ready(function(){
 	    }
 	});
 
-	$('.left.serts').click(function(e) {
+	$('.left.sert').click(function(e) {
 		e.preventDefault();
 	    owl2.trigger('prev.owl.carousel');
 	});
 
-	$('.right.serts').click(function(e) {
+	$('.right.sert').click(function(e) {
 		e.preventDefault();
 	    owl2.trigger('next.owl.carousel');
 	});

@@ -249,6 +249,33 @@
 .question .quest-container p {
   margin-bottom: 100px;
 }
+@media (max-width: 1367px) {
+  .panorama .cycle {
+    background-size: initial;
+  }
+  .serts {
+    min-height: 100vh;
+    height: auto;
+  }
+  .serts .container {
+    padding: 6% 8%;
+  }
+  .serts .sertificates {
+    height: 430px;
+  }
+  .partners {
+    height: 150vh;
+  }
+  .footer .f-content {
+    width: 55%;
+  }
+  .footer .f-content .socials {
+    float: right;
+  }
+  .footer .f-content .socials ul {
+    margin-left: 30px;
+  }
+}
 @media (max-width: 1025px) {
   .main h1 {
     margin-bottom: 22px;

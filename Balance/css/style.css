@@ -1611,6 +1611,33 @@ header.load {
 .question .quest-container p {
   margin-bottom: 100px;
 }
+@media (max-width: 1367px) {
+  .panorama .cycle {
+    background-size: initial;
+  }
+  .serts {
+    min-height: 100vh;
+    height: auto;
+  }
+  .serts .container {
+    padding: 6% 8%;
+  }
+  .serts .sertificates {
+    height: 430px;
+  }
+  .partners {
+    height: 150vh;
+  }
+  .footer .f-content {
+    width: 55%;
+  }
+  .footer .f-content .socials {
+    float: right;
+  }
+  .footer .f-content .socials ul {
+    margin-left: 30px;
+  }
+}
 @media (max-width: 1025px) {
   .main h1 {
     margin-bottom: 22px;
@@ -1806,6 +1833,19 @@ header.load {
 .more-articles {
   margin: 60px 0px;
   text-align: center;
+}
+@media (max-width: 1025px) {
+  .main .main-text p {
+    width: 70%;
+  }
+  .main .main-text {
+    top: 53%;
+  }
+  .trainer-cont .header h2 {
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 20px;
+  }
 }
 .serv-main {
   background-image: url(../img/fit.jpg);
