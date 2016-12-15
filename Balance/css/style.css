@@ -1050,6 +1050,9 @@ header.load {
   #faq .info-row {
     margin-bottom: 55px;
   }
+  .fail-page {
+    overflow: hidden;
+  }
 }
 @media (max-width: 1025px) {
   .divvideo {
