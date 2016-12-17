@@ -1633,6 +1633,12 @@ header{
 	#map{
 		height: 100vh;
 	}
+	.white-modal .success p {
+	    font-size: 18;
+	    font-weight: 300;
+	    line-height: 38px;
+	    width: 100%;
+	}
 }
 @media (max-width: 479px){
 	.no-fullpage .main .main-text p{
@@ -1704,6 +1710,7 @@ header{
 	}
 	#menu ul li a {
 	    font-size: 18px;
+	    line-height: 28px;
 	}
 	#menu ul li {
 	    margin-bottom: 8%;
@@ -1958,7 +1965,7 @@ header{
 		width: 100%;
 	}
 	.blue-tabs.lefty a {
-	    font-size: 13px;
+	    font-size: 11px;
 	    margin-right: 10px;
 	    margin-bottom: 20px;
 	}
@@ -2029,7 +2036,20 @@ header{
 		margin-bottom: 15px;
 	    width: 160px;
 	}
-
+	.blue-tabs-content .cont .partner-info{
+		display: block;
+	}
+	.grid{
+		.special{
+			display: none;
+		}
+		&.mobile{
+			display: block;
+			.special{
+				display: block;
+			}
+		}
+	}
 }
 @media (max-width: 321px){
 	.blue-tabs.lefty a {

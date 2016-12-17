@@ -1282,6 +1282,9 @@ header.load {
 .group-filter button:hover {
   color: #2c94ff;
 }
+.grid.mobile {
+  display: none;
+}
 .grid .item {
   display: inline-block;
   vertical-align: top;
@@ -2132,6 +2135,12 @@ header.load {
   #map {
     height: 100vh;
   }
+  .white-modal .success p {
+    font-size: 18;
+    font-weight: 300;
+    line-height: 38px;
+    width: 100%;
+  }
 }
 @media (max-width: 479px) {
   .no-fullpage .main .main-text p {
@@ -2202,6 +2211,7 @@ header.load {
   }
   #menu ul li a {
     font-size: 18px;
+    line-height: 28px;
   }
   #menu ul li {
     margin-bottom: 8%;
@@ -2452,7 +2462,7 @@ header.load {
     width: 100%;
   }
   .blue-tabs.lefty a {
-    font-size: 13px;
+    font-size: 11px;
     margin-right: 10px;
     margin-bottom: 20px;
   }
@@ -2522,6 +2532,18 @@ header.load {
   .abs-map-content .social a {
     margin-bottom: 15px;
     width: 160px;
+  }
+  .blue-tabs-content .cont .partner-info {
+    display: block;
+  }
+  .grid .special {
+    display: none;
+  }
+  .grid.mobile {
+    display: block;
+  }
+  .grid.mobile .special {
+    display: block;
   }
 }
 @media (max-width: 321px) {
