@@ -122,19 +122,19 @@ body {
   transform: translateY(100%);
 }
 .fullside.fullInNext {
-  transition: all 1s cubic-bezier(0.56, 0, 0, 0.995);
+  transition: transform 1s cubic-bezier(0.56, 0, 0, 0.995);
   transform: translateY(0%);
 }
 .fullside.fullOutNext {
-  transition: all 1s cubic-bezier(0.56, 0, 0, 0.995);
+  transition: transform 1s cubic-bezier(0.56, 0, 0, 0.995);
   transform: translateY(-100%);
 }
 .fullside.fullInPrev {
-  transition: all 1s cubic-bezier(0.56, 0, 0, 0.995);
+  transition: transform 1s cubic-bezier(0.56, 0, 0, 0.995);
   transform: translateY(0%);
 }
 .fullside.fullOutPrev {
-  transition: all 1s cubic-bezier(0.56, 0, 0, 0.995);
+  transition: transform 1s cubic-bezier(0.56, 0, 0, 0.995);
   transform: translateY(100%);
 }
 .fullside.noTransIn {
@@ -145,7 +145,7 @@ body {
   vertical-align: top;
   width: 50%;
   height: 100%;
-  transition: all 1s cubic-bezier(0.56, 0, 0, 0.995);
+  transition: transform 1s cubic-bezier(0.56, 0, 0, 0.995);
   background-size: cover;
   background-position: 50% 80%;
 }
