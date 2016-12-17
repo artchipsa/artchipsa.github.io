@@ -44,8 +44,11 @@ $(document).ready(function(){
 	});
 	
 	// // TODO такой же скролл на ипедах.
+	document.body.addEventListener('touchmove',function(e){
+	    e.preventDefault();
+	});
 	document.addEventListener('touchend', function(event) {
-		event.preventDefault();
+		//event.preventDefault();
 	   	var currentY = event.changedTouches[0].clientY;
 	   	init_scroll(event, currentY);
 	}, false);
