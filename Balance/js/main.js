@@ -1,3 +1,5 @@
+'use strict';
+
 $(document).ready(function(){
 	// Появление элементов на главном экране
 	setTimeout(function(){
@@ -42,11 +44,12 @@ $(document).ready(function(){
 	});
 	
 	// // TODO такой же скролл на ипедах.
-	document.addEventListener('touchmove', function(event) {
+	document.addEventListener('touchend', function(event) {
 		event.preventDefault();
-	   	var currentY = event.originalEvent.clientY;
+	   	var currentY = event.changedTouches[0].clientY;
 	   	init_scroll(event, currentY);
 	}, false);
+
 
 	//перекючение слайда
 
@@ -862,17 +865,22 @@ function checkWidth(){
 
 var lastAnimation = 0;
 function init_scroll(event, delta) {
-   var deltaOfInterest = delta,
-	   timeNow = new Date().getTime(),
-	   quietPeriod = 500;
-   
+	var deltaOfInterest = delta,
+		timeNow = new Date().getTime(),
+		quietPeriod = 500;
+
 	// Cancel scroll if currently animating or within quiet period
-   if(timeNow - lastAnimation < quietPeriod + 1000) {
-      event.preventDefault();
-      return;
-   }
+
+	// if ()
+
+
+	if(timeNow - lastAnimation < quietPeriod + 1000) {
+		event.preventDefault();
+	    return;
+	}
 
    setTimeout(function(){
+   		console.log('deltaOfInterest', deltaOfInterest);
 		if (deltaOfInterest < 0) {
 	      	moveDown();
 	   	} else {
