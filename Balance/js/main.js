@@ -42,11 +42,11 @@ $(document).ready(function(){
 	});
 	
 	// // TODO такой же скролл на ипедах.
-	// document.addEventListener('touchmove', function(event) {
-	// 	event.preventDefault();
-	//    	var currentY = event.originalEvent.touches[0].clientY;
-	//    	init_scroll(event, currentY);
-	// }, false);
+	document.addEventListener('touchmove', function(event) {
+		event.preventDefault();
+	   	var currentY = event.originalEvent.clientY;
+	   	init_scroll(event, currentY);
+	}, false);
 
 	//перекючение слайда
 
