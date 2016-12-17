@@ -44,7 +44,7 @@ $(document).ready(function(){
 	});
 	
 	// // TODO такой же скролл на ипедах.
-	document.body.addEventListener('touchmove',function(e){
+/*	document.body.addEventListener('touchmove',function(e){
 	    e.preventDefault();
 	});
 	document.addEventListener('touchend', function(event) {
@@ -52,6 +52,21 @@ $(document).ready(function(){
 	   	var currentY = event.changedTouches[0].clientY;
 	   	init_scroll(event, currentY);
 	}, false);
+*/
+	var mobile = document.getElementById('fullpage');
+	var touch = new Hammer(mobile);
+
+	touch.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+	touch.on("panend", function(ev) {
+		if (ev.direction === 8){
+			moveDown();
+		}
+
+		if (ev.direction === 16){
+			moveUp();
+		}
+	});
 
 
 	//перекючение слайда
