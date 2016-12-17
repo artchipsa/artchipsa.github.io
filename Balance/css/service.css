@@ -38,33 +38,36 @@
 .trainer-cont .header h2 {
   font-family: Gilroy;
   font-weight: 300;
-  font-size: 42px;
-  line-height: 62px;
+  font-size: 3vw;
+  line-height: 3.5vw;
   text-transform: uppercase;
   color: #566880;
   margin-top: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 7%;
 }
 .trainer-cont .header .name {
   font-weight: 800;
-  font-size: 26px;
-  line-height: 32px;
+  font-size: 1.5vw;
+  line-height: 1.7vw;
   width: 30%;
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 6%;
   color: #566880;
 }
 .trainer-cont .header .text {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 0.96vw;
+  line-height: 1.3vw;
   color: #566880;
-  margin-bottom: 50px;
+  margin-bottom: 7%;
   width: 39%;
   display: block;
 }
 .trainer-cont .blue-tabs {
   width: 100%;
   margin-bottom: 50px;
+}
+.trainer-cont .blue-tabs a {
+  font-size: 0.95vw;
 }
 .trainer-cont .blue-tabs .tabs-cont {
   position: relative;
@@ -91,7 +94,7 @@
   margin: 0 auto;
 }
 .trainer-cont .trainer ul li {
-  font-size: 18px;
+  font-size: 0.95vw;
   color: #566880;
   margin-bottom: 30px;
 }

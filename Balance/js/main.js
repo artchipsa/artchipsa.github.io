@@ -105,7 +105,7 @@ $(document).ready(function(){
 					$('#fullpage div[data-id='+active_id+'] .side').parent().next().find('.fullside').removeClass('noTransIn').addClass('fullInNext');
 				}, 1000);
 			} else {
-				$('#fullpage div[data-id='+active_id+']').css('z-index', 'auto');
+				$('#fullpage div[data-id='+active_id+']').css('z-index', 0);
 				$('#fullpage div').removeClass('noTransIn');
 			}
 
@@ -454,7 +454,7 @@ $(document).ready(function(){
 			} else {
 				$('.blue-tabs a').removeClass('active');
 				$(this).addClass('active');
-				$('.blue-line').css('right', right);
+				$(this).parent().find('.blue-line').css('right', right);
 				$('.tabs-content .trainer').fadeOut(300).removeClass('active-in');
 				setTimeout(function(){
 					$('.tabs-content div[data-id='+id+']').fadeIn(300).addClass('active-in');
@@ -552,8 +552,20 @@ $(document).ready(function(){
 		autoDraggerLength: false
 	});
 
+	if ($(window).width() < 769){
+		$('.scrolled').mCustomScrollbar('destroy');
+	}
+	$(window).resize(function(){
+		if ($(this).width() < 769){
+			$('.scrolled').mCustomScrollbar('destroy');
+		}
+	});	
+
 
 	// контакты
+/*	var width = $(document).width();
+	getCenter(width);*/
+
 	if ($('#map').length){
 		initMap();
 	}
@@ -800,6 +812,10 @@ function initMap(){
 	    }
 	];
 
+
+
+	var center = getCenter($(window).width());
+
 	var icon = {
 		url: 'http://blog.chipsa.ru/temp/marker.png',
 		origin: new google.maps.Point(0, 0),
@@ -807,8 +823,10 @@ function initMap(){
 	};
 	map = new google.maps.Map(document.getElementById('map'), {
 	    zoom: 15,
-	    center: {lat: 56.01824396548129, lng: 92.82528568376165},
-	    styles: style
+	    center: center,
+	    styles: style,
+	    disableDefaultUI: true,
+	    scrollwheel: false,
 	});
 
 	marker = new google.maps.Marker({
@@ -819,6 +837,19 @@ function initMap(){
 	});
 
 
+}
+
+function getCenter(width){
+	var big_center = {lat: 56.01824396548129, lng: 92.82528568376165};
+	var small_center = {lat: 56.01967114335406, lng: 92.83861089814764};
+	var middle_center = {lat: 56.0196231718452, lng: 92.82771040071111};
+	if (width > 991){
+		return big_center;
+	} else if (width > 469 && width < 991) {
+		return middle_center;
+	} else {
+		return small_center;
+	}
 }
 
 function checkWidth(){
@@ -847,7 +878,7 @@ function init_scroll(event, delta) {
 	   	} else {
 	      	moveUp();
 	   	}
-   }, 100)
+   }, 200)
    
    lastAnimation = timeNow;
 }

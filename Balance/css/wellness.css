@@ -88,11 +88,12 @@
   margin-bottom: 85px;
 }
 .grid .item .item-content .btn {
-  width: 69%;
+  width: 100%;
   border: none;
   border-top: 1px solid #b9bcc0;
   text-align: center;
   color: #fff;
+  padding: 25px 0px;
 }
 .grid .item .item-content .btn:hover {
   border-color: #2c94ff;
