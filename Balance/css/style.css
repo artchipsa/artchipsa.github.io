@@ -593,7 +593,7 @@ header.load {
 .footer .f-content .table tr .info {
   font-size: 16px;
   font-weight: 300;
-  color: #738091;
+  color: #738091!important;
 }
 .footer .f-content .socials {
   display: inline-block;
@@ -1846,6 +1846,15 @@ header.load {
     width: 70%;
     height: 90%;
   }
+  .preloader h2 {
+    font-size: 72px;
+  }
+  .main-services .fullside .item a {
+    transition: none;
+  }
+  .main-services .fullside .item a:hover {
+    transform: scale(1.01);
+  }
   .fullscroll #fullpage {
     overflow: visible;
   }
@@ -1973,6 +1982,9 @@ header.load {
   #fullpage {
     height: 100%;
   }
+  .panorama {
+    display: none!important;
+  }
   .record .service-list label {
     font-size: 14px;
     margin-right: 18px;
@@ -1982,6 +1994,9 @@ header.load {
   }
   .scroll-down {
     display: none!important;
+  }
+  .preloader h2 {
+    font-size: 32px;
   }
   .section {
     display: block;

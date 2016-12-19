@@ -57,7 +57,7 @@ $(document).ready(function(){
 
 	
 
-	if (!$('.fullpage').hasClass('no-fullpage')){
+	if (!$('#fullpage').hasClass('no-fullpage')){
 		var mobile = document.getElementById('fullpage');
 		var touch = new Hammer(mobile, {
 			domEvents: true
