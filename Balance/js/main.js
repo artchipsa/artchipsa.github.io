@@ -452,27 +452,15 @@ $(document).ready(function(){
 
 
 	// смена цвета хедера при скролле
-	var section = [];
-	$('.section').each(function(){
-		var self = $(this)
-		section.push(self);
-	});
 
 	$(window).scroll(function(){
-		var st = $('header').offset().top;
-		var sb = 0; 
-		for (var i = 0; i < section.length; i++){
-			sb = sb + section[i].height();
-			if (st > section[i].offset().top && st <= sb){ 
-				if  (section[i].css('background-color').toLowerCase() == 'rgb(255, 255, 255)') {
-					$('.header-btn, .menu, .st0').addClass('onWhite');
-				} else {
-					$('.header-btn, .menu, .st0').removeClass('onWhite');
-				}
-			}
-		}
-
+		headerColor();
 	});
+
+	document.addEventListener('touchmove', function(e){
+		headerColor();
+	});
+
 
 	// синие табы с линией
 	setTimeout(function(){
@@ -686,7 +674,26 @@ function scrollAnimation(st){
 	}
 
 }
+var section = [];
+$('.section').each(function(){
+	var self = $(this)
+	section.push(self);
+});
 
+function headerColor(){
+	var st = $('header').offset().top;
+	var sb = 0; 
+	for (var i = 0; i < section.length; i++){
+		sb = sb + section[i].height();
+		if (st > section[i].offset().top && st <= sb){ 
+			if  (section[i].css('background-color').toLowerCase() == 'rgb(255, 255, 255)') {
+				$('.header-btn, .menu, .st0').addClass('onWhite');
+			} else {
+				$('.header-btn, .menu, .st0').removeClass('onWhite');
+			}
+		}
+	}
+}
 
 var map;
 var marker;
