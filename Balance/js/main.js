@@ -457,7 +457,7 @@ $(document).ready(function(){
 		headerColor();
 	});
 
-	document.addEventListener('touchmove', function(e){
+	document.addEventListener('touchmove touchstart touchend', function(e){
 		headerColor();
 	});
 
