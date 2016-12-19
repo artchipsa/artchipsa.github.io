@@ -2138,6 +2138,7 @@ header.load {
     transform: translateY(0%) !important;
     height: auto;
     min-height: 100vh;
+    background-color: #fff;
   }
   .trainer-slider-section .img-container {
     display: block;
