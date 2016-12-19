@@ -457,9 +457,9 @@ $(document).ready(function(){
 		headerColor();
 	});
 
-	document.addEventListener('touchmove touchstart touchend', function(e){
-		headerColor();
-	});
+	// document.addEventListener('touchmove touchstart touchend', function(e){
+	// 	headerColor();
+	// });
 
 
 	// синие табы с линией
