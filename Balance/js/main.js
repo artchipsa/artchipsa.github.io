@@ -55,39 +55,43 @@ $(document).ready(function(){
 */
 
 
-	var mobile = document.getElementById('fullpage');
-	var touch = new Hammer(mobile, {
-		domEvents: true
-	});
+	
+
+	if (!$('.fullpage').hasClass('no-fullpage')){
+		var mobile = document.getElementById('fullpage');
+		var touch = new Hammer(mobile, {
+			domEvents: true
+		});
 
 
-	touch.on("panend", function(ev) {
-		if (ev.pointerType === 'mouse'){
-			return; 
-		} else {
-			if (ev.direction === 8){
-				moveDown();
+		touch.on("panend", function(ev) {
+			if (ev.pointerType === 'mouse'){
+				return; 
+			} else {
+				if (ev.direction === 8){
+					moveDown();
+				}
+
+				if (ev.direction === 16){
+					moveUp();
+				}
 			}
+		});
 
-			if (ev.direction === 16){
-				moveUp();
+		$(window).resize(function(){
+			if ($(window).width() > 800){
+				touch.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+			} else {
+				touch.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL  });
 			}
-		}
-	});
+		});
 
-	$(window).resize(function(){
+
 		if ($(window).width() > 800){
 			touch.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 		} else {
 			touch.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL  });
 		}
-	});
-
-
-	if ($(window).width() > 800){
-		touch.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-	} else {
-		touch.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL  });
 	}
 
 	//перекючение слайда

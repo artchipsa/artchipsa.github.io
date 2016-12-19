@@ -823,7 +823,11 @@ header.load {
   transform: rotate(45deg);
 }
 .white-modal .faq-content {
-  padding: 12% 16%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
 }
 .white-modal h2 {
   margin-top: 0px;
@@ -1830,6 +1834,10 @@ header.load {
   }
   .trainer-cont {
     padding: 12% 0px;
+  }
+  .trainer-cont .header .btn {
+    padding: 15px 65px;
+    font-size: 0.8vw;
   }
 }
 @media (max-width: 1025px) {
