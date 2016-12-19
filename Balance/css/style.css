@@ -595,6 +595,9 @@ header.load {
   font-weight: 300;
   color: #738091!important;
 }
+.footer .f-content .table tr .info a {
+  color: #738091!important;
+}
 .footer .f-content .socials {
   display: inline-block;
   vertical-align: top;
@@ -1855,6 +1858,9 @@ header.load {
   .preloader h2 {
     font-size: 72px;
   }
+  .panorama {
+    height: 75vh;
+  }
   .main-services .fullside .item a {
     transition: none;
   }
@@ -1951,8 +1957,8 @@ header.load {
     width: 45%;
   }
   .serts {
-    height: auto;
-    min-height: auto;
+    height: auto!important;
+    min-height: auto!important;
   }
   .serts .container {
     padding: 14% 8%;
