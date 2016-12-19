@@ -2632,6 +2632,9 @@ header.load {
     transform: translate(0%);
     width: 90%;
   }
+  .no-fullpage .fullside {
+    height: 100vh;
+  }
 }
 @media (max-width: 321px) {
   .blue-tabs.lefty a {
