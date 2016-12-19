@@ -382,6 +382,9 @@ $(document).ready(function(){
 
 	$('.header-btn, .quest').click(function(){
 		$('.faq').stop().fadeIn(350);
+		if ($('#menu').css('display') == 'block'){
+			$('.menu').click();	
+		}
 		setTimeout(function(){
 			$('.anim').addClass('in');
 		}, 350)
@@ -528,9 +531,15 @@ $(document).ready(function(){
 
 	$('.partner').click(function(e){
 		e.preventDefault();
-		var self = $(this);
-		$('.partner-info').fadeOut(250)
-		$(self).next().fadeIn(250);
+		if ($(this).hasClass('active')){
+			$(this).removeClass('active');
+			$('.partner-info').fadeOut(250);
+		} else {
+			$('.partner').removeClass('active');
+			$('.partner-info').fadeOut(250);
+			$(this).next().fadeIn(250);
+			$(this).addClass('active');
+		}
 	});
 
 	// фильтрация статей
