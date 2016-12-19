@@ -2217,6 +2217,9 @@ header.load {
   .fail-page .content {
     width: 90%;
   }
+  .main-about .side:nth-child(2) {
+    height: 82vh;
+  }
   .fail-page .content h1 {
     font-size: 150px;
   }
