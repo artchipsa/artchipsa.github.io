@@ -604,6 +604,11 @@ $(document).ready(function(){
 	$(window).resize(function(){
 		if ($(this).width() < 769){
 			$('.scrolled').mCustomScrollbar('destroy');
+		} else {
+			$(".scrolled").mCustomScrollbar({
+				scrollbarPosition: 'outside', 
+				autoDraggerLength: false
+			});
 		}
 	});	
 

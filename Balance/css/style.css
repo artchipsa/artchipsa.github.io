@@ -1608,7 +1608,7 @@ header.load {
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   position: relative;
   width: 6px;
-  height: 100%;
+  height: 100%!important;
   margin: 0 auto;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -1858,6 +1858,12 @@ header.load {
   .preloader h2 {
     font-size: 72px;
   }
+  .trainer-cont .blue-tabs a {
+    font-size: 1.2vw;
+  }
+  .trainer-cont {
+    padding: 18% 0px;
+  }
   .panorama {
     height: 75vh;
   }
@@ -1993,6 +1999,9 @@ header.load {
 @media (max-width: 769px) {
   #fullpage {
     height: 100%;
+  }
+  .trainer-cont .blue-tabs a {
+    font-size: 1.8vw;
   }
   .panorama {
     display: none!important;
