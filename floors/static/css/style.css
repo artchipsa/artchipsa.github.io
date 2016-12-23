@@ -265,6 +265,7 @@ a:hover {
   color: #ee3275;
   text-decoration: underline;
   display: inline-block;
+  letter-spacing: -1px;
 }
 .docs_list .docs_list__item__link:hover {
   text-decoration: none;
