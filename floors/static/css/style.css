@@ -422,6 +422,9 @@ a:hover {
   .header {
     top: 20px;
   }
+  .text .text__subtitle {
+    display: block;
+  }
   .logo__image {
     width: 140px;
   }
