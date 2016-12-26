@@ -377,6 +377,47 @@ a:hover {
     padding-bottom: 40px;
   }
 }
+@media (max-width: 668px) {
+  .phone-number__label {
+    font-size: 14px;
+  }
+  .logo__image {
+    width: 125px;
+  }
+  .header .phone-number .phone-number__phone-link {
+    font-size: 16px;
+  }
+  .text {
+    top: 32%;
+  }
+  .modals_container {
+    bottom: 32%;
+  }
+  .main-wrapper {
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 49%, rgba(0, 0, 0, 0.9)), url(../img/bg.jpg);
+  }
+  .text .text__subtitle {
+    display: none;
+  }
+  .white_window .pink_link_block .pink_link_block__link {
+    font-size: 14px;
+  }
+  .white_window .title {
+    font-size: 20px;
+  }
+  .white_window .close img {
+    width: 14px;
+  }
+  .white_window .close span {
+    font-size: 13px;
+  }
+  .docs_list {
+    column-count: 1;
+  }
+  .btn-default {
+    font-size: 10px;
+  }
+}
 @media (max-width: 479px) {
   .header {
     top: 20px;
