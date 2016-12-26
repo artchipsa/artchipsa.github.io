@@ -449,8 +449,6 @@ $(document).ready(function(){
 	// панорама на страничке клуба
 	$('.cycle').cyclotron({continuous:0,dampingFactor:1,autorotation:1});
 
-
-
 	// смена цвета хедера при скролле
 
 	$(window).scroll(function(){
@@ -528,21 +526,6 @@ $(document).ready(function(){
 			$(this).next().fadeIn(250);
 			$(this).addClass('active');
 		}
-	});
-
-	// фильтрация статей
-
-	var grid = $('.grid').isotope({
-		itemSelector: '.item',
-		layoutMode: 'fitRows'
-	});
-
-	$(document).on('click', '.filter', function(){
-		var filterValue = $(this).data("filter");
-	  	grid.isotope({ filter: filterValue });
-	  	$('.filter').removeClass('is-cheked');
-	  	$(this).addClass('is-cheked');
-	  	return false;
 	});
 
 	$(document).on('click', '.group-filter button', function(){
@@ -657,10 +640,67 @@ $(document).ready(function(){
             });
         }
     });
+    var grid = $('.grid');
+	$('.more-articles').click(function(e){
+		for (var i = 0; i < data.length; i++){
+			var item = $('<div class="item '+data[i]["tag"]+'" style="background-image: url('+data[i]["img"]+')" onclick="">'+
+						'<div class="overlay"></div>'+
+						'<span class="tag">'+data[i]["tag_name"]+'</span>'+
+						'<div class="item-content">'+
+							'<p>'+data[i]["heading"]+'</p>'+
+							'<a href="'+data[i]["url"]+'" class="btn">подробнее</a>'+
+						'</div>'+
+						'</div>');
 
+			grid.append(item).isotope('appended', item);
+		}
+
+		return false;
+	});
+
+	// фильтрация статей
+	grid.isotope({
+		itemSelector: '.item',
+		layoutMode: 'fitRows'
+	});
+
+	$(document).on('click', '.filter', function(){
+		var filterValue = $(this).data("filter");
+	  	grid.isotope({ filter: filterValue });
+	  	$('.filter').removeClass('is-cheked');
+	  	$(this).addClass('is-cheked');
+	  	return false;
+	});
 
 });
 
+var data = [
+		{
+			"tag": "eating",
+			"tag_name": "Питание",
+			"heading": "Таблица содержания белков, жиров, углеводов и калорий в продуктах питания",
+			"url": "какой-то урл",
+			"img": "img/i8.jpg"
+		},
+		{
+			"tag": "diagnostic",
+			"tag_name": "Диагностика",
+			"heading": "Живете ли вы в стиле wellness? Всего 10 вопросов",
+			"url": "какой-то урл",
+			"img": "img/i7.jpg"
+		},
+		{
+			"tag": "eating",
+			"tag_name": "Питание",
+			"heading": "Таблица содержания белков, жиров, углеводов и калорий в продуктах питания",
+			"url": "какой-то урл",
+			"img": "img/i8.jpg"
+		}
+	]
+
+function moreItems(data){
+
+}
 
 function scrollAnimation(st){
 	var scroll_elems = [];

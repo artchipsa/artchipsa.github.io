@@ -152,7 +152,6 @@ body{
 
 
 // хедер 
-
 header{
 	position: fixed;
 	z-index: 21;
@@ -1106,26 +1105,26 @@ header{
 
 .fail-page{
 	background-image: url(../img/404.jpg);
-	background-position: 0% 100%;
-	.content{
-		padding: 20%;
-		h1{
-			font-family: Gilroy;
-			font-weight: 300;
-			font-size: 156px;
-			line-height: 156px;
-			margin-top: 0px;
-			margin-bottom: 40px;
-			letter-spacing: 5!important;
+	background-position: 0% 0%;
+	.fail-content{
+		position: absolute;
+		bottom: 5%;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		span{
 			color: @white;
+			font-size: 24px;
+			display: block;
+			line-height: 34px;
+			margin-bottom: 35px;
 		}
-		h2{
-			text-transform: uppercase;
-			line-height: 72px;
-			margin-bottom: 80px;
-		}
-		a{
+		.btn{
+			border-color: @white;
 			color: @white;
+			&:hover{
+				border-color: @cyan;
+			}
 		}
 	}
 }
@@ -1360,6 +1359,10 @@ header{
 	    width: 70%;
 	    height: 90%;
 	}
+	.fail-page{
+		background-position: 50% 0px;
+		height: 100vh;
+	}
 	.mission{
 		background-attachment: inherit;
 	}
@@ -1515,6 +1518,12 @@ header{
 @media (max-width: 769px){
 	#fullpage{
 		height: 100%;
+	}
+	.fail-page{
+		height: 100vh!important;
+	}
+	.fail-content{
+		width: 80%;
 	}
 	.trainer-cont .blue-tabs a {
 	    font-size: 1.8vw;

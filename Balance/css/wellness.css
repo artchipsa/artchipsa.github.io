@@ -36,6 +36,9 @@
 .grid.mobile {
   display: none;
 }
+.grid.more {
+  display: none;
+}
 .grid .item {
   display: inline-block;
   vertical-align: top;

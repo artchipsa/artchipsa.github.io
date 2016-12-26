@@ -1,0 +1,79 @@
+.hodor {
+  background-image: url(../img/hodor.jpg);
+  display: block;
+}
+.hodor .logo {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  transform: translateX(-50%);
+}
+.hodor .logo img {
+  width: 135px;
+}
+.hodor h1 {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0px;
+  font-size: 3.15vw;
+  font-family: Gilroy;
+  font-weight: 300;
+  letter-spacing: 5!important;
+  left: 9%;
+}
+.hodor h1 span {
+  font-weight: 800;
+  letter-spacing: 8!important;
+}
+.hodor .adress {
+  font-size: 22px;
+  font-weight: 300;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  bottom: 70px;
+  transform: translateX(-50%);
+}
+.hodor .soon {
+  font-size: 2.5vw;
+  font-weight: 300;
+  color: #fff;
+  right: 21%;
+}
+.hodor .center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 769px) {
+  .hodor {
+    background-image: url(../img/hodor.jpg);
+    display: block;
+    height: 100vh;
+  }
+  .hodor .soon {
+    display: none;
+  }
+  .hodor .logo {
+    top: 40px;
+  }
+  .hodor .adress {
+    font-size: 18px;
+    bottom: 40px;
+  }
+  .hodor h1 {
+    font-size: 5.15vw;
+  }
+}
+@media (max-width: 479px) {
+  .hodor h1 {
+    font-size: 7.15vw;
+  }
+  .hodor .adress {
+    font-size: 14px;
+    bottom: 30px;
+  }
+  .logo {
+    top: 30px;
+  }
+}

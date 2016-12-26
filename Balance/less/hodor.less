@@ -1,0 +1,81 @@
+@import 'modules/vars.less';
+.hodor{
+	background-image: url(../img/hodor.jpg);
+	display: block;
+	.logo{
+		position: absolute;
+		left: 50%;
+		top: 70px;
+		transform: translateX(-50%);
+		img{
+			width: 135px;
+		}
+	}
+	h1{
+		text-transform: uppercase;
+		color: @white;
+		margin: 0px;
+	    font-size: 3.15vw;
+		font-family: Gilroy;
+		font-weight: 300;
+		letter-spacing: 5!important;
+		left: 9%;
+		span{
+			font-weight: 800;
+			letter-spacing: 8!important;
+		}
+	}
+	.adress{
+		font-size: 22px;
+		font-weight: 300;
+		color: @white;
+		position: absolute;
+		left: 50%;
+		bottom: 70px;
+		transform: translateX(-50%);
+	}
+	.soon{
+		font-size: 2.5vw;
+		font-weight: 300;
+		color: @white;
+		right: 21%;
+	}
+	.center{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+@media (max-width: 769px){
+	.hodor{
+		background-image: url(../img/hodor.jpg);
+		display: block;
+		height: 100vh;
+		.soon{
+			display: none;
+		}
+		.logo{
+			top: 40px;
+		}
+		.adress{
+			font-size: 18px;
+			bottom: 40px;
+		}
+		h1{
+		    font-size: 5.15vw;
+		}
+	}
+}
+@media (max-width: 479px){
+	.hodor h1 {
+	    font-size: 7.15vw;
+	}
+	.hodor .adress {
+	    font-size: 14px;
+	    bottom: 30px;
+	}
+	.logo{
+		top: 30px;
+	}
+}

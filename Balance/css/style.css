@@ -1293,6 +1293,9 @@ header.load {
 .grid.mobile {
   display: none;
 }
+.grid.more {
+  display: none;
+}
 .grid .item {
   display: inline-block;
   vertical-align: top;
@@ -1625,28 +1628,28 @@ header.load {
 }
 .fail-page {
   background-image: url(../img/404.jpg);
-  background-position: 0% 100%;
+  background-position: 0% 0%;
 }
-.fail-page .content {
-  padding: 20%;
+.fail-page .fail-content {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
-.fail-page .content h1 {
-  font-family: Gilroy;
-  font-weight: 300;
-  font-size: 156px;
-  line-height: 156px;
-  margin-top: 0px;
-  margin-bottom: 40px;
-  letter-spacing: 5!important;
+.fail-page .fail-content span {
+  color: #fff;
+  font-size: 24px;
+  display: block;
+  line-height: 34px;
+  margin-bottom: 35px;
+}
+.fail-page .fail-content .btn {
+  border-color: #fff;
   color: #fff;
 }
-.fail-page .content h2 {
-  text-transform: uppercase;
-  line-height: 72px;
-  margin-bottom: 80px;
-}
-.fail-page .content a {
-  color: #fff;
+.fail-page .fail-content .btn:hover {
+  border-color: #2c94ff;
 }
 .abs-map-content {
   position: absolute;
@@ -1869,6 +1872,10 @@ header.load {
     width: 70%;
     height: 90%;
   }
+  .fail-page {
+    background-position: 50% 0px;
+    height: 100vh;
+  }
   .mission {
     background-attachment: inherit;
   }
@@ -2022,6 +2029,12 @@ header.load {
 @media (max-width: 769px) {
   #fullpage {
     height: 100%;
+  }
+  .fail-page {
+    height: 100vh!important;
+  }
+  .fail-content {
+    width: 80%;
   }
   .trainer-cont .blue-tabs a {
     font-size: 1.8vw;
