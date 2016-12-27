@@ -3,13 +3,13 @@
 $(document).ready(function(){
 	// Появление элементов на главном экране
 	setTimeout(function(){
-		$('header, .main-text, .scroll-down, #navigator').addClass('load');
-	}, 3300)
+		$('header, .main-text h1, .main-text p, .scroll-down, #navigator').addClass('load');
+	}, 1750)
 
 
 	setTimeout(function(){
 		$('.preloader').fadeOut(250);
-	}, 3000)
+	}, 1500)
 
 	//определяем направление скролла
 	if ($('body').hasClass('fullscroll')){

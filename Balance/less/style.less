@@ -24,7 +24,6 @@ body{
     transition-delay: 1100ms;
     &.load{
 		transform: translateY(-50%) translateX(0%);
-		opacity: 1;
     }
 	.where{
 	    font-family: Gilroy;
@@ -160,7 +159,7 @@ header{
 	width: 96%;
     transform: translateY(-110%);
     opacity: 0;
-    transition: all 1000ms cubic-bezier(0.245, 0.000, 0.000, 1.005);
+    transition: all 1000ms ease;
     transition-delay: 500ms;
 	.logo{
 		width: 49%;
@@ -307,14 +306,10 @@ header{
 		position: absolute;
 		left: 50%;
 		top: 50%;
-	    transform: translate(-50%, -55%) scale(0.5);
-    	opacity: 0;
+	    transform: translate(-50%, -55%);
+    	opacity: 1;
 		text-align: center;
 		transition: all 1000ms cubic-bezier(0.245, 0.000, 0.000, 1.005);
-		&.load{
-			transform: translate(-50%, -50%) scale(1);
-			opacity: 1;
-		}
 		p{
 			width: 45%;
 			margin: 0 auto;
@@ -327,16 +322,28 @@ header{
 		font-weight: 300;
 		font-size: 5vw;
 		line-height: normal;
-		letter-spacing: 8vw!important;
+		letter-spacing: 6.5vw!important;
 		text-indent: 8vw;
 		text-transform: uppercase;
 		color: @white;
 		margin-bottom: 70px;
+		opacity: 0;
+		transition: opacity 3500ms ease, letter-spacing 4500ms ease;
+		&.load{
+			opacity: 1;
+			letter-spacing: 8vw!important;
+		}
 	}
 	p{
 		color: @white;
 		font-weight: 300;
 		line-height: 44px;
+		opacity: 0;
+		transition: all 1000ms ease;
+		transition-delay: .45s;
+		&.load{
+			opacity: 1;
+		}
 	}
 }
 .scroll-down{
@@ -345,7 +352,7 @@ header{
 	left: 50%;
 	transform: translateX(-50%) translateY(-45%);
 	opacity: 0;
-	transition: all 800ms cubic-bezier(0.245, 0.000, 0.000, 1.005);
+	transition: all 800ms ease;
 	transition-delay: 800ms;
 	padding: 18px;
 	border: 1px solid fade(@white, 50%);
@@ -935,26 +942,31 @@ header{
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background-color: @blue;
+	right: 0;
+	background-color: @white;
 	z-index: 123;
-	h2{
+	animation: preloaderOut .45s ease-in-out;
+	animation-delay: 1.5s;
+	animation-fill-mode: forwards;
+	img{
+		width: 225px;
 		position: absolute;
-		left: 50%;
 		top: 50%;
+		left: 50%;
 		transform: translate(-50%, -50%);
-		color: @white;
-		font-family: Gilroy;
-		font-weight: 300;
-		font-size: 86px;
-		text-indent: 86px;
-		text-transform: uppercase;
-		margin: 0;
-		opacity: 0;
-		&:nth-child(1){
-			animation: preloader 1.5s linear;
-		}
-		&:nth-child(2){
-			animation: preloader 1.5s linear 1.5s;
+		z-index: 2;
+	    mix-blend-mode: color-dodge;
+	}
+	.loading{
+		width: 0%;
+		height: 100%;
+		background-color: @blue;
+		animation: preloader 1.5s linear;
+		animation-fill-mode: forwards;
+		z-index: 2;
+		img{
+		    mix-blend-mode: difference;
+			z-index: 1
 		}
 	}
 }
@@ -963,18 +975,31 @@ header{
 }
 @keyframes preloader{
 	0%{
-		opacity: 0;
-		letter-spacing: 1px;
+		width: 0%;
+	}
+	65%{
+		width: 55% 
+	}
+	70{
+		width: 70%
 	}
 	80%{
-		opacity: 0.8;
-		letter-spacing: 100px;
+		width: 85% 
 	}
 	100%{
-		opacity: 0;
-		letter-spacing: 120px;
+		width: 100%;
 	}
-}
+} 
+@keyframes preloaderOut{
+	0%{
+		width: 100%;
+		opacity: 1;
+	}
+	100%{
+		width: 0%;
+	}
+} 
+
 .btn{
 	display: inline-block;
 	font-family: Gilroy;
