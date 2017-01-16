@@ -1,0 +1,169 @@
+@ease-out-back: cubic-bezier(0.175, 0.885, 0.320, 1);
+@fast-ease: cubic-bezier(0.500, 0.015, 0.505, 1.005);
+
+.fastFadeOut{
+    animation-name: fastOut, fadeOut;
+    animation-timing-function: cubic-bezier(0.5, 0.015, 0.505, 1.005), linear;
+}
+.fastFadeIn{
+    animation-name: fastIn, fadeIn;
+    animation-timing-function: cubic-bezier(0.5, 0.015, 0.505, 1.005), linear;
+}
+.main-slider{
+	.animated{
+	  	-webkit-animation-duration: 300ms;
+		animation-duration: 300ms;
+	}
+}
+.specials-slider{
+	.animated{
+	  	-webkit-animation-duration: 1000ms;
+		animation-duration: 1000ms;
+	}
+}
+@keyframes fastOut{
+	0%{
+		transform: translateX(0%);
+	}
+	100%{	
+		transform: translateX(-200px);
+	}
+}
+@-webkit-keyframes fastOut{
+	0%{
+		transform: translateX(0%);
+	}
+	100%{
+		transform: translateX(-200px);
+	}
+}
+
+@keyframes fastIn{
+	0%{
+		transform: translateX(200px);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+}
+@-webkit-keyframes fastIn{
+	0%{
+		transform: translateX(200px);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+}
+
+@keyframes fadeOut{
+  	0% {
+    	opacity: 1;
+  	}  
+  	100% {
+  		opacity: 0;
+	}  
+}
+@-webkit-keyframes fadeOut{
+  	0% {
+   		opacity: 1;
+  	}  
+  	100% {
+    	opacity: 0;
+  	}  
+}
+
+@keyframes fadeIn{
+  	0% {
+    	opacity: 0;
+  	}  
+  	100% {
+  		opacity: 1;
+	}  
+}
+@-webkit-keyframes fadeIn{
+  	0% {
+   		opacity: 0;
+  	}  
+  	100% {
+    	opacity: 1;
+  	}  
+}
+
+
+.camera{
+	animation-name: cameraFall ,cameraWiggle;
+	animation-timing-function: @ease-out-back, inherit;
+	animation-delay: 0s, 2s;
+	animation-duration: 2s, 12s;
+	animation-iteration-count: 1, infinite;
+	animation-fill-mode: forwards;
+}
+
+@keyframes cameraFall{
+
+	0% {
+	    transform: rotate(-0.9deg) translateY(-500px);
+	}
+	100%{
+		transform: rotate(0.6deg) translateY(0px); 
+	}
+
+}
+
+@keyframes cameraWiggle {
+	0%{
+		transform: rotate(0.6deg) translateY(0px); 
+	}
+	15% {
+	    transform: rotate(-0.9deg) translateY(-36px);
+	}
+	30%{
+		transform: rotate(0.2deg) translateY(0px);
+	}
+	45%{
+		transform: rotate(-0.7deg) translateY(-36px);
+	}
+	60%{
+		transform: rotate(0.3deg) translateY(0px);
+	}
+	75%{
+		transform: rotate(-0.4deg) translateY(-36px);
+	}
+	100%{
+		transform: rotate(0.6deg) translateY(0px); 
+	}
+}
+
+.card_animation{
+	animation-name: cardAppear, cardFloating;
+	animation-timing-function: @ease-out-back, inherit;
+	animation-delay: 0s, 1.9s;
+	animation-duration: 2s, 4s;
+	animation-iteration-count: 1, infinite;
+	animation-fill-mode: forwards;
+}
+
+@keyframes cardAppear{
+
+	0%{
+	    transform: translateY(500px);
+	}
+	100%{
+		transform: translateY(-46px); 
+	}
+
+}
+
+@keyframes cardFloating{
+
+	0%{
+		transform: translateY(-46px); 
+	}
+	50%{
+		transform: translateY(0px);
+	}
+	100%{
+		transform: translateY(-46px); 
+	}
+
+}

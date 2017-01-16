@@ -1,0 +1,222 @@
+html
+	include modules/head.jade
+	body
+		.hidden
+			include ../img/assets.svg
+		include modules/header.jade
+		.main-content
+			.search-over
+			.catalog-wrapper
+				.container
+					ol.breadcrumb
+						li
+							a(href="") Главная
+						li.active
+							a Каталог 
+					h2.title Каталог
+					.row
+						.col-md-3
+							.catalog-filter-wrapper
+								form(action="")
+									.form-group
+										.title-group
+											h3.filter-group-title Цена
+											.tooltip-link
+												a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бесплатная доставка" data-placement="top" data-content="Какой-то поясняющий текст про бесплатную доставку. Вау!") Предоставляем кредит
+										.range
+											input(type="text", name="min_range") 
+											span – 
+											input(type="text", name="max_range")
+										input#price_range(type="text", name="price_range")
+									.form-group
+										.checkbox-group
+											input#first_action(type="checkbox", name="")
+											label(for="first_action") Техника в аренду
+										.checkbox-group
+											input#second_action(type="checkbox", name="")
+											label(for="second_action") Техника в тест-драйв
+										.checkbox-group
+											input#third_action(type="checkbox", name="")
+											label(for="third_action") Товары по акции
+									.form-group
+										.title-group
+											h3.filter-group-title Объектив
+										.checkbox-group
+											input#first_lens(type="checkbox", name="")
+											label(for="first_lens") Объектив в комплекте
+										.checkbox-group
+											input#second_lens(type="checkbox", name="")
+											label(for="second_lens") Без объектива
+										.checkbox-group
+											input#third_lens(type="checkbox", name="")
+											label(for="third_lens") Не важно
+									.form-group
+										.title-group
+											h3.filter-group-title Марка
+										.row
+											.col-md-6
+												.checkbox-group
+													input#mark1(type="checkbox", name="")
+													label(for="mark1") Nikon
+												.checkbox-group
+													input#mark2(type="checkbox", name="")
+													label(for="mark2") Canon
+												.checkbox-group
+													input#mark3(type="checkbox", name="")
+													label(for="mark3") Olympus
+											.col-md-6
+												.checkbox-group
+													input#mark4(type="checkbox", name="")
+													label(for="mark4") Sony
+												.checkbox-group
+													input#mark5(type="checkbox", name="")
+													label(for="mark5") Panasonic
+												.checkbox-group
+													input#mark6(type="checkbox", name="")
+													label(for="mark6") Fujifilm
+									.form-group
+										.title-group
+											h3.filter-group-title кроп-фактор
+											a.que-tooltip(href="" data-toggle="tooltip" data-placement="top" title="подсказанька")
+												img(src="img/que.svg", alt="")
+										.row
+											.col-md-6
+												.checkbox-group
+													input#crop1(type="checkbox", name="")
+													label(for="crop1") 1
+												.checkbox-group
+													input#crop2(type="checkbox", name="")
+													label(for="crop2") 2.7
+											.col-md-6
+												.checkbox-group
+													input#crop3(type="checkbox", name="")
+													label(for="crop3") 1.5-1.6
+												.checkbox-group
+													input#crop4(type="checkbox", name="")
+													label(for="crop4") 2
+									.form-group
+										.title-group
+											h3.filter-group-title Видоискатель
+										.checkbox-group
+											input#viewfinder1(type="checkbox", name="")
+											label(for="viewfinder1") Гибридный
+										.checkbox-group
+											input#viewfinder2(type="checkbox", name="")
+											label(for="viewfinder2") Зеркальный
+										.checkbox-group
+											input#viewfinder3(type="checkbox", name="")
+											label(for="viewfinder3") Оптический
+										.checkbox-group
+											input#viewfinder4(type="checkbox", name="")
+											label(for="viewfinder4") Электронный
+									.addParams
+										a(href="#") #[span Скрыть доп. параметры] #[i.fa.fa-angle-down(aria-hidden="true")]
+										.hidden-params
+											.form-group
+												.title-group
+													h3.filter-group-title размер матрицы
+												.range.withUnit
+													input.scale(type="text", name="min_scale") 
+													span – 
+													input.scale(type="text", name="max_scale")
+													span.unit Мп.
+												input#scale_range(type="text", name="price_range")
+											.form-group
+												.title-group
+													h3.filter-group-title размер дисплея
+												.range.withUnit
+													input.size(type="text", name="min_size") 
+													span – 
+													input.size(type="text", name="max_size")
+													span.unit См.
+												input#size_range(type="text", name="price_range")
+											.form-group
+												.title-group
+													h3.filter-group-title Скорость съемки
+												.range.withUnit
+													input.speed(type="text", name="min_speed") 
+													span – 
+													input.speed(type="text", name="max_speed")
+													span.unit Кадр/<br>сек.
+												input#speed_range(type="text", name="price_range")
+											.form-group
+												.title-group
+													h3.filter-group-title Цвет
+												.colorfilter
+													input#brown(type="radio", name="")
+													label.brown(for="#brown") 
+									
+						.col-md-9
+							.catalog-list
+								.catalog__item
+									.specials
+										.special-item.percent
+											svg(viewBox="0 0 100 100", class="svgico percent")
+												use(xlink:href="#red")
+									.functions
+										a(href="").comparison
+											svg(viewBox="0 0 100 100", class="svgico comparison")
+												use(xlink:href="#comparison")
+										a(href="").like
+											svg(viewBox="0 0 100 100", class="svgico like like-gray")
+												use(xlink:href="#like")
+									.item__head
+										img(src="img/card_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+										.item__price
+											.old-price #[span 54 990] .–
+											.actual-price 141 990 .–
+									.item__bonuce
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+									.item__buy
+										a(href="").btn.primary-btn в корзину
+										a(href="").dotted-link Купить в один клик
+								.catalog__item
+									.specials
+										.special-item.percent
+											svg(viewBox="0 0 100 100", class="svgico percent")
+												use(xlink:href="#red")
+									.functions
+										a(href="").comparison
+											svg(viewBox="0 0 100 100", class="svgico comparison")
+												use(xlink:href="#comparison")
+										a(href="").like
+											svg(viewBox="0 0 100 100", class="svgico like like-gray")
+												use(xlink:href="#like")
+									.item__head
+										img(src="img/card_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+										.item__price
+											.old-price #[span 54 990] .–
+											.actual-price 141 990 .–
+									.item__bonuce
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+									.item__buy
+										a(href="").btn.primary-btn в корзину
+										a(href="").dotted-link Купить в один клик
+								.catalog__item
+									.specials
+										.special-item.percent
+											svg(viewBox="0 0 100 100", class="svgico percent")
+												use(xlink:href="#red")
+									.functions
+										a(href="").comparison
+											svg(viewBox="0 0 100 100", class="svgico comparison")
+												use(xlink:href="#comparison")
+										a(href="").like
+											svg(viewBox="0 0 100 100", class="svgico like like-gray")
+												use(xlink:href="#like")
+									.item__head
+										img(src="img/card_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+										.item__price
+											.old-price #[span 54 990] .–
+											.actual-price 141 990 .–
+									.item__bonuce
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+									.item__buy
+										a(href="").btn.primary-btn в корзину
+										a(href="").dotted-link Купить в один клик
+			include modules/brands.jade
+			include modules/footer.jade
+		include modules/scripts.jade
