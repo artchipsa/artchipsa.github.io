@@ -1,0 +1,233 @@
+html
+	include modules/head.jade
+	body
+		.hidden
+			include ../img/assets.svg
+		include modules/header.jade
+		.main-content
+			.search-over
+			.catalog-wrapper
+				.container
+					ol.breadcrumb
+						li
+							a(href="") Главная
+						li.active
+							a Корзина 
+					.row.basket-title-row
+						.col-md-4.vcenter
+							h2.title Каталог
+						.col-md-8.vcenter
+							.basket-info
+								a(href="#").dashed-link Условия доставки
+								a(href="#").dashed-link Условия возврата
+								a(href="#").dashed-link Условия trade in
+								a(href="#").dashed-link Условия для юр. лиц
+					.basket-block
+						.row
+							.col-md-3.vcenter
+								.pic
+									img(src="img/camera_in_basket.jpg", alt="")
+							.col-md-3.vcenter
+								.info
+									span.name Olympus OM-D E-M5 mark II kit 12-40mm f/2.8 Black
+									.tag
+										span.tag-name.order НА ЗАКАЗ
+										span.order-text Доставка до 15 дней
+							.col-md-2.vcenter
+								.count
+									a(href="#", data-id="desc") 
+										span -
+									input(type="text", name="", value="1")
+									a(href="#", data-id="asc") 
+										span + 
+							.col-md-3.vcenter
+								.price 
+									span 69 990 .–
+							.col-md-1.vcenter
+								a.delete(href="")
+									i.fa.fa-trash-o(aria-hidden="true")
+						.row
+							.col-md-3.vcenter
+								.pic
+									img(src="img/camera_in_basket.jpg", alt="")
+							.col-md-3.vcenter
+								.info
+									span.name Olympus OM-D E-M5 mark II kit 12-40mm f/2.8 Black
+									.tag
+										span.tag-name.order НА ЗАКАЗ
+										span.order-text Доставка до 15 дней
+							.col-md-2.vcenter
+								.count
+									a(href="#", data-id="desc") 
+										span -
+									input(type="text", name="", value="1")
+									a(href="#", data-id="asc") 
+										span + 
+							.col-md-3.vcenter
+								.price 
+									span 69 990 .–
+							.col-md-1.vcenter
+								a.delete(href="")
+									i.fa.fa-trash-o(aria-hidden="true")
+						.row
+							.col-md-3.vcenter
+								.pic
+									img(src="img/camera_in_basket.jpg", alt="")
+							.col-md-3.vcenter
+								.info
+									span.name Olympus OM-D E-M5 mark II kit 12-40mm f/2.8 Black
+							.col-md-2.vcenter
+								.count
+									a(href="#", data-id="desc") 
+										span -
+									input(type="text", name="", value="10")
+									a(href="#", data-id="asc") 
+										span + 
+							.col-md-3.vcenter
+								.price 
+									span 569 990 .–
+							.col-md-1.vcenter
+								a.delete(href="")
+									i.fa.fa-trash-o(aria-hidden="true")
+						.row
+							.col-md-3.vcenter
+								.pic
+									img(src="img/camera_in_basket.jpg", alt="")
+							.col-md-3.vcenter
+								.info
+									span.name Olympus OM-D E-M5 mark II kit 12-40mm f/2.8 Black
+									.tag
+										span.tag-name.lease аренда
+										.lease-info
+											.lease-text Начало аренды: #[span(data-lease="start") 12 сент. 2016 12:00]
+											.lease-text Конец аренды: #[span(data-lease="start") 14 сент. 2016 16:00]
+											.lease-text Общий срок аренды: #[span(data-lease="summ") 2 суток]
+										a.dashed-link(href="") Изменить даты аренды
+							.col-md-2.vcenter
+								.count
+									a(href="#", data-id="desc") 
+										span -
+									input(type="text", name="", value="1")
+									a(href="#", data-id="asc") 
+										span + 
+							.col-md-3.vcenter
+								.price 
+									span 569 990 .–
+							.col-md-1.vcenter
+								a.delete(href="")
+									i.fa.fa-trash-o(aria-hidden="true")
+						.row.gift-row
+							.col-md-5.col-md-offset-3.vcenter
+								span Сертификат на посещение мастер-классов
+							.col-md-3.vcenter
+								h3 В подарок!
+						.row
+							.col-md-1.col-md-offset-3
+								span.result Итого:
+							.col-md-5
+								.result-string 4 товара на сумму #[span 1 269 990 .–]
+								.result-bonus Бонусов: #[span 500]
+								.result-text Стоимость вашего заказа превышает 100 000 руб. Поэтому отправка товара до его полной оплаты недоступна. Это ограничение снимается для покупателей, которые суммарно купили у нас товаров на сумму более 30 000 руб.
+								a(href="").btn.primary-btn Оформить заказ
+					.catalog-list
+						h2.title Этот товар хорошо дополняют
+						.row
+							.col-md-3
+								.catalog__item
+									.specials
+										.special-item.percent
+											img(src="img/red.svg", alt="")
+										.special-item.percent
+											img(src="img/orange.svg", alt="")
+									.functions
+										a(href="").comparison
+											svg(viewBox="0 0 100 100", class="svgico comparison")
+												use(xlink:href="#comparison")
+										a(href="").like
+											svg(viewBox="0 0 100 100", class="svgico like like-gray")
+												use(xlink:href="#like")
+									.item__head
+										img(src="img/card_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+										.item__price
+											.old-price #[span 54 990] .–
+											.actual-price 141 990 .–
+									.item__bonuce
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+									.item__buy
+										a(href="").btn.primary-btn в корзину
+										a(href="").dotted-link Купить в один клик
+							.col-md-3
+								.catalog__item
+									.specials
+										.special-item.percent
+											img(src="img/blue.svg", alt="")
+									.functions
+										a(href="").comparison
+											svg(viewBox="0 0 100 100", class="svgico comparison")
+												use(xlink:href="#comparison")
+										a(href="").like
+											svg(viewBox="0 0 100 100", class="svgico like like-gray")
+												use(xlink:href="#like")
+									.item__head
+										img(src="img/card_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+										.item__price
+											.old-price #[span 54 990] .–
+											.actual-price 141 990 .–
+									.item__bonuce
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+									.item__buy
+										a(href="").btn.primary-btn в корзину
+										a(href="").dotted-link Купить в один клик
+							.col-md-3
+								.catalog__item
+									.specials
+										.special-item.percent
+											img(src="img/red.svg", alt="")
+									.functions
+										a(href="").comparison
+											svg(viewBox="0 0 100 100", class="svgico comparison")
+												use(xlink:href="#comparison")
+										a(href="").like
+											svg(viewBox="0 0 100 100", class="svgico like like-gray")
+												use(xlink:href="#like")
+									.item__head
+										img(src="img/card_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+										.item__price
+											.old-price #[span 54 990] .–
+											.actual-price 141 990 .–
+									.item__bonuce
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+									.item__buy
+										a(href="").btn.primary-btn в корзину
+										a(href="").dotted-link Купить в один клик
+							.col-md-3
+								.catalog__item
+									.specials
+										.special-item.percent
+											img(src="img/red.svg", alt="")
+									.functions
+										a(href="").comparison
+											svg(viewBox="0 0 100 100", class="svgico comparison")
+												use(xlink:href="#comparison")
+										a(href="").like
+											svg(viewBox="0 0 100 100", class="svgico like like-gray")
+												use(xlink:href="#like")
+									.item__head
+										img(src="img/card_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+										.item__price
+											.old-price #[span 54 990] .–
+											.actual-price 141 990 .–
+									.item__bonuce
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+									.item__buy
+										a(href="").btn.primary-btn в корзину
+										a(href="").dotted-link Купить в один клик
+
+
+
+			include modules/footer.jade
+		include modules/scripts.jade

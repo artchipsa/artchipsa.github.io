@@ -24,14 +24,22 @@ body{
 }
 header{
 	z-index: 10;
-	position: relative;
+	position: fixed;
+	width: 100%;
 }
 @media (min-width: 1200px){
 	.container {
 	    width: 1270px;
 	}
 }
-
+a{
+	&:focus{
+		color: @brown;
+	}
+	&:active{
+		color: @brown;
+	}
+}
 .hidden{
 	display: none;
 }
@@ -39,6 +47,12 @@ header{
 .vcenter {
     display: inline-block;
     vertical-align: middle;
+    margin-right: -4px;
+    float: none;
+}
+.vbottom {
+    display: inline-block;
+    vertical-align: bottom;
     margin-right: -4px;
     float: none;
 }
@@ -53,11 +67,11 @@ header{
 }
 .bonus-card{
 	position: absolute;
-	bottom: 50px;
+	bottom: 35px;
 	left: 35%;
 	transition: all .35s ease;
 	&:hover{
-		bottom: 58px;
+		bottom: 50px;
 	} 
 }
 .top-menu{
@@ -81,7 +95,9 @@ header{
 	}
 }
 .middle-header-info{
+	transition: all .2s ease-out;
 	padding: 30px 0px;
+	background-color: @white;
 }
 .geo-city-block{
 	span{
@@ -134,6 +150,7 @@ header{
 .logo{
 	text-align: center;
 	img{
+		// transition: all .2s ease;
 		width: 145px;
 	}
 }
@@ -204,8 +221,8 @@ header{
 				text-transform: uppercase;
 				display: inline-block;
 				margin-right: 30px;
-				padding-top: 20px;
-				padding-bottom: 16px;
+				padding-top: 16px;
+				padding-bottom: 12px;
 				border-bottom: 4px solid transparent;
 				transition: all .35s ease-in-out;
 				&:hover, &.active{
@@ -300,7 +317,34 @@ header{
 		}
 	}
 }
-
+header.fixed{
+	position: fixed;
+	width: 100%;
+	.middle-header-info {
+	    padding: 10px 0px;
+	    background-color: @white;
+	}
+	.socials{
+		display: none;
+	}
+	.phones{
+		width: 41.66666667%;
+	}
+	.header-phones{
+		a{
+			display: inline-block;
+			margin-right: 35px;
+		}
+	}
+	.logo img {
+	    width: 80px;
+	}
+}
+.header-placeholder{
+	display: block;
+	width: 100%;
+	background-color: #f3f4f4;
+}
 .main-content{
 	position: relative;
 }
@@ -580,12 +624,41 @@ header{
 		border: 1px solid @brown;
 		border-radius: 25px;
 		padding: 16px 48px;
+		background-color: transparent;
 		transition: all .35s ease-in-out;
 		&:hover{
 			background-color: @brown;
 			color: @white;
 		}
 
+	}
+	&.brownfill-btn{
+		font-size: 16px;
+		font-family: RoadRadio;
+		font-weight: 700;
+		line-height: 100%;
+		text-transform: uppercase;
+		color: @white;
+		border: 1px solid @brown;
+		border-radius: 25px;
+		padding: 16px 48px;
+		background-color: @brown;
+		transition: all .35s ease-in-out;
+		&:hover{
+			background-color: transparent;
+			color: @brown;
+		}
+	}
+
+	&.allpages-btn{
+		color: @white;
+		background-color: @brown;
+		border: 1px solid @brown;
+		border-radius: 25px;
+		text-transform: uppercase;
+		font-family: RoadRadio;
+		font-weight: 700;
+		padding: 6px 25px;
 	}
 }
 .owl-controls{
@@ -663,12 +736,13 @@ header{
 }
 .catalog__item{
 	display: inline-block;
-    width: 22.9%;
-	margin-right: 30px;
+	vertical-align: top;
+    width: 100%;
 	margin-left: 0px;
 	margin-bottom: 30px;
 	background-color: @white;
 	position: relative;
+	min-height: 636px;
 	&:nth-child(4n){
 		margin-right: 0px;
 	}
@@ -678,26 +752,17 @@ header{
 		left: 0px;
 		.special-item{
 			display: inline-block;
-			padding: 6px;
-			&.percent{
-				background-color: @red;
+			margin-right: -5px;
+			img{
+				width: 32px;
+				height: 32px;
 			}
-		}
-	}
-	.functions{
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		padding-top: 8px;
-		a{
-			vertical-align: top;
-			display: inline-block;
-			margin-right: 12px;
 		}
 	}
 	.item__head{
 		padding: 40px 20px;
 		text-align: center;
+		display: block;
 		img{
 			width: 80%;
 		}
@@ -714,61 +779,156 @@ header{
 			text-align: left;
 			margin-bottom: 22px;
 		}
-		.item__price{
+	}
+	&.big-item{
+		.item__head{
+			img{
+				width: 240px;
+				vertical-align: middle;
+				margin-bottom: 20px;
+			}
+			.item__name{
+				width: 45%;
+    			margin-left: -35px;
+    			vertical-align: middle;
+			    padding: 30px 28px;
+			    margin-bottom: -30px;
+			    display: inline-block;
+			}
+			p{
+				color: @black;
+				text-align: left!important;
+			}
+		}
+		.buy__buttons{
+		    width: 40%;
+		    margin-right: 90px;
+		    vertical-align: middle;
+		}
+	}
+	&.colored{
+		position: relative;
+		background-color: @yellow;
+		padding: 55px 40px;
+		h3{
+			margin-top: 0px;
+			margin-bottom: 62px;
+			text-transform: uppercase;
 			font-family: RoadRadio;
-			display: inline-block;
-			.old-price{
-				text-align: left;
-				font-size: 20px;
-				line-height: 100%;
-				font-weight: 300;
-				color: @red;
-				span{
-					text-decoration: line-through;
-				}
-			}
-			.actual-price{
-				text-align: left;
-				font-size: 30px;
-				line-height: 100%;
-				font-weight: 700;
-				color: @brown;
-			}
-		}
-	}
-	.item__bonuce{
-		margin-bottom: 30px;
-		a{
-			text-align: center;
-			width: 100%;
-			display: inline-block;
-			padding: 16px 0px;
-			border-top: 1px solid #e1e1e1;
-			border-bottom: 1px solid #e1e1e1;
-			font-size: 16px;
+			font-size: 28px;
+			line-height: 130%;
+			font-weight: 700;
 			color: @black;
-			outline: none;
-			span{
+		}
+		p{
+			color: @black;
+			line-height: 145%;
+		}
+		.bottom-block{
+			position: absolute;
+			bottom: 55px;
+		    width: 100%;
+   			left: 0;
+		}
+	}
+	&.consultant{
+		.consultant-head{
+			border-bottom: 1px solid @gray;
+			text-align: center;
+			padding: 28px;
+			img{
+				display: block;
+				border-radius: 50%;
+				border: 1px solid @yellow;
+				margin: 0 auto;
+				margin-bottom: 25px;
+			}
+			.name{
+				display: block;
+				margin: 0 auto;
+				margin-bottom: 15px;
+				font-size: 15px;
 				font-weight: 700;
+			}
+			.position{
+				color: @dgray;
+				font-size: 12px;
+			}
+		}
+		.consultant-body{
+			padding: 25px 44px;
+			border-bottom: 1px solid @gray;
+			margin-bottom: 30px;
+			p{
+				font-size: 13px;
+				line-height: 155%;
+				color: @black;
 			}
 		}
 	}
-	.item__buy{
+}
+.item__price{
+	font-family: RoadRadio;
+	display: inline-block;
+	.old-price{
+		text-align: left;
+		font-size: 20px;
+		line-height: 100%;
+		font-weight: 300;
+		color: @red;
+		span{
+			text-decoration: line-through;
+		}
+		&.invisible{
+			visibility: hidden;
+		}
+	}
+	.actual-price{
+		text-align: left;
+		font-size: 30px;
+		line-height: 100%;
+		font-weight: 700;
+		color: @brown;
+	}
+}
+.item__bonuce{
+	margin-bottom: 30px;
+	a{
 		text-align: center;
-		margin-bottom: 30px;
-		.dotted-link{
-			display: inline-block;
-			font-size: 16px;
-			font-weight: 300;
-			border-bottom: 1px dashed @brown;
-			&:hover{
-				border-bottom-color: transparent;
-			}
+		width: 100%;
+		display: inline-block;
+		padding: 16px 0px;
+		border-top: 1px solid #e1e1e1;
+		border-bottom: 1px solid #e1e1e1;
+		font-size: 16px;
+		color: @black;
+		outline: none;
+		span{
+			font-weight: 700;
+		}
+	}
+}
+.item__buy{
+	text-align: center;
+	margin-bottom: 30px;
+	.buy__buttons{
+		display: inline-block;
+	}
+	.dotted-link{
+		display: inline-block;
+		font-size: 16px;
+		font-weight: 300;
+		border-bottom: 1px dashed @brown;
+		&:hover{
+			border-bottom-color: transparent;
 		}
 	}
 }
 .center-link{
 	padding-top: 20px;
+	text-align: center;
+}
+.center{
 	text-align: center;
 }
 .rent-block{
@@ -989,7 +1149,7 @@ header{
 			}
 			.hover-item{
 				position: absolute;
-				bottom: -80px;
+				bottom: -100%;
 				background-color: fade(@brown, 80%);
 				padding: 12px 22px;
 				transition: all .35s @ease-out-back;
@@ -1107,3 +1267,5 @@ header{
 }
 
 @import 'catalog.less';
+@import 'card.less';
+@import 'basket.less';

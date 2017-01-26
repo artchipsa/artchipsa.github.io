@@ -1,0 +1,503 @@
+.basket-title-row {
+  margin-bottom: 50px;
+}
+.basket-title-row .title {
+  margin-bottom: 0px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.basket-title-row .title + a {
+  font-family: RoadRadio;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: underline;
+  vertical-align: middle;
+  margin-left: 30px;
+}
+.basket-title-row .title + a:hover {
+  text-decoration: none;
+}
+.basket-info {
+  text-align: right;
+}
+.basket-info a {
+  margin-left: 35px;
+}
+.basket-block {
+  margin-bottom: 60px;
+}
+.basket-block .row {
+  background-color: #ffffff;
+  padding: 30px 0px;
+  border-bottom: 1px solid #e1e1e1;
+  position: relative;
+}
+.basket-block .row:last-child {
+  border-bottom-color: transparent;
+}
+.basket-block .row.deleted:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #e1e1e1;
+  opacity: 0.6;
+  display: block;
+  z-index: 2;
+}
+.basket-block .pic {
+  text-align: center;
+}
+.basket-block .pic img {
+  width: 100%;
+  padding: 0px 60px;
+}
+.basket-block .info .name {
+  font-weight: 700;
+  display: inline-block;
+}
+.basket-block .info .tag {
+  margin-top: 20px;
+}
+.basket-block .info .tag .dashed-link {
+  margin-top: 20px;
+  display: inline-block;
+}
+.basket-block .info .order-text {
+  color: #606060;
+}
+.basket-block .count {
+  text-align: center;
+}
+.basket-block .count input {
+  border: 1px solid #e1e1e1;
+  width: 80px;
+  font-size: 18px;
+  padding: 15px 28px;
+  margin: 0px 9px;
+  text-align: center;
+  display: inline-block;
+}
+.basket-block .count a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: #ffffff;
+  border: 1px solid #fdd62b;
+  border-radius: 50%;
+  font-size: 28px;
+  color: #71441b;
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1);
+  margin-right: -4px;
+}
+.basket-block .count a:hover {
+  background-color: #fdd62b;
+}
+.basket-block .count a span {
+  display: inline-block;
+  line-height: 100%;
+}
+.basket-block .price {
+  overflow: hidden;
+  text-align: center;
+}
+.basket-block .price span {
+  display: inline-block;
+  transform: translateY(0%);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1);
+  font-family: RoadRadio;
+  font-weight: 700;
+  font-size: 30px;
+  color: #71441b;
+}
+.basket-block .price span.remath {
+  transform: translateY(100%);
+}
+.basket-block .delete {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+.basket-block .col-md-1.remove {
+  z-index: 3;
+}
+.basket-block .lease-info {
+  margin-top: 26px;
+}
+.basket-block .lease-info .lease-text {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.basket-block .lease-info .lease-text span {
+  font-weight: 400;
+}
+.basket-block .result {
+  font-size: 18px;
+  font-weight: 700;
+}
+.basket-block .result-string {
+  color: #71441b;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 110%;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.basket-block .result-string span {
+  font-weight: 700;
+  font-family: RoadRadio;
+  font-size: 30px;
+  margin-left: 28px;
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1);
+  transform: translateY(0%);
+  display: inline-block;
+}
+.basket-block .result-string span.remath {
+  transform: translateY(100%);
+}
+.basket-block .result-bonus {
+  font-size: 16px;
+  margin-bottom: 45px;
+}
+.basket-block .result-bonus span {
+  font-weight: 700;
+}
+.basket-block .result-text {
+  padding-left: 30px;
+  border-left: 1px solid #fdd62b;
+  color: #a0a0a0;
+  line-height: 165%;
+  margin-bottom: 48px;
+}
+.gift-row {
+  background-color: #ececec !important;
+}
+.gift-row span {
+  font-size: 18px;
+  font-weight: 700;
+}
+.gift-row h3 {
+  margin: 0px;
+  font-family: RoadRadio;
+  font-size: 24px;
+  font-weight: 700;
+  color: #71441b;
+  text-align: center;
+}
+.tag-name {
+  padding: 6px 10px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.tag-name.order {
+  background-color: #8f75be;
+}
+.tag-name.lease {
+  background-color: #f9593a;
+}
+.basket-block.small .row {
+  padding: 30px 45px;
+}
+.basket-block.small .info .name {
+  font-size: 16px;
+}
+.basket-block.small .count {
+  font-size: 16px;
+}
+.basket-block-btn .btn {
+  margin-right: 16px;
+  font-weight: 300!important;
+  padding: 16px 40px!important;
+}
+.bill-block {
+  background-color: #ffffff;
+  position: relative;
+  padding: 10px 0px;
+}
+.bill-block.affix {
+  position: fixed;
+  top: 140px;
+  z-index: 2;
+  overflow: hidden;
+  background-color: #f3f4f4;
+}
+.bill-block.affix:before,
+.bill-block.affix:after {
+  color: #ffffff;
+}
+.bill-block:before {
+  content: '..............';
+  position: absolute;
+  color: #f3f4f4;
+  top: -116px;
+  left: 0px;
+  width: 100%;
+  letter-spacing: 0px;
+  font-size: 144px;
+  line-height: 100%;
+}
+.bill-block:after {
+  content: '..............';
+  position: absolute;
+  color: #f3f4f4;
+  bottom: -27px;
+  left: 0px;
+  width: 100%;
+  letter-spacing: 0px;
+  font-size: 144px;
+  line-height: 100%;
+}
+.bill-block .block-group {
+  padding: 22px 0px;
+  text-align: center;
+  border-bottom: 1px solid #e1e1e1;
+}
+.bill-block .block-group:last-child {
+  border-bottom-color: transparent;
+}
+.bill-block .block-group .label {
+  display: block;
+  color: #000;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+.bill-block .block-group .label.result {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.bill-block .block-group .price {
+  font-size: 24px;
+  line-height: 100%;
+  font-family: RoadRadio;
+  font-weight: 700;
+  color: #a2a2a2;
+}
+.bill-block .block-group .price.result {
+  font-size: 30px;
+  color: #71441b;
+}
+.white-wrapper {
+  padding: 70px 0px;
+}
+.string-title {
+  font-size: 700;
+  font-size: 22px;
+  color: #71441b;
+  margin-bottom: 50px;
+}
+.order-data {
+  position: relative;
+  border: 1px solid #e1e1e1;
+  padding: 0px;
+}
+.order-data form {
+  margin-bottom: 0px;
+}
+.order-data .form-group {
+  padding: 52px 62px;
+  margin: 0px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.order-data .form-group:last-child {
+  border-bottom-color: transparent;
+}
+.order-data .form-group .title {
+  text-align: left;
+  margin-bottom: 40px;
+}
+.order-data .form-group .row {
+  margin-bottom: 32px;
+}
+.order-data .form-group.additional-info {
+  background-color: #f3f4f4;
+}
+.order-data .form-group.add-info {
+  background-color: #fdd62b;
+  padding: 20px 62px;
+}
+.order-data .form-group.add-info .title {
+  margin-bottom: 10px;
+}
+.order-data .form-group.add-info p {
+  font-weight: 300;
+  font-size: 16px;
+  color: #71441b;
+  margin-bottom: 0px;
+}
+.order-data .form-group.add-info .row {
+  margin-bottom: 0px;
+}
+.order-data .form-group.add-info .vcenter:nth-child(2) {
+  text-align: right;
+}
+.order-data .form-group.add-info a {
+  padding: 10px;
+  border: 1px solid #71441b;
+  border-radius: 50%;
+  display: inline-block;
+}
+.order-data .form-group.add-info .fa {
+  font-size: 18px;
+  line-height: 12px;
+}
+.order-data p {
+  margin-bottom: 35px;
+  line-height: 165%;
+}
+.order-data .input-group {
+  width: 100%;
+}
+.order-data .input-group label {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #bebebe;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.order-data .input-group label span {
+  text-transform: none;
+}
+.order-data .input-group label.requierd {
+  position: relative;
+}
+.order-data .input-group label.requierd:before {
+  content: '*';
+  color: #f9593a;
+  position: absolute;
+  top: -5px;
+  right: -8px;
+}
+.order-data .input-group svg {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+}
+.order-data .input-group input[type="text"],
+.order-data .input-group input[type="tel"],
+.order-data .input-group input[type="number"] {
+  display: block;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  padding: 10px 14px;
+  line-height: 100%;
+}
+.order-data .input-group input::-webkit-outer-spin-button,
+.order-data .input-group input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+.radio-group {
+  display: inline-block;
+}
+.radio-group input[type="radio"] {
+  display: none;
+}
+.radio-group input[type="radio"] + label {
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin-left: 40px;
+  margin-bottom: 0px;
+}
+.radio-group input[type="radio"] + label:before {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #fdd62b;
+  background-color: #ffffff;
+}
+.radio-group input[type="radio"]:checked + label:before {
+  content: '\2022';
+  color: #fdd62b;
+  font-size: 30px;
+  text-align: center;
+  line-height: 15px;
+}
+.additional-info {
+  display: none;
+}
+.additional-info .input-group label {
+  display: block;
+}
+.additional-info .radio-group {
+  display: inline-block;
+  margin-right: 30px;
+}
+.delivery-item label {
+  margin-bottom: 10px!important;
+}
+.delivery-item span {
+  display: block;
+  margin-bottom: 5px;
+}
+.delivery-item .delivery-text {
+  margin-left: 22px;
+}
+.check-out-row {
+  border: 1px solid #e1e1e1;
+  width: 100%;
+}
+.check-out-row .item {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-right: -4px;
+  width: 25%;
+  border-right: 1px solid #e1e1e1;
+  padding: 19px;
+  height: 150px;
+}
+.check-out-row .item.disabled:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #e1e1e1;
+  opacity: 0.6;
+}
+.check-out-row .item:last-child {
+  border: none;
+}
+.check-out-row .item .radio-group {
+  margin-bottom: 30px;
+}
+.check-out-row .item label {
+  margin-left: 30px!important;
+}
+.check-out-row .item label:before {
+  left: -30px !important;
+}
+.check-out-row .item .text-block {
+  position: absolute;
+  top: 85px;
+  font-size: 12px;
+  color: #b1b1b1;
+}
+.check-out-row .item .text-block .fa {
+  margin-right: 16px;
+  font-size: 44px;
+}
+.check-out-row .item .text-block .fa:last-child {
+  margin-right: 0px;
+}
+.personal-item {
+  display: none;
+}
+.personal-item.active {
+  display: block;
+}

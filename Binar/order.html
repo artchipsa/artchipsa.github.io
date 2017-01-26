@@ -187,465 +187,568 @@
         <div class="container">
           <ol class="breadcrumb">
             <li><a href="">Главная</a></li>
-            <li class="active"><a>Каталог </a></li>
+            <li><a href="">Корзина</a></li>
+            <li class="active"><a>Оформление заказа</a></li>
           </ol>
-          <h2 class="title">Каталог</h2>
-          <div class="row">
-            <div class="col-md-3">
-              <div class="catalog-filter-wrapper">
-                <form action="">
-                  <div class="form-group">
-                    <div class="title-group">
-                      <h3 class="filter-group-title">Цена</h3>
-                      <div class="tooltip-link"><a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бесплатная доставка" data-placement="top" data-content="Какой-то поясняющий текст про бесплатную доставку. Вау!">Предоставляем кредит</a></div>
-                    </div>
-                    <div class="range">
-                      <input type="text" name="min_range"/><span>– </span>
-                      <input type="text" name="max_range"/>
-                    </div>
-                    <input id="price_range" type="text" name="price_range"/>
-                  </div>
-                  <div class="form-group">
-                    <div class="checkbox-group">
-                      <input id="first_action" type="checkbox" name=""/>
-                      <label for="first_action">Техника в аренду<span class="count-tooltip">найдено 204 модели</span></label>
-                    </div>
-                    <div class="checkbox-group">
-                      <input id="second_action" type="checkbox" name=""/>
-                      <label for="second_action">Техника в тест-драйв</label>
-                    </div>
-                    <div class="checkbox-group">
-                      <input id="third_action" type="checkbox" name=""/>
-                      <label for="third_action">Товары по акции</label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="title-group">
-                      <h3 class="filter-group-title">Объектив</h3>
-                    </div>
-                    <div class="checkbox-group">
-                      <input id="first_lens" type="checkbox" name=""/>
-                      <label for="first_lens">Объектив в комплекте</label>
-                    </div>
-                    <div class="checkbox-group">
-                      <input id="second_lens" type="checkbox" name=""/>
-                      <label for="second_lens">Без объектива</label>
-                    </div>
-                    <div class="checkbox-group">
-                      <input id="third_lens" type="checkbox" name=""/>
-                      <label for="third_lens">Не важно</label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="title-group">
-                      <h3 class="filter-group-title">Марка</h3>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="checkbox-group">
-                          <input id="mark1" type="checkbox" name=""/>
-                          <label for="mark1">Nikon</label>
-                        </div>
-                        <div class="checkbox-group">
-                          <input id="mark2" type="checkbox" name=""/>
-                          <label for="mark2">Canon</label>
-                        </div>
-                        <div class="checkbox-group">
-                          <input id="mark3" type="checkbox" name=""/>
-                          <label for="mark3">Olympus</label>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="checkbox-group">
-                          <input id="mark4" type="checkbox" name=""/>
-                          <label for="mark4">Sony</label>
-                        </div>
-                        <div class="checkbox-group">
-                          <input id="mark5" type="checkbox" name=""/>
-                          <label for="mark5">Panasonic</label>
-                        </div>
-                        <div class="checkbox-group">
-                          <input id="mark6" type="checkbox" name=""/>
-                          <label for="mark6">Fujifilm</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="title-group">
-                      <h3 class="filter-group-title">кроп-фактор</h3><a href="" data-toggle="tooltip" data-placement="top" title="подсказанька" class="que-tooltip"><img src="img/que.svg" alt=""/></a>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="checkbox-group">
-                          <input id="crop1" type="checkbox" name=""/>
-                          <label for="crop1">1</label>
-                        </div>
-                        <div class="checkbox-group">
-                          <input id="crop2" type="checkbox" name=""/>
-                          <label for="crop2">2.7</label>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="checkbox-group">
-                          <input id="crop3" type="checkbox" name=""/>
-                          <label for="crop3">1.5-1.6</label>
-                        </div>
-                        <div class="checkbox-group">
-                          <input id="crop4" type="checkbox" name=""/>
-                          <label for="crop4">2</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="title-group">
-                      <h3 class="filter-group-title">Видоискатель</h3>
-                    </div>
-                    <div class="checkbox-group">
-                      <input id="viewfinder1" type="checkbox" name=""/>
-                      <label for="viewfinder1">Гибридный</label>
-                    </div>
-                    <div class="checkbox-group">
-                      <input id="viewfinder2" type="checkbox" name=""/>
-                      <label for="viewfinder2">Зеркальный</label>
-                    </div>
-                    <div class="checkbox-group">
-                      <input id="viewfinder3" type="checkbox" name=""/>
-                      <label for="viewfinder3">Оптический</label>
-                    </div>
-                    <div class="checkbox-group">
-                      <input id="viewfinder4" type="checkbox" name=""/>
-                      <label for="viewfinder4">Электронный</label>
-                    </div>
-                  </div>
-                  <div class="addParams"><a href="#" class="js-hideParams"><span>Показать доп. параметры</span> <i aria-hidden="true" class="fa fa-angle-down"></i></a>
-                    <div class="hidden-params">
-                      <div class="form-group">
-                        <div class="title-group">
-                          <h3 class="filter-group-title">размер матрицы</h3>
-                        </div>
-                        <div class="range withUnit">
-                          <input type="text" name="min_scale" class="scale"/><span>– </span>
-                          <input type="text" name="max_scale" class="scale"/><span class="unit">Мп.</span>
-                        </div>
-                        <input id="scale_range" type="text" name="price_range"/>
-                      </div>
-                      <div class="form-group">
-                        <div class="title-group">
-                          <h3 class="filter-group-title">размер дисплея</h3>
-                        </div>
-                        <div class="range withUnit">
-                          <input type="text" name="min_size" class="size"/><span>– </span>
-                          <input type="text" name="max_size" class="size"/><span class="unit">См.</span>
-                        </div>
-                        <input id="size_range" type="text" name="price_range"/>
-                      </div>
-                      <div class="form-group">
-                        <div class="title-group">
-                          <h3 class="filter-group-title">Скорость съемки</h3>
-                        </div>
-                        <div class="range withUnit">
-                          <input type="text" name="min_speed" class="speed"/><span>– </span>
-                          <input type="text" name="max_speed" class="speed"/><span class="unit">Кадр/<br>сек.</span>
-                        </div>
-                        <input id="speed_range" type="text" name="price_range"/>
-                      </div>
-                      <div class="form-group">
-                        <div class="title-group">
-                          <h3 class="filter-group-title">Цвет</h3>
-                        </div>
-                        <div class="colorfilter">
-                          <input id="brown" type="radio" name="color"/>
-                          <label for="brown"><span class="brown"></span></label>
-                          <input id="orange1" type="radio" name="color"/>
-                          <label for="orange1"><span class="orange"></span></label>
-                          <input id="green1" type="radio" name="color"/>
-                          <label for="green1"><span class="green"></span></label>
-                          <input id="cyan" type="radio" name="color"/>
-                          <label for="cyan"><span class="cyan"></span></label>
-                          <input id="purple" type="radio" name="color"/>
-                          <label for="purple"><span class="purple"></span></label>
-                          <input id="black" type="radio" name="color"/>
-                          <label for="black"><span class="black"></span></label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="center">
-                      <input type="submit" value="Подобрать" class="btn brown-btn"/>
-                    </div>
-                  </div>
-                </form>
-              </div>
+          <div class="row basket-title-row">
+            <div class="col-md-4 vcenter">
+              <h2 class="title">Оформление заказа</h2><a href="">изменить</a>
             </div>
-            <div class="col-md-9 catalog">
-              <div class="top-sort">
+            <div class="col-md-8 vcenter">
+              <div class="basket-info"><a href="#" class="dashed-link">Условия доставки</a><a href="#" class="dashed-link">Условия возврата</a><a href="#" class="dashed-link">Условия trade in</a><a href="#" class="dashed-link">Условия для юр. </a></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-9">
+              <div class="basket-block small">
                 <div class="row">
                   <div class="col-md-5 vcenter">
-                    <div class="sort-block"><span>Сортировать по: </span><a href="" class="js-toggle-price">ЦЕНЕ <i class="fa fa-sort-amount-desc"></i></a></div>
+                    <div class="info"><span class="name">Olympus OM-D E-M5 mark II kit 12-40mm f/2.8 Black</span></div>
                   </div>
-                  <div class="col-md-7 vcenter">
-                    <div class="gift"><img src="img/gift.svg" alt=""/><a href="" class="dashed-link">Всем покупателям мы дарим сертификат на фотокурсы </a></div>
+                  <div class="col-md-3 center vcenter">
+                    <div class="info"><span class="tag-name order">на заказ</span></div>
+                  </div>
+                  <div class="col-md-1 center vcenter"><span class="count">1 шт.</span></div>
+                  <div class="col-md-3 vcenter">
+                    <div class="price"> <span>69 990 .–</span></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-5 vcenter">
+                    <div class="info"><span class="name">Olympus OM-D E-M5 mark II kit 12-40mm f/2.8 Black</span></div>
+                  </div>
+                  <div class="col-md-3 center vcenter"></div>
+                  <div class="col-md-1 center vcenter"><span class="count">1 шт.</span></div>
+                  <div class="col-md-3 vcenter">
+                    <div class="price"> <span>69 990 .–</span></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-5 vcenter">
+                    <div class="info"><span class="name">Olympus OM-D E-M5 mark II kit 12-40mm f/2.8 Black</span></div>
+                  </div>
+                  <div class="col-md-3 center vcenter">
+                    <div class="info"><span class="tag-name lease">аренда</span></div>
+                  </div>
+                  <div class="col-md-1 center vcenter"><span class="count">1 шт.</span></div>
+                  <div class="col-md-3 vcenter">
+                    <div class="price"> <span>69 990 .–</span></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-5 vcenter">
+                    <div class="info"><span class="name">Olympus OM-D E-M5 mark II kit 12-40mm f/2.8 Black</span></div>
+                  </div>
+                  <div class="col-md-3 center vcenter"></div>
+                  <div class="col-md-1 center vcenter"><span class="count">1 шт.</span></div>
+                  <div class="col-md-3 vcenter">
+                    <div class="price"> <span>69 990 .–</span></div>
+                  </div>
+                </div>
+                <div class="row gift-row">
+                  <div class="col-md-9 vcenter">
+                    <div class="info"><span class="name">Сертификат на посещение мастер-классов</span></div>
+                  </div>
+                  <div class="col-md-3 vcenter">
+                    <div class="price"> <span>В подарок!</span></div>
                   </div>
                 </div>
               </div>
-              <div class="catalog-list">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="catalog__item">
-                      <div class="specials">
-                        <div class="special-item percent"><img src="img/red.svg" alt=""/></div>
-                        <div class="special-item percent"><img src="img/orange.svg" alt=""/></div>
-                      </div>
-                      <div class="functions"><a href="" class="comparison">
-                          <svg viewBox="0 0 100 100" class="svgico comparison">
-                            <use xlink:href="#comparison"></use>
-                          </svg></a><a href="" class="like">
-                          <svg viewBox="0 0 100 100" class="svgico like like-gray">
-                            <use xlink:href="#like"></use>
-                          </svg></a></div>
-                      <div class="item__head"><img src="img/card_img.jpg" alt=""/>
-                        <div class="item__name">Sony Alpha A5100 kit 16-50мм PZ Brown</div>
-                        <div class="item__price">
-                          <div class="old-price"><span>54 990</span> .–</div>
-                          <div class="actual-price">141 990 .–</div>
-                        </div>
-                      </div>
-                      <div class="item__bonuce"><a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!">Бонусов: <span>1280</span></a></div>
-                      <div class="item__buy"><a href="" class="btn primary-btn">в корзину</a><a href="" class="dotted-link">Купить в один клик</a></div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="catalog__item">
-                      <div class="specials">
-                        <div class="special-item percent"><img src="img/blue.svg" alt=""/></div>
-                      </div>
-                      <div class="functions"><a href="" class="comparison">
-                          <svg viewBox="0 0 100 100" class="svgico comparison">
-                            <use xlink:href="#comparison"></use>
-                          </svg></a><a href="" class="like">
-                          <svg viewBox="0 0 100 100" class="svgico like like-gray">
-                            <use xlink:href="#like"></use>
-                          </svg></a></div>
-                      <div class="item__head"><img src="img/card_img.jpg" alt=""/>
-                        <div class="item__name">Sony Alpha A5100 kit 16-50мм PZ Brown</div>
-                        <div class="item__price">
-                          <div class="old-price"><span>54 990</span> .–</div>
-                          <div class="actual-price">141 990 .–</div>
-                        </div>
-                      </div>
-                      <div class="item__bonuce"><a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!">Бонусов: <span>1280</span></a></div>
-                      <div class="item__buy"><a href="" class="btn primary-btn">в корзину</a><a href="" class="dotted-link">Купить в один клик</a></div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="catalog__item">
-                      <div class="specials">
-                        <div class="special-item percent"><img src="img/red.svg" alt=""/></div>
-                      </div>
-                      <div class="functions"><a href="" class="comparison">
-                          <svg viewBox="0 0 100 100" class="svgico comparison">
-                            <use xlink:href="#comparison"></use>
-                          </svg></a><a href="" class="like">
-                          <svg viewBox="0 0 100 100" class="svgico like like-gray">
-                            <use xlink:href="#like"></use>
-                          </svg></a></div>
-                      <div class="item__head"><img src="img/card_img.jpg" alt=""/>
-                        <div class="item__name">Sony Alpha A5100 kit 16-50мм PZ Brown</div>
-                        <div class="item__price">
-                          <div class="old-price"><span>54 990</span> .–</div>
-                          <div class="actual-price">141 990 .–</div>
-                        </div>
-                      </div>
-                      <div class="item__bonuce"><a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!">Бонусов: <span>1280</span></a></div>
-                      <div class="item__buy"><a href="" class="btn primary-btn">в корзину</a><a href="" class="dotted-link">Купить в один клик</a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="catalog__item">
-                      <div class="specials">
-                        <div class="special-item percent"><img src="img/green.svg" alt=""/></div>
-                      </div>
-                      <div class="functions"><a href="" class="comparison">
-                          <svg viewBox="0 0 100 100" class="svgico comparison">
-                            <use xlink:href="#comparison"></use>
-                          </svg></a><a href="" class="like">
-                          <svg viewBox="0 0 100 100" class="svgico like like-gray">
-                            <use xlink:href="#like"></use>
-                          </svg></a></div>
-                      <div class="item__head"><img src="img/card_img.jpg" alt=""/>
-                        <div class="item__name">Sony Alpha A5100 kit 16-50мм PZ Brown</div>
-                        <div class="item__price">
-                          <div class="old-price"><span>54 990</span> .–</div>
-                          <div class="actual-price">141 990 .–</div>
-                        </div>
-                      </div>
-                      <div class="item__bonuce"><a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!">Бонусов: <span>1280</span></a></div>
-                      <div class="item__buy"><a href="" class="btn primary-btn">в корзину</a><a href="" class="dotted-link">Купить в один клик</a></div>
-                    </div>
-                  </div>
-                  <div class="col-md-8">
-                    <div class="catalog__item big-item">
-                      <div class="specials">
-                        <div class="special-item percent"><img src="img/red.svg" alt=""/></div>
-                      </div>
-                      <div class="functions"><a href="" class="comparison">
-                          <svg viewBox="0 0 100 100" class="svgico comparison">
-                            <use xlink:href="#comparison"></use>
-                          </svg></a><a href="" class="like">
-                          <svg viewBox="0 0 100 100" class="svgico like like-gray">
-                            <use xlink:href="#like"></use>
-                          </svg></a></div><a href="" class="item__head"><img src="img/card_img.jpg" alt=""/>
-                        <div class="item__name">Sony Alpha A5100 kit 16-50мм PZ Brown</div>
-                        <p>Реализованная в фотокамере Nikon D5 153-точечная система АФ следующего поколения позволяет работать в самых разных условиях, от динамичных гонок до претенциозных светских мероприятий. снять 200 изображений</p></a>
-                      <div class="item__bonuce"><a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!">Бонусов: <span>1280</span></a></div>
-                      <div class="item__buy">
-                        <div class="buy__buttons"><a href="" class="btn primary-btn">в корзину</a><a href="" class="dotted-link">Купить в один клик</a></div>
-                        <div class="item__price">
-                          <div class="old-price"><span>54 990</span> .–</div>
-                          <div class="actual-price">141 990 .–</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="catalog__item colored">
-                      <h3>У нас действует trade IN</h3>
-                      <p>Вы можете отдать вашу старую технику в счёт опаты новой. Никогда прежде повышение уровня фотографа не было так доступно.</p>
-                      <div class="bottom-block center"><a href="" class="btn brown-btn">подробнее</a></div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="catalog__item">
-                      <div class="functions"><a href="" class="comparison">
-                          <svg viewBox="0 0 100 100" class="svgico comparison">
-                            <use xlink:href="#comparison"></use>
-                          </svg></a><a href="" class="like">
-                          <svg viewBox="0 0 100 100" class="svgico like like-gray">
-                            <use xlink:href="#like"></use>
-                          </svg></a></div>
-                      <div class="item__head"><img src="img/card_img.jpg" alt=""/>
-                        <div class="item__name">Sony Alpha A5100 kit 16-50мм PZ Brown</div>
-                        <div class="item__price">
-                          <div class="old-price invisible"><span>54 990</span> .–</div>
-                          <div class="actual-price">141 990 .–</div>
-                        </div>
-                      </div>
-                      <div class="item__bonuce"><a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!">Бонусов: <span>1280</span></a></div>
-                      <div class="item__buy"><a href="" class="btn primary-btn">в корзину</a><a href="" class="dotted-link">Купить в один клик</a></div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="catalog__item">
-                      <div class="specials">
-                        <div class="special-item percent"><img src="img/green.svg" alt=""/></div>
-                      </div>
-                      <div class="functions"><a href="" class="comparison">
-                          <svg viewBox="0 0 100 100" class="svgico comparison">
-                            <use xlink:href="#comparison"></use>
-                          </svg></a><a href="" class="like">
-                          <svg viewBox="0 0 100 100" class="svgico like like-gray">
-                            <use xlink:href="#like"></use>
-                          </svg></a></div>
-                      <div class="item__head"><img src="img/card_img.jpg" alt=""/>
-                        <div class="item__name">Sony Alpha A5100 kit 16-50мм PZ Brown</div>
-                        <div class="item__price">
-                          <div class="old-price"><span>54 990</span> .–</div>
-                          <div class="actual-price">141 990 .–</div>
-                        </div>
-                      </div>
-                      <div class="item__bonuce"><a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!">Бонусов: <span>1280</span></a></div>
-                      <div class="item__buy"><a href="" class="btn primary-btn">в корзину</a><a href="" class="dotted-link">Купить в один клик</a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="catalog__item">
-                      <div class="specials">
-                        <div class="special-item percent"><img src="img/red.svg" alt=""/></div>
-                        <div class="special-item percent"><img src="img/orange.svg" alt=""/></div>
-                      </div>
-                      <div class="functions"><a href="" class="comparison">
-                          <svg viewBox="0 0 100 100" class="svgico comparison">
-                            <use xlink:href="#comparison"></use>
-                          </svg></a><a href="" class="like">
-                          <svg viewBox="0 0 100 100" class="svgico like like-gray">
-                            <use xlink:href="#like"></use>
-                          </svg></a></div>
-                      <div class="item__head"><img src="img/card_img.jpg" alt=""/>
-                        <div class="item__name">Sony Alpha A5100 kit 16-50мм PZ Brown</div>
-                        <div class="item__price">
-                          <div class="old-price"><span>54 990</span> .–</div>
-                          <div class="actual-price">141 990 .–</div>
-                        </div>
-                      </div>
-                      <div class="item__bonuce"><a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!">Бонусов: <span>1280</span></a></div>
-                      <div class="item__buy"><a href="" class="btn primary-btn">в корзину</a><a href="" class="dotted-link">Купить в один клик</a></div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="catalog__item consultant">
-                      <div class="consultant-head"><img src="img/consultant.png" alt=""/><span class="name">Константин Константинопольский</span><span class="position">Продавец-консультант</span></div>
-                      <div class="consultant-body">
-                        <p>Вижу вам интересна техника Nikon. Бывает сложно разобраться во всех параметрах. Специально для вас я написал статью помогающую понять основные различия между фотоаппаратами этой марки.</p>
-                      </div>
-                      <div class="consultant-footer center"><a href="" class="btn brown-btn">читать</a></div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="catalog__item">
-                      <div class="functions"><a href="" class="comparison">
-                          <svg viewBox="0 0 100 100" class="svgico comparison">
-                            <use xlink:href="#comparison"></use>
-                          </svg></a><a href="" class="like">
-                          <svg viewBox="0 0 100 100" class="svgico like like-gray">
-                            <use xlink:href="#like"></use>
-                          </svg></a></div>
-                      <div class="item__head"><img src="img/card_img.jpg" alt=""/>
-                        <div class="item__name">Sony Alpha A5100 kit 16-50мм PZ Brown</div>
-                        <div class="item__price">
-                          <div class="old-price invisible"><span>54 990</span> .–</div>
-                          <div class="actual-price">141 990 .–</div>
-                        </div>
-                      </div>
-                      <div class="item__bonuce"><a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!">Бонусов: <span>1280</span></a></div>
-                      <div class="item__buy"><a href="" class="btn primary-btn">в корзину</a><a href="" class="dotted-link">Купить в один клик</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="pagination-block">
-                <nav aria-label="Page navigation">
-                  <ul class="pagination">
-                    <li class="disabled"><a href="#" aria-label="Previous" class="nav-link"><span aria-hidden="true">предыдущая</span></a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li>...</li>
-                    <li><a href="">25</a></li>
-                    <li><a href="#" aria-label="Next" class="nav-link"><span aria-hidden="true">следующая</span></a></li>
-                  </ul><a href="" class="btn allpages-btn">показать все</a>
-                </nav>
+              <div class="basket-block-btn"><a href="#" class="btn brownfill-btn">войти и продолжить</a><a href="#" class="btn brown-btn">Продолжить без входа в личный кабинет</a><a class="dashed-link">Купить в один клик</a></div>
+            </div>
+            <div class="col-md-3">
+              <div class="bill-block affix">
+                <div class="block-group"><span class="label">Стоимость товаров:</span><span class="price">269 990 .–</span></div>
+                <div class="block-group"><span class="label">Стоимость доставки:</span><span class="price">269 990 .–</span></div>
+                <div class="block-group"><span class="label">Скидка:</span><span class="price">269 990 .–</span></div>
+                <div class="block-group"><span class="label result">Итого:</span><span class="price result">279 990 .–</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="brands-block standart-paddings">
+      <div class="white-wrapper">
         <div class="container">
-          <h2 class="title">наши бренды</h2>
-          <div class="brends-container">
-            <div class="left-sticker"><img src="img/rotated.png" alt=""/><span>официальный<br> представитель</span></div>
-            <div class="content"><a href="" class="item big"><img src="img/brand1.png" alt=""/></a><a href="" class="item big"><img src="img/brand1.png" alt=""/></a><a href="" class="item big"><img src="img/brand1.png" alt=""/></a><a href="" class="item small"><img src="img/brand2.png" alt=""/></a><a href="" class="item small"><img src="img/brand2.png" alt=""/></a><a href="" class="item small"><img src="img/brand2.png" alt=""/></a><a href="" class="item small"><img src="img/brand2.png" alt=""/></a><a href="" class="item small">и еще более <br/> <span>30 брендов</span></a></div>
+          <p class="string-title">Для того, чтобы взять технику в аренду<br> вам необходимо заполнить более подробную анкету</p>
+          <div class="row">
+            <div class="col-md-9 order-data">
+              <form>
+                <div class="form-group">
+                  <h2 class="title">Личные данные</h2>
+                  <div class="row">
+                    <div class="col-md-4 vbottom">
+                      <div class="radio-group">
+                        <input id="individual" type="radio" name="person" checked="checked"/>
+                        <label for="individual">Физическое лицо</label>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="radio-group">
+                        <input id="legal" type="radio" name="person"/>
+                        <label for="legal">Юридическое лицо</label><a href="" data-toggle="tooltip" data-placement="top" title="Пояснение за физическое лицо" class="que-tooltip"> <img src="img/que.svg" alt=""/></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="personal-info">
+                    <div class="personal-item active">
+                      <div class="row">
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd">Фамилия </label>
+                            <input type="text" name=""/>
+                          </div>
+                        </div>
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd">Имя </label>
+                            <input type="text" name=""/>
+                          </div>
+                        </div>
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd">Отчество </label>
+                            <input type="text" name=""/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd">электронная почта </label>
+                            <input type="text" name=""/>
+                          </div>
+                        </div>
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd">мобильный телефон </label>
+                            <input type="tel" name="" class="tel"/>
+                          </div>
+                        </div>
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd">дата рождения </label>
+                            <input type="text" name="" class="date"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="personal-item">
+                      <div class="row">
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd">Название компании </label>
+                            <input type="text" name=""/>
+                          </div>
+                        </div>
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd">инн </label>
+                            <input type="number" name=""/>
+                          </div>
+                        </div>
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd">кпп </label>
+                            <input type="number" name=""/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd">контактное лицо </label>
+                            <input type="text" name=""/>
+                          </div>
+                        </div>
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd"> телефон </label>
+                            <input type="tel" name="" class="tel"/>
+                          </div>
+                        </div>
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd">электронная почта</label>
+                            <input type="text" name=""/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-8 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd">юридический адрес</label>
+                            <input type="text" name=""/>
+                          </div>
+                        </div>
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd"> индекс </label>
+                            <input type="number" name=""/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd">генеральный директор</label>
+                            <input type="text" name=""/>
+                          </div>
+                        </div>
+                        <div class="col-md-4 vbottom">
+                          <div class="input-group">
+                            <label for="" class="requierd"> главный бухгалтер</label>
+                            <input type="number" name=""/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h2 class="title">паспортные данные</h2>
+                  <div class="row">
+                    <div class="col-md-2 vbottom">
+                      <div class="input-group">
+                        <label for="" class="requierd">серия  </label>
+                        <input type="tel" class="series"/>
+                      </div>
+                    </div>
+                    <div class="col-md-2 vbottom">
+                      <div class="input-group">
+                        <label for="" class="requierd">номер  </label>
+                        <input type="number" name="" class="pasport-number"/>
+                      </div>
+                    </div>
+                    <div class="col-md-3 vbottom">
+                      <div class="input-group">
+                        <label for="" class="requierd">код подразделения </label>
+                        <input type="text" name="" class="code"/>
+                      </div>
+                    </div>
+                    <div class="col-md-5 vbottom">
+                      <div class="input-group">
+                        <label for="" class="requierd">кем выдан </label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="" class="requierd">дата выдачи  </label>
+                        <input type="text" class="date"/>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="" class="requierd">адрес регистрации  </label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="" class="requierd">время регистрации в регионе </label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 vbottom">
+                      <div class="input-group">
+                        <label for="" class="requierd">место рождения</label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                    <div class="col-md-6 vbottom">
+                      <div class="input-group">
+                        <label for="" class="requierd">фактический адрес проживания </label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group add-info">
+                  <div class="row">
+                    <div class="col-md-10 vcenter">
+                      <h2 class="title">Расширенная анкета</h2>
+                      <p>чтобы мы могли дать фототехнику в аренду на сумму выше 50 000, необходимо заполнить расширенную анкету</p>
+                    </div>
+                    <div class="col-md-2 vcenter"><a href=""><i class="fa fa-angle-down"></i></a></div>
+                  </div>
+                </div>
+                <div class="form-group additional-info">
+                  <div class="row">
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">городской телефон </label>
+                        <input type="tel" name="" class="city-phone"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 vbottom">
+                      <div class="input-group">
+                        <label>менялись ли фио?</label>
+                        <div class="radio-group">
+                          <input id="fio-yes" type="radio" name="fio"/>
+                          <label for="fio-yes">Да</label>
+                        </div>
+                        <div class="radio-group">
+                          <input id="fio-no" type="radio" name="fio"/>
+                          <label for="fio-no">Нет</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">Фамилия </label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">Имя </label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">Отчество </label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 vbottom">
+                      <div class="input-group">
+                        <label>семейное положение</label>
+                        <div class="radio-group">
+                          <input id="single" type="radio" name="marriage"/>
+                          <label for="single">Холост / Не замужем</label>
+                        </div>
+                        <div class="radio-group">
+                          <input id="relationship" type="radio" name="marriage"/>
+                          <label for="relationship">Женат / Замужем</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">количество детей </label>
+                        <input type="number" name=""/>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">их возраст </label>
+                        <input type="number" name=""/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">страница в соц. сетях </label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">адрес веб-сайта/портфолио </label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                  </div>
+                  <h2 class="title">сведения с места работы</h2>
+                  <div class="row">
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">место работы <br><span>(название орг.-ции)</span> </label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">юр. лицо организации <br><span>(ФИО)</span> </label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">Занимаемая должность </label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">сайт компании работодателя</label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">сайт компании работодателя</label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">телефон организации </label>
+                        <input type="tel" name="" class="city-phone"/>
+                      </div>
+                    </div>
+                  </div>
+                  <h2 class="title">информация о хобби</h2>
+                  <div class="row">
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label for="">сайт компании работодателя</label>
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <label>Кто из профессиональных фотографов/ видеооператоров может дать о Вас рекомендации?</label>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="input-group">
+                        <label><span>укажите адрес сайта/<br/>номер телефона</span></label>
+                      </div>
+                    </div>
+                    <div class="col-md-9">
+                      <div class="input-group">
+                        <input type="text" name=""/>
+                      </div>
+                    </div>
+                  </div>
+                  <h2 class="title">дополнительные данные</h2>
+                  <div class="row">
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label>водительские права</label>
+                        <input type="number" name="" placeholder="Номер"/>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <input type="text" name="" placeholder="Дата выдачи"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label>заграничный паспорт</label>
+                        <input type="number" name="" placeholder="Номер"/>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <input type="text" name="" placeholder="Дата выдачи"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <label>ПТС</label>
+                        <input type="number" name="" placeholder="Серия/номер"/>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <input type="text" name="" placeholder="Дата выдачи"/>
+                      </div>
+                    </div>
+                    <div class="col-md-4 vbottom">
+                      <div class="input-group">
+                        <input type="text" name="" placeholder="Марка автомобиля"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h2 class="title">Доставка</h2>
+                  <div class="row">
+                    <div class="col-md-3 vbottom">
+                      <div class="radio-group">
+                        <input id="deliver" type="radio" name="delivery"/>
+                        <label for="deliver">Доставка</label>
+                      </div>
+                    </div>
+                    <div class="col-md-3 vbottom">
+                      <div class="radio-group">
+                        <input id="selfdeliver" type="radio" name="delivery"/>
+                        <label for="selfdeliver">Самовывоз</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="delivery-item">
+                      <div class="col-md-5">
+                        <div class="input-group">
+                          <svg viewBox="0 0 100 100" class="svgico location">
+                            <use xlink:href="#location"></use>
+                          </svg>
+                          <label for="">Адрес:</label>
+                          <div class="delivery-text"><span>г. Красноярск, ул. Авиаторов 38</span><a href="">показать на карте</a></div>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="input-group">
+                          <svg viewBox="0 0 100 100" class="svgico clock">
+                            <use xlink:href="#clock"></use>
+                          </svg>
+                          <label for="">Режим работы:</label>
+                          <div class="delivery-text"><span>пн-пт: 10:00 – 19:00</span><span>суббота, восскресенье: 11:00 – 17:00.</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h2 class="title">оплата</h2>
+                  <p>Стоимость вашего заказа превышает 100 000 руб. Поэтому отправка товара до его полной оплаты недоступна. Это ограничение снимается для покупателей, которые суммарно купили у нас товаров на сумму более 30 000 руб</p>
+                  <div class="check-out-row">
+                    <div class="item">
+                      <div class="radio-group">
+                        <input id="cash" type="radio" name="check_out"/>
+                        <label for="cash">Наличными или картой</label>
+                      </div>
+                      <div class="text-block"><span>Курьеру при <br>получении</span></div>
+                    </div>
+                    <div class="item">
+                      <div class="radio-group">
+                        <input id="card" type="radio" name="check_out"/>
+                        <label for="card">Картой на сайте</label>
+                      </div>
+                      <div class="text-block"><i aria-hidden="true" class="fa fa-cc-visa"></i><i aria-hidden="true" class="fa fa-cc-mastercard"></i></div>
+                    </div>
+                    <div class="item">
+                      <div class="radio-group">
+                        <input id="card" type="radio" name="check_out"/>
+                        <label for="card">Банковский перевод</label>
+                      </div>
+                      <div class="text-block"><span>Счёт на оплату будет выслан на указанную эл. почтуи</span></div>
+                    </div>
+                    <div class="item">
+                      <div class="radio-group">
+                        <input id="card" type="radio" name="check_out"/>
+                        <label for="card">Кредит</label>
+                      </div>
+                      <div class="text-block"><span>Без переплаты	</span></div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

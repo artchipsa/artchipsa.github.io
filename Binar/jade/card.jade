@@ -1,0 +1,379 @@
+html
+	include modules/head.jade
+	body
+		.hidden
+			include ../img/assets.svg
+		include modules/header.jade
+		.main-content
+			.search-over
+			.catalog-wrapper.card-wrap
+				.container
+					ol.breadcrumb
+						li
+							a(href="") Главная
+						li
+							a(href="") Каталог
+						li.active
+							a Olympus OM-D E-M5 mark II kit 12-40mm f/2.8 Black  
+					.card-title
+						.row
+							.col-md-8.vcenter
+								h2.title Olympus OM-D E-M5 mark II kit 12-40mm f/2.8 Black
+							.col-md-4.vcenter
+								.functions
+									a(href="").like
+										svg(viewBox="0 0 100 100", class="svgico like like-gray")
+											use(xlink:href="#like")
+										span в избранное
+									a(href="").comparison
+										svg(viewBox="0 0 100 100", class="svgico comparison")
+											use(xlink:href="#comparison")
+										span В список сравнения
+					.row
+						.col-md-3.float
+							.card-left-block.affix
+								.card-block-group
+									.item__head
+										img(src="img/card_inside_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+									.item__price
+										.old-price #[span 54 990] .–
+										.actual-price 141 990 .–
+								.card-block-group.item__bonuce
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+								.card-block-group.item__buy
+									a(href="").btn.primary-btn в корзину
+									.zero-count
+										span.tag НА ЗАКАЗ
+										<br>
+										span Доставка до 15 дней
+								.card-block-group.fast__buy
+									a.dashed-link(href="") Купить в один клик
+									<br>
+									.credit
+										a(href="") Купить в кредит
+										<br>
+										span от 9 999 руб,/мес.
+								.card-block-group.center
+									a(href="") Взять в аренду
+									a.que-tooltip(href="" data-toggle="tooltip" data-placement="top" title="подсказанька")
+										img(src="img/que.svg", alt="")
+
+						.col-md-9
+							.goods-info
+								.gallery
+									.big-gallery
+										a(href="").close 
+											i.fa.fa-times(aria-hidden="true")
+										.owl-carousel.goods-gallery.big-goods-gallery(data-slider-id="1")
+											.item 
+												img(src="img/card_inside_img.jpg", alt="")
+											.item 
+												img(src="img/card_inside_img.jpg", alt="")
+											.item 
+												img(src="img/card_inside_img.jpg", alt="")
+											.item 
+												img(src="img/card_inside_img.jpg", alt="")
+											.item 
+												img(src="img/card_inside_img.jpg", alt="")
+										.owl-thumbs.big-goods-thumbs(data-slider-id="1")
+											.owl-thumb-item(data-thumb-id="0") 
+												.inside
+													img(src="img/mini_img_1.jpg", alt="")
+											.owl-thumb-item(data-thumb-id="1") 
+												.inside
+													img(src="img/mini_img_2.jpg", alt="")
+											.owl-thumb-item(data-thumb-id="2") 
+												.inside
+													img(src="img/mini_img_1.jpg", alt="")
+											.owl-thumb-item(data-thumb-id="3") 
+												.inside
+													img(src="img/mini_img_3.jpg", alt="")
+									.owl-carousel.goods-gallery(data-slider-id="2")
+										.item 
+											img(src="img/card_inside_img.jpg", alt="")
+										.item 
+											img(src="img/card_inside_img.jpg", alt="")
+										.item 
+											img(src="img/card_inside_img.jpg", alt="")
+										.item 
+											img(src="img/card_inside_img.jpg", alt="")
+										.item 
+											img(src="img/card_inside_img.jpg", alt="")
+									.owl-thumbs.small-goods-thumbs(data-slider-id="2")
+										.owl-thumb-item(data-thumb-id="0")
+											.inside
+												img(src="img/mini_img_1.jpg", alt="")
+										.owl-thumb-item(data-thumb-id="1") 
+											.inside
+												img(src="img/mini_img_2.jpg", alt="")
+										.owl-thumb-item(data-thumb-id="2") 
+											.inside
+												img(src="img/mini_img_1.jpg", alt="")
+										.owl-thumb-item(data-thumb-id="3") 
+											.inside
+												img(src="img/mini_img_3.jpg", alt="")
+								.information
+									.info-group
+										a(href="").special-row
+											img(src="img/red.svg", alt="")
+											span Скидка 30%
+										a(href="").special-row
+											img(src="img/green.svg", alt="")
+											span Аксессуар<br> в подарок
+										a(href="").special-row
+											img(src="img/blue.svg", alt="")
+											span Кэшбэк 10%
+										a(href="").special-row
+											img(src="img/orange.svg", alt="")
+											span Сертификат
+									.info-group
+										.gain-block
+											.gain-item
+												img(src="img/delivery.svg", alt="")
+												.link-container.tooltip-link
+													a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бесплатная доставка" data-placement="top" data-content="Какой-то поясняющий текст про бесплатную доставку. Вау!") Бесплатная доставка <br> по Красноярску
+											.gain-item
+												img(src="img/test.svg", alt="")
+												.link-container.tooltip-link
+													a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бесплатный тест-драйв" data-placement="top" data-content="Какой-то поясняющий текст про бесплатный тест-драйв. Вау!") Можно взять <br>на тест драйв
+											.gain-item
+												img(src="img/master_class.svg", alt="")
+												.link-container.tooltip-link
+													a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бесплатное обучение" data-placement="top" data-content="Какой-то поясняющий текст про Бесплатное обучение. Вау!") Бесплатное<br> обучение
+											.gain-item
+												img(src="img/guarantee.svg", alt="")
+												.link-container.tooltip-link
+													a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title=" Расширенная гарантия" data-placement="top" data-content="Какой-то поясняющий текст про расширенную гарантию. Вау!") +1 год гарантии<br>+3 года сервиса
+									.info-group
+										.sys-info
+											h3.subtitle Основные параметры:
+											ul
+												li Модель: #[span D5 body]
+												li Вес: #[span 1405 г]
+												li Цвет: #[span Черный]
+												li Видоискатель: #[span Зеркальный]
+												li Разрешение матрицы: #[span 21.33 Мп.]
+												li Размер дисплея: #[span 2 дюйм]
+							.common-info
+								.common-info-group
+									h3.subtitle Информация о товаре 
+									ul.nav.nav-tabs(role="tablist")
+										li(role="presentation").active
+											a(href="#descr" aria-controls="descr" role="tab" data-toggle="tab") оПИСАНИЕ
+										li(role="presentation")
+											a(href="#params" aria-controls="params" role="tab" data-toggle="tab") ПАРАМЕТРЫ
+									.tab-content
+										.tab-pane.fade.in.active#descr(role="tabpanel")
+											h4.string-title Мощность и точность при любых обстоятельствах: с помощью фотокамеры D5 можно снимать то, что не видно глазу
+											p Реализованная в фотокамере Nikon D5 153-точечная система АФ следующего поколения позволяет работать в самых разных условиях, от динамичных гонок до претенциозных светских мероприятий. Необычайно широкий спектр применения и новый буфер, позволяющий снять 200 изображений формата NEF (RAW) при высокоскоростной серийной съемке. Новая матрица и датчик для замера экспозиции обеспечивают исключительно точное распознавание объектов съемки и деталей изображения. Широчайший в истории Nikon диапазон светочувствительности открывает возможности съемки практически в любых условиях, от яркого солнечного света до астрономических сумерек. Для видеооператоров, стремящихся к совершенству, подойдет встроенный режим D-видео, благодаря которому прямо в фотокамере можно записывать видеоролики в формате 4K/UHD.
+										.tab-pane.fade#params(role="tabpanel")
+											table
+												tbody
+													tr
+														td количество пикселей
+														td 22 мпикс
+													tr
+														td Размер
+														td 123 * 213 * 123
+													tr
+														td Кроп-фактор
+														td 123
+													tr
+														td Объектив в комплекте
+														td присутствует
+													tr
+														td Общее число пикселов
+														td 123 мпикс
+								.common-info-group
+									h3.subtitle Видеообзор камеры
+									iframe(width="100%" height="355" src="https://www.youtube.com/embed/LSb1f_15ev0" frameborder="0" allowfullscreen)
+								.common-info-group.photos
+									h3.subtitle Фото, сделанные этим фотоаппаратом:
+									.photos-container
+										.half
+											.item(style="background-image: url(img/ph1.jpg)")
+												.hover-item
+													.author автор: #[span.name Константин Константинопольский]
+													.header-socials
+														a(href="")
+															i.fa.fa-twitter(aria-hidden="true")
+														a(href="")
+															i.fa.fa-instagram(aria-hidden="true")
+														a(href="")
+															i.fa.fa-youtube(aria-hidden="true")
+														a(href="")
+															i.fa.fa-vk(aria-hidden="true")
+										.half
+											.item.small(style="background-image: url(img/ph2.jpg)")
+												.hover-item
+													.author автор: #[span.name Константин Константинопольский]
+													.header-socials
+														a(href="")
+															i.fa.fa-twitter(aria-hidden="true")
+														a(href="")
+															i.fa.fa-instagram(aria-hidden="true")
+														a(href="")
+															i.fa.fa-youtube(aria-hidden="true")
+														a(href="")
+															i.fa.fa-vk(aria-hidden="true")
+											.item.small(style="background-image: url(img/ph3.jpg)")
+												.hover-item
+													.author автор: #[span.name Константин Константинопольский]
+													.header-socials
+														a(href="")
+															i.fa.fa-twitter(aria-hidden="true")
+														a(href="")
+															i.fa.fa-instagram(aria-hidden="true")
+														a(href="")
+															i.fa.fa-youtube(aria-hidden="true")
+														a(href="")
+															i.fa.fa-vk(aria-hidden="true")
+											.item.small(style="background-image: url(img/ph1.jpg)")
+												.hover-item
+													.author автор: #[span.name Константин Константинопольский]
+													.header-socials
+														a(href="")
+															i.fa.fa-twitter(aria-hidden="true")
+														a(href="")
+															i.fa.fa-instagram(aria-hidden="true")
+														a(href="")
+															i.fa.fa-youtube(aria-hidden="true")
+														a(href="")
+															i.fa.fa-vk(aria-hidden="true")
+											.item.small(style="background-image: url(img/ph4.jpg)")
+												.hover-item
+													.author автор: #[span.name Константин Константинопольский]
+													.header-socials
+														a(href="")
+															i.fa.fa-twitter(aria-hidden="true")
+														a(href="")
+															i.fa.fa-instagram(aria-hidden="true")
+														a(href="")
+															i.fa.fa-youtube(aria-hidden="true")
+														a(href="")
+															i.fa.fa-vk(aria-hidden="true")
+								.common-info-group
+									a.subtitle.js-reviews-toggle(href="") Отзывы #[i.fa.fa-angle-right]
+									.reviews
+										ul.nav.nav-tabs(role="tablist")
+											li(role="presentation").active
+												a(href="#binar_rev" aria-controls="binar_rev" role="tab" data-toggle="tab") БИНАР
+											li(role="presentation")
+												a(href="#yandex_rev" aria-controls="yandex_rev" role="tab" data-toggle="tab") ЯНДЕКС.маркет
+											li(role="presentation")
+												a(href="#vk_rev" aria-controls="vk_rev" role="tab" data-toggle="tab") вконтакте
+										.tab-content
+											.tab-pane.fade.in.active#binar_rev(role="tabpanel")
+												.reviews-container
+													.item
+														.item__head
+															h4.string-title Константин Константинопольский
+															span 12/23/2016
+														.item__body
+															p Очень доволен. Фото с него потрясающие даже без обработки: сочные, контрастные, чёткие. Если снимать в RAW (а это стоит сделать), то "проявить" их можно очень быстро в бесплатном Capture NX-D (имею Lightroom 5, но забросил его, так как цвета получаются не такие естественные, хотя шумы он убирает лучше). До ~ ISO800 шумы не заметны. 
+													.item
+														.item__head
+															h4.string-title Аркадий Варламович
+															span 12/23/2016
+														.item__body
+															p Автофокусировка цепкая, меткая и быстрая. Отличнейшее качество изображения при высоких ISO (для меня это самый большой плюс этого фотоаппарата), можно ставить до 3200 даже, если сильно наглеть (а в р-не до 1600 почти не отличается от 100).
+												.own-review-container
+													h3.subtitle Оставьте отзыв
+													form(action="")
+														.form-group
+															label(for="review_name") Ваше имя
+															input#review_name(type="text", name="review_name")
+														.form-group
+															label(for="review_text") Текст отзыва
+															textarea#review_text(name="review_text", rows="10")
+														.form-group
+															input(type="submit", value="Оставить отзыв").btn.brown-btn
+											.tab-pane.fade#yandex_rev(role="tabpanel") яндекс
+											.tab-pane.fade#vk_rev(role="tabpanel") вконтактель
+			.co-goods
+				.container
+					h3.title Этот товар хорошо дополняют
+					.row
+						.col-md-3.vcenter
+							.card-left-block.co-item.js-invis-toggle.invisible
+								.card-block-group
+									.item__head
+										img(src="img/card_inside_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+									.item__price
+										.old-price #[span 54 990] .–
+										.actual-price 141 990 .–
+								.card-block-group.item__bonuce
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+								.card-block-group.item__buy
+									a(href="").btn.primary-btn в корзину
+								.card-block-group.fast__buy
+									a.dashed-link(href="") Купить в один клик
+									<br>
+									.credit
+										a(href="") Купить в кредит
+										<br>
+										span от 9 999 руб,/мес.
+								.card-block-group.center
+									a(href="") Взять в аренду
+									a.que-tooltip(href="" data-toggle="tooltip" data-placement="top" title="подсказанька")
+										img(src="img/que.svg", alt="")
+						.col-md-3.vcenter
+							.card-left-block.co-item.disabled
+								.card-block-group
+									.item__head
+										img(src="img/card_inside_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+									.item__price
+										.old-price #[span 54 990] .–
+										.actual-price 141 990 .–
+								.card-block-group.item__bonuce
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+								.card-block-group.add__item
+									.checkbox-group
+										input#co-goods1(type="checkbox", name="")
+										label(for="co-goods1") Добавить
+						.col-md-3.vcenter
+							.card-left-block.co-item.disabled
+								.card-block-group
+									.item__head
+										img(src="img/card_inside_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+									.item__price
+										.old-price #[span 54 990] .–
+										.actual-price 141 990 .–
+								.card-block-group.item__bonuce
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+								.card-block-group.add__item
+									.checkbox-group
+										input#co-goods2(type="checkbox", name="")
+										label(for="co-goods2") Добавить
+						.col-md-3.vcenter
+							.card-left-block.result
+								.card-block-group
+									.item__price
+										span Итоговая<br>стоимость:
+										.actual-price 141 990 .–
+								.card-block-group.item__bonuce
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+								.card-block-group.item__buy
+									a(href="").btn.primary-btn к оформлению
+								.card-block-group.fast__buy
+									a.dashed-link(href="") Купить в один клик
+									<br>
+									.credit
+										a(href="") Купить в кредит
+										<br>
+										span от 9 999 руб,/мес.
+						
+
+
+
+
+
+
+			include modules/brands.jade
+			include modules/footer.jade
+			include modules/viewcompare.jade
+		include modules/scripts.jade
