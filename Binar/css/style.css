@@ -812,6 +812,7 @@ header.fixed .logo img {
   border-radius: 25px;
   padding: 16px 48px;
   margin-bottom: 18px;
+  background-color: transparent;
   transition: all 0.35s ease-in-out;
 }
 .btn.primary-btn:hover {
@@ -1448,6 +1449,7 @@ header.fixed .logo img {
 .breadcrumb {
   margin-bottom: 28px;
   padding: 8px 0px;
+  background-color: transparent;
 }
 .breadcrumb li {
   margin-right: -4px;
@@ -2779,6 +2781,14 @@ header.fixed .logo img {
 .bill-block.affix:after {
   color: #ffffff;
 }
+.bill-block.affix-bottom {
+  overflow: hidden;
+  background-color: #f3f4f4;
+}
+.bill-block.affix-bottom:before,
+.bill-block.affix-bottom:after {
+  color: #ffffff;
+}
 .bill-block:before {
   content: '..............';
   position: absolute;
@@ -2847,6 +2857,7 @@ header.fixed .logo img {
   position: relative;
   border: 1px solid #e1e1e1;
   padding: 0px;
+  margin-bottom: 45px;
 }
 .order-data form {
   margin-bottom: 0px;
@@ -2902,45 +2913,54 @@ header.fixed .logo img {
   margin-bottom: 35px;
   line-height: 165%;
 }
-.order-data .input-group {
+.input-group {
   width: 100%;
 }
-.order-data .input-group label {
+.input-group label {
   text-transform: uppercase;
   font-size: 12px;
   color: #bebebe;
   display: inline-block;
   margin-bottom: 20px;
 }
-.order-data .input-group label span {
+.input-group label span {
   text-transform: none;
 }
-.order-data .input-group label.requierd {
+.input-group label.requierd {
   position: relative;
 }
-.order-data .input-group label.requierd:before {
+.input-group label.requierd:before {
   content: '*';
   color: #f9593a;
   position: absolute;
   top: -5px;
   right: -8px;
 }
-.order-data .input-group svg {
+.input-group svg {
   display: inline-block;
   vertical-align: top;
   margin-right: 10px;
 }
-.order-data .input-group input[type="text"],
-.order-data .input-group input[type="tel"],
-.order-data .input-group input[type="number"] {
+.input-group input[type="text"],
+.input-group input[type="password"],
+.input-group input[type="tel"],
+.input-group input[type="number"],
+.input-group textarea {
   display: block;
   width: 100%;
   border: 1px solid #e1e1e1;
   padding: 10px 14px;
   line-height: 100%;
 }
-.order-data .input-group input::-webkit-outer-spin-button,
-.order-data .input-group input::-webkit-inner-spin-button {
+.input-group input[type="text"].error,
+.input-group input[type="password"].error,
+.input-group input[type="tel"].error,
+.input-group input[type="number"].error,
+.input-group textarea.error {
+  border-color: #f9593a;
+}
+.input-group input::-webkit-outer-spin-button,
+.input-group input::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none;
   margin: 0;
@@ -2989,6 +3009,12 @@ header.fixed .logo img {
   display: inline-block;
   margin-right: 30px;
 }
+.delivery-item {
+  display: none;
+}
+.delivery-item.active {
+  display: block;
+}
 .delivery-item label {
   margin-bottom: 10px!important;
 }
@@ -2998,6 +3024,17 @@ header.fixed .logo img {
 }
 .delivery-item .delivery-text {
   margin-left: 22px;
+}
+.delivery-item .delivery-price h2 {
+  margin: 0px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 700;
+  color: #71441b;
+}
+.delivery-item .delivery-price span {
+  font-size: 12px;
 }
 .check-out-row {
   border: 1px solid #e1e1e1;
@@ -3014,7 +3051,11 @@ header.fixed .logo img {
   height: 150px;
 }
 .check-out-row .item.disabled:before {
+  position: absolute;
   content: '';
+  top: 0px;
+  left: 0px;
+  z-index: 1;
   width: 100%;
   height: 100%;
   background-color: #e1e1e1;
@@ -3050,4 +3091,137 @@ header.fixed .logo img {
 }
 .personal-item.active {
   display: block;
+}
+.form-result {
+  margin-bottom: 50px;
+}
+.form-result .price-block {
+  position: relative;
+  overflow: hidden;
+}
+.form-result .price-block span {
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 28px;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
+}
+.form-result .price-block h2 {
+  color: #71441b;
+  font-weight: 700;
+  font-size: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px;
+}
+.form-result .bonus-block p {
+  margin-bottom: 0px;
+}
+.form-result .bonus-block p span {
+  font-weight: 700;
+}
+.form-result .bonus-block p span.applied {
+  text-decoration: line-through;
+}
+.form-result .apply-bonus {
+  margin-bottom: 0px;
+}
+.form-result .apply-bonus label {
+  margin-bottom: 0px!important;
+  font-size: 12px!important;
+}
+.form-result .apply-bonus label:before {
+  top: -2px;
+}
+.js-change-price {
+  transform: translateY(0%);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+.js-change-price.remath {
+  transform: translateY(100%);
+}
+.thanks-block {
+  background-color: #e6e6e6;
+  padding: 60px 0px;
+  margin-bottom: 45px;
+  text-align: center;
+}
+.thanks-block .img-block {
+  position: relative;
+  margin-bottom: 38px;
+}
+.thanks-block .img-block img {
+  widows: 462px;
+}
+.thanks-block .img-block .promo-text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(113, 68, 27, 0.9);
+  color: #ffffff;
+  padding: 45px 75px;
+  font-family: RoadRadio;
+  font-size: 56px;
+  font-weight: 700;
+}
+.thanks-block p {
+  font-size: 16px;
+}
+.thanks-block p span {
+  font-size: 24px;
+  color: #71441b;
+  font-weight: 700;
+}
+.register-block .title {
+  margin-bottom: 28px;
+  text-align: left;
+}
+.register-block p {
+  margin-bottom: 44px;
+}
+.register-block form .input-group {
+  position: relative;
+}
+.register-block form .input-group label {
+  color: #454545;
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+.register-block form .input-group .show-password {
+  position: absolute;
+  bottom: 3px;
+  right: 2px;
+  padding: 10px;
+  color: #757575;
+}
+.register-block form span {
+  color: #a4a4a4;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.register-block form .checkbox-group label {
+  font-size: 14px;
+}
+.register-block form .row {
+  margin-bottom: 20px;
+}
+.register-block form .password-row {
+  margin-bottom: 48px;
+}
+.register-block form .brown-btn {
+  font-size: 13px;
+}
+.register-block form .underline-link {
+  font-family: RoadRadio;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.underline-link {
+  text-decoration: underline;
+}
+.underline-link:hover {
+  text-decoration: none;
 }

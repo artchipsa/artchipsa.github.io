@@ -1,4 +1,6 @@
-var over = false;
+'use strict';
+var over = false,
+    error = false;
 $(document).ready(function(){
 
     $('.header-placeholder').height($('header').height());
@@ -498,11 +500,16 @@ $(document).ready(function(){
         basketResult();
         return false;
     });
-    var bill_anchor = $('.white-wrapper').offset().top;    
+    if ($('.white-wrapper').length){
+        var bill_anchor = $('.white-wrapper').offset().top;
+    }
     $('.bill-block.affix').width($('.bill-block').parent().width());
     $('.bill-block.affix').affix({
         offset:{
-            top: bill_anchor - 120
+            top: bill_anchor - 120,
+            bottom: function(){
+                return (this.bottom = $('.footer').outerHeight(true) + 100);
+            }
         }
     });
 
@@ -526,11 +533,85 @@ $(document).ready(function(){
             $('.personal-item.active').removeClass('active');
             $('.personal-item:eq('+id+')').fadeIn(300).addClass('active');
        });
+    });
+
+    $('input[name="delivery"]').change(function(){
+       var id =  $('input[name="delivery"]').index($('input[name="delivery"]:checked'));
+       $('.delivery-item.active').fadeOut(300, function(){
+            $('.delivery-item.active').removeClass('active');
+            $('.delivery-item:eq('+id+')').fadeIn(300).addClass('active');
+       });
     })
+
+    $('#apply_bonus').change(function(){
+        var bonus_summ = parseInt($('.bonus-block span').text().replace(/\s/g, ''));
+        var price_space = $('.js-change-price');
+        var price = parseInt(price_space.text().replace(/\s/g, ''));
+        var new_price = 0;
+        if ($(this).prop('checked')){
+            new_price = price - bonus_summ;
+            new_price = new_price.toLocaleString();
+            new_price = new_price + ' .-';
+            $('.bonus-block span').addClass('applied');
+            price_space.addClass('remath');
+            setTimeout(function(){
+                price_space.text(new_price);
+                price_space.removeClass('remath');
+            }, 200);
+        } else {
+            new_price = price + bonus_summ;
+            new_price = new_price.toLocaleString();
+            new_price = new_price + ' .-';
+            $('.bonus-block span').removeClass('applied');
+            price_space.addClass('remath');
+            setTimeout(function(){
+                price_space.text(new_price);
+                price_space.removeClass('remath');
+            }, 200);
+        }
+    });
+
+    $(document).on('change keyup', '.error', function(){
+        $(this).removeClass('error');
+    });
+
+    $('#order').submit(function(e){
+        var form = $(this);
+        var body = $('html, body');
+
+        form.find('.requierd:visible').each(function(){
+            checkFill($(this));
+        });
+
+        if($('.error').length){
+            var first_error = $('.error').first().parent().offset().top - ($('.error').first().outerHeight() * 3.5);
+            console.log(first_error);
+            body.stop().animate({scrollTop: first_error}, '450', 'swing');
+        }
+
+        if (error) return false;
+    });
+
+    $(document).on('click', '.show-password', function(){
+        $(this).children().toggleClass('fa-eye fa-eye-slash');
+        if ($(this).children().hasClass('fa-eye')){
+            $(this).parent().find('input').attr('type', 'text');
+        } else {
+            $(this).parent().find('input').attr('type', 'password');
+        }
+        return false;
+    });
+
 
 });
 
 //funcs
+function checkFill(elem){
+    if (elem.next().val() == ''){
+        elem.next().addClass('error');
+        error = true;
+    }
+}
 
 (function(){
     if ($('.frame').length){

@@ -101,330 +101,382 @@ html
 				.container
 					p.string-title Для того, чтобы взять технику в аренду<br> вам необходимо заполнить более подробную анкету
 					.row
-						.col-md-9.order-data
-							form
-								.form-group
-									h2.title Личные данные
-									.row
-										.col-md-4.vbottom
-											.radio-group
-												input#individual(type="radio", name="person" checked)
-												label(for="individual") Физическое лицо
-										.col-md-4.vbottom
-											.radio-group
-												input#legal(type="radio", name="person")
-												label(for="legal") Юридическое лицо
-												a(href="" data-toggle="tooltip" data-placement="top" title="Пояснение за физическое лицо").que-tooltip 
-													img(src="img/que.svg", alt="")
-									.personal-info
-										.personal-item.active
-											.row
-												.col-md-4.vbottom
+						.col-md-9
+							form#order
+								.order-data
+									.form-group
+										h2.title Личные данные
+										.row
+											.col-md-4.vbottom
+												.radio-group
+													input#individual(type="radio", name="person" checked)
+													label(for="individual") Физическое лицо
+											.col-md-4.vbottom
+												.radio-group
+													input#legal(type="radio", name="person")
+													label(for="legal") Юридическое лицо
+													a(href="" data-toggle="tooltip" data-placement="top" title="Пояснение за физическое лицо").que-tooltip 
+														img(src="img/que.svg", alt="")
+										.personal-info
+											.personal-item.active
+												.row
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd Фамилия 
+															input(type="text", name="")
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd Имя 
+															input(type="text", name="")
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd Отчество 
+															input(type="text", name="")
+												.row
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd электронная почта 
+															input(type="text", name="")
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd мобильный телефон 
+															input(type="tel", name="").tel
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd дата рождения 
+															input(type="text", name="").date
+											.personal-item
+												.row
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd Название компании 
+															input(type="text", name="")
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd инн 
+															input(type="number", name="")
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd кпп 
+															input(type="number", name="")
+												.row
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd контактное лицо 
+															input(type="text", name="")
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd  телефон 
+															input(type="tel", name="").tel
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd электронная почта
+															input(type="text", name="")
+												.row
+													.col-md-8.vbottom
+														.input-group
+															label(for="").requierd юридический адрес
+															input(type="text", name="")
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd  индекс 
+															input(type="number", name="")
+												.row
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd генеральный директор
+															input(type="text", name="")
+													.col-md-4.vbottom
+														.input-group
+															label(for="").requierd  главный бухгалтер
+															input(type="number", name="")
+									.form-group
+										h2.title паспортные данные
+										.row
+											.col-md-2.vbottom
+												.input-group
+													label(for="").requierd серия  
+													input(type="tel").series
+											.col-md-2.vbottom
+												.input-group
+													label(for="").requierd номер  
+													input(type="number", name="").pasport-number
+											.col-md-3.vbottom
+												.input-group
+													label(for="").requierd код подразделения 
+													input(type="text", name="").code
+											.col-md-5.vbottom
+												.input-group
+													label(for="").requierd кем выдан 
+													input(type="text", name="")
+										.row
+											.col-md-4.vbottom
+												.input-group
+													label(for="").requierd дата выдачи  
+													input(type="text").date
+											.col-md-4.vbottom
+												.input-group
+													label(for="").requierd адрес регистрации  
+													input(type="text", name="")
+											.col-md-4.vbottom
+												.input-group
+													label(for="").requierd время регистрации в регионе 
+													input(type="text", name="")
+										.row
+											.col-md-6.vbottom
+												.input-group
+													label(for="").requierd место рождения
+													input(type="text", name="")
+											.col-md-6.vbottom
+												.input-group
+													label(for="").requierd фактический адрес проживания 
+													input(type="text", name="")
+									.form-group.add-info
+										.row
+											.col-md-10.vcenter
+												h2.title Расширенная анкета
+												p чтобы мы могли дать фототехнику в аренду на сумму выше 50 000, необходимо заполнить расширенную анкету
+											.col-md-2.vcenter
+												a(href="")
+													i.fa.fa-angle-down
+									.form-group.additional-info
+										.row
+											.col-md-4.vbottom
+												.input-group
+													label(for="") городской телефон 
+													input(type="tel", name="").city-phone
+										.row
+											.col-md-12.vbottom
+												.input-group
+													label менялись ли фио?
+													.radio-group
+														input#fio-yes(type="radio", name="fio")
+														label(for="fio-yes") Да
+													.radio-group
+														input#fio-no(type="radio", name="fio")
+														label(for="fio-no") Нет
+										.row
+											.col-md-4.vbottom
+												.input-group
+													label(for="") Фамилия 
+													input(type="text", name="")
+											.col-md-4.vbottom
+												.input-group
+													label(for="") Имя 
+													input(type="text", name="")
+											.col-md-4.vbottom
+												.input-group
+													label(for="") Отчество 
+													input(type="text", name="")
+										.row
+											.col-md-12.vbottom
+												.input-group
+													label семейное положение
+													.radio-group
+														input#single(type="radio", name="marriage")
+														label(for="single") Холост / Не замужем
+													.radio-group
+														input#relationship(type="radio", name="marriage")
+														label(for="relationship") Женат / Замужем
+										.row
+											.col-md-4.vbottom
+												.input-group
+													label(for="") количество детей 
+													input(type="number", name="")
+											.col-md-4.vbottom
+												.input-group
+													label(for="") их возраст 
+													input(type="number", name="")
+										.row
+											.col-md-4.vbottom
+												.input-group
+													label(for="") страница в соц. сетях 
+													input(type="text", name="")
+											.col-md-4.vbottom
+												.input-group
+													label(for="") адрес веб-сайта/портфолио 
+													input(type="text", name="")
+										h2.title сведения с места работы
+										.row
+											.col-md-4.vbottom
+												.input-group
+													label(for="") место работы <br>#[span (название орг.-ции)] 
+													input(type="text", name="")
+											.col-md-4.vbottom
+												.input-group
+													label(for="") юр. лицо организации <br>#[span (ФИО)] 
+													input(type="text", name="")
+											.col-md-4.vbottom
+												.input-group
+													label(for="") Занимаемая должность 
+													input(type="text", name="")
+										.row
+											.col-md-4.vbottom
+												.input-group
+													label(for="") сайт компании работодателя
+													input(type="text", name="")
+											.col-md-4.vbottom
+												.input-group
+													label(for="") сайт компании работодателя
+													input(type="text", name="")
+											.col-md-4.vbottom
+												.input-group
+													label(for="") телефон организации 
+													input(type="tel", name="").city-phone
+										h2.title информация о хобби
+										.row
+											.col-md-4.vbottom
+												.input-group
+													label(for="") сайт компании работодателя
+													input(type="text", name="")
+										.input-group
+											label Кто из профессиональных фотографов/ видеооператоров может дать о Вас рекомендации?
+										.row
+											.col-md-3
+												.input-group
+													label #[span укажите адрес сайта/#[br]номер телефона]
+											.col-md-9
+												.input-group
+													input(type="text", name="")
+										h2.title дополнительные данные
+										.row
+											.col-md-4.vbottom
+												.input-group
+													label водительские права
+													input(type="number", name="", placeholder="Номер")
+											.col-md-4.vbottom
+												.input-group
+													input(type="text", name="", placeholder="Дата выдачи")
+										.row
+											.col-md-4.vbottom
+												.input-group
+													label заграничный паспорт
+													input(type="number", name="", placeholder="Номер")
+											.col-md-4.vbottom
+												.input-group
+													input(type="text", name="", placeholder="Дата выдачи")
+										.row
+											.col-md-4.vbottom
+												.input-group
+													label ПТС
+													input(type="number", name="", placeholder="Серия/номер")
+											.col-md-4.vbottom
+												.input-group
+													input(type="text", name="", placeholder="Дата выдачи")
+											.col-md-4.vbottom
+												.input-group
+													input(type="text", name="", placeholder="Марка автомобиля")
+									.form-group
+										h2.title Доставка
+										.row
+											.col-md-3.vbottom
+												.radio-group
+													input#deliver(type="radio", name="delivery" checked)
+													label(for="deliver") Доставка
+											.col-md-3.vbottom
+												.radio-group
+													input#selfdeliver(type="radio", name="delivery")
+													label(for="selfdeliver") Самовывоз
+										.row
+											.delivery-item.active
+												.row
+													.col-md-4.vbottom
+														.input-group
+															label(for="") Город
+															input(type="text", name="")
+													.col-md-4.vbottom
+														.input-group
+															label(for="") транспортная компания
+															input(type="text", name="")
+													.col-md-4.vbottom
+														.delivery-price
+															h2 от 250.–
+															span Стоимость доставки негабаритного товара может измениться
+												.row
+													.col-md-4.vbottom
+														.input-group
+															label(for="") индекс
+															input(type="number", name="")
+													.col-md-4.vbottom
+														.input-group
+															label(for="") улица
+															input(type="text", name="")
+													.col-md-2.vbottom
+														.input-group
+															label(for="") дом
+															input(type="number", name="")
+													.col-md-2.vbottom
+														.input-group
+															label(for="") квартира/офис
+															input(type="number", name="")
+												.row
+													.col-md-8
+														.input-group
+															label(for="") комментарий для курьера
+															textarea(name="", rows="10")
+											.delivery-item
+												.col-md-5
 													.input-group
-														label(for="").requierd Фамилия 
-														input(type="text", name="")
-												.col-md-4.vbottom
+														svg(viewBox="0 0 100 100", class="svgico location")
+															use(xlink:href="#location")
+														label(for="") Адрес:
+														.delivery-text
+															span г. Красноярск, ул. Авиаторов 38
+															a(href="") показать на карте
+												.col-md-5
 													.input-group
-														label(for="").requierd Имя 
-														input(type="text", name="")
-												.col-md-4.vbottom
-													.input-group
-														label(for="").requierd Отчество 
-														input(type="text", name="")
-											.row
-												.col-md-4.vbottom
-													.input-group
-														label(for="").requierd электронная почта 
-														input(type="text", name="")
-												.col-md-4.vbottom
-													.input-group
-														label(for="").requierd мобильный телефон 
-														input(type="tel", name="").tel
-												.col-md-4.vbottom
-													.input-group
-														label(for="").requierd дата рождения 
-														input(type="text", name="").date
-										.personal-item
-											.row
-												.col-md-4.vbottom
-													.input-group
-														label(for="").requierd Название компании 
-														input(type="text", name="")
-												.col-md-4.vbottom
-													.input-group
-														label(for="").requierd инн 
-														input(type="number", name="")
-												.col-md-4.vbottom
-													.input-group
-														label(for="").requierd кпп 
-														input(type="number", name="")
-											.row
-												.col-md-4.vbottom
-													.input-group
-														label(for="").requierd контактное лицо 
-														input(type="text", name="")
-												.col-md-4.vbottom
-													.input-group
-														label(for="").requierd  телефон 
-														input(type="tel", name="").tel
-												.col-md-4.vbottom
-													.input-group
-														label(for="").requierd электронная почта
-														input(type="text", name="")
-											.row
-												.col-md-8.vbottom
-													.input-group
-														label(for="").requierd юридический адрес
-														input(type="text", name="")
-												.col-md-4.vbottom
-													.input-group
-														label(for="").requierd  индекс 
-														input(type="number", name="")
-											.row
-												.col-md-4.vbottom
-													.input-group
-														label(for="").requierd генеральный директор
-														input(type="text", name="")
-												.col-md-4.vbottom
-													.input-group
-														label(for="").requierd  главный бухгалтер
-														input(type="number", name="")
+														svg(viewBox="0 0 100 100", class="svgico clock")
+															use(xlink:href="#clock")
+														label(for="") Режим работы:
+														.delivery-text
+															span пн-пт: 10:00 – 19:00
+															span суббота, восскресенье: 11:00 – 17:00.
+									.form-group
+										h2.title оплата
+										p Стоимость вашего заказа превышает 100 000 руб. Поэтому отправка товара до его полной оплаты недоступна. Это ограничение снимается для покупателей, которые суммарно купили у нас товаров на сумму более 30 000 руб
+										.check-out-row
+											.item
+												.radio-group
+													input#cash(type="radio", name="check_out")
+													label(for="cash") Наличными или картой
+												.text-block
+													span Курьеру при <br>получении
+											.item
+												.radio-group
+													input#credit_card(type="radio", name="check_out")
+													label(for="credit_card") Картой на сайте
+												.text-block
+													i.fa.fa-cc-visa(aria-hidden="true")
+													i.fa.fa-cc-mastercard(aria-hidden="true")
+											.item
+												.radio-group
+													input#bank(type="radio", name="check_out")
+													label(for="bank") Банковский перевод
+												.text-block
+													span Счёт на оплату будет выслан на указанную эл. почтуи
+											.item.disabled
+												.radio-group
+													input#credit(type="radio", name="check_out")
+													label(for="credit") Кредит
+												.text-block
+													span Без переплаты	
+								.row.form-result
+									.col-md-4.vcenter
+										.price-block
+											span Итого:
+											h2.js-change-price 279 990 .–
+									.col-md-4.vcenter
+										.bonus-block
+											p Бонусов использовано: #[span 5 000]
+									.col-md-4.vcenter
+										.checkbox-group.apply-bonus
+											input#apply_bonus(type="checkbox", name="", checked)
+											label(for="apply_bonus") Применить скидку по бонусной карте
+								.row
+									.col-md-11.col-md-offset-1
+										input(type="submit", value="Отправить заказ").btn.primary-btn 
 
 
-								.form-group
-									h2.title паспортные данные
-									.row
-										.col-md-2.vbottom
-											.input-group
-												label(for="").requierd серия  
-												input(type="tel").series
-										.col-md-2.vbottom
-											.input-group
-												label(for="").requierd номер  
-												input(type="number", name="").pasport-number
-										.col-md-3.vbottom
-											.input-group
-												label(for="").requierd код подразделения 
-												input(type="text", name="").code
-										.col-md-5.vbottom
-											.input-group
-												label(for="").requierd кем выдан 
-												input(type="text", name="")
-									.row
-										.col-md-4.vbottom
-											.input-group
-												label(for="").requierd дата выдачи  
-												input(type="text").date
-										.col-md-4.vbottom
-											.input-group
-												label(for="").requierd адрес регистрации  
-												input(type="text", name="")
-										.col-md-4.vbottom
-											.input-group
-												label(for="").requierd время регистрации в регионе 
-												input(type="text", name="")
-									.row
-										.col-md-6.vbottom
-											.input-group
-												label(for="").requierd место рождения
-												input(type="text", name="")
-										.col-md-6.vbottom
-											.input-group
-												label(for="").requierd фактический адрес проживания 
-												input(type="text", name="")
-								.form-group.add-info
-									.row
-										.col-md-10.vcenter
-											h2.title Расширенная анкета
-											p чтобы мы могли дать фототехнику в аренду на сумму выше 50 000, необходимо заполнить расширенную анкету
-										.col-md-2.vcenter
-											a(href="")
-												i.fa.fa-angle-down
-								.form-group.additional-info
-									.row
-										.col-md-4.vbottom
-											.input-group
-												label(for="") городской телефон 
-												input(type="tel", name="").city-phone
-									.row
-										.col-md-12.vbottom
-											.input-group
-												label менялись ли фио?
-												.radio-group
-													input#fio-yes(type="radio", name="fio")
-													label(for="fio-yes") Да
-												.radio-group
-													input#fio-no(type="radio", name="fio")
-													label(for="fio-no") Нет
-									.row
-										.col-md-4.vbottom
-											.input-group
-												label(for="") Фамилия 
-												input(type="text", name="")
-										.col-md-4.vbottom
-											.input-group
-												label(for="") Имя 
-												input(type="text", name="")
-										.col-md-4.vbottom
-											.input-group
-												label(for="") Отчество 
-												input(type="text", name="")
-									.row
-										.col-md-12.vbottom
-											.input-group
-												label семейное положение
-												.radio-group
-													input#single(type="radio", name="marriage")
-													label(for="single") Холост / Не замужем
-												.radio-group
-													input#relationship(type="radio", name="marriage")
-													label(for="relationship") Женат / Замужем
-									.row
-										.col-md-4.vbottom
-											.input-group
-												label(for="") количество детей 
-												input(type="number", name="")
-										.col-md-4.vbottom
-											.input-group
-												label(for="") их возраст 
-												input(type="number", name="")
-									.row
-										.col-md-4.vbottom
-											.input-group
-												label(for="") страница в соц. сетях 
-												input(type="text", name="")
-										.col-md-4.vbottom
-											.input-group
-												label(for="") адрес веб-сайта/портфолио 
-												input(type="text", name="")
-									h2.title сведения с места работы
-									.row
-										.col-md-4.vbottom
-											.input-group
-												label(for="") место работы <br>#[span (название орг.-ции)] 
-												input(type="text", name="")
-										.col-md-4.vbottom
-											.input-group
-												label(for="") юр. лицо организации <br>#[span (ФИО)] 
-												input(type="text", name="")
-										.col-md-4.vbottom
-											.input-group
-												label(for="") Занимаемая должность 
-												input(type="text", name="")
-									.row
-										.col-md-4.vbottom
-											.input-group
-												label(for="") сайт компании работодателя
-												input(type="text", name="")
-										.col-md-4.vbottom
-											.input-group
-												label(for="") сайт компании работодателя
-												input(type="text", name="")
-										.col-md-4.vbottom
-											.input-group
-												label(for="") телефон организации 
-												input(type="tel", name="").city-phone
-									h2.title информация о хобби
-									.row
-										.col-md-4.vbottom
-											.input-group
-												label(for="") сайт компании работодателя
-												input(type="text", name="")
-									.input-group
-										label Кто из профессиональных фотографов/ видеооператоров может дать о Вас рекомендации?
-									.row
-										.col-md-3
-											.input-group
-												label #[span укажите адрес сайта/#[br]номер телефона]
-										.col-md-9
-											.input-group
-												input(type="text", name="")
-									h2.title дополнительные данные
-									.row
-										.col-md-4.vbottom
-											.input-group
-												label водительские права
-												input(type="number", name="", placeholder="Номер")
-										.col-md-4.vbottom
-											.input-group
-												input(type="text", name="", placeholder="Дата выдачи")
-									.row
-										.col-md-4.vbottom
-											.input-group
-												label заграничный паспорт
-												input(type="number", name="", placeholder="Номер")
-										.col-md-4.vbottom
-											.input-group
-												input(type="text", name="", placeholder="Дата выдачи")
-									.row
-										.col-md-4.vbottom
-											.input-group
-												label ПТС
-												input(type="number", name="", placeholder="Серия/номер")
-										.col-md-4.vbottom
-											.input-group
-												input(type="text", name="", placeholder="Дата выдачи")
-										.col-md-4.vbottom
-											.input-group
-												input(type="text", name="", placeholder="Марка автомобиля")
-								.form-group
-									h2.title Доставка
-									.row
-										.col-md-3.vbottom
-											.radio-group
-												input#deliver(type="radio", name="delivery")
-												label(for="deliver") Доставка
-										.col-md-3.vbottom
-											.radio-group
-												input#selfdeliver(type="radio", name="delivery")
-												label(for="selfdeliver") Самовывоз
-									.row
-										.delivery-item
-											.col-md-5
-												.input-group
-													svg(viewBox="0 0 100 100", class="svgico location")
-														use(xlink:href="#location")
-													label(for="") Адрес:
-													.delivery-text
-														span г. Красноярск, ул. Авиаторов 38
-														a(href="") показать на карте
-											.col-md-5
-												.input-group
-													svg(viewBox="0 0 100 100", class="svgico clock")
-														use(xlink:href="#clock")
-													label(for="") Режим работы:
-													.delivery-text
-														span пн-пт: 10:00 – 19:00
-														span суббота, восскресенье: 11:00 – 17:00.
-								.form-group
-									h2.title оплата
-									p Стоимость вашего заказа превышает 100 000 руб. Поэтому отправка товара до его полной оплаты недоступна. Это ограничение снимается для покупателей, которые суммарно купили у нас товаров на сумму более 30 000 руб
-									.check-out-row
-										.item
-											.radio-group
-												input#cash(type="radio", name="check_out")
-												label(for="cash") Наличными или картой
-											.text-block
-												span Курьеру при <br>получении
-										.item
-											.radio-group
-												input#card(type="radio", name="check_out")
-												label(for="card") Картой на сайте
-											.text-block
-												i.fa.fa-cc-visa(aria-hidden="true")
-												i.fa.fa-cc-mastercard(aria-hidden="true")
-										.item
-											.radio-group
-												input#card(type="radio", name="check_out")
-												label(for="card") Банковский перевод
-											.text-block
-												span Счёт на оплату будет выслан на указанную эл. почтуи
-										.item
-											.radio-group
-												input#card(type="radio", name="check_out")
-												label(for="card") Кредит
-											.text-block
-												span Без переплаты	
 
 									
 

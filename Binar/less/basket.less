@@ -243,6 +243,13 @@
 			color: @white;
 		}
 	}
+	&.affix-bottom{
+		overflow: hidden;
+		background-color: @gray;
+		&:before, &:after{
+			color: @white;
+		}
+	}
 	&:before{
 	    content: '..............';
 	    position: absolute;
@@ -312,6 +319,7 @@
 	position: relative;
 	border: 1px solid @common-gray;
 	padding: 0px;
+	margin-bottom: 45px;
 	form{
 		margin-bottom: 0px;
 	}
@@ -366,48 +374,52 @@
 		margin-bottom: 35px;
 		line-height: 165%;
 	}
-	.input-group{
-		width: 100%;
-		label{
-			text-transform: uppercase;
-			font-size: 12px;
-			color: #bebebe;
-			display: inline-block;
-			margin-bottom: 20px;
-			span{
-				text-transform: none;
+}
+.input-group{
+	width: 100%;
+	label{
+		text-transform: uppercase;
+		font-size: 12px;
+		color: #bebebe;
+		display: inline-block;
+		margin-bottom: 20px;
+		span{
+			text-transform: none;
+		}
+		&.requierd{
+			position: relative;
+			&:before{
+				content: '*';
+				color: @red;
+				position: absolute;
+				top: -5px;
+				right: -8px;
 			}
-			&.requierd{
-				position: relative;
-				&:before{
-					content: '*';
-					color: @red;
-					position: absolute;
-					top: -5px;
-					right: -8px;
-				}
-			}
-		}
-		svg{
-			display: inline-block;
-			vertical-align: top;
-			margin-right: 10px;
-		}
-		input[type="text"], input[type="tel"], input[type="number"]{
-			display: block;
-			width: 100%;
-			border: 1px solid #e1e1e1;
-			padding: 10px 14px;
-			line-height: 100%;
-		}
-		input::-webkit-outer-spin-button,
-		input::-webkit-inner-spin-button {
-		    /* display: none; <- Crashes Chrome on hover */
-		    -webkit-appearance: none;
-		    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 		}
 	}
+	svg{
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 10px;
+	}
+	input[type="text"], input[type="password"], input[type="tel"], input[type="number"], textarea{
+		display: block;
+		width: 100%;
+		border: 1px solid #e1e1e1;
+		padding: 10px 14px;
+		line-height: 100%;
+		&.error{
+			border-color: @red;
+		}
+	}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    /* display: none; <- Crashes Chrome on hover */
+	    -webkit-appearance: none;
+	    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+	}
 }
+
 .radio-group{
 	display: inline-block;
 	input[type="radio"]{
@@ -454,6 +466,10 @@
 	}
 }
 .delivery-item{
+	display: none;
+	&.active{
+		display: block;
+	}
 	label{
 		margin-bottom: 10px!important;
 	}
@@ -463,6 +479,19 @@
 	}
 	.delivery-text{
 		margin-left: 22px;
+	}
+	.delivery-price{
+		h2{
+			margin: 0px;
+			margin-bottom: 10px;
+			font-size: 16px;
+			line-height: 100%;
+			font-weight: 700;
+			color: @brown;
+		}
+		span{
+			font-size: 12px;
+		}
 	}
 }
 .check-out-row{
@@ -478,7 +507,11 @@
 		padding: 19px;
 		height: 150px;
 		&.disabled:before{
+			position: absolute;
 			content: '';
+			top: 0px;
+			left: 0px;
+			z-index: 1;
 			width: 100%;
 			height: 100%;
 			background-color: @common-gray;
@@ -515,5 +548,147 @@
 	display: none;
 	&.active{
 		display: block;
+	}
+}
+.form-result{
+	margin-bottom: 50px;
+	.price-block{
+		position: relative;
+		overflow: hidden;
+		span{
+			font-size: 18px;
+			font-weight: 700;
+			margin-right: 28px;
+			text-transform: uppercase;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		h2{
+			color: @brown;
+			font-weight: 700;
+			font-size: 30px;
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0px;
+		}
+	}
+	.bonus-block{
+		p{
+			margin-bottom: 0px;
+			span{
+				font-weight: 700;
+				&.applied{
+					text-decoration: line-through;
+				}
+			}
+		}
+	}
+	.apply-bonus{
+		margin-bottom: 0px;
+		label{
+			margin-bottom: 0px!important;
+			font-size: 12px!important;
+			&:before{
+			    top: -2px;
+			}
+		}
+	}
+}
+.js-change-price{
+	transform: translateY(0%);
+	transition: all .35s @ease-out-back;
+	&.remath{
+		transform: translateY(100%);
+	}
+}
+
+.thanks-block{
+	background-color: @rent;
+	padding: 60px 0px;
+	margin-bottom: 45px;
+	text-align: center;
+	.img-block{
+		position: relative;
+		margin-bottom: 38px;
+		img{
+			widows: 462px;
+		}
+		.promo-text{
+			position: absolute;
+			top: 60%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: fade(@brown, 90%);
+			color: @white;
+			padding: 45px 75px;
+			font-family: RoadRadio;
+			font-size: 56px;
+			font-weight: 700;
+		}
+	}
+	p{
+		font-size: 16px;
+		span{
+			font-size: 24px;
+			color: @brown;
+			font-weight: 700;
+		}
+	}
+}
+.register-block{
+	.title{
+		margin-bottom: 28px;
+		text-align: left;
+	}
+	p{
+		margin-bottom: 44px;
+	}
+	form{
+		.input-group{
+			position: relative;
+			label{
+				color: @black;
+				font-weight: 700;
+				margin-bottom: 16px;
+				font-size: 15px;
+			}
+			.show-password{
+				position: absolute;
+			    bottom: 3px;
+    			right: 2px;
+				padding: 10px;
+				color: #757575;
+			}
+		}
+		span{
+			color: #a4a4a4;
+		    margin-bottom: 10px;
+   	 		display: inline-block;
+		}
+		.checkbox-group{
+			label{
+				font-size: 14px;
+			}
+		}
+		.row{
+			margin-bottom: 20px;
+		}
+		.password-row{
+			margin-bottom: 48px;
+		}
+		.brown-btn{
+			font-size: 13px;
+		}
+		.underline-link{
+			font-family: RoadRadio;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+	}
+}
+.underline-link{
+	text-decoration: underline;
+	&:hover{
+		text-decoration: none;
 	}
 }

@@ -1,6 +1,7 @@
 .breadcrumb {
   margin-bottom: 28px;
   padding: 8px 0px;
+  background-color: transparent;
 }
 .breadcrumb li {
   margin-right: -4px;

@@ -1,0 +1,52 @@
+html
+	include modules/head.jade
+	body
+		.hidden
+			include ../img/assets.svg
+		include modules/header.jade
+		.main-content
+			.search-over
+			.white-wrapper
+				.container
+					ol.breadcrumb
+						li
+							a(href="") Главная
+						li.active
+							a Личный кабинет
+					.thanks-block
+						.img-block
+							img(src="img/camera.png", alt="")
+							.promo-text Спасибо!
+						p Вы получили #[span 2500 бонусов] (1 бонус = 1 рубль)
+					.register-block
+						.row
+							.col-md-8.col-md-offset-2
+								h2.title Вы ещё не зарегистрированы 
+								p Чтобы мы могли привязать бонусы к вашему аккаунту вам нужно зарегистрироваться. Для этого просто введите пароль в поле ниже. Остальное мы сделаем за вас.
+								form#fast-register
+									.row.password-row
+										.col-md-4.vbottom
+											.input-group
+												label пароль
+												input(type="text", value="234234234ld")
+												a(href="").show-password
+													i.fa.fa-eye
+										.col-md-4.vbottom
+											span Только цифры и латинские буквы
+									.row
+										.col-md-6
+											.checkbox-group
+												input#data_processing(type="checkbox", name="", checked)
+												label(for="data_processing") Cогласен на обработку персональных данных (без согласия ваша регистрация невозможна)
+										.col-md-6
+											.checkbox-group
+												input#mail_delivery(type="checkbox", name="", checked)
+												label(for="data_processing") Cогласен на получение рассылки о акциях
+									.row
+										.col-md-6.vcenter
+											input(type="submit", value="Зарегистрироваться и получить бонусы").btn.brown-btn
+										.col-md-6.vcenter
+											a.underline-link(href="") войти, если зарегистрированы
+
+			include modules/footer.jade
+		include modules/scripts.jade
