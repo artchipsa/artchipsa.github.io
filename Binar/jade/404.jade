@@ -1,0 +1,114 @@
+html
+	include modules/head.jade
+	body
+		.hidden
+			include ../img/assets.svg
+		include modules/header.jade
+		.main-content
+			.search-over
+			.catalog-wrapper
+				.container
+					.fail-block
+						img(src="img/fail-page.png", alt="")
+						h2.title Упс... <br>запрашиваемая страница <Br>не найдена
+						p Возможно эта страница была удалена или никогда и не было. Переходи в каталог товаров и посмотри и соверши свою покупку
+						a.btn.primary-btn перейти в каталог
+					h2.title популярные товары
+					.catalog-list
+						.row
+							.col-md-3
+								.catalog__item
+									.specials
+										.special-item.percent
+											img(src="img/red.svg", alt="")
+										.special-item.percent
+											img(src="img/orange.svg", alt="")
+									.functions
+										a(href="").comparison
+											svg(viewBox="0 0 100 100", class="svgico comparison")
+												use(xlink:href="#comparison")
+										a(href="").like
+											svg(viewBox="0 0 100 100", class="svgico like like-gray")
+												use(xlink:href="#like")
+									a(href="").item__head
+										img(src="img/card_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+										.item__price
+											.old-price #[span 54 990] .–
+											.actual-price 141 990 .–
+									.item__bonuce
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+									.item__buy
+										a(href="").btn.primary-btn в корзину
+										a(href="").dotted-link Купить в один клик
+							.col-md-3
+								.catalog__item
+									.specials
+										.special-item.percent
+											img(src="img/blue.svg", alt="")
+									.functions
+										a(href="").comparison
+											svg(viewBox="0 0 100 100", class="svgico comparison")
+												use(xlink:href="#comparison")
+										a(href="").like
+											svg(viewBox="0 0 100 100", class="svgico like like-gray")
+												use(xlink:href="#like")
+									a(href="").item__head
+										img(src="img/card_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+										.item__price
+											.old-price #[span 54 990] .–
+											.actual-price 141 990 .–
+									.item__bonuce
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+									.item__buy
+										a(href="").btn.primary-btn в корзину
+										a(href="").dotted-link Купить в один клик
+							.col-md-3
+								.catalog__item
+									.specials
+										.special-item.percent
+											img(src="img/red.svg", alt="")
+									.functions
+										a(href="").comparison
+											svg(viewBox="0 0 100 100", class="svgico comparison")
+												use(xlink:href="#comparison")
+										a(href="").like
+											svg(viewBox="0 0 100 100", class="svgico like like-gray")
+												use(xlink:href="#like")
+									a(href="").item__head
+										img(src="img/card_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+										.item__price
+											.old-price #[span 54 990] .–
+											.actual-price 141 990 .–
+									.item__bonuce
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+									.item__buy
+										a(href="").btn.primary-btn в корзину
+										a(href="").dotted-link Купить в один клик
+							.col-md-3
+								.catalog__item
+									.specials
+										.special-item.percent
+											img(src="img/red.svg", alt="")
+									.functions
+										a(href="").comparison
+											svg(viewBox="0 0 100 100", class="svgico comparison")
+												use(xlink:href="#comparison")
+										a(href="").like
+											svg(viewBox="0 0 100 100", class="svgico like like-gray")
+												use(xlink:href="#like")
+									a(href="").item__head
+										img(src="img/card_img.jpg", alt="")
+										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+										.item__price
+											.old-price #[span 54 990] .–
+											.actual-price 141 990 .–
+									.item__bonuce
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+									.item__buy
+										a(href="").btn.primary-btn в корзину
+										a(href="").dotted-link Купить в один клик
+			include modules/footer.jade
+		include modules/scripts.jade

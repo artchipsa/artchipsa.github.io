@@ -1,0 +1,60 @@
+html
+	include modules/head.jade
+	body
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		.hidden
+			include ../img/assets.svg
+		include modules/header.jade
+		.main-content
+			.search-over
+			.catalog-wrapper
+				.container
+					ol.breadcrumb
+						li
+							a(href="") Главная
+						li.active
+							a Контакты
+					h2.title Контакты
+					table.contacts.vcard
+						tr
+							td.info-name
+								img(src="img/location.svg", alt="")
+								span адрес:
+							td.adr
+								p 664543, Красноярский край, 
+								p.locality г. Красноярск, #[span.street-address ул. Авиаторов 38]
+						tr
+							td.info-name
+								img(src="img/phone.svg", alt="")
+								span teлефоны:
+							td.tel-info
+								span.tel +7 (391) 257-37-07
+								span.tel +7 (391) 277-85-87
+						tr
+							td.info-name
+								img(src="img/mail.svg", alt="")
+								span Эл. почта:
+							td
+								span.email info@binar-shop.ru
+						tr
+							td.info-name
+								img(src="img/car.svg", alt="")
+								span общественный траспорт:
+							td
+								p Остановка "Улица Авиаторов"
+								p автобусы 6, 50, 53, 60, 63, 71, 74, 76, 79, 81, 98
+						tr
+							td.info-name
+								img(src="img/clock.svg", alt="")
+								span График работы:
+							td
+								.hours
+									span Cлужба доставки:
+									p.workhours Пн - Пт: с 10:00 до 20:00
+								.hours
+									span Mагазин на Авиаторов, 38:
+									p.workhours Пн - Пт:  с 10:00 до 19:00
+									p.workhours Сб - Вск: с 11:00 до 17:00
+					#map
+			include modules/footer.jade
+		include modules/scripts.jade

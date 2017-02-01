@@ -1,0 +1,49 @@
+@import 'modules/vars.less';
+.contacts{
+	width: 100%;
+	td{
+		width: 50%;
+		border-bottom: 1px solid @common-gray;
+		padding: 50px 64px;
+		background-color: @white;
+		img{
+			width: 30px;
+			margin-right: 20px;
+		}
+	}
+	tr{
+		&:last-child{
+			td{
+				vertical-align: top;
+			}
+		}
+	}
+	.info-name{
+		span{
+			text-transform: uppercase;
+			color: @brown;
+			font-weight: 700;
+			font-family: RoadRadio;
+		}
+	}
+	.tel-info{
+		span{
+			margin-right: 50px;
+			display: inline-block;
+		}	
+	}
+	.hours{
+		margin-bottom: 38px;
+		span{
+			text-transform: uppercase;
+			font-size: 16px;
+			display: block;
+			font-weight: 700;
+			margin-bottom: 12px;
+		}
+	}
+}
+#map{
+	height: 455px;
+	width: 100%;
+}

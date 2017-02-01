@@ -1,0 +1,258 @@
+ul.nav.nav-tabs.fav-tab(role="tablist")
+	li(role="presentation").active
+		a(href="#lk-favs" aria-controls="lk-favs" role="tab" data-toggle="tab") 
+			svg(viewBox="0 0 100 100", class="svgico like like-gray")
+				use(xlink:href="#like")
+			span избранное (2)
+	li(role="presentation")
+		a(href="#lk-compare" aria-controls="lk-compare" role="tab" data-toggle="tab")
+			svg(viewBox="0 0 100 100", class="svgico like comparison")
+				use(xlink:href="#comparison")
+			span избранное (2)
+.tab-content
+	.tab-pane.fade.in.active#lk-favs(role="tabpanel")
+		.basket-block
+			.row
+				.col-md-3.vcenter
+					a(href="").pic
+						img(src="img/camera_in_basket.jpg", alt="")
+				.col-md-3.vcenter
+					.info
+						span.name Olympus OM-D E-M5 mark II kit 12-40mm f/2.8 Black          
+				.col-md-3.col-md-offset-2.vcenter
+					.price 
+						span 69 990 .–
+				.col-md-1.vcenter
+					a.delete(href="")
+						i.fa.fa-trash-o(aria-hidden="true")
+			.row
+				.col-md-3.vcenter
+					a(href="").pic
+						img(src="img/camera_in_basket.jpg", alt="")
+				.col-md-3.vcenter
+					.info
+						span.name Olympus OM-D E-M5 mark II kit 12-40mm f/2.8 Black          
+				.col-md-3.col-md-offset-2.vcenter
+					.price 
+						span 69 990 .–
+				.col-md-1.vcenter
+					a.delete(href="")
+						i.fa.fa-trash-o(aria-hidden="true")
+	.tab-pane.fade#lk-compare(role="tabpanel")
+		.compare-view.bottom-add-view
+			.pre-compare
+				.compare-frame
+					ul.slidee
+						li
+							a(href="#" data-category="0").compare-category
+								img(src="img/canon700d.png", alt="")
+								span Зеркальные фотоапараты
+						li
+							a(href="#" data-category="1").compare-category
+								img(src="img/compare_camera.png", alt="")
+								span со сменной оптикой
+				.frame-scrollbar
+					.handle
+			.compare-block-wrapper
+				.compare-block(data-category="0")
+					.row.head-row
+						.col-md-3.vcenter
+							a(href="#").back
+								svg(viewBox="0 0 100 100", class="svgico arrow back-arrow")
+									use(xlink:href="#ArrowLeft")
+								span Назад
+						.col-md-8.vcenter
+							a(href="").dashed-link Все параметры
+							a(href="").dashed-link Отличающиеся
+						.col-md-1.vcenter
+					.compare-info
+						.compare-static-info
+							h2.title У вас 2 списка сравнения товаров
+							table.js-highlite
+								tbody
+									tr
+										td.chars Цена
+									tr
+										td.chars Размер
+									tr
+										td.chars Кроп-фактор
+									tr
+										td.chars Объектив в комплекте
+									tr
+										td.chars Общее число пикселов
+									tr
+										td.chars Число эффективных пикселов
+									tr
+										td.chars Размер
+									tr
+										td.chars Кроп-фактор
+									tr
+										td.chars Максимальное разрешение
+									tr
+										td.chars Тип матрицы
+						.compare-slide
+							.frame-scrollbar
+								.handle
+							.compare-info-frame
+								ul.slidee
+									li
+										.header
+											img(src="img/card_img.jpg", alt="")
+											.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+											a(href="").remove-elem
+												i.fa.fa-times(aria-hidden="true")
+										table
+											tbody
+												tr
+													td
+														.item__price
+															.old-price #[span 54 990] .–
+															.actual-price 141 990 .–
+												tr
+													td.chars 124x98x76 мм, без объектива
+												tr
+													td.chars APS (20.2 x 15.4 мм)
+												tr
+													td.chars Нет
+												tr
+													td.chars 24.7 млн
+												tr
+													td.chars CMOS
+												tr
+													td.chars 36 бит
+												tr
+													td.chars 1,5
+												tr
+													td.chars ISO6400, ISO12800
+												tr
+													td.chars CMOS
+										.btn.primary-btn в корзину
+									li
+										.header.best
+											img(src="img/card_img.jpg", alt="")
+											.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+											.best-tag лучший выбор
+											a(href="").remove-elem
+												i.fa.fa-times(aria-hidden="true")
+										table
+											tbody
+												tr
+													td
+														.item__price
+															.old-price #[span 54 990] .–
+															.actual-price 141 990 .–
+												tr
+													td.chars 124x98x76 мм, без объектива
+												tr
+													td.chars APS (20.2 x 15.4 мм)
+												tr
+													td.chars Нет
+												tr
+													td.chars 24.7 млн
+												tr
+													td.chars CMOS
+												tr
+													td.chars 36 бит
+												tr
+													td.chars 1,5
+												tr
+													td.chars ISO6400, ISO12800
+												tr
+													td.chars CMOS
+										.btn.primary-btn в корзину
+									li
+										.header
+											img(src="img/card_img.jpg", alt="")
+											.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+											a(href="").remove-elem
+												i.fa.fa-times(aria-hidden="true")
+										table
+											tbody
+												tr
+													td
+														.item__price
+															.old-price #[span 54 990] .–
+															.actual-price 141 990 .–
+												tr
+													td.chars 124x98x76 мм, без объектива
+												tr
+													td.chars APS (20.2 x 15.4 мм)
+												tr
+													td.chars Нет
+												tr
+													td.chars 24.7 млн
+												tr
+													td.chars CMOS
+												tr
+													td.chars 36 бит
+												tr
+													td.chars 1,5
+												tr
+													td.chars ISO6400, ISO12800
+												tr
+													td.chars CMOS
+										.btn.primary-btn в корзину
+									li
+										.header
+											img(src="img/card_img.jpg", alt="")
+											.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+											a(href="").remove-elem
+												i.fa.fa-times(aria-hidden="true")
+										table
+											tbody
+												tr
+													td
+														.item__price
+															.old-price #[span 54 990] .–
+															.actual-price 141 990 .–
+												tr
+													td.chars 124x98x76 мм, без объектива
+												tr
+													td.chars APS (20.2 x 15.4 мм)
+												tr
+													td.chars Нет
+												tr
+													td.chars 24.7 млн
+												tr
+													td.chars CMOS
+												tr
+													td.chars 36 бит
+												tr
+													td.chars 1,5
+												tr
+													td.chars ISO6400, ISO12800
+												tr
+													td.chars CMOS
+										.btn.primary-btn в корзину
+									li
+										.header
+											img(src="img/card_img.jpg", alt="")
+											.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
+											a(href="").remove-elem
+												i.fa.fa-times(aria-hidden="true")
+										table
+											tbody
+												tr
+													td
+														.item__price
+															.old-price #[span 54 990] .–
+															.actual-price 141 990 .–
+												tr
+													td.chars 124x98x76 мм, без объектива
+												tr
+													td.chars APS (20.2 x 15.4 мм)
+												tr
+													td.chars Нет
+												tr
+													td.chars 24.7 млн
+												tr
+													td.chars CMOS
+												tr
+													td.chars 36 бит
+												tr
+													td.chars 1,5
+												tr
+													td.chars ISO6400, ISO12800
+												tr
+													td.chars CMOS
+										.btn.primary-btn в корзину

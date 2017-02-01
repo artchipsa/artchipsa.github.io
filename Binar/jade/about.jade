@@ -1,0 +1,119 @@
+html
+	include modules/head.jade
+	body
+		.hidden
+			include ../img/assets.svg
+		include modules/header.jade
+		.main-content
+			.search-over
+			.about-hero
+				.container
+					.row
+						.col-md-2
+							img(src="img/logo_binar.svg", alt="")
+						.col-md-7.col-md-offset-1
+							h2 #[span Магазин «Бинар»] помогает фотографам любого уровня мастерства на пути профессионального роста
+							p Мы поможем подобрать оптимальную технику под ваш уровень, посоветуем или пригласим посетить наш регулярный мастер-класс или фотошколу чтобы ваши снимки стали восхитительными.
+			.catalog-wrapper
+				.container
+					.row
+						.col-md-10.col-md-offset-1.about-tabs
+							ol.breadcrumb
+								li
+									a(href="") Главная
+								li.active
+									a О компании
+							ul.nav.nav-tabs(role="tablist")
+								li(role="presentation").active
+									a(href="#history" aria-controls="history" role="tab" data-toggle="tab") заказы
+								li(role="presentation")
+									a(href="#nowadays" aria-controls="nowadays" role="tab" data-toggle="tab") Наши дни
+								li(role="presentation")
+									a(href="#brands" aria-controls="brands" role="tab" data-toggle="tab") Бренды
+								li(role="presentation")
+									a(href="#forbuyers" aria-controls="forbuyers" role="tab" data-toggle="tab") покупателям
+							.tab-content
+								.tab-pane.fade.in.active#history(role="tabpanel")
+									p Компания “Бинар” начала свою деятельность как классический компьютерный магазин. Образовавшись в начале 2005года, компания планомерно развивалась, оказывая на рынке г.Красноярска такие услуги как продажа компьютерной и орг.техники, програмного обеспечения, ремонт и сервисное обслуживание. Следуя за тенденциями рынка, мы постоянно добавляли новые группы товара, увеличивали ассортимент, расширяли перечень оказываемых услуг. В продаже появилась фототехника, продукция марки Apple, автомобильная электроника, экшн-камеры, смартфоны и прочая цифровая техника.
+									p Начиная с 2010 года компания все больше и больше делает упор на Фототехнику, ассортимент фототоваров постоянно увеличивается, в продаже появляется оборудование для студийной съемки, аксессуары для видеосъемки, увеличивается колличество брендов представленных на витрине магазина.
+									p В начале 2014 года мы запустили программу «Trade-in» ( обмен старой техники на новую). Весь процесс обмена занимает всего несколько часов. Никогда еще переход со старой техники на новую не был настолько быстр и прост.
+									p Так же на постоянной основе работает акция "Гарантия лучшей цены", суть которой заключатеся в том, что Вы гарантированно купите товар по самой низкой цене в г.Красноярске.
+								.tab-pane.fade#nowadays(role="tabpanel")
+									p Тоже какой-то крутой текст про наши дни, уоу! 
+								.tab-pane.fade#brands(role="tabpanel")
+									.brends-container
+										.left-sticker
+											img(src="img/rotated.png", alt="")
+											span официальный<br> представитель
+										.content
+											a.item.big(href="")
+												img(src="img/brand1.png", alt="")
+											a.item.big(href="")
+												img(src="img/brand1.png", alt="")
+											a.item.big(href="")
+												img(src="img/brand1.png", alt="")
+											a.item.small(href="")
+												img(src="img/brand2.png", alt="")
+											a.item.small(href="")
+												img(src="img/brand2.png", alt="")
+											a.item.small(href="")
+												img(src="img/brand2.png", alt="")
+											a.item.small(href="")
+												img(src="img/brand2.png", alt="")
+											a.item.small(href="")
+												img(src="img/brand2.png", alt="")
+											a.item.small(href="")
+												img(src="img/brand2.png", alt="")
+											a.item.small(href="")
+												img(src="img/brand2.png", alt="")
+											a.item.small(href="")
+												img(src="img/brand2.png", alt="")
+											a.item.small(href="")
+												img(src="img/brand2.png", alt="")
+											a.item.small(href="")
+												img(src="img/brand2.png", alt="")
+								.tab-pane.fade#forbuyers(role="tabpanel")
+									p Тоже какой-то крутой текст для покупателей, уоу!
+			.binar-now
+				.container
+					p ​"Бинар" - это специализированный магазин фототеники. Где работают люди, которые знают и любят свою работу. Где тебе профессионально помогут с выбором. Где огромный ассортимент, гарантия низкой цены и расширенные гарантии на технику ряда фирм
+			.gain-block.standart-paddings
+				.container
+					h2.title Помимо отличной фототехники вы получите:
+					.row.gain-row
+						.col-md-6
+							.gain-item
+								img(src="img/delivery.svg", alt="")
+								.link-container.tooltip-link
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про бесплатную доставку. Вау!") #[span Бесплатная доставка] <br> по Красноярску
+						.col-md-6
+							.gain-item
+								img(src="img/test.svg", alt="")
+								.link-container.tooltip-link
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про бесплатный тест-драйв. Вау!") #[span Бесплатный Тест-драйв] <br> фототехники в течение 3 дней
+					.row.gain-row
+						.col-md-6
+							.gain-item
+								img(src="img/trade_in.svg", alt="")
+								.link-container.tooltip-link
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про Trade-in. Вау!") #[span Trade-in] — возможность сдать свою <br> старую технику в счёт оплаты новой
+						.col-md-6
+							.gain-item
+								img(src="img/master_class.svg", alt="")
+								.link-container.tooltip-link
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про Бесплатное обучение. Вау!") #[span Бесплатное обучение] фотомастерству <br> и посещение мастер-классов
+					.row.gain-row
+						.col-md-6
+							.gain-item
+								img(src="img/guarantee.svg", alt="")
+								.link-container.tooltip-link
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про расширенную гарантию. Вау!") #[span Расширенная гарантия] на всю <br> фототехнику марок Nikon, Canon, Sony, Fujifilm
+						.col-md-6
+							.gain-item
+								img(src="img/guarantee.svg", alt="")
+								.link-container.tooltip-link
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про низкие цены. Вау!") #[span У нас низкие цены.] У нас низкие цены. <br>Найдете дешевле - сделаем скидку!
+
+
+		include modules/footer.jade
+	include modules/scripts.jade

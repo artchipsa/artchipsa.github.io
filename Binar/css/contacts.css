@@ -1,0 +1,40 @@
+.contacts {
+  width: 100%;
+}
+.contacts td {
+  width: 50%;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 50px 64px;
+  background-color: #ffffff;
+}
+.contacts td img {
+  width: 30px;
+  margin-right: 20px;
+}
+.contacts tr:last-child td {
+  vertical-align: top;
+}
+.contacts .info-name span {
+  text-transform: uppercase;
+  color: #71441b;
+  font-weight: 700;
+  font-family: RoadRadio;
+}
+.contacts .tel-info span {
+  margin-right: 50px;
+  display: inline-block;
+}
+.contacts .hours {
+  margin-bottom: 38px;
+}
+.contacts .hours span {
+  text-transform: uppercase;
+  font-size: 16px;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+#map {
+  height: 455px;
+  width: 100%;
+}

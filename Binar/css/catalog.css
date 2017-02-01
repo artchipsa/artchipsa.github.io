@@ -38,6 +38,21 @@
 .catalog-filter-wrapper {
   background-color: #ffffff;
 }
+.catalog-filter-wrapper.category-filter {
+  margin-bottom: 30px;
+}
+.catalog-filter-wrapper.category-filter .form-group a {
+  color: #757575;
+}
+.catalog-filter-wrapper.category-filter .form-group a span {
+  font-weight: 700;
+}
+.catalog-filter-wrapper.category-filter .form-group a:hover {
+  color: #71441b;
+}
+.catalog-filter-wrapper.category-filter .addParams .form-group a {
+  background-color: transparent;
+}
 .catalog-filter-wrapper .form-group {
   padding: 30px;
   margin-bottom: 0px;
@@ -193,6 +208,9 @@
   width: 100%;
   padding: 14px 0px;
 }
+.addParams a span {
+  margin-right: 5px;
+}
 .hidden-params {
   display: none;
   text-align: left;
@@ -312,6 +330,12 @@
 .top-sort .gift img {
   width: 30px;
   margin-right: 15px;
+}
+.top-sort .gift .tooltip-link {
+  display: inline-block;
+}
+.tooltip-link {
+  display: inline-block;
 }
 .dashed-link {
   border-bottom: 1px dashed #71441b;

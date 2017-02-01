@@ -63,7 +63,7 @@ gulp.task('svgstore', function () {
 gulp.task('watch', function(){
 	gulp.watch('jade/**/*.jade', ['jade']);
 	gulp.watch('less/**/*.less', ['less']);
-    gulp.watch(['*.html'], ['html']);
+    gulp.watch('*.html', ['html']);
     gulp.watch(['js/*.js'], ['js']);
 
 });

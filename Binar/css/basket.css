@@ -1,5 +1,6 @@
 .basket-title-row {
   margin-bottom: 50px;
+  z-index: 2;
 }
 .basket-title-row .title {
   margin-bottom: 0px;
@@ -217,6 +218,7 @@
   background-color: #ffffff;
   position: relative;
   padding: 10px 0px;
+  overflow: hidden;
 }
 .bill-block.affix {
   position: fixed;

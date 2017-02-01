@@ -6,15 +6,48 @@ html
 		include modules/header.jade
 		.main-content
 			.search-over
-			.white-wrapper
+			.catalog-wrapper
 				.container
 					ol.breadcrumb
 						li
 							a(href="") Главная
 						li.active
 							a Личный кабинет
+					.lk-container
+						h2.title Личный кабинет
+						.top-info
+							.bonus Бонусов: #[span 950]
+							.card
+								img(src="img/card.svg", alt="")
+								p Номер вашей бонусной карты: #[span 12345B3]
+						.lk-tabs-block
+							ul.nav.nav-tabs(role="tablist")
+								li(role="presentation").active
+									a(href="#orders" aria-controls="orders" role="tab" data-toggle="tab") заказы
+								li(role="presentation")
+									a(href="#bonuses" aria-controls="bonuses" role="tab" data-toggle="tab") бонусы и сертификаты
+								li(role="presentation")
+									a(href="#favorites" aria-controls="favorites" role="tab" data-toggle="tab") избранное и список сравнения
+								li(role="presentation")
+									a(href="#payInfo" aria-controls="payInfo" role="tab" data-toggle="tab") реквизиты оплаты
+								li(role="presentation")
+									a(href="#settings" aria-controls="settings" role="tab" data-toggle="tab") настройки
+							.tab-content
+								.tab-pane.fade.in.active#orders(role="tabpanel")
+									include modules/lk-orders.jade
+								.tab-pane.fade#bonuses(role="tabpanel")
+									include modules/lk-bonuses.jade
+								.tab-pane.fade#favorites(role="tabpanel")
+									include modules/lk-viewcompare.jade
+								.tab-pane.fade#payInfo(role="tabpanel")
+									include modules/lk-payinfo.jade
+								.tab-pane.fade#settings(role="tabpanel")
+									include modules/lk-settings.jade
 
-			
+
+
+
+
 
 
 			include modules/footer.jade

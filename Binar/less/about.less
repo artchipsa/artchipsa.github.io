@@ -1,0 +1,89 @@
+@import 'modules/vars.less';
+
+.about-hero{
+	background-image: url(../img/wooden_pattern.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 118px 0px;
+	h2{
+		line-height: 150%;
+		color: @white;
+		font-weight: 300;
+		font-size: 32px;
+		margin-top: 0px;
+		margin-bottom: 55px;
+		span{
+			font-weight: 700;
+			color: @yellow;
+		}
+	}
+	p{
+		color: @white;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 150%;
+	}
+}
+.about-tabs{
+	.nav-tabs{
+		li{
+			&.active a{
+				color: @brown;
+			}
+			a{
+				&:hover{
+					color: @brown;
+				}
+			}
+		}
+	}
+	.tab-content{
+		p{
+			font-size: 16px;
+			line-height: 185%;
+			margin-bottom: 52px;
+		}
+	}
+	.brends-container .content .item{
+		margin-bottom: 53px;
+	}
+	.brends-container .content .item.small{
+		margin-bottom: 53px;
+		&:last-child{
+			margin-right: 0px;
+		}
+	}
+	.brends-container .content{
+		width: 92.6%;
+		padding-bottom: 0px;
+	}
+	.brends-container .left-sticker{
+		left: -67px;
+	}
+}
+.binar-now{
+	padding: 136px 0px;
+	background-image: url(../img/binar_now.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	p{
+		font-family: RoadRadio;
+		padding: 62px 150px;
+		color: @white;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 34px;
+		line-height: 130%;
+		background-color: fade(@brown, 90%);
+	}
+}
+.popover{
+	background-color: @brown;
+	color: @white;
+	border-radius: 0px;
+	padding: 10px 20px;
+}
+.popover.top>.arrow:after{
+    border-top-color: @brown!important;
+}

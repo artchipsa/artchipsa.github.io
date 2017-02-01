@@ -1,0 +1,238 @@
+form#personal-data
+	.order-data
+		.form-group
+			h2.title Личные данные
+			.personal-info
+				.personal-item.active
+					.row
+						.col-md-4.vbottom
+							.input-group
+								label(for="") Фамилия 
+								input(type="text", name="")
+						.col-md-4.vbottom
+							.input-group
+								label(for="") Имя 
+								input(type="text", name="")
+						.col-md-4.vbottom
+							.input-group
+								label(for="") Отчество 
+								input(type="text", name="")
+					.row
+						.col-md-4.vbottom
+							.input-group
+								label(for="") электронная почта 
+								input(type="text", name="")
+						.col-md-4.vbottom
+							.input-group
+								label(for="") мобильный телефон 
+								input(type="tel", name="").tel
+						.col-md-4.vbottom
+							.input-group
+								label(for="") дата рождения 
+								input(type="text", name="").date
+					.row
+						.col-md-4.vbottom
+							.input-group
+								label(for="") город 
+								input(type="text", name="")
+						.col-md-8.vbottom
+							.input-group
+								label(for="") УЛИЦА/ПЕРЕУЛОК 
+								input(type="text", name="")
+					.row
+						.col-md-2.vbottom
+							.input-group
+								label(for="") индекс 
+								input(type="number", name="")
+						.col-md-2.vbottom
+							.input-group
+								label(for="") ДОМ 
+								input(type="number", name="")
+						.col-md-2.vbottom
+							.input-group
+								label(for="") квартира 
+								input(type="number", name="")
+					.row
+						.col-md-4
+							input(type="submit", value="сохранить").btn.brown-btn
+form#personal-add-data
+	.order-data
+		.form-group.add-info
+			.row
+				.col-md-10.vcenter
+					h2.title Расширенная анкета
+					p чтобы мы могли дать фототехнику в аренду на сумму выше 50 000, необходимо заполнить расширенную анкету
+				.col-md-2.vcenter
+					a(href="")
+						i.fa.fa-angle-down
+		.form-group.additional-info
+			h2.title паспортные данные
+			.row
+				.col-md-2.vbottom
+					.input-group
+						label(for="") серия  
+						input(type="tel").series
+				.col-md-2.vbottom
+					.input-group
+						label(for="") номер  
+						input(type="number", name="").pasport-number
+				.col-md-3.vbottom
+					.input-group
+						label(for="") код подразделения 
+						input(type="text", name="").code
+				.col-md-5.vbottom
+					.input-group
+						label(for="") кем выдан 
+						input(type="text", name="")
+			.row
+				.col-md-4.vbottom
+					.input-group
+						label(for="") дата выдачи  
+						input(type="text").date
+				.col-md-4.vbottom
+					.input-group
+						label(for="") адрес регистрации  
+						input(type="text", name="")
+				.col-md-4.vbottom
+					.input-group
+						label(for="") время регистрации в регионе 
+						input(type="text", name="")
+			.row
+				.col-md-6.vbottom
+					.input-group
+						label(for="") место рождения
+						input(type="text", name="")
+				.col-md-6.vbottom
+					.input-group
+						label(for="") фактический адрес проживания 
+						input(type="text", name="")
+			.row
+				.col-md-4.vbottom
+					.input-group
+						label(for="") городской телефон 
+						input(type="tel", name="").city-phone
+			h2.title Дополнительные сведения
+			.row
+				.col-md-12.vbottom
+					.input-group
+						label менялись ли фио?
+						.radio-group
+							input#fio-yes(type="radio", name="fio")
+							label(for="fio-yes") Да
+						.radio-group
+							input#fio-no(type="radio", name="fio")
+							label(for="fio-no") Нет
+			.row
+				.col-md-4.vbottom
+					.input-group
+						label(for="") Фамилия 
+						input(type="text", name="")
+				.col-md-4.vbottom
+					.input-group
+						label(for="") Имя 
+						input(type="text", name="")
+				.col-md-4.vbottom
+					.input-group
+						label(for="") Отчество 
+						input(type="text", name="")
+			.row
+				.col-md-12.vbottom
+					.input-group
+						label семейное положение
+						.radio-group
+							input#single(type="radio", name="marriage")
+							label(for="single") Холост / Не замужем
+						.radio-group
+							input#relationship(type="radio", name="marriage")
+							label(for="relationship") Женат / Замужем
+			.row
+				.col-md-4.vbottom
+					.input-group
+						label(for="") количество детей 
+						input(type="number", name="")
+				.col-md-4.vbottom
+					.input-group
+						label(for="") их возраст 
+						input(type="number", name="")
+			.row
+				.col-md-4.vbottom
+					.input-group
+						label(for="") страница в соц. сетях 
+						input(type="text", name="")
+				.col-md-4.vbottom
+					.input-group
+						label(for="") адрес веб-сайта/портфолио 
+						input(type="text", name="")
+			h2.title сведения с места работы
+			.row
+				.col-md-4.vbottom
+					.input-group
+						label(for="") место работы <br>#[span (название орг.-ции)] 
+						input(type="text", name="")
+				.col-md-4.vbottom
+					.input-group
+						label(for="") юр. лицо организации <br>#[span (ФИО)] 
+						input(type="text", name="")
+				.col-md-4.vbottom
+					.input-group
+						label(for="") Занимаемая должность 
+						input(type="text", name="")
+			.row
+				.col-md-4.vbottom
+					.input-group
+						label(for="") сайт компании работодателя
+						input(type="text", name="")
+				.col-md-4.vbottom
+					.input-group
+						label(for="") сайт компании работодателя
+						input(type="text", name="")
+				.col-md-4.vbottom
+					.input-group
+						label(for="") телефон организации 
+						input(type="tel", name="").city-phone
+			h2.title информация о хобби
+			.row
+				.col-md-4.vbottom
+					.input-group
+						label(for="") ваш уровень
+						input(type="text", name="")
+			.input-group
+				label Кто из профессиональных фотографов/ видеооператоров может дать о Вас рекомендации?
+			.row
+				.col-md-3
+					.input-group
+						label #[span укажите адрес сайта/#[br]номер телефона]
+				.col-md-9
+					.input-group
+						input(type="text", name="")
+			h2.title дополнительные данные
+			.row
+				.col-md-4.vbottom
+					.input-group
+						label водительские права
+						input(type="number", name="", placeholder="Номер")
+				.col-md-4.vbottom
+					.input-group
+						input(type="text", name="", placeholder="Дата выдачи")
+			.row
+				.col-md-4.vbottom
+					.input-group
+						label заграничный паспорт
+						input(type="number", name="", placeholder="Номер")
+				.col-md-4.vbottom
+					.input-group
+						input(type="text", name="", placeholder="Дата выдачи")
+			.row
+				.col-md-4.vbottom
+					.input-group
+						label ПТС
+						input(type="number", name="", placeholder="Серия/номер")
+				.col-md-4.vbottom
+					.input-group
+						input(type="text", name="", placeholder="Дата выдачи")
+				.col-md-4.vbottom
+					.input-group
+						input(type="text", name="", placeholder="Марка автомобиля")
+			.row
+				input(type="submit", value="сохранить").btn.brown-btn
+				.change-info чтобы изменить паспортные данные обратитесь в магазин по телефону #[a(href="tel:222-22-22") 222-22-22]

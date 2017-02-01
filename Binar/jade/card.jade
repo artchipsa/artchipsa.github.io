@@ -7,6 +7,49 @@ html
 		.main-content
 			.search-over
 			.catalog-wrapper.card-wrap
+				//- Модальное окно аренды 
+				.modal.fade.small-modal.rent-modal(tabindex="-1" role="dialog")
+					.modal-dialog.modal-lg(role="document")
+						.modal-content
+							form
+								.modal-body
+									a.close(href="#" data-dismiss="modal" aria-label="Close")
+										img(src="img/cross.svg", alt="")
+									h2.title взять в аренду
+									.form-group
+										span начало аренды
+										input(type="time", value="10:00")
+										input#first-date(type="text")
+									.form-group
+										span конец аренды
+										input(type="time", value="10:00")
+										input#last-date(type="text")
+									.form-group
+										p Общий срок аренды - 2 дня
+								.modal-footer
+									.form-group
+										.result Итого: #[span 1269 .-]
+									a.btn.primary-btn положить в корзину
+				//- модальное окно одного клика
+				.modal.fade.small-modal.oneclick-modal(tabindex="-1" role="dialog")
+					.modal-dialog.modal-lg(role="document")
+						.modal-content
+							form
+								.modal-body
+									a.close(href="#" data-dismiss="modal" aria-label="Close")
+										img(src="img/cross.svg", alt="")
+									h2.title Купить в один клик
+									.form-group
+										span #[i.fa.fa-user-o] Имя
+										input(type="text")
+									.form-group
+										span #[i.fa.fa-phone] Телефон
+										input(type="text")
+									.form-group
+										input(type="submit", value="отправить заказ").btn.primary-btn
+									.form-group
+										p В течение 15 минут вам перезвонит наш менеджер для уточнения деталей
+									
 				.container
 					ol.breadcrumb
 						li
@@ -40,7 +83,7 @@ html
 										.old-price #[span 54 990] .–
 										.actual-price 141 990 .–
 								.card-block-group.item__bonuce
-									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
 								.card-block-group.item__buy
 									a(href="").btn.primary-btn в корзину
 									.zero-count
@@ -48,14 +91,14 @@ html
 										<br>
 										span Доставка до 15 дней
 								.card-block-group.fast__buy
-									a.dashed-link(href="") Купить в один клик
+									a.dashed-link(href="" data-toggle="modal" data-target=".oneclick-modal") Купить в один клик
 									<br>
 									.credit
 										a(href="") Купить в кредит
 										<br>
 										span от 9 999 руб,/мес.
 								.card-block-group.center
-									a(href="") Взять в аренду
+									a(href="#" data-toggle="modal" data-target=".rent-modal") Взять в аренду
 									a.que-tooltip(href="" data-toggle="tooltip" data-placement="top" title="подсказанька")
 										img(src="img/que.svg", alt="")
 
@@ -132,19 +175,19 @@ html
 											.gain-item
 												img(src="img/delivery.svg", alt="")
 												.link-container.tooltip-link
-													a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бесплатная доставка" data-placement="top" data-content="Какой-то поясняющий текст про бесплатную доставку. Вау!") Бесплатная доставка <br> по Красноярску
+													a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про бесплатную доставку. Вау!") Бесплатная доставка <br> по Красноярску
 											.gain-item
 												img(src="img/test.svg", alt="")
 												.link-container.tooltip-link
-													a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бесплатный тест-драйв" data-placement="top" data-content="Какой-то поясняющий текст про бесплатный тест-драйв. Вау!") Можно взять <br>на тест драйв
+													a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про бесплатный тест-драйв. Вау!") Можно взять <br>на тест драйв
 											.gain-item
 												img(src="img/master_class.svg", alt="")
 												.link-container.tooltip-link
-													a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бесплатное обучение" data-placement="top" data-content="Какой-то поясняющий текст про Бесплатное обучение. Вау!") Бесплатное<br> обучение
+													a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про Бесплатное обучение. Вау!") Бесплатное<br> обучение
 											.gain-item
 												img(src="img/guarantee.svg", alt="")
 												.link-container.tooltip-link
-													a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title=" Расширенная гарантия" data-placement="top" data-content="Какой-то поясняющий текст про расширенную гарантию. Вау!") +1 год гарантии<br>+3 года сервиса
+													a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про расширенную гарантию. Вау!") +1 год гарантии<br>+3 года сервиса
 									.info-group
 										.sys-info
 											h3.subtitle Основные параметры:
@@ -316,7 +359,7 @@ html
 										<br>
 										span от 9 999 руб,/мес.
 								.card-block-group.center
-									a(href="") Взять в аренду
+									a(href="" data-toggle="modal" data-target=".rent-modal") Взять в аренду
 									a.que-tooltip(href="" data-toggle="tooltip" data-placement="top" title="подсказанька")
 										img(src="img/que.svg", alt="")
 						.col-md-3.vcenter

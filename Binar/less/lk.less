@@ -1,0 +1,302 @@
+@import 'modules/vars.less';
+
+.lk-container{
+	.title{
+		text-align: left;
+	}
+	.nav-tabs{
+		li{
+			border-bottom-color: transparent;
+			a{
+				padding-right: 55px;
+			}
+			&.active{
+				border-bottom-color: @yellow;
+			}
+		}
+		&.dotted-tab{
+			li{
+				a{
+					padding-right: 0px;
+				}
+			}
+		}
+	}
+	.history{
+		display: none;
+	}
+	.basket-block{
+		&.story{
+			width: 95%;
+			margin: 0 auto;
+			margin-bottom: 25px;
+			.row:first-child{
+				border-top: none;
+			}
+			.subtitle{
+				margin: 0px;
+			}
+			.history-toggle{
+				text-align: right;
+				width: 100%;
+				display: inline-block;
+				padding: 5px;
+				.fa{
+					font-weight: 700;
+					font-size: 20px;
+				}
+			}
+			.lease-status{
+				text-transform: uppercase;
+				text-align: center;
+				font-weight: 700;
+				&.returned{
+					color: @green;
+				}
+				&.outdated{
+					color: @red;
+				}
+			}
+		}
+		.history{
+			display: none;
+		}
+	}
+	.order-data{
+		border: none;
+	}
+}
+.top-info{
+	margin-bottom: 78px;
+	padding: 0px 5%;
+	background-color: @white;
+	.bonus{
+		display: inline-block;
+		vertical-align: middle;
+		padding: 30px 60px 30px 0px;
+		border-right: 1px solid @common-gray;
+		span{
+			font-weight: 700;
+		}
+	}
+	.card{
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 60px;
+		img{
+			width: 34px;
+			margin-right: 20px;
+		}
+		p{
+			display: inline-block;
+			margin: 0px;
+			span{
+				font-weight: 700;
+				color: @brown;
+			}
+		}
+	}
+}
+.lk-tabs-block{
+	width: 100%;
+	padding: 30px 5%;
+	background-color: @white;
+	.order-info{
+		margin-top: 24px;
+		p{
+			margin: 0px;
+			span{
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+#waits{
+	.basket-block{
+		margin-bottom: 10px;
+		.row:first-child{
+			border-top: 1px solid @common-gray;
+		}
+		.row:nth-last-child(2){
+			border-bottom: 2px solid @yellow;
+		}
+	}
+}
+.disable-trace{
+	color: #acacac;
+}
+
+#leased{
+	.perDay{
+		font-family: RoadRadio;
+		font-size: 16px;
+		color: #acacac;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.price{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	.basket-block{
+		.row:first-child{
+			border-top: 1px solid @common-gray;
+		}
+		.row:last-child{
+			border-bottom: 1px solid @common-gray;
+		}
+	}
+	.deadline{
+		span{
+			display: block;
+		}
+	}
+}
+.bg-warning{
+	background-color: transparent;
+	color: #757575;
+	margin-bottom: 60px;
+	span{
+		display: inline-block;
+		vertical-align: top;
+		width: 85%;
+		a{
+			text-decoration: underline;;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	img{
+		width: 16px;
+		vertical-align: top;
+		margin-right: 12px;
+	}
+}
+
+.deadline{
+	span{
+		font-weight: 700;
+	}
+}
+
+#testDrive{
+	.input-group{
+		label{
+			margin-bottom: 10px;
+		}
+	}
+}
+
+
+// BONUSES
+
+.bonuses-text{
+	span{
+		font-weight: 700;
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+}
+.bonuses-info{
+	.bonus-title{
+		text-transform: uppercase;
+		color: #939393;
+		font-weight: 700;
+	}
+	.amount{
+		display: inline-block;
+		font-size: 38px;
+		font-weight: 800;
+		color: @brown;
+		margin-right: 10px;
+	}
+	span{
+		display: inline-block;
+		font-weight: 700;
+	}
+	.row{
+		margin-bottom: 35px;
+	}
+}
+
+// PAYMANT INFO
+
+.no-info{
+	text-align: center;
+	padding: 100px;
+	p{
+		margin-bottom: 50px;
+	}
+}
+.create-info{
+	display: none;
+	.row{
+		margin-bottom: 30px;
+	}
+	form{
+		width: 85%;
+	}
+	.cancel{
+		margin-left: 38px;
+		text-transform: uppercase;
+		font-weight: 700;
+		vertical-align: middle;
+		text-decoration: underline;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+.saved-info{
+	display: none;
+	.row{
+		margin-bottom: 30px;
+	}
+}
+
+.change-info{
+	padding: 10px;
+	margin-left: 50px;
+	padding-left: 50px;
+	border-left: 2px solid @yellow;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+// COMPARE FAV 
+
+.fav-tab{
+	svg{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+}
+#lk-favs{
+	.basket-block{
+		.row:first-child{
+			border-top: 1px solid @common-gray;
+		}
+	}
+}
+#lk-compare{
+	.bottom-add-view {
+	    background-color: #f3f4f4;
+	    position: static;
+	    bottom: 0px;
+	    padding: 25px;
+	    transform: translateY(0%);
+	    transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1);
+	}
+	.slidee{
+		height: auto;
+		min-width: 100%!important;
+	}
+	.compare-frame .slidee{
+		display: block;
+	}
+}

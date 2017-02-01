@@ -344,6 +344,7 @@ header.fixed{
 	display: block;
 	width: 100%;
 	background-color: #f3f4f4;
+	height: 253px;
 }
 .main-content{
 	position: relative;
@@ -375,7 +376,7 @@ header.fixed{
 		clip: rect(0px, 10px, 20px, 0px);
 	}
 }
-.left{
+.cleft{
   -webkit-animation-duration: 4s;
   -webkit-animation-name: left-spin;
   -webkit-animation-iteration-count: infinite;
@@ -388,7 +389,7 @@ header.fixed{
   animation-fill-mode: forwards;
 }
 
-.right{
+.cright{
   -webkit-animation-duration: 2s;
   -webkit-animation-name: right-spin;
   -webkit-animation-iteration-count: infinite;
@@ -759,6 +760,11 @@ header.fixed{
 				height: 32px;
 			}
 		}
+	}
+	.functions{
+		position: absolute;
+		right: 5px;
+		top: 5px;
 	}
 	.item__head{
 		padding: 40px 20px;
@@ -1267,6 +1273,343 @@ header.fixed{
 	}
 }
 
+.article-container{
+	width: 100%;
+	img{
+		width: 100%;
+	}
+	.content{
+		padding: 40px 160px;
+		padding-bottom: 80px;
+		background-color: @white;
+		.time{
+			color: #7f7f7f;
+			font-weight: 700;
+			margin-bottom: 30px;
+			display: inline-block;
+		}
+		h1{
+			margin-top: 0px;
+			font-size: 32px;
+			font-weight: 700;
+			margin-bottom: 45px;
+		}
+		p{
+			margin-bottom: 32px;
+			line-height: 175%;
+			a{
+				text-decoration: underline;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
+		img{
+			margin-bottom: 20px;
+			& + span{
+				color: #666666;
+				font-size: 13px;
+				display: inline-block;
+				margin-bottom: 60px;
+			}
+		}
+		h2{
+			margin-top: 0px;
+			font-size: 26px;
+			font-weight: 700;
+			line-height: 135%;
+			padding-right: 150px;
+			margin-bottom: 30px;
+		}
+		h3{
+			margin-top: 0px;
+			font-size: 20px;
+			font-weight: 700;
+			margin-right: 150px;
+			line-height: 130%;
+			margin-bottom: 24px;
+		}
+		ul{
+			list-style: none; 
+			counter-reset: li; 
+			padding-left: 0px;
+			li{
+				margin-bottom: 20px;
+				ul{
+					margin-top: 20px;
+					padding-left: 15px;
+				}
+			}
+		}
+		li:before {
+			counter-increment: li; 
+			content: counters(li,".") ". "; 
+		}
+		table{
+			table-layout: fixed;
+		  	width: 100%;
+		  	margin-bottom: 20px;
+		  	margin-top: 68px;
+		  	& + span{
+		  		display: inline-block;
+		  		margin-bottom: 80px;
+		  	}
+			thead{
+				tr{
+					th{
+						background-color: @brown;
+						padding: 18px 25px;
+						color: @white;
+					}
+				}
+			}
+			tbody{
+				tr{
+					&:nth-child(2n){
+						background-color: #f2f2f2;
+					}
+					&:last-child{
+						border-bottom: 1px solid @brown;
+					}
+					td{
+						padding: 18px 25px;
+					}
+				}
+			}
+		}
+		.quote{
+			background-color: @gray;
+			padding: 44px 135px 72px 155px;
+			position: relative;
+			.qleft{
+				width: 36px;
+				height: 36px;
+				position: absolute;
+				top: 30px;
+				left: 40px;
+			}
+			.qright{
+				width: 36px;
+				height: 36px;
+				position: absolute;
+				bottom: 30px;
+				right: 40px;
+				transform: rotateY(-180deg);
+			}
+			.author{
+				width: 50%;
+				p{
+					line-height: 135%;
+					&:first-child{
+						font-weight: 700;
+						font-size: 18px;
+						line-height: 100%;
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.fail-block{
+	padding: 70px 0px;
+	background-color: @white;
+	text-align: center!important;
+	margin-bottom: 68px;
+	img{
+		margin-bottom: 60px;
+	}
+	.title{
+		text-align: center!important;
+		line-height: 150%;
+		font-size: 24px;
+	}
+	p{
+		width: 45%;
+		margin: 0 auto;
+		margin-bottom: 55px;
+		font-size: 18px;
+		line-height: 150%;
+		font-weight: 300;
+	}
+}
+.tooltip-inner{
+	background-color: @brown;
+	border-radius: 0px;
+}
+.tooltip.top .tooltip-arrow{
+	border-top-color: @brown;
+}
+
+.modal{
+	.modal-content{
+		border-radius: 0px;
+	}
+	.modal-dialog{
+		width: 410px;
+	}
+	.modal-body{
+		padding: 50px;
+	}
+	.close{
+		z-index: 2;
+		position: absolute;
+		top: 15px; 
+		right: 15px;
+		opacity: 0.9;
+	}
+	.form-group{
+		margin-bottom: 30px;
+		&:last-child{
+			margin-bottom: 0px;
+		}
+		span{
+			font-size: 12px;
+			font-weight: 700;
+			text-transform: uppercase;
+			display: block;
+			margin-bottom: 20px;
+		}
+		input[type="time"], input[type="text"], input[type="password"]{
+			border: 1px solid @common-gray;
+			padding: 12px;
+		}
+		input[type="time"]{
+			width: 30%;
+			margin-right: 4%;
+			text-align: center;
+		}
+		p{
+			border-left: 1px solid @yellow;
+			padding-left: 20px;
+			font-weight: 300;
+			color: #757575;
+		}
+		.result{
+			font-size: 18px;
+			font-weight: 700;
+			display: inline-block;
+			width: 100%;
+			span{
+				color: @brown;
+				font-size: 30px;
+				display: inline-block;
+				margin-bottom: 0px;
+				line-height: 100%;
+			}
+		}
+	}
+	.modal-footer{
+		text-align: left;
+		padding: 40px 50px;
+		.btn{
+			margin-bottom: 0px;
+		}
+	}
+}
+
+//datapicker
+.daterangepicker .calendar th .fa, .daterangepicker .calendar td .fa{
+	color: @brown;
+}
+.daterangepicker .calendar thead tr:last-child{
+	font-size: 10px;
+	color: #b9b9b9;
+}
+.daterangepicker td.active, .daterangepicker td.active:hover{
+	background-color: @red;
+	border-radius: 50%!important;
+	border-color: transparent!important;
+	color: #333;
+}
+.daterangepicker td.available:hover, .daterangepicker th.available:hover{
+	border-radius: 50%!important;
+}
+.daterangepicker td.available.weekend{
+	color: @red;
+}
+
+
+
+input[type="time"]::-webkit-clear-button {
+    display: none;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.modal{
+	form{
+		margin-bottom: 0px;
+	}
+	.title{
+		margin-bottom: 40px;
+	}
+}
+
+.login-modal{
+	.title{
+		text-align: left;
+	}
+	input[type="text"], input[type="password"]{
+		width: 100%;
+	}
+	i{
+		margin-right: 10px;
+	}
+	.input-group{
+		label{
+			font-size: 12px;
+			font-weight: 700;
+			text-transform: uppercase;
+			display: block;
+			margin-bottom: 20px;
+			color: @black;
+			&.requierd:before{
+				content: '';
+			}
+		}
+
+	}
+	.underline-link{
+		display: inline-block;
+		vertical-align: middle;
+		font-family: RoadRadio;
+		font-weight: 700;
+	}
+	.btn{
+		margin-bottom: 0px;
+		margin-right: 20px;
+	}
+	.header-socials{
+		text-align: left;
+		i{
+			margin-right: 0px;
+		}
+	}
+	.modal-footer{
+		padding: 40px 50px;
+	}
+	.recall-pass{
+		display: none;
+	}
+	.sucsess{
+		display: none;
+	}
+}
+
 @import 'catalog.less';
 @import 'card.less';
 @import 'basket.less';
+@import 'lk.less';
+@import 'about.less';
+@import 'news.less';
+@import 'contacts.less';

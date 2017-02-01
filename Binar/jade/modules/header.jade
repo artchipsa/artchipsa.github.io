@@ -1,3 +1,64 @@
+//- Модалка входа
+.modal.fade.small-modal.login-modal(tabindex="-1" role="dialog")
+	.modal-dialog.modal-lg(role="document")
+		.modal-content
+			form.login-form
+				.modal-body
+					a.close(href="#" data-dismiss="modal" aria-label="Close")
+						img(src="img/cross.svg", alt="")
+					h2.title Купить в один клик
+					.form-group
+						.input-group
+							label.required #[i.fa.fa-user-o] Логин
+							input(type="text")
+					.form-group
+						.input-group
+							label.required #[i.fa.fa-unlock-alt] Пароль
+							input(type="password")
+					.form-group
+						input(type="submit", value="войти").btn.primary-btn
+						a(href="").underline-link.js-recall забыли пароль?
+				.modal-footer
+					.form-group
+						span Войти через соц. сети
+						.header-socials
+							a(href="")
+								i.fa.fa-twitter(aria-hidden="true")
+							a(href="")
+								i.fa.fa-instagram(aria-hidden="true")
+							a(href="")
+								i.fa.fa-youtube(aria-hidden="true")
+							a(href="")
+								i.fa.fa-vk(aria-hidden="true")
+			form.recall-pass
+				a.close(href="#" data-dismiss="modal" aria-label="Close")
+						img(src="img/cross.svg", alt="")
+				.modal-body
+					h2.title Забыли пароль? 
+					.form-group
+						.input-group
+							label.requierd #[i.fa.fa-envelope-o] Ваша почта
+							input(type="text")
+					.form-group
+						p Мы вышлем на указанную почту письмо с вашим паролем
+					.form-group
+						input(type="submit", value="восстановить").btn.primary-btn
+						a(href="").underline-link.js-login назад
+					.sucsess
+						p Ваш новый пароль выслан на указанную почту
+				.modal-footer
+					.form-group
+						span Войти через соц. сети
+						.header-socials
+							a(href="")
+								i.fa.fa-twitter(aria-hidden="true")
+							a(href="")
+								i.fa.fa-instagram(aria-hidden="true")
+							a(href="")
+								i.fa.fa-youtube(aria-hidden="true")
+							a(href="")
+								i.fa.fa-vk(aria-hidden="true")
+
 header
 	nav.navbar
 		.navbar-header
@@ -63,7 +124,7 @@ header
 										svg(viewBox="0 0 100 100", class="svgico like")
 											use(xlink:href="#like")
 									p корзина  #[span 45 000 .-]
-								a(href="").bubble-btn-block
+								a(href="" data-toggle="modal" data-target=".login-modal").bubble-btn-block
 									.bubble-btn
 										svg(viewBox="0 0 100 100", class="svgico like")
 											use(xlink:href="#User")
@@ -191,8 +252,8 @@ header
 						div.search-block
 							form(action="")
 								.base-loader
-									.circle.left
-									.circle.right
+									.circle.cleft
+									.circle.cright
 								input(type="text", placeholder="Поиск").js-search
 								input(type="submit", value=" ")
 								.search-result

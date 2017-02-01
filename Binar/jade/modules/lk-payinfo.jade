@@ -1,0 +1,84 @@
+.payinfo-block
+	.no-info.js-dissapear
+		p Если вы хотите оплачивать заказы по выставленному на вашу организацию <br>счёта, то вы можете заранее создать реквизиты вашей компании.
+		a.btn.brown-btn(href="").js-payment-toggler создать реквизиты
+	.create-info
+		form#payment-info(action="")
+			.row
+				.col-md-4
+					.input-group
+						label(for="").requierd название компании 
+						input(type="text", name="")
+				.col-md-4
+					.input-group
+						label(for="").requierd ИНН 
+						input(type="number", name="")
+				.col-md-4
+					.input-group
+						label(for="").requierd КПП 
+						input(type="number", name="")
+			.row
+				.col-md-4
+					.input-group
+						label(for="").requierd контактное лицо 
+						input(type="text", name="")
+				.col-md-4
+					.input-group
+						label(for="").requierd Телефон 
+						input(type="tel", name="").tel
+				.col-md-4
+					.input-group
+						label(for="").requierd электронная почта 
+						input(type="text", name="")
+			.row
+				.col-md-8
+					.input-group
+						label(for="").requierd юридический адрес
+						input(type="text", name="")
+				.col-md-4
+					.input-group
+						label(for="") индекс 
+						input(type="number", name="")
+			.row
+				.col-md-12
+					input(type="submit", value="сохранить реквизиты").btn.brown-btn
+					a(href="#").cancel отмена
+	.saved-info.js-dissapear
+		.saved-item
+			.row
+				.col-md-4
+					.input-group
+						label(for="") название компании 
+						p Константин Константинопольский
+				.col-md-4
+					.input-group
+						label(for="") ИНН 
+						p 8 923 456 78 76
+				.col-md-4
+					.input-group
+						label(for="") КПП 
+						p 1231231 312312 312
+			.row
+				.col-md-4
+					.input-group
+						label(for="") контактное лицо 
+						p Константин Константинопольский
+				.col-md-4
+					.input-group
+						label(for="") Телефон 
+						p 8 923 456 78 76
+				.col-md-4
+					.input-group
+						label(for="") электронная почта 
+						p konstantinkonst@mailbox.com
+			.row
+				.col-md-8
+					.input-group
+						label(for="") юридический адрес
+						p ул. Лесная, д. 5, кв. 176
+				.col-md-4
+					.input-group
+						label(for="") индекс 
+						p 6600055
+		.row
+			a.btn.brown-btn(href="").js-payment-toggler создать реквизиты

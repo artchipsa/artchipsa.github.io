@@ -1,0 +1,77 @@
+.about-hero {
+  background-image: url(../img/wooden_pattern.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 118px 0px;
+}
+.about-hero h2 {
+  line-height: 150%;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 32px;
+  margin-top: 0px;
+  margin-bottom: 55px;
+}
+.about-hero h2 span {
+  font-weight: 700;
+  color: #fdd62b;
+}
+.about-hero p {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%;
+}
+.about-tabs .nav-tabs li.active a {
+  color: #71441b;
+}
+.about-tabs .nav-tabs li a:hover {
+  color: #71441b;
+}
+.about-tabs .tab-content p {
+  font-size: 16px;
+  line-height: 185%;
+  margin-bottom: 52px;
+}
+.about-tabs .brends-container .content .item {
+  margin-bottom: 53px;
+}
+.about-tabs .brends-container .content .item.small {
+  margin-bottom: 53px;
+}
+.about-tabs .brends-container .content .item.small:last-child {
+  margin-right: 0px;
+}
+.about-tabs .brends-container .content {
+  width: 92.6%;
+  padding-bottom: 0px;
+}
+.about-tabs .brends-container .left-sticker {
+  left: -67px;
+}
+.binar-now {
+  padding: 136px 0px;
+  background-image: url(../img/binar_now.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.binar-now p {
+  font-family: RoadRadio;
+  padding: 62px 150px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 130%;
+  background-color: rgba(113, 68, 27, 0.9);
+}
+.popover {
+  background-color: #71441b;
+  color: #ffffff;
+  border-radius: 0px;
+  padding: 10px 20px;
+}
+.popover.top > .arrow:after {
+  border-top-color: #71441b !important;
+}

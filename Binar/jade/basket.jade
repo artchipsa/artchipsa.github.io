@@ -6,6 +6,29 @@ html
 		include modules/header.jade
 		.main-content
 			.search-over
+			//- Модальное окно аренды 
+			.modal.fade.small-modal.rent-modal(tabindex="-1" role="dialog")
+				.modal-dialog.modal-lg(role="document")
+					.modal-content
+						form
+							.modal-body
+								a.close(href="#" data-dismiss="modal" aria-label="Close")
+									img(src="img/cross.svg", alt="")
+								h2.title взять в аренду
+								.form-group
+									span начало аренды
+									input(type="time", value="10:00")
+									input#first-date(type="text")
+								.form-group
+									span конец аренды
+									input(type="time", value="10:00")
+									input#last-date(type="text")
+								.form-group
+									p Общий срок аренды - 2 дня
+							.modal-footer
+								.form-group
+									.result Итого: #[span 1269 .-]
+								a.btn.primary-btn положить в корзину
 			.catalog-wrapper
 				.container
 					ol.breadcrumb
@@ -18,10 +41,14 @@ html
 							h2.title Каталог
 						.col-md-8.vcenter
 							.basket-info
-								a(href="#").dashed-link Условия доставки
-								a(href="#").dashed-link Условия возврата
-								a(href="#").dashed-link Условия trade in
-								a(href="#").dashed-link Условия для юр. лиц
+								.tooltip-link
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про условия доставки. Вау!").dashed-link Условия доставки
+								.tooltip-link
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про условия возврата. Вау!").dashed-link Условия возврата
+								.tooltip-link
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про условия обмена. Вау!").dashed-link Условия trade in
+								.tooltip-link
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про условия для юр лиц. Вау!").dashed-link Условия для юр. лиц
 					.basket-block
 						.row
 							.col-md-3.vcenter
@@ -102,7 +129,7 @@ html
 											.lease-text Начало аренды: #[span(data-lease="start") 12 сент. 2016 12:00]
 											.lease-text Конец аренды: #[span(data-lease="start") 14 сент. 2016 16:00]
 											.lease-text Общий срок аренды: #[span(data-lease="summ") 2 суток]
-										a.dashed-link(href="") Изменить даты аренды
+										a.dashed-link(href="" data-toggle="modal" data-target=".rent-modal") Изменить даты аренды
 							.col-md-2.vcenter
 								.count
 									a(href="#", data-id="desc") 
@@ -146,14 +173,14 @@ html
 										a(href="").like
 											svg(viewBox="0 0 100 100", class="svgico like like-gray")
 												use(xlink:href="#like")
-									.item__head
+									a(href="").item__head
 										img(src="img/card_img.jpg", alt="")
 										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
 										.item__price
 											.old-price #[span 54 990] .–
 											.actual-price 141 990 .–
 									.item__bonuce
-										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
 									.item__buy
 										a(href="").btn.primary-btn в корзину
 										a(href="").dotted-link Купить в один клик
@@ -169,14 +196,14 @@ html
 										a(href="").like
 											svg(viewBox="0 0 100 100", class="svgico like like-gray")
 												use(xlink:href="#like")
-									.item__head
+									a(href="").item__head
 										img(src="img/card_img.jpg", alt="")
 										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
 										.item__price
 											.old-price #[span 54 990] .–
 											.actual-price 141 990 .–
 									.item__bonuce
-										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
 									.item__buy
 										a(href="").btn.primary-btn в корзину
 										a(href="").dotted-link Купить в один клик
@@ -192,14 +219,14 @@ html
 										a(href="").like
 											svg(viewBox="0 0 100 100", class="svgico like like-gray")
 												use(xlink:href="#like")
-									.item__head
+									a(href="").item__head
 										img(src="img/card_img.jpg", alt="")
 										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
 										.item__price
 											.old-price #[span 54 990] .–
 											.actual-price 141 990 .–
 									.item__bonuce
-										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
 									.item__buy
 										a(href="").btn.primary-btn в корзину
 										a(href="").dotted-link Купить в один клик
@@ -215,14 +242,14 @@ html
 										a(href="").like
 											svg(viewBox="0 0 100 100", class="svgico like like-gray")
 												use(xlink:href="#like")
-									.item__head
+									a(href="").item__head
 										img(src="img/card_img.jpg", alt="")
 										.item__name Sony Alpha A5100 kit 16-50мм PZ Brown
 										.item__price
 											.old-price #[span 54 990] .–
 											.actual-price 141 990 .–
 									.item__bonuce
-										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бонусная программа" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
+										a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про супер бонусы. Вау!") Бонусов: #[span 1280]
 									.item__buy
 										a(href="").btn.primary-btn в корзину
 										a(href="").dotted-link Купить в один клик

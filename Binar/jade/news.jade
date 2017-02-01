@@ -1,0 +1,147 @@
+html
+	include modules/head.jade
+	body
+		.hidden
+			include ../img/assets.svg
+		include modules/header.jade
+		.main-content
+			.search-over
+			.catalog-wrapper
+				.container
+					ol.breadcrumb
+						li
+							a(href="") Главная
+						li.active
+							a Новости, акции и статьи 
+					h2.title Новости, акции и статьи
+					.news-filter
+						form
+							.row
+								.col-md-9.filter-options.vcenter
+									span показать:
+									.checkbox-group
+										input#specials(type="checkbox", name="", checked)
+										label(for="specials") #[img(src="img/akcii.svg", alt="")] Акции
+									.checkbox-group
+										input#news(type="checkbox", name="", checked)
+										label(for="news") #[img(src="img/news.svg", alt="")] новости
+									.checkbox-group
+										input#articles(type="checkbox", name="", checked)
+										label(for="articles") #[img(src="img/articles.svg", alt="")] статьи
+								.col-md-3.apply-filter.vcenter
+									input(type="submit", value="применить").btn.primary-btn
+					.news-sort
+						span Сортировать по: 
+						a(href="#") дате добавления 
+							i.fa.fa-sort-amount-desc
+					.news-container
+						.row
+							.col-md-3
+								a(href="").news-item
+									.tag.news
+										svg(viewBox="0 0 100 100", class="svgico news")
+											use(xlink:href="#news")
+									.time 12.06.2016
+									p Пресс-конференция OLYMPUS в прямом эфире из Кельна. Не пропустите!
+									.link-block
+										i.fa.fa-angle-right
+										span подробнее
+							.col-md-3
+								a(href="").news-item
+									.tag.news
+										svg(viewBox="0 0 100 100", class="svgico news")
+											use(xlink:href="#news")
+									.time 12.06.2016
+									p Станьте одним из первых обладателей камеры Fujifilm X-Т2 , сделав предзаказ с 8 июля.
+									.link-block
+										i.fa.fa-angle-right
+										span подробнее
+							.col-md-3
+								a(href="").news-item.partner
+									.tag.news
+										svg(viewBox="0 0 100 100", class="svgico news")
+											use(xlink:href="#news")
+									.time 12.06.2016
+									p «БИНАР» - премиум парнтер MANFROTTO
+									.link-block
+										i.fa.fa-angle-right
+										span подробнее
+							.col-md-3
+								a(href="").news-item
+									.tag.article
+										svg(viewBox="0 0 100 100", class="svgico articles")
+											use(xlink:href="#articles")
+									.time 12.06.2016
+									p Мастер-Класс Дарьи Булавиной в Красноярске! 
+									.link-block
+										i.fa.fa-angle-right
+										span подробнее
+						.row
+							.col-md-6
+								a(href="" style="background-image: url(img/spec1.jpg)").news-item.special
+									.tag.news
+										svg(viewBox="0 0 100 100", class="svgico specials")
+											use(xlink:href="#akcii")
+									.time 12.06.2016
+									p Какой фотоаппарат лучше выбрать начинающему фотографу. Сравнительный тест-драйв флагманских моделей от Canon, Nikon
+									.link-block
+										i.fa.fa-angle-right
+										span подробнее
+							.col-md-3
+								a(href="").news-item
+									.tag.news
+										svg(viewBox="0 0 100 100", class="svgico news")
+											use(xlink:href="#news")
+									.time 12.06.2016
+									p Вышла прошивка по повышению стабильности работы камеры X-pro2! 
+									.link-block
+										i.fa.fa-angle-right
+										span подробнее
+							.col-md-3
+								a(href="").news-item
+									.tag.news
+										svg(viewBox="0 0 100 100", class="svgico news")
+											use(xlink:href="#news")
+									.time 12.06.2016
+									p Пресс-конференция OLYMPUS в прямом эфире из Кельна. Не пропустите!
+									.link-block
+										i.fa.fa-angle-right
+										span подробнее
+						.row
+							.col-md-3
+								a(href="").news-item
+									.tag.news
+										svg(viewBox="0 0 100 100", class="svgico news")
+											use(xlink:href="#news")
+									.time 12.06.2016
+									p Пресс-конференция OLYMPUS в прямом эфире из Кельна. Не пропустите!
+									.link-block
+										i.fa.fa-angle-right
+										span подробнее
+							.col-md-3
+								a(href="").news-item
+									.tag.news
+										svg(viewBox="0 0 100 100", class="svgico news")
+											use(xlink:href="#news")
+									.time 12.06.2016
+									p Станьте одним из первых обладателей камеры Fujifilm X-Т2 , сделав предзаказ с 8 июля.
+									.link-block
+										i.fa.fa-angle-right
+										span подробнее
+							.col-md-6
+								a(href="" style="background-image: url(img/spec2.jpg)").news-item.special
+									.tag.news
+										svg(viewBox="0 0 100 100", class="svgico specials")
+											use(xlink:href="#akcii")
+									.time 12.06.2016
+									p Искусство создания эффекта тилт-шифт . Как правильно работать с камерой «сдвиг/наклон»
+									.link-block
+										i.fa.fa-angle-right
+										span подробнее
+					.more-items
+						a.btn.brown-btn(href="#") Загрузить еще 30 новостей новостей
+						a(href="#").underline-link показать все новости
+
+
+			include modules/footer.jade
+		include modules/scripts.jade

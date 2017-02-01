@@ -6,6 +6,25 @@ html
 		include modules/header.jade
 		.main-content
 			.search-over
+			//- модальное окно одного клика
+			.modal.fade.small-modal.oneclick-modal(tabindex="-1" role="dialog")
+				.modal-dialog.modal-lg(role="document")
+					.modal-content
+						form
+							.modal-body
+								a.close(href="#" data-dismiss="modal" aria-label="Close")
+									img(src="img/cross.svg", alt="")
+								h2.title Купить в один клик
+								.form-group
+									span #[i.fa.fa-user-o] Имя
+									input(type="text")
+								.form-group
+									span #[i.fa.fa-phone] Телефон
+									input(type="text")
+								.form-group
+									input(type="submit", value="отправить заказ").btn.primary-btn
+								.form-group
+									p В течение 15 минут вам перезвонит наш менеджер для уточнения деталей
 			.main-slider-block
 				.divvideo
 					video(autoplay="" muted="" style="width:100%; height:100%; position:absolute; margin:auto; z-index: 0; top: 0;")
@@ -72,34 +91,34 @@ html
 							.gain-item
 								img(src="img/delivery.svg", alt="")
 								.link-container.tooltip-link
-									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бесплатная доставка" data-placement="top" data-content="Какой-то поясняющий текст про бесплатную доставку. Вау!") #[span Бесплатная доставка] <br> по Красноярску
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про бесплатную доставку. Вау!") #[span Бесплатная доставка] <br> по Красноярску
 						.col-md-6
 							.gain-item
 								img(src="img/test.svg", alt="")
 								.link-container.tooltip-link
-									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бесплатный тест-драйв" data-placement="top" data-content="Какой-то поясняющий текст про бесплатный тест-драйв. Вау!") #[span Бесплатный Тест-драйв] <br> фототехники в течение 3 дней
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про бесплатный тест-драйв. Вау!") #[span Бесплатный Тест-драйв] <br> фототехники в течение 3 дней
 					.row.gain-row
 						.col-md-6
 							.gain-item
 								img(src="img/trade_in.svg", alt="")
 								.link-container.tooltip-link
-									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Trade-in" data-placement="top" data-content="Какой-то поясняющий текст про Trade-in. Вау!") #[span Trade-in] — возможность сдать свою <br> старую технику в счёт оплаты новой
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Какой-то поясняющий текст про Trade-in. Вау!") #[span Trade-in] — возможность сдать свою <br> старую технику в счёт оплаты новой
 						.col-md-6
 							.gain-item
 								img(src="img/master_class.svg", alt="")
 								.link-container.tooltip-link
-									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Бесплатное обучение" data-placement="top" data-content="Какой-то поясняющий текст про Бесплатное обучение. Вау!") #[span Бесплатное обучение] фотомастерству <br> и посещение мастер-классов
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus"  data-placement="top" data-content="Какой-то поясняющий текст про Бесплатное обучение. Вау!") #[span Бесплатное обучение] фотомастерству <br> и посещение мастер-классов
 					.row.gain-row
 						.col-md-6
 							.gain-item
 								img(src="img/guarantee.svg", alt="")
 								.link-container.tooltip-link
-									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title=" Расширенная гарантия" data-placement="top" data-content="Какой-то поясняющий текст про расширенную гарантию. Вау!") #[span Расширенная гарантия] на всю <br> фототехнику марок Nikon, Canon, Sony, Fujifilm
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus"  data-placement="top" data-content="Какой-то поясняющий текст про расширенную гарантию. Вау!") #[span Расширенная гарантия] на всю <br> фототехнику марок Nikon, Canon, Sony, Fujifilm
 						.col-md-6
 							.gain-item
 								img(src="img/guarantee.svg", alt="")
 								.link-container.tooltip-link
-									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Hизкие цены" data-placement="top" data-content="Какой-то поясняющий текст про низкие цены. Вау!") #[span У нас низкие цены.] У нас низкие цены. <br>Найдете дешевле - сделаем скидку!
+									a(tabindex="0" role="button" data-toggle="popover" data-trigger="focus"  data-placement="top" data-content="Какой-то поясняющий текст про низкие цены. Вау!") #[span У нас низкие цены.] У нас низкие цены. <br>Найдете дешевле - сделаем скидку!
 					.center-link
 						a(href="").btn.brown-btn Больше о магазине
 			.about-card-block

@@ -184,7 +184,7 @@
 				margin-right: -4px;
 				width: 10%;
 				height: 100%;
-				border-left: 1px solid @dark-gray;
+				border-left: 1px solid @common-gray;
 			    padding: 30px;
 			    .owl-thumb-item{
 			    	width: 100%!important;
@@ -198,7 +198,7 @@
 	height: 100%;
 	display: inline-block;
 	vertical-align: top;
-	border-left: 1px solid @dark-gray;
+	border-left: 1px solid @common-gray;
 	margin-right: -4px;
 	padding: 0px 30px;
 }
@@ -313,9 +313,11 @@
 		transition: all .35s @ease-out-back;
 		&.active{
 			border-bottom-color: @yellow;
+			background-color: transparent;
 		}
 		&:hover a{
 			color: @black;
+			background-color: transparent;
 		}
 		a{
 			border: none!important;
@@ -328,8 +330,45 @@
 			padding-right: 70px;
 			font-size: 16px;
 			transition: all .35s @ease-out-back;
+			background-color: transparent!important;
 			&:hover{
-				background-color: transparent;
+				
+			}
+		}
+	}
+	&.dotted-tab{
+		margin-left: 32px;
+		li{
+			border: none;
+			margin-right: 50px;
+			&.active a, &:hover a{
+				border-bottom-color: transparent!important;
+			}
+			a{
+				font-family: Acrom;
+				font-weight: 300;
+				font-size: 14px;
+				text-transform: none;
+				color: @brown;
+				border-bottom: 1px dashed @brown!important;
+				display: inline-block;
+				padding: 0px;
+				cursor: pointer;
+				span{
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	&.fav-tab{
+		margin-left: 32px;
+		li{
+			border: none;
+			&.active a, &:hover a{
+				color: @brown;
+			}
+			a{
+				color: #d0d0d0;
 			}
 		}
 	}

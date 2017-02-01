@@ -1,4 +1,60 @@
 
+<div tabindex="-1" role="dialog" class="modal fade small-modal login-modal">
+  <div role="document" class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form class="login-form">
+        <div class="modal-body"><a href="#" data-dismiss="modal" aria-label="Close" class="close"><img src="img/cross.svg" alt=""/></a>
+          <h2 class="title">Купить в один клик</h2>
+          <div class="form-group">
+            <div class="input-group">
+              <label class="required"><i class="fa fa-user-o"></i> Логин</label>
+              <input type="text"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <label class="required"><i class="fa fa-unlock-alt"></i> Пароль</label>
+              <input type="password"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="войти" class="btn primary-btn"/><a href="" class="underline-link js-recall">забыли пароль?</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="form-group"><span>Войти через соц. сети</span>
+            <div class="header-socials"><a href=""><i aria-hidden="true" class="fa fa-twitter"></i></a><a href=""><i aria-hidden="true" class="fa fa-instagram"></i></a><a href=""><i aria-hidden="true" class="fa fa-youtube"></i></a><a href=""><i aria-hidden="true" class="fa fa-vk"></i></a></div>
+          </div>
+        </div>
+      </form>
+      <form class="recall-pass"><a href="#" data-dismiss="modal" aria-label="Close" class="close"><img src="img/cross.svg" alt=""/></a>
+        <div class="modal-body">
+          <h2 class="title">Забыли пароль? </h2>
+          <div class="form-group">
+            <div class="input-group">
+              <label class="requierd"><i class="fa fa-envelope-o"></i> Ваша почта</label>
+              <input type="text"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <p>Мы вышлем на указанную почту письмо с вашим паролем</p>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="восстановить" class="btn primary-btn"/><a href="" class="underline-link js-login">назад</a>
+          </div>
+          <div class="sucsess">
+            <p>Ваш новый пароль выслан на указанную почту</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="form-group"><span>Войти через соц. сети</span>
+            <div class="header-socials"><a href=""><i aria-hidden="true" class="fa fa-twitter"></i></a><a href=""><i aria-hidden="true" class="fa fa-instagram"></i></a><a href=""><i aria-hidden="true" class="fa fa-youtube"></i></a><a href=""><i aria-hidden="true" class="fa fa-vk"></i></a></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 <header>
   <nav class="navbar">
     <div class="navbar-header">
@@ -53,7 +109,7 @@
                       <use xlink:href="#like"></use>
                     </svg>
                   </div>
-                  <p>корзина  <span>45 000 .-</span></p></a><a href="" class="bubble-btn-block">
+                  <p>корзина  <span>45 000 .-</span></p></a><a href="" data-toggle="modal" data-target=".login-modal" class="bubble-btn-block">
                   <div class="bubble-btn">
                     <svg viewBox="0 0 100 100" class="svgico like">
                       <use xlink:href="#User"></use>
@@ -145,8 +201,8 @@
             <div class="search-block">
               <form action="">
                 <div class="base-loader">
-                  <div class="circle left"></div>
-                  <div class="circle right"></div>
+                  <div class="circle cleft"></div>
+                  <div class="circle cright"></div>
                 </div>
                 <input type="text" placeholder="Поиск" class="js-search"/>
                 <input type="submit" value=" "/>

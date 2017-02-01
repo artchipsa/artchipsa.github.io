@@ -1,0 +1,169 @@
+@import 'modules/vars.less';
+.news-filter{
+	background-color: @white;
+	padding: 20px 40px;
+	margin-bottom: 30px;
+	form{
+		margin-bottom: 0px;
+	}
+	.apply-filter{
+		text-align: right;
+		.btn{
+			margin-bottom: 0px;
+		}
+	}
+	.filter-options{
+		span{
+			font-size: 12px;
+			text-transform: uppercase;
+			font-weight: 700;
+			color: #979797;
+			margin-right: 46px;
+		}
+		.checkbox-group{
+			margin-bottom: 0px;
+			display: inline-block;
+			margin-right: 35px;
+			width: auto;
+			img{
+				display: inline-block;
+				vertical-align: bottom;
+				width: 20px;
+			}
+		}
+		.checkbox-group input[type="checkbox"] + label{
+			margin-left: 22px;
+			font-size: 13px;
+			font-weight: 700;
+			display: inline-block;
+			vertical-align: middle;
+			text-transform: uppercase;
+			margin-bottom: 0px;
+			&:before{
+				left: -35px;
+			}
+		}
+	}
+
+}
+.news-sort{
+	margin-bottom: 30px;
+	span,a{
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	.fa{
+		color: @brown;
+	}
+	span{
+		color: #7f7f7f;
+	}
+	a{
+		text-decoration: underline;
+		&:hover{
+			text-decoration: none;
+			color: @brown;
+		}
+	}
+}
+.news-container{
+	margin-bottom: 70px;
+	.row{
+		margin-bottom: 30px;
+		&:last-child{
+			margin-bottom: 0px;
+		}
+	}
+}
+.news-item{
+	background-color: @white;
+	display: block;
+	padding: 68px 38px 0px 38px;
+	height: 254px;
+	position: relative;
+	border: 2px solid transparent;
+	transition: all .45s @ease-out-back;
+	&:hover{
+		border-color: @yellow;
+	}
+	&.partner{
+		background-color: @brown;
+		p{
+			color: @white;
+		}
+		.time{
+			color: #b8a28d;
+		}
+		.link-block{
+			i, span{
+				color: @white;
+			}
+		}
+	}
+	&.special{
+		background-size: cover;
+		background-repeat: no-repeat;
+		text-align: center;
+		padding-left: 80px;
+		padding-right: 80px;
+		p{
+			color: @white;
+		}
+		.link-block{
+			bottom: 40px;
+			color: @white;
+			left: 50%;
+			transform: translateX(-60%);
+		}
+		.tag{
+			background-color: @yellow!important;
+		}
+	}
+	.tag{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		padding: 7px;
+		&.news, &.article{
+			background-color: @brown;
+		}
+	}
+	.time{
+		color: #7f7f7f;
+		position: absolute;
+		top: 10px;
+		right: 15px;
+	}
+	p{
+		color: @black;
+	}
+	.link-block{
+		position: absolute;
+		bottom: 24px;
+		i{
+			font-size: 16px;
+			font-weight: 700;
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			border: 1px solid @yellow;
+			text-align: center;
+			line-height: 16px;
+		    padding-top: 6px;
+    		padding-left: 2px;
+    		margin-right: 10px;
+		}
+		span{
+			font-family: RoadRadio;
+		}
+	}
+}
+.more-items{
+	.underline-link{
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	.btn{
+		margin-right: 30px;
+	}
+}

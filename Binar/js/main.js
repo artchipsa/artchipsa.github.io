@@ -1,9 +1,8 @@
 'use strict';
 var over = false,
     error = false;
+$('.header-placeholder').height($('header').height());
 $(document).ready(function(){
-
-    $('.header-placeholder').height($('header').height());
 
 	// Анимация дропдовна 
 	$('.dropdown').on('show.bs.dropdown', function() {
@@ -270,12 +269,22 @@ $(document).ready(function(){
 
     // addParams
     $(document).on('click', '.js-hideParams', function(){
-         $(this).find('span').text(function(i, text){
-          return text === "Показать доп. параметры" ? "Скрыть доп. параметры" : "Показать доп. параметры";
-        });
-        $(this).find('.fa').toggleClass('fa-angle-down fa-angle-up')
-        $('.hidden-params').slideToggle('300');
-        return false;
+
+        if($(this).parents('.catalog-filter-wrapper').hasClass('category-filter')){
+            $(this).find('span').text(function(i, text){
+              return text === "Открыть больше категорий" ? "Скрыть больше категорий" : "Открыть больше категорий";
+            });
+            $(this).find('.fa').toggleClass('fa-angle-down fa-angle-up')
+            $(this).parent().find('.hidden-params').slideToggle('300');
+            return false;
+        } else {
+             $(this).find('span').text(function(i, text){
+              return text === "Показать доп. параметры" ? "Скрыть доп. параметры" : "Показать доп. параметры";
+            });
+            $(this).find('.fa').toggleClass('fa-angle-down fa-angle-up')
+            $(this).parent().find('.hidden-params').slideToggle('300');
+            return false;
+        }
     });
 
     $(document).on('click', '.js-toggle-price', function(){
@@ -394,9 +403,10 @@ $(document).ready(function(){
 
         $('.result .actual-price').addClass('price-change');
         for (var i = 0; i < prices.length; i++){
-            value = prices[i].replace(/\s/g, '');
+            var value = prices[i].replace(/\s/g, '');
             new_price = new_price + parseInt(value);
         }
+        new_price = new_price.toLocaleString();
         new_price = new_price+' .-'
         setTimeout(function(){
             $('.result .actual-price').text(new_price);
@@ -589,7 +599,33 @@ $(document).ready(function(){
             body.stop().animate({scrollTop: first_error}, '450', 'swing');
         }
 
-        if (error) return false;
+        if (!error) return false;
+    });
+
+    $('#payment-info').submit(function(){
+        var form = $(this);
+        var body = $('html, body');
+
+        form.find('.requierd:visible').each(function(){
+            checkFill($(this));
+        });
+
+        if($('.error').length){
+            var first_error = $('.error').first().parent().offset().top - ($('.error').first().outerHeight() * 3.5);
+            console.log(first_error);
+            body.stop().animate({scrollTop: first_error}, '450', 'swing');
+        }
+
+        if (!error){
+            $('.create-info').fadeOut(300, function(){
+                $('#payment-info .input-group input').each(function(){
+                    $(this).val('');
+                });
+                $('.saved-info').fadeIn(300);
+            }); 
+        }
+
+        return false;
     });
 
     $(document).on('click', '.show-password', function(){
@@ -602,15 +638,171 @@ $(document).ready(function(){
         return false;
     });
 
+    $(document).on('click', '.history-toggle', function(){
+        var parent = $(this).parents('.story');
+        $(this).find('.fa').toggleClass('fa-angle-down fa-angle-right');
+        parent.find('.history').slideToggle(300);
+        return false
+    });
+
+    $(document).on('click', '.js-payment-toggler', function(){
+        $(this).parents('.js-dissapear').fadeOut(300, function(){
+            $('.create-info').fadeIn(300);
+        });
+        return false;
+    });
+
+    $(document).on('click', '.cancel', function(){
+        $('.create-info').fadeOut(300, function(){
+            $('#payment-info .input-group input').each(function(){
+                $(this).val('');
+            });
+            $('.no-info').fadeIn(300);
+        }); 
+        return false;
+    });
+
+    $(document).on('click', '.news-sort a', function(){
+        $(this).find('.fa').toggleClass('fa-sort-amount-desc fa-sort-amount-asc');
+        return false;
+    });
+
+    if ($('#map').length){
+        ymaps.ready(init);
+    }
+    var ru = {
+            "format": "DD/MM/YYYY",
+            "separator": " - ",
+            "applyLabel": "Apply",
+            "cancelLabel": "Cancel",
+            "fromLabel": "From",
+            "toLabel": "To",
+            "customRangeLabel": "Custom",
+            "daysOfWeek": [
+                "Сб",
+                "Пн",
+                "Вт",
+                "Ср",
+                "Чт",
+                "Пт",
+                "Сб"
+            ],
+            "monthNames": [
+                "Январь",
+                "Феввраль",
+                "Март",
+                "Апрель",
+                "Май",
+                "Июнь",
+                "Июль",
+                "Август",
+                "Сентябрь",
+                "Октябрь",
+                "Ноябрь",
+                "Декабрь"
+            ],
+            "firstDay": 1
+        }
+    $('#first-date').daterangepicker({
+        "singleDatePicker": true,
+        "autoApply": true,
+        "startDate": "26/01/2017",
+        "endDate": "01/02/2017",
+        "locale": ru
+    });
+
+    $('#last-date').daterangepicker({
+        "singleDatePicker": true,
+        "autoApply": true,
+        "startDate": "26/01/2017",
+        "endDate": "01/02/2017",
+        "locale": ru
+    });
+
+    $(document).on('click', '.js-recall', function(){
+
+        $('.login-form').fadeOut(280, function(){
+            $('.recall-pass').fadeIn(300);
+        });
+        return false;
+    });
+
+    $(document).on('click', '.js-login', function(){
+
+        $('.recall-pass').fadeOut(280, function(){
+            $('.login-form').fadeIn(300);
+        });
+        return false;
+    });
+
+    $('.login-form').submit(function(){
+
+        var form = $(this);
+        var body = $('html, body');
+
+        form.find('.requierd:visible').each(function(){
+            checkFill($(this));
+        });
+
+        if($('.error').length){
+            var first_error = $('.error').first().parent().offset().top - ($('.error').first().outerHeight() * 3.5);
+            console.log(first_error);
+            body.stop().animate({scrollTop: first_error}, '450', 'swing');
+        }
+
+        if (!error) return false;
+
+    });
+
+    $('.recall-pass').submit(function(){
+
+        var form = $(this);
+        var body = $('html, body');
+
+        form.find('.requierd:visible').each(function(){
+            checkFill($(this));
+        });
+
+
+        if (!error){
+            form.find('.modal-body .form-group').fadeOut(300, function(){
+                $('.sucsess').fadeIn(300);
+            });
+        } 
+
+        return false;
+        
+    });
 
 });
-
 //funcs
 function checkFill(elem){
     if (elem.next().val() == ''){
         elem.next().addClass('error');
         error = true;
     }
+}
+var myMap,
+    myPlacemark;
+
+function init(){     
+    myMap = new ymaps.Map ("map", {
+        center: [56.04803256868295,92.9166125],
+        zoom: 16,
+        controls: ['zoomControl']
+    });
+
+    myPlacemark = new ymaps.Placemark([56.04803256868295,92.9166125], { 
+        hintContent: 'Бинар'
+    }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'http://localhost:8080/img/marker.png',
+        iconImageSize: [30, 42],
+        iconImageOffset: [-18, -38]
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+    myMap.behaviors.disable('scrollZoom');
 }
 
 (function(){
@@ -658,6 +850,10 @@ function checkFill(elem){
         if ($('.compare-frame li').length < 4){
             $('.pre-compare .frame-scrollbar').hide();
         }
+
+        $('a[aria-controls="lk-compare"]').click(function(){
+             sly2.reload();
+        });
     }
 }());
 
@@ -740,7 +936,7 @@ function basketResult(){
     var result_space = $('.result-string span');
     var result = 0;
     setTimeout(function(){
-        $('.price').each(function(){
+        $('.price:visible').each(function(){
             if (!$(this).parents('.row').hasClass('deleted')){
                 result = result + parseInt($(this).text().replace(/\s/g, ''));
             }
