@@ -1226,11 +1226,11 @@ header.no-index .row {
 header.no-index .downline {
   width: 100%;
   height: 1px;
-  background-color: #161615;
+  background-color: #e5e5e5;
   position: relative;
 }
 header.no-index .downline .circle {
-  border-color: #858585;
+  border-color: #e5e5e5;
   top: -5px;
 }
 header.no-index .downline .circle:last-child {
@@ -1246,11 +1246,12 @@ header.no-index .downline .circle span {
 }
 .breadcrumb {
   background-color: transparent;
-  margin-bottom: 140px;
+  margin-bottom: 80px;
 }
 .breadcrumb li.active a {
   color: #858585;
   cursor: default;
+  font-weight: 700;
 }
 .breadcrumb li.active a:hover {
   text-decoration: none;
@@ -1259,6 +1260,8 @@ header.no-index .downline .circle span {
   color: #3ab9db;
   text-transform: uppercase;
   font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.1!important;
 }
 .breadcrumb > li + li:before {
   content: '+';
@@ -1399,6 +1402,9 @@ header.no-index .downline .circle span {
   width: 100%;
   margin-bottom: 50px;
 }
+.catalog-content {
+  margin-bottom: 80px;
+}
 .catalog-content .item {
   width: 50%;
   height: 440px;
@@ -1433,12 +1439,32 @@ header.no-index .downline .circle span {
   margin-bottom: 200px;
   margin-top: 120px;
 }
+.catalog-text .line-block .little-lines:nth-child(1n) {
+  top: 150px;
+}
+.catalog-text .line-block .little-lines:nth-child(1n) span:nth-child(2) {
+  top: auto;
+  bottom: 0px;
+}
+.catalog-text .line-block .little-lines:nth-child(2n) {
+  top: 0px;
+}
 .catalog-text .line-block {
   position: absolute;
   z-index: -1;
   left: 0;
+  top: -120px;
   width: 100%;
-  height: 100%;
+  height: 110%;
+}
+.catalog-text .line-block .diagonal-lines {
+  background-color: #e6e6e6;
+  width: 1px;
+  height: 158%;
+  position: absolute;
+  left: 49.15%;
+  top: -34%;
+  transform: rotate(44deg);
 }
 .catalog-text .line-block .big-lines,
 .catalog-text .line-block .little-lines {
@@ -1447,6 +1473,20 @@ header.no-index .downline .circle span {
 .catalog-text .line-block .big-lines span,
 .catalog-text .line-block .little-lines span {
   color: #e6e6e6;
+}
+.catalog-text .line-block .big-lines .circle,
+.catalog-text .line-block .little-lines .circle {
+  color: #e6e6e6;
+  border-color: #e6e6e6;
+  top: 0px;
+}
+.catalog-text .line-block .big-lines .circle span,
+.catalog-text .line-block .little-lines .circle span {
+  position: static;
+  background-color: #e6e6e6;
+}
+.catalog-text .line-block .big-lines:nth-child(1) {
+  opacity: 0;
 }
 .catalog-text .catalog-text-item {
   margin-bottom: 50px;
