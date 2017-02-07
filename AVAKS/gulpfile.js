@@ -3,15 +3,30 @@ var gulp = require('gulp'),
 	jade = require('gulp-jade'),
 	less = require('gulp-less'),
 	svgstore = require('gulp-svgstore'),
+    connect = require('gulp-connect');
+    livereload = require('gulp-livereload');
 	svgmin = require('gulp-svgmin');
 
+
+gulp.task('connect', function() {
+  connect.server({
+    root: '',
+    livereload: true
+  });
+});
 
 gulp.task('jade', function(){
 	return gulp.src('jade/**/*.jade')
 		.pipe(jade({
             pretty: true
         }))
-		.pipe(gulp.dest(''));
+		.pipe(gulp.dest(''))
+        .pipe(connect.reload());
+});
+
+gulp.task('js', function(){
+    gulp.src('js/*.js')
+    .pipe(connect.reload());
 });
 
 gulp.task('svgstore', function () {
@@ -35,11 +50,15 @@ gulp.task('svgstore', function () {
 gulp.task('less', function(){
 	return gulp.src('less/*.less')
 		.pipe(less())
-		.pipe(gulp.dest('css'));
+		.pipe(gulp.dest('css'))
+        .pipe(connect.reload());
 });
 
 
 gulp.task('watch', function(){
 	gulp.watch('jade/**/*.jade', ['jade']);
 	gulp.watch('less/**/*.less', ['less']);
+    gulp.watch('js/*.js', ['js']);
 });
+
+gulp.task('default', ['connect', 'watch']);

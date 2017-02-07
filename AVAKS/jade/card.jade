@@ -1,0 +1,183 @@
+html
+	include modules/head.jade
+	body
+		.main-menu
+			div.line-block
+				.big-lines
+				.big-lines
+				.big-lines
+					div.circle
+						span
+				.little-lines
+					span + 
+				.little-lines
+					span +
+			.container-fluid.menu-content
+				.menu-list
+					ul
+						li
+							a(href="#") ТЕХНИЧЕСКОЕ ЗАДАНИЕ
+								span.blue-line
+						li
+							a(href="#") УСЛУГИ
+								span.blue-line
+						li
+							a(href="#") ВИДЫ ТЕХНИКИ
+								span.blue-line
+						li
+							a(href="#") СТАТЬИ И НОВОСТИ
+								span.blue-line
+						li
+							a(href="#") КОНТАКТЫ
+								span.blue-line
+			.social
+				a(href="#", target="_blank") VKONTAKTE
+				a(href="#", target="_blank") facebook
+				a(href="#", target="_blank") twitter
+				a(href="#", target="_blank") instagram
+		header.onWhite.no-index
+			.container-r
+				.row
+					.col-lg-4.col-md-4.vcenter.header-logo
+						img.logo(src="img/logoblack.svg", alt="")
+					.col-lg-4.col-md-4.vcenter.center.header-text
+						span.logo-text Автономные аэрокосмические системы
+					.col-lg-4.col-md-4.col-sm-12.col-xs-12.vcenter.menu-block
+						.menu.no-active
+							.close-menu
+								span.burger-bar
+								span.burger-bar
+								span.burger-bar
+							.open-menu
+								span.burger-bar
+								span.burger-bar
+				.downline
+					.circle
+						span
+					.circle
+						span
+		.main-content
+			.container-fluid
+				.row
+					.col-md-offset-1.col-md-10.col-xs-12
+						ol.breadcrumb
+							li
+								a(href="#") Главная
+							li
+								a(href="#") Первый уровень
+							li
+								a(href="#") Состав комплекса управления движением БПЛА
+							li.active
+								a(href="") Автопилот АП-05
+						.row
+							.col-md-5.col-md-push-7.col-lg-6.col-lg-push-6
+								div.cardsequence
+									img(async src="ap05_anim/1.png")
+									a.btn.standart.invert(href="#") Скачать презентацию 
+										span.lt +
+										span.rt +
+										span.lb +
+										span.rb +
+							.col-md-7.col-md-pull-5.col-lg-6.col-lg-pull-6
+								h2.title Автопилот БПЛА АП-05
+								.text-section
+									p Автопилот АП-05 осуществляет управление бортовым сегментом комплекса БПЛА и предназначен для:
+									ul
+										li Решения навигационной задачи;
+										li Вождение ЛА по заданному алгоритму или маршруту с автоматическим регулированием каналов тангажа, крена, курса, высоты и скорости;
+										li Управления полезной нагрузкой;
+										li Управления внешними вспомогательными и исполнительными устройствами.
+								.text-section
+									h3.subtitle Особенности
+									ul
+										li Помехозащищённые интерфейсы с полезной нагрузкой
+										li Законченный комплекс навигационных устройств в одном корпусе для пилотирования БПЛА;
+										li Адаптивное комплексирование средств связи;
+										li Возможность интеграции в кластер с высокопроизводительными вычислительными модулями для решения задач машинного зрения.
+								.text-section
+									h3.subtitle Поддерживаемые платформы
+									ul
+										li Самолёт;
+										li Мультироторный вертолёт;
+										li Вертолёт;
+										li Подводные аппараты;
+										li Прочие робототехнические платформы.
+									img(src="img/card1.png", alt="")
+									img(src="img/card2.png", alt="")
+									p Программное обеспечение АП-05 функционирует на базе операционной системы реального времени QNX Neutrino, имеет модульную отказоустойчивую открытую архитектуру. Это позволяет интегрировать собственное программное обеспечение с гарантией безопасности со стороны системы. На базе нескольких АП-05 реализуется схема перекрёстного нагруженного (горячего) резервирования за счёт технологии Qnet ОСРВ QNX.
+								.text-section
+									h3.subtitle Технические характеристики
+									table
+										tr
+											td Производительность вычислителя	
+											td 400 MIPS
+										tr
+											td Объём оперативной памяти	
+											td 64 Мбайт
+										tr
+											td Объём энергонезависимой памяти
+											td 256 Мбайт
+										tr
+											td Поддерживаемые интерфейсы
+											td RS-232 × 3 шт., RS-485 × 3 шт., Fast Ethernet, USB Host, сигнал опорной частоты (1-5 МГц) и секундные синхроимпульсы (1 Гц) приёмника CРНС
+										tr
+											td Погрешность определения тангажа и крена
+											td 0,5 град (опционально 0,3 град)
+										tr
+											td Поддерживаемые системы спутниковой радионавигации
+											td ГЛОНАСС, GPS
+								
+		.news-block
+			.container-fluid
+				.row
+					.col-md-offset-1.col-md-10
+						h2.title Статьи на эту тему
+						.news-feed#frame
+							ul.slidee
+								li
+									a.news-item(href="#")
+										.time 1 мая 2016
+										img(src="img/new1.jpg", alt="")
+										.news-content
+											h2.news-title международная авиационная конференция в москве 2016
+											p Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности
+								li
+									a.news-item(href="#")
+										.time 1 мая 2016
+										img(src="img/new1.jpg", alt="")
+										.news-content
+											h2.news-title международная авиационная конференция в москве 2016
+											p Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности
+								li
+									a.news-item(href="#")
+										.time 1 мая 2016
+										img(src="img/new1.jpg", alt="")
+										.news-content
+											h2.news-title международная авиационная конференция в москве 2016
+											p Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности
+								li
+									a.news-item(href="#")
+										.time 1 мая 2016
+										img(src="img/new1.jpg", alt="")
+										.news-content
+											h2.news-title международная авиационная конференция в москве 2016
+											p Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности
+								li
+									a.news-item(href="#")
+										.time 1 мая 2016
+										img(src="img/new1.jpg", alt="")
+										.news-content
+											h2.news-title международная авиационная конференция в москве 2016
+											p Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности
+								li
+									a.news-item(href="#")
+										.time 1 мая 2016
+										img(src="img/new1.jpg", alt="")
+										.news-content
+											h2.news-title международная авиационная конференция в москве 2016
+											p Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности
+						.scrollbar
+							.handle
+		#map
+
+		include modules/footer.jade

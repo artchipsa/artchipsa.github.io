@@ -1,0 +1,208 @@
+html
+	include modules/head.jade
+	body
+		.main-menu
+			div.line-block
+				.big-lines
+				.big-lines
+				.big-lines
+					div.circle
+						span
+				.little-lines
+					span + 
+				.little-lines
+					span +
+			.container-fluid.menu-content
+				.menu-list
+					ul
+						li
+							a(href="#") ТЕХНИЧЕСКОЕ ЗАДАНИЕ
+								span.blue-line
+						li
+							a(href="#") УСЛУГИ
+								span.blue-line
+						li
+							a(href="#") ВИДЫ ТЕХНИКИ
+								span.blue-line
+						li
+							a(href="#") СТАТЬИ И НОВОСТИ
+								span.blue-line
+						li
+							a(href="#") КОНТАКТЫ
+								span.blue-line
+			.social
+				a(href="#", target="_blank") VKONTAKTE
+				a(href="#", target="_blank") facebook
+				a(href="#", target="_blank") twitter
+				a(href="#", target="_blank") instagram
+		header.onWhite.no-index
+			.container-r
+				.row
+					.col-lg-4.col-md-4.vcenter.header-logo
+						img.logo(src="img/logoblack.svg", alt="")
+					.col-lg-4.col-md-4.vcenter.center.header-text
+						span.logo-text Автономные аэрокосмические системы
+					.col-lg-4.col-md-4.col-sm-12.col-xs-12.vcenter.menu-block
+						.menu.no-active
+							.close-menu
+								span.burger-bar
+								span.burger-bar
+								span.burger-bar
+							.open-menu
+								span.burger-bar
+								span.burger-bar
+				.downline
+					.circle
+						span
+					.circle
+						span
+		.main-content
+			.container-fluid
+				.row
+					.col-md-offset-1.col-md-10.col-xs-12
+						ol.breadcrumb
+							li
+								a(href="#") Главная
+							li
+								a(href="#") Первый уровень
+							li.active
+								a(href="") Комплекс управления движением системы автопилотирования БПЛА
+						h2.title Комплекс управления движением системы автопилот<wbr>ирования БПЛА
+						a.btn.standart.invert(href="#") Скачать презентацию 
+							span.lt +
+							span.rt +
+							span.lb +
+							span.rb +
+						.platforms
+							h3.subtitle Поддерживаемые платформы
+							.row
+								.col-md-4
+									img(src="img/p1.png", alt="")
+									span Cамолет: классическая схема, бесхвостка, летающее крыло
+								.col-md-4
+									img(src="img/p2.png", alt="")
+									span Вертолёт: классическая схема, мультикоптер
+								.col-md-4
+									img(src="img/p3.png", alt="")
+									span Мобильные робототехнические средства
+						.consist-block
+							h3.subtitle Состав комплекса управления движением БПЛА
+							.row
+								.col-md-6
+									.item
+										a.item-name(href="https://artchipsa.github.io/AVAKS/card.html") Автопилот АП-05
+										ul
+											li RS-232 3 шт.
+											li RS-485 3 шт.
+											li Ethernet 10/100.
+											li USB Host.
+											li Метка времени для синхронизации с полезной нагрузкой.
+								.col-md-6
+									.item
+										span.item-name Вычислитель
+										ul
+											li Архитектура процессора ARM;
+											li Объём оперативной памяти от 64 Мб;
+											li Энергозависимая память с защищённой от сбоев файловой системой;
+											li Обновление ПО через интернет.
+							.row
+								.col-md-6
+									.item
+										span.item-name Инерциальная навигационная система
+										p В автопилот встроена микромеханическая инерциальнаянавигационная система, которая обладает:
+										ul
+											li Встроенной термокомпенсацией;
+											li Встроенной виброизоляцией (опция);
+											li Предстартовой и непрерывной полётной самодиагностикой чувствительных элементов.
+								.col-md-6
+									.item
+										span.item-name Система воздушных сигналов
+										ul
+											li Измерение барометрической высоты;
+											li Измерение воздушной скорости;
+											li Автоматическая предполётная установка нулевого положения;
+											li Непрерывная самодиагностика.
+							.row
+								.col-md-6
+									.item
+										span.item-name Спутниковая навигационная система
+										ul
+											li Встроенный отечественный приёмник ГЛОНАСС / GPS / GALILEO;
+											li Диагностика целостности антенны;
+											li Мониторинг состояния решения;
+											li Поддержка дифференциального режима;
+											li Опционально высокоточный ГЛОНАСС / GPS приёмник с фазовым дифференциальным режимом, работа в реальном времени или в пост-обработке.
+								.col-md-6
+									.item
+										span.item-name Система воздушных сигналов
+										img(src="img/p_img1.png", alt="")
+										p Алгоритмы получения навигационного решения абстрагированы от измерительных средств, поэтому система навигационных измерений может быть интегрирована с внешними навигационными измерительными устройствами через стандартные интерфейсы.
+							.row
+								.col-md-6
+									.item
+										span.item-name Спутниковая навигационная система
+										img(src="img/p_img2.png", alt="")
+										ul
+											li Встроенный отечественный приёмник ГЛОНАСС / GPS / GALILEO;
+											li Диагностика целостности антенны;
+											li Мониторинг состояния решения;
+											li Поддержка дифференциального режима;
+											li Опционально высокоточный ГЛОНАСС / GPS приёмник с фазовым дифференциальным режимом, работа в реальном времени или в пост-обработке.
+								.col-md-6
+									.item
+										a(href="").item-name Система воздушных сигналов
+										p Алгоритмы получения навигационного решения абстрагированы от измерительных средств, поэтому система навигационных измерений может быть интегрирована с внешними навигационными измерительными устройствами через стандартные интерфейсы.
+		.news-block
+			.container-fluid
+				.row
+					.col-md-offset-1.col-md-10
+						h2.title Статьи на эту тему
+						.news-feed#frame
+							ul.slidee
+								li
+									a.news-item(href="#")
+										.time 1 мая 2016
+										img(src="img/new1.jpg", alt="")
+										.news-content
+											h2.news-title международная авиационная конференция в москве 2016
+											p Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности
+								li
+									a.news-item(href="#")
+										.time 1 мая 2016
+										img(src="img/new1.jpg", alt="")
+										.news-content
+											h2.news-title международная авиационная конференция в москве 2016
+											p Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности
+								li
+									a.news-item(href="#")
+										.time 1 мая 2016
+										img(src="img/new1.jpg", alt="")
+										.news-content
+											h2.news-title международная авиационная конференция в москве 2016
+											p Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности
+								li
+									a.news-item(href="#")
+										.time 1 мая 2016
+										img(src="img/new1.jpg", alt="")
+										.news-content
+											h2.news-title международная авиационная конференция в москве 2016
+											p Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности
+								li
+									a.news-item(href="#")
+										.time 1 мая 2016
+										img(src="img/new1.jpg", alt="")
+										.news-content
+											h2.news-title международная авиационная конференция в москве 2016
+											p Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности
+								li
+									a.news-item(href="#")
+										.time 1 мая 2016
+										img(src="img/new1.jpg", alt="")
+										.news-content
+											h2.news-title международная авиационная конференция в москве 2016
+											p Для того, чтобы нам лучше понять требования к заказу, желательно прислать нам его заранее для продуктивности
+						.scrollbar
+							.handle
+		#map
+
+		include modules/footer.jade

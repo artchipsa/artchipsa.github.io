@@ -3,6 +3,9 @@
 var images = [];
 var length = $('#load').data('img');
 
+var cardimages = [];
+var card_length = 60;
+
 /*var fill = "";
 for (var i = 607; i < 731; i++){
     fill = fill+'"'+i+'"'+',';
@@ -28,6 +31,14 @@ function sequencePreload(){
     }
 }
 
+var cardImageObj = new Image();
+
+function cardSequencePreload(){
+    for (var i = 1; i <= card_length; i++) {
+        cardImageObj.src = 'ap05_anim/'+ i + '.png';
+    }
+}
+
 // THIS LOOKS AT THE DATA ATTRIBUTES IN THE load element AND GENERATES 
 // THE IMAGE NAMES BASED ON A GIVEN RANGE 
 // THEN PUSHES THEM INTO THE ARRAY
@@ -37,19 +48,35 @@ for (var i = 1; i <= length; i++) {
 }
 
 
+for (var i = 1; i <= card_length; i++) {
+    cardimages.push('ap05_anim/'+ i + '.png');
+    cardimg = new Image();
+}
+
+
+
 // THIS TAKES EACH IMAGE NAME FROM THE ARRAY AND CREATES A CLUSTER OF
 // PRELOADED HIDDEN IMAGES ON THE PAGE USING JQUERY
 $(images).each(function () {
     $('<img />')[0].src = this;
 });
 
+if ($(window).width() > 1023){
+    $(cardimages).each(function () {
+        $('<img />')[0].src = this;
+    });
+}
+
 
 var totalImages = images.length;
-
 var pageHeight = $(document).height();
+
+var totalCardImages = cardimages.length;
+var cardPageHeight = $('.main-content').height() - $('.cardsequence').height();
 
 // Work out how often we should change image (i.e. how far we scroll between changes)
 var scrollInterval = Math.floor(pageHeight / totalImages);
+var cardscrollInterval = Math.floor(cardPageHeight / totalCardImages);
 
 var viewport = $(window),
     slowdown;
@@ -60,20 +87,10 @@ viewport.on('scroll', function () {
     // Show the corresponding image from the array
     $('.divvideo img').attr('src', images[i]);
     //$('b').text('Frame: ' + i);
-
-
-    // THIS IS WHERE WE'RE SETTING OUR ACTIVE STATES FOR THE SIDE NAVIGATION BASED ON 
-    // SLOWDOWN POSITION
-/*    if (slowdown >= 1 && slowdown <= 100 || slowdown >= 300) {
-        $('.box').removeClass('active');
-        $('#front').addClass('active');
-    } else if (slowdown >= 100 && slowdown <= 200) {
-        $('.box').removeClass('active');
-        $('#left').addClass('active');
-    } else if (slowdown >= 201 && slowdown <= 299) {
-        $('.box').removeClass('active');
-        $('#back').addClass('active');
-    }*/
+    if ($(window).width() > 1023){
+        j = Math.floor($(this).scrollTop() / cardscrollInterval);
+        $('.cardsequence img').attr('src', cardimages[j]);
+    }
 });
 
 

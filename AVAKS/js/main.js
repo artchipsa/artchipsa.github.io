@@ -44,7 +44,7 @@ $(document).ready(function(){
 
 			event.preventDefault();	
 
-			if ($(window).scrollTop() < 26999){
+			if ($(window).scrollTop() < 26999 && $('.divvideo').length){
 				scrollTime = 0.5;
 				scrollDistance = 500;
 			} else {
@@ -108,7 +108,9 @@ $(document).ready(function(){
 	$('.p0 .section-name').removeClass('fadeOut').addClass('fadeIn');
 
 	var curSt = $(window).scrollTop();
-	var intro_end = $('.main-content').position().top;
+	if ($('.main-content').length){
+		var intro_end = $('.main-content').position().top;
+	}
 	mouseDown(curSt);
     headerChange(curSt);
 
@@ -120,22 +122,29 @@ $(document).ready(function(){
 	    var st = $(self).scrollTop();
 
 	    //Анимашки технического задания 
-	    var tech_block = ($('.tech-task').position().top/1.5) + 27000;
-	    var tech = $('.tech').position().top;
-	    var blueprint = $('.blueprint').position().top;
+	    if ($('.tech-task').length){
+		    var tech_block = ($('.tech-task').position().top/1.5) + 27000;
+		    var tech = $('.tech').position().top;
+		    var blueprint = $('.blueprint').position().top;
 
-	    if (st > tech_block){
-	    	$('.tech').addClass('in');
-	    }
+		    if (st > tech_block){
+		    	$('.tech').addClass('in');
+		    }
 
-	    if(st > tech_block){
-	    	setTimeout(function(){
-	    		$('.blueprint').addClass('in');
-	    	}, 1000);
+		    if(st > tech_block){
+		    	setTimeout(function(){
+		    		$('.blueprint').addClass('in');
+		    	}, 1000);
+		    }
 	    }
 
 	    //анимашки новостей
-	    var news_block = ($('.news-block').position().top/1.5) + 27000;
+	    if ($('.divvideo').length){
+	    	var news_block = ($('.news-block').position().top/1.5) + 27000;
+	    } else {
+	    	var news_block = ($('.news-block').position().top/1.1);
+	    }
+	    
 
 	    if (st > news_block){
 	    	var time = 0;
@@ -143,6 +152,18 @@ $(document).ready(function(){
 				oneByOneFade($(this), time);
 				time = time + 150;
 			});
+	    }
+
+	    // анимашки состава
+
+	    if($('.consist-block').length){
+	    	var time = 0;
+	    	$('.consist-block .item').each(function(){
+	    		if (st > ($(this).offset().top/1.7)){
+	    			oneByOneFade($(this), time)
+	    			time = time + 150;
+	    		}
+	    	});
 	    }
 
 
@@ -192,8 +213,10 @@ $(document).ready(function(){
 		}
 	});
 
-	$('.turn-head .handler').css({left: $('.turn-head a[data-id="1"]').position().left + ($('.turn-head a[data-id="1"]').width()/2) - ($('.turn-head .handler').outerWidth()/2) })
 
+	if ($('.turn-head a').length){
+		$('.turn-head .handler').css({left: $('.turn-head a[data-id="1"]').position().left + ($('.turn-head a[data-id="1"]').width()/2) - ($('.turn-head .handler').outerWidth()/2) })
+	}
 	// mobile tabs 
 
 	$('.turn-body').on('swipeleft', function(){
@@ -288,6 +311,22 @@ $(document).ready(function(){
 		}
 	});
 
+	if ($('.cardsequence').length){
+		var card_top = $('.cardsequence').offset().top;
+		var card_bottom = $('body').height() - $('.news-block').offset().top + 95;
+		$('.cardsequence').width($('.cardsequence').parent().width());
+		$(window).resize(function(){
+			$('.cardsequence').width($('.cardsequence').parent().width());
+		})
+	}
+	if ($(window).width() > 1023){
+		$('.cardsequence').affix({
+		  offset: {
+		    top: card_top,
+		    bottom: card_bottom
+		  }
+		});
+	}
 
 });
 
