@@ -122,10 +122,12 @@ h3 {
   overflow: hidden;
   margin-right: auto;
   margin-left: auto;
+  background-color: #000;
 }
 .divvideo img {
   width: 100%;
   height: 100%;
+  display: none;
 }
 .controls {
   width: 3px;
