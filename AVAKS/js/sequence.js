@@ -4,7 +4,7 @@ var images = [];
 var length = $('#load').data('img');
 
 var cardimages = [];
-var card_length = 60;
+var card_length = 80;
 
 /*var fill = "";
 for (var i = 607; i < 731; i++){
