@@ -265,9 +265,13 @@
   padding: 22px 0px;
   text-align: center;
   border-bottom: 1px solid #e1e1e1;
+  overflow: hidden;
 }
 .bill-block .block-group:last-child {
   border-bottom-color: transparent;
+}
+.bill-block .block-group .overflow {
+  overflow: hidden;
 }
 .bill-block .block-group .label {
   display: block;
@@ -289,6 +293,7 @@
   font-family: RoadRadio;
   font-weight: 700;
   color: #a2a2a2;
+  display: block;
 }
 .bill-block .block-group .price.result {
   font-size: 30px;

@@ -577,28 +577,36 @@ $(document).ready(function(){
 
     $('#apply_bonus').change(function(){
         var bonus_summ = parseInt($('.bonus-block span').text().replace(/\s/g, ''));
-        var price_space = $('.js-change-price');
+        var price_space = $('.form-result .js-change-price');
         var price = parseInt(price_space.text().replace(/\s/g, ''));
         var new_price = 0;
+        var discount_block = $('.bill-block .discount .js-change-price');
         if ($(this).prop('checked')){
             new_price = price - bonus_summ;
             new_price = new_price.toLocaleString();
             new_price = new_price + ' .-';
             $('.bonus-block span').addClass('applied');
             price_space.addClass('remath');
+            discount_block.addClass('remath');
             setTimeout(function(){
                 price_space.text(new_price);
                 price_space.removeClass('remath');
+                discount_block.text('5000 .-');
+                discount_block.removeClass('remath');
             }, 200);
+
         } else {
             new_price = price + bonus_summ;
             new_price = new_price.toLocaleString();
             new_price = new_price + ' .-';
             $('.bonus-block span').removeClass('applied');
             price_space.addClass('remath');
+            discount_block.addClass('remath');
             setTimeout(function(){
                 price_space.text(new_price);
                 price_space.removeClass('remath');
+                discount_block.text('0 .-');
+                discount_block.removeClass('remath');
             }, 200);
         }
     });
