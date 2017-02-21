@@ -13,7 +13,7 @@
   text-decoration: none;
 }
 .breadcrumb li.active a {
-  text-decoration: none;
+  top-sorttext-decoration: none;
 }
 .breadcrumb li + li:before {
   content: "-";
@@ -27,6 +27,9 @@
 }
 .catalog-wrapper .title {
   text-align: left;
+}
+.catalog-wrapper .catalog {
+  background-color: transparent;
 }
 .catalog-wrapper .catalog__item {
   width: 100%;
@@ -166,6 +169,10 @@
 .checkbox-group input[type="checkbox"]:checked + label:before {
   content: '✔';
 }
+.checkbox-group input[type="checkbox"]:disabled + label {
+  opacity: 0.5;
+  cursor: default;
+}
 .irs-min,
 .irs-max,
 .irs-from,
@@ -215,17 +222,17 @@
   display: none;
   text-align: left;
 }
-.colorfilter input[type="radio"] {
+.colorfilter input[type="checkbox"] {
   display: none;
 }
-.colorfilter input[type="radio"] + label {
+.colorfilter input[type="checkbox"] + label {
   width: 34px;
   height: 34px;
   border-radius: 50%;
   border: 2px solid transparent;
   cursor: pointer;
 }
-.colorfilter input[type="radio"] + label span {
+.colorfilter input[type="checkbox"] + label span {
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -233,25 +240,25 @@
   margin-left: 3px;
   margin-top: 3px;
 }
-.colorfilter input[type="radio"] + label span.brown {
+.colorfilter input[type="checkbox"] + label span.brown {
   background-color: #71441b;
 }
-.colorfilter input[type="radio"] + label span.orange {
+.colorfilter input[type="checkbox"] + label span.orange {
   background-color: #f49137;
 }
-.colorfilter input[type="radio"] + label span.green {
+.colorfilter input[type="checkbox"] + label span.green {
   background-color: #70b631;
 }
-.colorfilter input[type="radio"] + label span.cyan {
+.colorfilter input[type="checkbox"] + label span.cyan {
   background-color: #43adc8;
 }
-.colorfilter input[type="radio"] + label span.purple {
+.colorfilter input[type="checkbox"] + label span.purple {
   background-color: #8f75be;
 }
-.colorfilter input[type="radio"] + label span.black {
+.colorfilter input[type="checkbox"] + label span.black {
   background-color: #000000;
 }
-.colorfilter input[type="radio"]:checked + label {
+.colorfilter input[type="checkbox"]:checked + label {
   border-color: #fdd62b;
 }
 .pagination-block .pagination {
@@ -318,6 +325,7 @@
 }
 .top-sort {
   margin-bottom: 25px;
+  background-color: transparent;
 }
 .top-sort .sort-block {
   text-transform: uppercase;

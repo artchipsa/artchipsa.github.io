@@ -400,7 +400,7 @@
   text-align: right;
 }
 .reviews {
-  display: none;
+  display: block;
 }
 .reviews .item {
   margin-bottom: 45px;

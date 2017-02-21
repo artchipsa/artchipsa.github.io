@@ -246,3 +246,13 @@
 #lk-compare .compare-frame .slidee {
   display: block;
 }
+#settings .order-data {
+  margin-bottom: 0px;
+}
+#settings form:nth-child(1) .form-group:nth-child(1) {
+  padding-bottom: 40px;
+}
+#settings form:nth-child(1) .form-group .row:last-child {
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
