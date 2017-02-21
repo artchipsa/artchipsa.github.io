@@ -15,16 +15,16 @@
         <div class="modal-content">
           <form class="login-form">
             <div class="modal-body"><a href="#" data-dismiss="modal" aria-label="Close" class="close"><img src="img/cross.svg" alt=""/></a>
-              <h2 class="title">Купить в один клик</h2>
+              <h2 class="title">Личный кабинет</h2>
               <div class="form-group">
-                <div class="input-group">
-                  <label class="required"><i class="fa fa-user-o"></i> Логин</label>
+                <div class="input-group required">
+                  <label><i class="fa fa-user-o"></i> Логин</label>
                   <input type="text"/>
                 </div>
               </div>
               <div class="form-group">
-                <div class="input-group">
-                  <label class="required"><i class="fa fa-unlock-alt"></i> Пароль</label>
+                <div class="input-group required">
+                  <label><i class="fa fa-unlock-alt"></i> Пароль</label>
                   <input type="password"/>
                 </div>
               </div>
@@ -42,8 +42,8 @@
             <div class="modal-body">
               <h2 class="title">Забыли пароль? </h2>
               <div class="form-group">
-                <div class="input-group">
-                  <label class="requierd"><i class="fa fa-envelope-o"></i> Ваша почта</label>
+                <div class="input-group required">
+                  <label><i class="fa fa-envelope-o"></i> Ваша почта</label>
                   <input type="text"/>
                 </div>
               </div>
@@ -116,13 +116,13 @@
                         </svg>
                       </div></a><a href="" class="bubble-btn-block">
                       <div class="bubble-btn"><span class="basket-count">12</span>
-                        <svg viewBox="0 0 100 100" class="svgico like">
-                          <use xlink:href="#like"></use>
+                        <svg viewBox="0 0 100 100" class="svgico basket">
+                          <use xlink:href="#basket"></use>
                         </svg>
                       </div>
                       <p>корзина  <span>45 000 .-</span></p></a><a href="" data-toggle="modal" data-target=".login-modal" class="bubble-btn-block">
                       <div class="bubble-btn">
-                        <svg viewBox="0 0 100 100" class="svgico like">
+                        <svg viewBox="0 0 100 100" class="svgico user">
                           <use xlink:href="#User"></use>
                         </svg>
                       </div>
@@ -252,16 +252,16 @@
               <div class="row">
                 <div class="col-md-9 filter-options vcenter"><span>показать:</span>
                   <div class="checkbox-group">
-                    <input id="specials" type="checkbox" name="" checked="checked"/>
-                    <label for="specials"><img src="img/akcii.svg" alt=""/> Акции</label>
+                    <input id="specials_filter" type="checkbox" name="" checked="checked"/>
+                    <label for="specials_filter"><img src="img/akcii.svg" alt=""/> Акции</label>
                   </div>
                   <div class="checkbox-group">
-                    <input id="news" type="checkbox" name="" checked="checked"/>
-                    <label for="news"><img src="img/news.svg" alt=""/> новости</label>
+                    <input id="news_filter" type="checkbox" name="" checked="checked"/>
+                    <label for="news_filter"><img src="img/news.svg" alt=""/> новости</label>
                   </div>
                   <div class="checkbox-group">
-                    <input id="articles" type="checkbox" name="" checked="checked"/>
-                    <label for="articles"><img src="img/articles.svg" alt=""/> статьи</label>
+                    <input id="articles_filter" type="checkbox" name="" checked="checked"/>
+                    <label for="articles_filter"><img src="img/articles.svg" alt=""/> статьи</label>
                   </div>
                 </div>
                 <div class="col-md-3 apply-filter vcenter">

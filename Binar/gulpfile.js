@@ -3,10 +3,9 @@ var gulp = require('gulp'),
 	jade = require('gulp-jade'),
 	less = require('gulp-less'),
 	svgstore = require('gulp-svgstore'),
-	svgmin = require('gulp-svgmin'),
-	path = require('path'),
     connect = require('gulp-connect');
     livereload = require('gulp-livereload');
+	svgmin = require('gulp-svgmin');
 
 
 gulp.task('connect', function() {
@@ -14,16 +13,6 @@ gulp.task('connect', function() {
     root: '',
     livereload: true
   });
-});
-
-gulp.task('html', function () {
-  gulp.src('*.html')
-    .pipe(connect.reload());
-});
-
-gulp.task('js', function(){
-    gulp.src('js/*.js')
-    .pipe(connect.reload());
 });
 
 gulp.task('jade', function(){
@@ -35,11 +24,9 @@ gulp.task('jade', function(){
         .pipe(connect.reload());
 });
 
-gulp.task('less', function(){
-	return gulp.src('less/*.less')
-		.pipe(less())
-		.pipe(gulp.dest('css'))
-        .pipe(connect.reload());
+gulp.task('js', function(){
+    gulp.src('js/*.js')
+    .pipe(connect.reload());
 });
 
 gulp.task('svgstore', function () {
@@ -59,13 +46,19 @@ gulp.task('svgstore', function () {
         .pipe(svgstore())
         .pipe(gulp.dest('img'));
 });
+ 
+gulp.task('less', function(){
+	return gulp.src('less/*.less')
+		.pipe(less())
+		.pipe(gulp.dest('css'))
+        .pipe(connect.reload());
+});
+
 
 gulp.task('watch', function(){
 	gulp.watch('jade/**/*.jade', ['jade']);
 	gulp.watch('less/**/*.less', ['less']);
-    gulp.watch('*.html', ['html']);
-    gulp.watch(['js/*.js'], ['js']);
-
+    gulp.watch('js/*.js', ['js']);
 });
 
 gulp.task('default', ['connect', 'watch']);

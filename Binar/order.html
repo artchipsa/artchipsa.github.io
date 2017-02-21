@@ -15,16 +15,16 @@
         <div class="modal-content">
           <form class="login-form">
             <div class="modal-body"><a href="#" data-dismiss="modal" aria-label="Close" class="close"><img src="img/cross.svg" alt=""/></a>
-              <h2 class="title">Купить в один клик</h2>
+              <h2 class="title">Личный кабинет</h2>
               <div class="form-group">
-                <div class="input-group">
-                  <label class="required"><i class="fa fa-user-o"></i> Логин</label>
+                <div class="input-group required">
+                  <label><i class="fa fa-user-o"></i> Логин</label>
                   <input type="text"/>
                 </div>
               </div>
               <div class="form-group">
-                <div class="input-group">
-                  <label class="required"><i class="fa fa-unlock-alt"></i> Пароль</label>
+                <div class="input-group required">
+                  <label><i class="fa fa-unlock-alt"></i> Пароль</label>
                   <input type="password"/>
                 </div>
               </div>
@@ -42,8 +42,8 @@
             <div class="modal-body">
               <h2 class="title">Забыли пароль? </h2>
               <div class="form-group">
-                <div class="input-group">
-                  <label class="requierd"><i class="fa fa-envelope-o"></i> Ваша почта</label>
+                <div class="input-group required">
+                  <label><i class="fa fa-envelope-o"></i> Ваша почта</label>
                   <input type="text"/>
                 </div>
               </div>
@@ -116,13 +116,13 @@
                         </svg>
                       </div></a><a href="" class="bubble-btn-block">
                       <div class="bubble-btn"><span class="basket-count">12</span>
-                        <svg viewBox="0 0 100 100" class="svgico like">
-                          <use xlink:href="#like"></use>
+                        <svg viewBox="0 0 100 100" class="svgico basket">
+                          <use xlink:href="#basket"></use>
                         </svg>
                       </div>
                       <p>корзина  <span>45 000 .-</span></p></a><a href="" data-toggle="modal" data-target=".login-modal" class="bubble-btn-block">
                       <div class="bubble-btn">
-                        <svg viewBox="0 0 100 100" class="svgico like">
+                        <svg viewBox="0 0 100 100" class="svgico user">
                           <use xlink:href="#User"></use>
                         </svg>
                       </div>
@@ -240,6 +240,33 @@
     <div class="header-placeholder"></div>
     <div class="main-content">
       <div class="search-over"></div>
+      <div tabindex="-1" role="dialog" class="modal fade small-modal oneclick-modal">
+        <div role="document" class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <form id="one_click">
+              <div class="modal-body"><a href="#" data-dismiss="modal" aria-label="Close" class="close"><img src="img/cross.svg" alt=""/></a>
+                <h2 class="title">Купить в один клик</h2>
+                <div class="form-group">
+                  <div class="input-group required"><span><i class="fa fa-user-o"></i> Имя</span>
+                    <input type="text"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group required"><span><i class="fa fa-phone"></i> Телефон</span>
+                    <input type="tel" class="tel"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="submit" value="отправить заказ" class="btn primary-btn"/>
+                </div>
+                <div class="form-group">
+                  <p>В течение 15 минут вам перезвонит наш менеджер для уточнения деталей</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
       <div class="catalog-wrapper">
         <div class="container">
           <ol class="breadcrumb">
@@ -316,14 +343,14 @@
                   </div>
                 </div>
               </div>
-              <div class="basket-block-btn"><a href="#" class="btn brownfill-btn">войти и продолжить</a><a href="#" class="btn brown-btn">Продолжить без входа в личный кабинет</a><a class="dashed-link">Купить в один клик</a></div>
+              <div class="basket-block-btn"><a href="#" data-toggle="modal" data-target=".login-modal" class="btn brownfill-btn">войти и продолжить</a><a href="#" class="btn brown-btn js-continue">Продолжить без входа в личный кабинет</a><a href="" data-toggle="modal" data-target=".oneclick-modal" class="dashed-link">Купить в один клик</a></div>
             </div>
             <div class="col-md-3">
               <div class="bill-block affix">
                 <div class="block-group"><span class="label">Стоимость товаров:</span><span class="price">269 990 .–</span></div>
-                <div class="block-group"><span class="label">Стоимость доставки:</span><span class="price">269 990 .–</span></div>
-                <div class="block-group"><span class="label">Скидка:</span><span class="price">269 990 .–</span></div>
-                <div class="block-group"><span class="label result">Итого:</span><span class="price result">279 990 .–</span></div>
+                <div class="block-group delivery"><span class="label">Стоимость доставки:</span><span class="price js-change-price">250 .–</span></div>
+                <div class="block-group discount"><span class="label">Скидка:</span><span class="price js-change-price">5 000 .–</span></div>
+                <div class="block-group summ"><span class="label result">Итого:</span><span class="price result js-change-price">279 990 .–</span></div>
               </div>
             </div>
           </div>
@@ -331,9 +358,12 @@
       </div>
       <div class="white-wrapper">
         <div class="container">
-          <p class="string-title">Для того, чтобы взять технику в аренду<br> вам необходимо заполнить более подробную анкету</p>
           <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-9 order-data-container">
+              <div class="access-denied">
+                <p>Не так быстро, морячок. Сначала нажми на одну из кнопок сверху</p>
+              </div>
+              <p class="string-title">Для того, чтобы взять технику в аренду<br> вам необходимо заполнить более подробную анкету</p>
               <form id="order">
                 <div class="order-data">
                   <div class="form-group">
@@ -356,40 +386,40 @@
                       <div class="personal-item active">
                         <div class="row">
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd">Фамилия </label>
+                            <div class="input-group required">
+                              <label for="">Фамилия </label>
                               <input type="text" name=""/>
                             </div>
                           </div>
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd">Имя </label>
+                            <div class="input-group required">
+                              <label for="">Имя </label>
                               <input type="text" name=""/>
                             </div>
                           </div>
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd">Отчество </label>
+                            <div class="input-group required">
+                              <label for="">Отчество </label>
                               <input type="text" name=""/>
                             </div>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd">электронная почта </label>
+                            <div class="input-group required">
+                              <label for="">электронная почта </label>
                               <input type="text" name=""/>
                             </div>
                           </div>
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd">мобильный телефон </label>
+                            <div class="input-group required">
+                              <label for="">мобильный телефон </label>
                               <input type="tel" name="" class="tel"/>
                             </div>
                           </div>
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd">дата рождения </label>
+                            <div class="input-group required">
+                              <label for="">дата рождения </label>
                               <input type="text" name="" class="date"/>
                             </div>
                           </div>
@@ -398,68 +428,68 @@
                       <div class="personal-item">
                         <div class="row">
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd">Название компании </label>
+                            <div class="input-group required">
+                              <label for="">Название компании </label>
                               <input type="text" name=""/>
                             </div>
                           </div>
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd">инн </label>
+                            <div class="input-group required">
+                              <label for="">инн </label>
                               <input type="number" name=""/>
                             </div>
                           </div>
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd">кпп </label>
+                            <div class="input-group required">
+                              <label for="">кпп </label>
                               <input type="number" name=""/>
                             </div>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd">контактное лицо </label>
+                            <div class="input-group required">
+                              <label for="">контактное лицо </label>
                               <input type="text" name=""/>
                             </div>
                           </div>
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd"> телефон </label>
+                            <div class="input-group required">
+                              <label for="">телефон </label>
                               <input type="tel" name="" class="tel"/>
                             </div>
                           </div>
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd">электронная почта</label>
+                            <div class="input-group required">
+                              <label for="">электронная почта</label>
                               <input type="text" name=""/>
                             </div>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-md-8 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd">юридический адрес</label>
+                            <div class="input-group required">
+                              <label for="">юридический адрес</label>
                               <input type="text" name=""/>
                             </div>
                           </div>
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd"> индекс </label>
+                            <div class="input-group required">
+                              <label for=""> индекс </label>
                               <input type="number" name=""/>
                             </div>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd">генеральный директор</label>
+                            <div class="input-group required">
+                              <label for="">генеральный директор</label>
                               <input type="text" name=""/>
                             </div>
                           </div>
                           <div class="col-md-4 vbottom">
-                            <div class="input-group">
-                              <label for="" class="requierd"> главный бухгалтер</label>
+                            <div class="input-group required">
+                              <label for=""> главный бухгалтер</label>
                               <input type="number" name=""/>
                             </div>
                           </div>
@@ -471,60 +501,60 @@
                     <h2 class="title">паспортные данные</h2>
                     <div class="row">
                       <div class="col-md-2 vbottom">
-                        <div class="input-group">
-                          <label for="" class="requierd">серия  </label>
+                        <div class="input-group required">
+                          <label for="">серия  </label>
                           <input type="tel" class="series"/>
                         </div>
                       </div>
                       <div class="col-md-2 vbottom">
-                        <div class="input-group">
-                          <label for="" class="requierd">номер  </label>
+                        <div class="input-group required">
+                          <label for="">номер  </label>
                           <input type="number" name="" class="pasport-number"/>
                         </div>
                       </div>
                       <div class="col-md-3 vbottom">
-                        <div class="input-group">
-                          <label for="" class="requierd">код подразделения </label>
+                        <div class="input-group required">
+                          <label for="">код подразделения </label>
                           <input type="text" name="" class="code"/>
                         </div>
                       </div>
                       <div class="col-md-5 vbottom">
-                        <div class="input-group">
-                          <label for="" class="requierd">кем выдан </label>
+                        <div class="input-group required">
+                          <label for="">кем выдан </label>
                           <input type="text" name=""/>
                         </div>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-4 vbottom">
-                        <div class="input-group">
-                          <label for="" class="requierd">дата выдачи  </label>
+                        <div class="input-group required">
+                          <label for="">дата выдачи  </label>
                           <input type="text" class="date"/>
                         </div>
                       </div>
                       <div class="col-md-4 vbottom">
-                        <div class="input-group">
-                          <label for="" class="requierd">адрес регистрации  </label>
+                        <div class="input-group required">
+                          <label for="">адрес регистрации  </label>
                           <input type="text" name=""/>
                         </div>
                       </div>
                       <div class="col-md-4 vbottom">
-                        <div class="input-group">
-                          <label for="" class="requierd">время регистрации в регионе </label>
+                        <div class="input-group required">
+                          <label for="">время регистрации в регионе </label>
                           <input type="text" name=""/>
                         </div>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-6 vbottom">
-                        <div class="input-group">
-                          <label for="" class="requierd">место рождения</label>
+                        <div class="input-group required">
+                          <label for="">место рождения</label>
                           <input type="text" name=""/>
                         </div>
                       </div>
                       <div class="col-md-6 vbottom">
-                        <div class="input-group">
-                          <label for="" class="requierd">фактический адрес проживания </label>
+                        <div class="input-group required">
+                          <label for="">фактический адрес проживания </label>
                           <input type="text" name=""/>
                         </div>
                       </div>
@@ -742,13 +772,13 @@
                     <div class="row">
                       <div class="col-md-3 vbottom">
                         <div class="radio-group">
-                          <input id="deliver" type="radio" name="delivery" checked="checked"/>
+                          <input id="deliver" type="radio" name="delivery" checked="checked" class="deliver"/>
                           <label for="deliver">Доставка</label>
                         </div>
                       </div>
                       <div class="col-md-3 vbottom">
                         <div class="radio-group">
-                          <input id="selfdeliver" type="radio" name="delivery"/>
+                          <input id="selfdeliver" type="radio" name="delivery" class="deliver"/>
                           <label for="selfdeliver">Самовывоз</label>
                         </div>
                       </div>

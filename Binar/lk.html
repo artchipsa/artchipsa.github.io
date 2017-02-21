@@ -15,16 +15,16 @@
         <div class="modal-content">
           <form class="login-form">
             <div class="modal-body"><a href="#" data-dismiss="modal" aria-label="Close" class="close"><img src="img/cross.svg" alt=""/></a>
-              <h2 class="title">Купить в один клик</h2>
+              <h2 class="title">Личный кабинет</h2>
               <div class="form-group">
-                <div class="input-group">
-                  <label class="required"><i class="fa fa-user-o"></i> Логин</label>
+                <div class="input-group required">
+                  <label><i class="fa fa-user-o"></i> Логин</label>
                   <input type="text"/>
                 </div>
               </div>
               <div class="form-group">
-                <div class="input-group">
-                  <label class="required"><i class="fa fa-unlock-alt"></i> Пароль</label>
+                <div class="input-group required">
+                  <label><i class="fa fa-unlock-alt"></i> Пароль</label>
                   <input type="password"/>
                 </div>
               </div>
@@ -42,8 +42,8 @@
             <div class="modal-body">
               <h2 class="title">Забыли пароль? </h2>
               <div class="form-group">
-                <div class="input-group">
-                  <label class="requierd"><i class="fa fa-envelope-o"></i> Ваша почта</label>
+                <div class="input-group required">
+                  <label><i class="fa fa-envelope-o"></i> Ваша почта</label>
                   <input type="text"/>
                 </div>
               </div>
@@ -116,13 +116,13 @@
                         </svg>
                       </div></a><a href="" class="bubble-btn-block">
                       <div class="bubble-btn"><span class="basket-count">12</span>
-                        <svg viewBox="0 0 100 100" class="svgico like">
-                          <use xlink:href="#like"></use>
+                        <svg viewBox="0 0 100 100" class="svgico basket">
+                          <use xlink:href="#basket"></use>
                         </svg>
                       </div>
                       <p>корзина  <span>45 000 .-</span></p></a><a href="" data-toggle="modal" data-target=".login-modal" class="bubble-btn-block">
                       <div class="bubble-btn">
-                        <svg viewBox="0 0 100 100" class="svgico like">
+                        <svg viewBox="0 0 100 100" class="svgico user">
                           <use xlink:href="#User"></use>
                         </svg>
                       </div>
@@ -511,7 +511,7 @@
                       <div class="basket-block story">
                         <div class="row">
                           <div class="col-md-11 vcenter">
-                            <h2 class="subtitle">история арендованной техники</h2>
+                            <h2 class="subtitle">история техники в тест драйв</h2>
                           </div>
                           <div class="col-md-1 vcenter"><a href="" class="history-toggle"><i aria-hidden="true" class="fa fa-angle-right"></i></a></div>
                         </div>
@@ -599,7 +599,7 @@
                     <li role="presentation"><a href="#lk-compare" aria-controls="lk-compare" role="tab" data-toggle="tab">
                         <svg viewBox="0 0 100 100" class="svgico like comparison">
                           <use xlink:href="#comparison"></use>
-                        </svg><span>избранное (2)</span></a></li>
+                        </svg><span>список сравнения (2)</span></a></li>
                   </ul>
                   <div class="tab-content">
                     <div id="lk-favs" role="tabpanel" class="tab-pane fade in active">
@@ -938,48 +938,28 @@
                       <form id="payment-info" action="">
                         <div class="row">
                           <div class="col-md-4">
-                            <div class="input-group">
-                              <label for="" class="requierd">название компании </label>
+                            <div class="input-group required">
+                              <label for="">название компании </label>
                               <input type="text" name=""/>
                             </div>
                           </div>
                           <div class="col-md-4">
-                            <div class="input-group">
-                              <label for="" class="requierd">ИНН </label>
+                            <div class="input-group required">
+                              <label for="">ИНН </label>
                               <input type="number" name=""/>
                             </div>
                           </div>
                           <div class="col-md-4">
-                            <div class="input-group">
-                              <label for="" class="requierd">КПП </label>
+                            <div class="input-group required">
+                              <label for="">КПП </label>
                               <input type="number" name=""/>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-4">
-                            <div class="input-group">
-                              <label for="" class="requierd">контактное лицо </label>
-                              <input type="text" name=""/>
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="input-group">
-                              <label for="" class="requierd">Телефон </label>
-                              <input type="tel" name="" class="tel"/>
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="input-group">
-                              <label for="" class="requierd">электронная почта </label>
-                              <input type="text" name=""/>
                             </div>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-md-8">
-                            <div class="input-group">
-                              <label for="" class="requierd">юридический адрес</label>
+                            <div class="input-group required">
+                              <label for="">юридический адрес</label>
                               <input type="text" name=""/>
                             </div>
                           </div>
@@ -1001,53 +981,33 @@
                       <div class="saved-item">
                         <div class="row">
                           <div class="col-md-4">
-                            <div class="input-group">
+                            <div class="input-group required">
                               <label for="">название компании </label>
                               <p>Константин Константинопольский</p>
                             </div>
                           </div>
                           <div class="col-md-4">
-                            <div class="input-group">
+                            <div class="input-group required">
                               <label for="">ИНН </label>
                               <p>8 923 456 78 76</p>
                             </div>
                           </div>
                           <div class="col-md-4">
-                            <div class="input-group">
+                            <div class="input-group required">
                               <label for="">КПП </label>
                               <p>1231231 312312 312</p>
                             </div>
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-md-4">
-                            <div class="input-group">
-                              <label for="">контактное лицо </label>
-                              <p>Константин Константинопольский</p>
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="input-group">
-                              <label for="">Телефон </label>
-                              <p>8 923 456 78 76</p>
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="input-group">
-                              <label for="">электронная почта </label>
-                              <p>konstantinkonst@mailbox.com</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
                           <div class="col-md-8">
-                            <div class="input-group">
+                            <div class="input-group required">
                               <label for="">юридический адрес</label>
                               <p>ул. Лесная, д. 5, кв. 176</p>
                             </div>
                           </div>
                           <div class="col-md-4">
-                            <div class="input-group">
+                            <div class="input-group required">
                               <label for="">индекс </label>
                               <p>6600055</p>
                             </div>
