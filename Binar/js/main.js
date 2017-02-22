@@ -942,7 +942,7 @@ function init(){
         hintContent: 'Бинар'
     }, {
         iconLayout: 'default#image',
-        iconImageHref: 'http://localhost:8080/img/marker.png',
+        iconImageHref: 'https://artchipsa.github.io/Binar/img/marker.png',
         iconImageSize: [30, 42],
         iconImageOffset: [-18, -38]
     });
