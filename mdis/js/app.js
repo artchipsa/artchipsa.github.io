@@ -436,7 +436,7 @@ router.config(function($routeProvider, $locationProvider) {
             controller: 'mainController'
         });
 
-    $locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
 
 }).run(function($rootScope, $window, $route, $location) {
 
