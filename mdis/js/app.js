@@ -427,6 +427,7 @@ router.config(function($routeProvider, $locationProvider) {
     $routeProvider
     	.when('/:name*', {
     	  	templateUrl: function(link){
+    	  	    console.log("link", link);
     	  		return '../' + link.name + '.html';
     	  	},
     	  	controller: 'mainController'
