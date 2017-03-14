@@ -1,0 +1,22 @@
+<svg width="34" height="52" viewBox="0 0 34 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>phone</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="matrix(2 0 0 2 -458 170)" figma:type="canvas">
+<g id="phone" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Vector 25" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path0_stroke" transform="translate(230 -84)" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Ellipse 6" style="mix-blend-mode:normal;" figma:type="ellipse">
+<use xlink:href="#path1_fill" transform="translate(236.176 -64.4475)" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Vector 26" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path2_stroke" transform="translate(230 -80.1818)" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_stroke" style="fill: #E2112E" d="M 0 0L 0 -1C -0.552285 -1 -1 -0.552285 -1 2.22045e-16L 0 0ZM 0 24L -1 24C -1 24.5523 -0.552285 25 2.22045e-16 25L 0 24ZM 15 24L 15 25C 15.5523 25 16 24.5523 16 24L 15 24ZM 15 0L 16 0C 16 -0.552285 15.5523 -1 15 -1L 15 0ZM -1 0L -1 24L 1 24L 1 0L -1 0ZM 0 25L 15 25L 15 23L 0 23L 0 25ZM 16 24L 16 0L 14 0L 14 24L 16 24ZM 15 -1L 0 -1L 0 1L 15 1L 15 -1Z"/>
+<path id="path1_fill" style="fill: #E2112E" d="M 2.64706 1.38462C 2.64706 2.14932 2.05449 2.76923 1.32353 2.76923C 0.592564 2.76923 0 2.14932 0 1.38462C 0 0.619913 0.592564 0 1.32353 0C 2.05449 0 2.64706 0.619913 2.64706 1.38462Z"/>
+<path id="path2_stroke" style="fill: #E2112E" d="M 0 1L 15 1L 15 -1L 0 -1L 0 1ZM 0 15.1818L 15 15.1818L 15 13.1818L 0 13.1818L 0 15.1818Z"/>
+</defs>
+</svg>

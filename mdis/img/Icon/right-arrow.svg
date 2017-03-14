@@ -1,0 +1,28 @@
+<svg width="32" height="23" viewBox="0 0 32 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>right-arrow</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-1963 -3587)" figma:type="canvas">
+<mask id="mask0_alpha" mask-type="alpha">
+<path d="M 121 0L 2041 0L 2041 5407L 121 5407L 121 0Z" fill="#FFFFFF"/>
+</mask>
+<g id="MAIN PAGE" style="mix-blend-mode:normal;" mask="url(#mask0_alpha)" figma:type="frame">
+<path d="M 121 0L 2041 0L 2041 5407L 121 5407L 121 0Z" fill="#FFFFFF"/>
+<g id="NEWS ARTICLES" style="mix-blend-mode:normal;" figma:type="frame">
+</g>
+<g id="Component" style="mix-blend-mode:normal;" figma:type="instance">
+<g id="Rectangle 13" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path0_fill" transform="translate(1561 3359)" fill="#E2112E" style="mix-blend-mode:normal;"/>
+</g>
+<g id="right-arrow" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path1_fill" transform="translate(1963.26 3587.86)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 0L 480 0L 480 300L 0 300L 0 0Z"/>
+<path id="path1_fill" d="M 21.205 0.333C 20.776 -0.111 20.062 -0.111 19.618 0.333C 19.189 0.762 19.189 1.476 19.618 1.904L 27.665 9.951L 1.111 9.951C 0.492 9.952 0 10.444 0 11.063C 0 11.682 0.492 12.19 1.111 12.19L 27.665 12.19L 19.618 20.222C 19.189 20.666 19.189 21.381 19.618 21.809C 20.062 22.253 20.777 22.253 21.205 21.809L 31.157 11.857C 31.601 11.428 31.601 10.714 31.157 10.286L 21.205 0.333Z"/>
+</defs>
+</svg>

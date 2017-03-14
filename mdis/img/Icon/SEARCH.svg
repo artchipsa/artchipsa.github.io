@@ -1,0 +1,24 @@
+<svg width="19" height="20" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>SEARCH</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-297 -25)" figma:type="canvas">
+<g id="SEARCH" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Ellipse 4" style="mix-blend-mode:normal;" figma:type="ellipse">
+<mask id="mask0_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="matrix(0.139981 -0.143981 0.139981 0.143981 294.448 32.9761)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="matrix(0.139981 -0.143981 0.139981 0.143981 294.448 32.9761)" fill="#E2112E" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+<g id="Vector 20" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path2_stroke" transform="matrix(0.139981 -0.143981 0.139981 0.143981 309.475 38.3706)" fill="#E2112E" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 72.4081 36.204C 72.4081 56.199 56.199 72.4081 36.204 72.4081C 16.2091 72.4081 0 56.199 0 36.204C 0 16.2091 16.2091 0 36.204 0C 56.199 0 72.4081 16.2091 72.4081 36.204Z"/>
+<path id="path1_stroke_2x" d="M 62.4081 36.204C 62.4081 50.6761 50.6761 62.4081 36.204 62.4081L 36.204 82.4081C 61.7218 82.4081 82.4081 61.7218 82.4081 36.204L 62.4081 36.204ZM 36.204 62.4081C 21.7319 62.4081 10 50.6761 10 36.204L -10 36.204C -10 61.7218 10.6863 82.4081 36.204 82.4081L 36.204 62.4081ZM 10 36.204C 10 21.7319 21.7319 10 36.204 10L 36.204 -10C 10.6863 -10 -10 10.6863 -10 36.204L 10 36.204ZM 36.204 10C 50.6761 10 62.4081 21.7319 62.4081 36.204L 82.4081 36.204C 82.4081 10.6863 61.7218 -10 36.204 -10L 36.204 10Z"/>
+<path id="path2_stroke" d="M -5 -3.08395e-17L -5 38.3337L 5 38.3337L 5 3.08395e-17L -5 -3.08395e-17Z"/>
+</defs>
+</svg>

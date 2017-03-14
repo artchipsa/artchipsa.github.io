@@ -1,0 +1,50 @@
+<svg width="22" height="15" viewBox="0 0 22 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Soc_icon_moi mir</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-26980 -2015)" figma:type="canvas">
+<mask id="mask0_alpha" mask-type="alpha">
+<path d="M 25829 1.13687e-13L 27749 1.13687e-13L 27749 2340L 25829 2340L 25829 1.13687e-13Z" fill="#FFFFFF"/>
+</mask>
+<g id="News" style="mix-blend-mode:normal;" mask="url(#mask0_alpha)" figma:type="frame">
+<path d="M 25829 1.13687e-13L 27749 1.13687e-13L 27749 2340L 25829 2340L 25829 1.13687e-13Z" fill="#FFFFFF"/>
+<g id="Group" style="mix-blend-mode:normal;" figma:type="frame">
+<mask id="mask1_alpha" mask-type="alpha">
+<path d="M 25822 272L 27742 272L 27742 2340L 25822 2340L 25822 272Z" fill="#FFFFFF"/>
+</mask>
+<g id="Menu_Footer" style="mix-blend-mode:normal;" mask="url(#mask1_alpha)" figma:type="frame">
+<path d="M 25822 272L 27742 272L 27742 2340L 25822 2340L 25822 272Z" fill="#FFFFFF"/>
+</g>
+<g id="share" style="mix-blend-mode:normal;" figma:type="symbol">
+<mask id="mask2_alpha" mask-type="alpha">
+<path d="M 26718 1750L 27308.2 1750L 27308.2 2345.28L 26718 2345.28L 26718 1750Z" fill="#FFFFFF"/>
+</mask>
+<g id="mir_share" style="mix-blend-mode:normal;" mask="url(#mask2_alpha)" figma:type="frame">
+</g>
+</g>
+<g id="share" style="mix-blend-mode:normal;" figma:type="instance">
+<mask id="mask3_alpha" mask-type="alpha">
+<path d="M 26790 1800.01L 27380.2 1800.01L 27380.2 2395.29L 26790 2395.29L 26790 1800.01Z" fill="#FFFFFF"/>
+</mask>
+<g id="mir_share" style="mix-blend-mode:normal;" mask="url(#mask3_alpha)" figma:type="frame">
+</g>
+</g>
+<g id="share" style="mix-blend-mode:normal;" figma:type="instance">
+</g>
+<g id="new" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="btn_shar" style="mix-blend-mode:normal;" figma:type="instance">
+<g id="Rectangle 34" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path0_fill" transform="translate(26958 2002)" fill="#EEEEEE" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+<g id="Soc_icon_moi mir" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path1_fill" transform="translate(26980 2015)" fill="#E2112E" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 20C 0 8.9543 8.9543 0 20 0L 45 0C 56.0457 0 65 8.95431 65 20L 65 20C 65 31.0457 56.0457 40 45 40L 20 40C 8.9543 40 0 31.0457 0 20L 0 20Z"/>
+<path id="path1_fill" d="M 15.2238 0C 16.3226 0 17.2133 0.896973 17.2133 2.00346C 17.2133 3.1099 16.3226 4.00678 15.2238 4.00678C 14.1248 4.00678 13.2342 3.1099 13.2342 2.00346C 13.2342 0.896973 14.1249 0 15.2238 0ZM 6.78628 0.0150563C 7.88506 0.0150563 8.77582 0.911982 8.77582 2.01847C 8.77582 3.12496 7.88506 4.02179 6.78628 4.02179C 5.68746 4.02179 4.79675 3.12491 4.79675 2.01847C 4.79675 0.911982 5.68746 0.0150563 6.78628 0.0150563ZM 21.3774 13.9899C 20.8399 14.3338 20.1017 14.1654 19.733 13.5834C 19.4011 13.0588 19.1046 12.5115 18.7645 11.9262C 14.9059 16.0239 7.05979 16.0212 3.21603 11.9383C 2.88821 12.4798 2.57968 13.0115 2.24958 13.5292C 1.86103 14.1385 0.998263 14.3463 0.472258 13.9745C -0.033114 13.6171 -0.146997 12.7519 0.199171 12.1726C 1.01918 10.8004 1.81874 9.41583 2.63194 8.0395C 2.93284 7.53019 3.41455 7.38094 3.95639 7.47465C 4.45021 7.55992 4.79279 7.89832 4.87495 8.38654C 4.92297 8.67143 4.88022 9.03999 4.73005 9.27483C 4.50671 9.62417 4.64099 9.79677 4.85381 10.0458C 5.90791 11.2795 7.29268 11.938 8.81955 12.2865C 11.0388 12.7931 13.2165 12.5851 15.2358 11.5029C 15.9684 11.1103 16.5788 10.4763 17.2111 9.91394C 17.3206 9.81675 17.3274 9.50259 17.2672 9.32887C 16.9392 8.38016 17.2311 7.7548 17.7795 7.55997C 18.4669 7.31584 19.1089 7.4573 19.5216 8.24888C 20.2349 9.61662 21.0573 10.9269 21.8331 12.2615C 22.1755 12.8504 21.9751 13.6073 21.3774 13.9899Z"/>
+</defs>
+</svg>

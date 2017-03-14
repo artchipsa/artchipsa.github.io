@@ -1,0 +1,18 @@
+<svg width="30" height="11" viewBox="0 0 30 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>menu_burger</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(1942 -1281)" figma:type="canvas">
+<g id="menu_burger" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Rectangle 10" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path0_fill" transform="translate(-1942 1281)" fill="#E2112E" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Rectangle 10" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path1_fill" transform="translate(-1942 1290)" fill="#E2112E" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 1C 0 0.447715 0.447715 0 1 0L 29 0C 29.5523 0 30 0.447716 30 1C 30 1.55228 29.5523 2 29 2L 1 2C 0.447715 2 0 1.55228 0 1Z"/>
+<path id="path1_fill" d="M 0 1C 0 0.447715 0.447715 0 1 0L 19 0C 19.5523 0 20 0.447716 20 1C 20 1.55228 19.5523 2 19 2L 1 2C 0.447715 2 0 1.55228 0 1Z"/>
+</defs>
+</svg>

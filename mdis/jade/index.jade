@@ -1,0 +1,53 @@
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		title Mdis
+		link(rel="stylesheet", href="css/normalize.css")
+		link(rel="stylesheet", href="css/style.css")
+		link(rel="stylesheet", href="css/owl.carousel.min.css")
+		link(rel="stylesheet", href="css/owl.theme.default.min.css")
+		base(href="/")
+	body(ng-app="route")
+		.svg-assets
+			include ../img/assets.svg
+		header(ng-class="headerClass")
+			.half-header
+				a.menu(href="#") #[span ] #[p меню]
+				a.search(href="") #[img(src="img/Icon/SEARCH.svg", alt="")] #[p поиск]
+			.half-header
+				a.question(href="") 
+					span задать вопрос
+					img(src="img/ask.svg", alt="")
+				a.callback(href="") 
+					span перезвоните мне
+					img(src="img/phone.svg", alt="")
+				a.phone(href="tel:+7 924 242 45 64") +7 924 #[span 242 45 64]
+		.overflow
+			#content-changer.transition-block(ng-view, ng-class="slide")
+		footer
+			.item
+				img(src="img/logo_footer.svg", alt="")
+				span.bottom ©   MD Information system 2006–2016
+			.item
+				span.top Адрес
+				.line
+				span.bottom 123022, Россия, г. Москва, ул. 1905 года, д. 7, строение 1
+			.item
+				span.top Контакты
+				.line
+				.bottom
+					a.tel(href="") +7 (495) 783-33-79 (многоканальный)
+					a(href="").email sales@mdis.ru (отдел продаж),
+					a(href="").email support@mdis.ru (тех. поддержка)
+			.item
+				a(href="").btn.primary ПОДРОБНЕЕ
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+		script(src="js/owl.carousel.min.js")
+		script(src="js/hammer.js")
+		script(src="js/jquery.hammer.js")
+		//- script(src="js/page.js")
+		script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js")
+		script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js")
+		script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-animate.min.js")
+		script(src="js/app.js")

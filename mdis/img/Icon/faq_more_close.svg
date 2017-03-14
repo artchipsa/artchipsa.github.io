@@ -1,0 +1,21 @@
+<svg width="40" height="40" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>faq_more_close</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-22262 -1180)" figma:type="canvas">
+<g id="faq_more_close" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Rectangle 11" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path0_fill" transform="matrix(6.12323e-17 -1 1 6.12323e-17 22262 1220)" fill="#E2112E" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Rectangle 19" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path1_fill" transform="translate(22272 1198.5)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Rectangle 19" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path1_fill" transform="matrix(6.12323e-17 1 -1 6.12323e-17 22282.8 1189.75)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 20C 0 8.9543 8.9543 0 20 0C 31.0457 0 40 8.95431 40 20C 40 31.0457 31.0457 40 20 40C 8.9543 40 0 31.0457 0 20Z"/>
+<path id="path1_fill" d="M 0 0L 19.5 0L 19.5 2L 0 2L 0 0Z"/>
+</defs>
+</svg>

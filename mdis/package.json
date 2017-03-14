@@ -1,0 +1,30 @@
+{
+  "name": "webpack-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack app.js build.js --watch"
+  },
+  "devDependencies": {
+    "browserify": "^14.0.0",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-less": "^3.3.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-watch": "^4.3.11",
+    "path": "^0.12.7",
+    "svgmin": "^0.1.0",
+    "svgstore": "^2.0.2",
+    "vue": "^2.1.10",
+    "vueify": "^9.4.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

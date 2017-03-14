@@ -1,0 +1,24 @@
+@baseFontSize: 14;
+
+.font-size(@font-size: @baseFontSize) {
+	@rem: (@font-size / @baseFontSize);
+	font-size: @font-size * 1px;
+	font-size: ~"@{rem}rem"; 
+}
+
+
+.font(@family, @sub, @weight){
+    @font-face{
+        font-family: @family;
+        src: url('../fonts/@{sub}.otf');
+        src: url('../fonts/@{sub}.woff2') format('woff2'),
+        	 url('../fonts/@{sub}.ttf') format('truetype');
+        font-weight: @weight;
+    }
+}
+
+.animation (@i) when (@i > 0) {
+    @stag: 55 * (@i - 1); // skip first
+    .animation:nth-child(@{i}){ transition-delay: ~"@{stag}ms"; }
+    .animation(@i - 1);
+}

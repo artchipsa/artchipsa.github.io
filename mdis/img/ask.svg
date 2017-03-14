@@ -1,0 +1,24 @@
+<svg width="48" height="48" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>ask</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="matrix(2 0 0 2 -308 166)" figma:type="canvas">
+<g id="ask" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Ellipse 5" style="mix-blend-mode:normal;" figma:type="ellipse">
+<mask id="mask0_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="translate(154 -83)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="translate(154 -83)" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+<g id="?" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path2_fill" transform="translate(162.578 -75.9174)" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" style="fill: #E2112E" d="M 24 12C 24 18.6274 18.6274 24 12 24C 5.37258 24 0 18.6274 0 12C 0 5.37258 5.37258 0 12 0C 18.6274 0 24 5.37258 24 12Z"/>
+<path id="path1_stroke_2x" style="fill: #E2112E" d="M 22 12C 22 17.5228 17.5228 22 12 22L 12 26C 19.732 26 26 19.732 26 12L 22 12ZM 12 22C 6.47715 22 2 17.5228 2 12L -2 12C -2 19.732 4.26801 26 12 26L 12 22ZM 2 12C 2 6.47715 6.47715 2 12 2L 12 -2C 4.26801 -2 -2 4.26801 -2 12L 2 12ZM 12 2C 17.5228 2 22 6.47715 22 12L 26 12C 26 4.26801 19.732 -2 12 -2L 12 2Z"/>
+<path id="path2_fill" style="fill: #E2112E" d="M 0.0617647 2.31C -0.0782353 2.646 0.0197646 2.8 0.355765 2.912L 1.02776 3.15C 1.36376 3.276 1.47576 3.206 1.62976 2.856C 1.99376 2.044 2.52576 1.54 3.67376 1.54C 4.83576 1.54 5.42376 2.142 5.42376 2.968C 5.42376 4.116 4.62576 4.494 3.86976 4.97C 3.18376 5.432 2.52576 5.978 2.52576 7.308C 2.52576 7.658 2.63776 7.756 2.97376 7.756L 3.53376 7.756C 3.86976 7.756 3.98176 7.658 3.98176 7.308C 3.98176 6.72 4.37376 6.398 4.86376 6.09C 5.77376 5.53 7.15976 4.998 7.15976 2.898C 7.15976 1.302 5.89976 0 3.71576 0C 1.68576 0 0.593765 0.938 0.0617647 2.31ZM 3.32376 8.526L 3.21176 8.526C 2.53976 8.526 2.31576 8.75 2.31576 9.422L 2.31576 9.548C 2.31576 10.234 2.53976 10.444 3.21176 10.444L 3.32376 10.444C 3.99576 10.444 4.21976 10.234 4.21976 9.548L 4.21976 9.422C 4.21976 8.75 3.99576 8.526 3.32376 8.526Z"/>
+</defs>
+</svg>
