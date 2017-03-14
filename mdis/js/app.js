@@ -428,12 +428,12 @@ router.config(function($routeProvider, $locationProvider) {
     	.when('/:name*', {
     	  	templateUrl: function(link){
     	  	    console.log("link", link);
-    	  		return '/' + link.name + '.html';
+    	  		return 'mdis/' + link.name + '.html';
     	  	},
     	  	controller: 'mainController'
     	})
     	.when('/', {
-            templateUrl : '/main.html',
+            templateUrl : 'mdis/main.html',
             controller: 'mainController'
         });
 
