@@ -66,6 +66,40 @@ $(document).ready(function(){
 		line.removeClass('hovered');
 	});
 
+	// menu modal
+
+	doc.on('click', 'header .menu', function(e){
+		e.preventDefault();
+		$(this).toggleClass('active');
+		if ($(this).hasClass('active')){
+			$('#menu').addClass('active');
+			$('header .search, header .question, header .callback, header .phone, header .menu p').addClass('invisible');
+		} else {
+			$('#menu').removeClass('active');
+			$('header .search, header .question, header .callback, header .phone, header .menu p').removeClass('invisible');		
+		}
+	});
+
+
+
+	$('body').on('mousewheel', function(e){
+		if ($('.menu').hasClass('active')){
+			e.preventDefault();
+			e.stopPropagation();
+		} else {
+			return;
+		}
+	});
+
+	doc.keyup(function(e){
+		if ($('.menu').hasClass('active')){
+			if (e.keyCode === 27){
+				$('.menu').click();
+			} 
+		}
+	});
+
+
  	photoTabs();
 
 	doc.on('click', '.package-block .wave-tabs-head a', function(){

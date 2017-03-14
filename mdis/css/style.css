@@ -111,23 +111,6 @@
   animation-timing-function: ease;
   animation-name: leftenter;
 }
-/* .slide-right{
-	&.ng-leave{
-		animation-name: rightleave;
-	}
-	&.ng-enter{
-		animation-name: rightenter;
-	}
-}
-
-.slide-left{
-	&.ng-leave{
-		animation-name: leftleave;
-	}
-	&.ng-enter{
-		animation-name: leftenter;
-	}
-} */
 @keyframes leftenter {
   0% {
     transform: translateX(100%);
@@ -170,12 +153,17 @@ body {
 }
 .svg-assets {
   display: none;
+  pointer-events: none;
 }
 header {
   width: 100%;
   position: fixed;
   padding: 30px;
   z-index: 2;
+}
+header .invisible {
+  visibility: hidden;
+  pointer-events: none;
 }
 header .half-header {
   width: 50%;
@@ -187,6 +175,30 @@ header .half-header:nth-child(2) {
 }
 header.no-index a {
   color: #333;
+}
+header.no-index .question {
+  display: inline-block;
+  vertical-align: middle;
+}
+header.no-index .question span {
+  display: none;
+}
+header.no-index .question img {
+  display: block;
+  width: 32px;
+  max-height: 32px;
+}
+header.no-index .callback {
+  display: inline-block;
+  vertical-align: middle;
+}
+header.no-index .callback span {
+  display: none;
+}
+header.no-index .callback img {
+  display: block;
+  width: 32px;
+  max-height: 32px;
 }
 header a {
   font-size: 18px;
@@ -208,13 +220,22 @@ header .menu:hover span:after {
   width: 30px;
 }
 header .menu.active span {
+  background: 0 0!important;
+  transition-delay: .3s,.3s;
+}
+header .menu.active span:before {
+  bottom: 0px;
+  width: 30px;
   transform: rotate(45deg);
+  transition-delay: 0s,.3s;
+  background-color: #333;
 }
 header .menu.active span:after {
   bottom: 0px;
   width: 30px;
   transform: rotate(-45deg);
   transition-delay: 0s,.3s;
+  background-color: #333;
 }
 header .menu p {
   display: inline-block;
@@ -232,6 +253,14 @@ header .menu span {
   position: relative;
   margin-bottom: 10px;
 }
+header .menu span:before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 2px;
+  bottom: -10px;
+  transition: bottom 0.25s cubic-bezier(0.245, 0, 0, 1.005) 0.3s, transform 0.35s cubic-bezier(0.245, 0, 0, 1.005), width 0.35s cubic-bezier(0.245, 0, 0, 1.005);
+}
 header .menu span:after {
   position: absolute;
   content: '';
@@ -239,7 +268,7 @@ header .menu span:after {
   height: 2px;
   background-color: #E2112E;
   bottom: -10px;
-  transition: bottom 0.45s cubic-bezier(0.245, 0, 0, 1.005) 0.3s, transform 0.45s cubic-bezier(0.245, 0, 0, 1.005), width 0.45s cubic-bezier(0.245, 0, 0, 1.005);
+  transition: bottom 0.25s cubic-bezier(0.245, 0, 0, 1.005) 0.3s, transform 0.35s cubic-bezier(0.245, 0, 0, 1.005), width 0.35s cubic-bezier(0.245, 0, 0, 1.005);
 }
 header .search p {
   display: inline-block;
