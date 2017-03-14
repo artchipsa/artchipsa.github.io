@@ -54,6 +54,18 @@ $(document).ready(function(){
 
 	});
 
+	// menu hover 
+
+	doc.on('mouseover', '#menu .section', function(){
+		var line = $(this).parents('.menu-row').find('.line');
+		line.addClass('hovered');
+	});
+
+	doc.on('mouseleave', '#menu .section', function(){
+		var line = $(this).parents('.menu-row').find('.line');
+		line.removeClass('hovered');
+	});
+
  	photoTabs();
 
 	doc.on('click', '.package-block .wave-tabs-head a', function(){
@@ -196,19 +208,19 @@ function anchorsBlock(){
 	doc.on('click', '.wave-tabs.anchors .wave-tabs-head a', function(e){
 		e.preventDefault();
 		var href = $(this).attr("href"),
-			offsetTop = href === "#" ? 0 : $(href).offset().top - anchorMenuHeight+15;
+			offsetTop = href === "#" ? 0 : $(href).offset().top - anchorMenuHeight-130;
 		$('html, body').stop().animate({ 
 			scrollTop: offsetTop
 		}, 300);
 	});
 
-   	var fixed_trigger = anchorMenu.offset().top;
+   	var fixed_trigger = anchorMenu.offset().top - anchorMenuHeight+190;
    	var fixed_stop_trigger = $('.product-content').offset().top + $('.product-content').height();
    	var lastScrollTop = 0;
 	var new_step = 0;
 	$(window).scroll(function(){
 	   // Get container scroll position
-	    var fromTop = $(this).scrollTop();
+	    var fromTop = $(this).scrollTop() + anchorMenuHeight+170;
 	    var window_width = $(this).width();
 	    if(fromTop > fixed_trigger){
 	   		anchorMenu.addClass('fixed').removeClass('fixed_stop');
@@ -269,8 +281,6 @@ function anchorsBlock(){
 		}
 	});
 }
-
-
 
 function mobileScroll(){
 	var container = $('.mobile-scroll');
@@ -427,7 +437,6 @@ router.config(function($routeProvider, $locationProvider) {
     $routeProvider
     	.when('/:name*', {
     	  	templateUrl: function(link){
-    	  	    console.log("link", link);
     	  		return link.name + '.html';
     	  	},
     	  	controller: 'mainController'
