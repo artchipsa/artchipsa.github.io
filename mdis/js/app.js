@@ -796,6 +796,9 @@ function ready(){
 	});
 
 	if ($('.full').length){
+		setTimeout(function(){
+			specialBlockPos();
+		}, 1000);
 		specialBlockPos();
 	}
 

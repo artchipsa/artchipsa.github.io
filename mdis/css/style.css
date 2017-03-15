@@ -46,9 +46,9 @@
 * {
   box-sizing: border-box;
 }
-/* #content-changer{
-	will-change: transform;
-} */
+#content-changer {
+  overflow: hidden;
+}
 .content-container {
   padding-top: 180px;
 }
