@@ -293,7 +293,7 @@ function anchorsBlock(){
 				if (id !== ''){
 					var new_left = anchorMenu.find("a[href='#"+id+"']").position().left;
 					wave_img.stop().animate({ left: new_left}, 250);
-					if (anchorMenu.find("a[href='#"+id+"']").position().left + anchorMenu.find("a[href='#"+id+"']").width() > anchorMenu.width()){
+					if (anchorMenu.find("a[href='#"+id+"']").position().left + anchorMenu.find("a[href='#"+id+"']").width() > anchorMenu.width() && $(window).width() > 500){
 						new_left = anchorMenu.width() -  wave_img.width();
 						console.log("new_left", new_left);
 						wave_img.stop().animate({ left: new_left}, 250);

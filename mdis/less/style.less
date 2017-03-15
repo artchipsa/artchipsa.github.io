@@ -150,7 +150,7 @@ header{
 	width: 100%;
 	position: fixed;
 	padding: 30px;
-	z-index: 2;
+	z-index: 3;
 	.invisible{
 		visibility: hidden;
 		pointer-events: none;
@@ -1065,7 +1065,7 @@ footer{
 	height: 100%;
 	left: 0px;
 	top: 0px;
-	z-index: 1;
+	z-index: 2;
 	will-change: transform;
 	background-color: @white;
 	transform: translate3d(-100%, 0, 0);
@@ -1364,7 +1364,7 @@ footer{
 	}
 	.wave-tabs.anchors.fixed{
 	    z-index: 1;
-        padding-top: 90px;
+        padding-top: 120px;
 	}
 }
 
@@ -1432,7 +1432,7 @@ footer{
 		right: 14%;
 	}
 	.wave-tabs.anchors.fixed{
-		padding-top: 78px;
+		padding-top: 114px;
 		z-index: 1;
 	}
 	.page-control-line .back span{
@@ -1468,6 +1468,9 @@ footer{
 	}
 }
 @media (max-width: 439px){
+	.wave-tabs.anchors .wave-tabs-head ul{
+		display: block;
+	}
 	.hero-main p.load {
 	    transform: translateX(-50%) translateY(-50%);
 	}
