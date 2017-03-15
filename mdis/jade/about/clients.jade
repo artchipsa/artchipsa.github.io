@@ -1,12 +1,17 @@
 .content-container
 	.page-control-line
-		a(href="" ng-click="back()").page-link.back
+		a(href="#!about/index" ng-click="back()").page-link.back
 			svg(viewBox="0 0 76 76", class="svgico arrow-icon")
 				use(xlink:href="#left-arrow")
-			span Назад
-		.title-block
-			span.top-tag О компании
-			span.name-span НАШИ КЛИЕНТЫ
+			span Кто мы
+		.line-center
+			.title-block
+				span.top-tag О компании
+				span.name-span НАШИ КЛИЕНТЫ
+		a(href="#!partners" ng-click="next()").page-link.fowrard
+			span ПАРТНЕРЫ
+			svg(viewBox="0 0 76 76", class="svgico arrow-icon")
+				use(xlink:href="#right-arrow")
 	.page-content
 		.clients-block
 			.case-item

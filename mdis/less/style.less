@@ -14,9 +14,9 @@
 	box-sizing: border-box;
 }
 
-#content-changer{
-	overflow: hidden;
-}
+/* #content-changer{
+	will-change: transform;
+} */
 
 .content-container{
 	padding-top: 180px;
@@ -95,37 +95,37 @@
 
 @keyframes leftenter{
 	0%{
-		transform: translateX(100%);
+		transform: translate3d(100%, 0, 0);
 	}
 	100%{
-		transform: translateX(0%);
+		transform: translate3d(0%, 0, 0);
 	}
 }
 
 @keyframes leftleave{
 	0%{
-		transform: translateX(0%);
+		transform: translate3d(0%, 0, 0);
 	}
 	100%{
-		transform: translateX(-100%);
+		transform: translate3d(-100%, 0, 0);
 	}
 }
 
 @keyframes rightenter{
 	0%{
-		transform: translateX(-100%);
+		transform: translate3d(-100%, 0, 0);
 	}
 	100%{
-		transform: translateX(0%);
+		transform: translate3d(0%, 0, 0);
 	}
 }
 
 @keyframes rightleave{
 	0%{
-		transform: translateX(0%);
+		transform: translate3d(0%, 0, 0);
 	}
 	100%{
-		transform: translateX(100%);
+		transform: translate3d(100%, 0, 0);
 	}
 }
 
@@ -164,6 +164,8 @@ header{
 		}
 	}
 	&.no-index{
+	    background-color: white;
+        padding: 42px 30px;
 		a{
 			color: @black;
 		}
@@ -1070,6 +1072,12 @@ footer{
 	transition: all .25s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 	&.active{
 		transform: translate3d(0, 0, 0);
+		.menu-container{
+			.menu-row{
+				opacity: 1;
+				transform: translate3d(0,0,0);
+			}
+		}
 	}
 	.menu-container{
 		width: 75%;
@@ -1078,6 +1086,11 @@ footer{
 		left: 50%;
 		transform: translate(-50%, -50%);
 		.menu-row{
+			will-change: transform;
+			transition: all .45s ease;
+			transition-delay: .3s;
+			opacity: 0;
+			transform: translate3d(-40px,0,0);
 			&:last-child{
 				.row-content{
 					border-bottom: 0px;
@@ -1171,6 +1184,8 @@ footer{
 
 
 @import "product.less";
+@import "about.less";
+
 
 @media (max-width: 1367px){
 	.line-item .tag{
@@ -1223,6 +1238,7 @@ footer{
 	}
 	.page-control-line .back{
 		margin-right: 30px;
+		margin-left: 3%;
 	}
 	.page-control-line .title-block{
 		margin-right: 50px;
@@ -1234,6 +1250,12 @@ footer{
 	.switch-modal-window.photos .switch-photos{
 	    top: 50%;
    		transform: translateY(-50%);
+	}
+	.page-control-line .line-center{
+		width: 645px;
+	}
+	.page-control-line .fowrard span{
+	    font-size: 26px;
 	}
 }
 

@@ -1,0 +1,18 @@
+<svg width="40" height="78" viewBox="0 0 40 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Group</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-30913 -2166)" figma:type="canvas">
+<g id="Group" style="mix-blend-mode:normal;" figma:type="instance">
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path0_fill" transform="translate(30913 2166)" fill="#E1172E" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path1_fill" transform="translate(30913 2170.86)" fill="#AD0E29" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 20 9.73017C 31.0457 9.73017 40 7.552 40 4.86508C 40 2.17817 31.0457 0 20 0C 8.9543 0 0 2.17817 0 4.86508C 0 7.552 8.9543 9.73017 20 9.73017Z"/>
+<path id="path1_fill" d="M 40 0C 40 2.68683 31.0459 4.86509 20 4.86509C 8.95412 4.86509 0 2.68683 0 0L 0 67.2698C 0 69.9567 8.95412 73.1349 20 73.1349C 31.0459 73.1349 40 69.9567 40 67.2698L 40 0Z"/>
+</defs>
+</svg>

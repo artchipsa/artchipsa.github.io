@@ -218,8 +218,24 @@ $(document).ready(function(){
 
 	});
 
+	$(window).resize(function(){
+		specialBlockPos();
+	});
+
 });
 
+function oneByOneFade(elem, time){
+	setTimeout(function(){
+		elem.addClass('in');
+	}, time);
+}
+function specialBlockPos(){
+	var special_width = $(window).width();
+	$('.full').each(function(){
+		$(this).width(special_width);
+		$(this).offset({left: 0});
+	});
+}
 function anchorsBlock(){
 	var lastId,
 		anchorMenu = $('.wave-tabs.anchors'),
@@ -249,7 +265,7 @@ function anchorsBlock(){
 	});
 
    	var fixed_trigger = anchorMenu.offset().top - anchorMenuHeight+190;
-   	var fixed_stop_trigger = $('.product-content').offset().top + $('.product-content').height();
+   	var fixed_stop_trigger = $('.spy-content').offset().top + $('.spy-content').height();
    	var lastScrollTop = 0;
 	var new_step = 0;
 	$(window).scroll(function(){
@@ -277,6 +293,11 @@ function anchorsBlock(){
 				if (id !== ''){
 					var new_left = anchorMenu.find("a[href='#"+id+"']").position().left;
 					wave_img.stop().animate({ left: new_left}, 250);
+					if (anchorMenu.find("a[href='#"+id+"']").position().left + anchorMenu.find("a[href='#"+id+"']").width() > anchorMenu.width()){
+						new_left = anchorMenu.width() -  wave_img.width();
+						console.log("new_left", new_left);
+						wave_img.stop().animate({ left: new_left}, 250);
+					}
 				}
 		   	}
 
@@ -315,7 +336,6 @@ function anchorsBlock(){
 		}
 	});
 }
-
 function mobileScroll(){
 	var container = $('.mobile-scroll');
 	var width = 0;
@@ -350,7 +370,6 @@ function mobileScroll(){
 		});
 	});
 }
-
 function mainHeroAnimation(){
 	// Хак с шириной свг 
 	var window_width = $(window).width();
@@ -370,7 +389,6 @@ function mainHeroAnimation(){
 		$('.wave-block, .hero-img .overlay, .hero-main p').addClass('load');
 	}, 250)
 }
-
 function photoTabs(){
 	var width = 0;
 	setTimeout(function(){
@@ -380,6 +398,329 @@ function photoTabs(){
 		$('.photo-tab-block').width(width + 75);
 	}, 100);
 }
+function initMap(){
+
+	var styleArray = [
+	    {
+	        "featureType": "all",
+	        "elementType": "labels",
+	        "stylers": [
+	            {
+	                "visibility": "on"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "all",
+	        "elementType": "labels.text.fill",
+	        "stylers": [
+	            {
+	                "saturation": 36
+	            },
+	            {
+	                "color": "#000000"
+	            },
+	            {
+	                "lightness": 40
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "all",
+	        "elementType": "labels.text.stroke",
+	        "stylers": [
+	            {
+	                "visibility": "on"
+	            },
+	            {
+	                "color": "#000000"
+	            },
+	            {
+	                "lightness": 16
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "all",
+	        "elementType": "labels.icon",
+	        "stylers": [
+	            {
+	                "visibility": "off"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "administrative",
+	        "elementType": "geometry.fill",
+	        "stylers": [
+	            {
+	                "color": "#000000"
+	            },
+	            {
+	                "lightness": 20
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "administrative",
+	        "elementType": "geometry.stroke",
+	        "stylers": [
+	            {
+	                "color": "#000000"
+	            },
+	            {
+	                "lightness": 17
+	            },
+	            {
+	                "weight": 1.2
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "administrative.locality",
+	        "elementType": "labels.text.fill",
+	        "stylers": [
+	            {
+	                "color": "#c4c4c4"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "administrative.neighborhood",
+	        "elementType": "labels.text.fill",
+	        "stylers": [
+	            {
+	                "color": "#707070"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "landscape",
+	        "elementType": "geometry",
+	        "stylers": [
+	            {
+	                "color": "#000000"
+	            },
+	            {
+	                "lightness": 20
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "poi",
+	        "elementType": "geometry",
+	        "stylers": [
+	            {
+	                "color": "#000000"
+	            },
+	            {
+	                "lightness": 21
+	            },
+	            {
+	                "visibility": "on"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "poi.business",
+	        "elementType": "geometry",
+	        "stylers": [
+	            {
+	                "visibility": "on"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.highway",
+	        "elementType": "geometry.fill",
+	        "stylers": [
+	            {
+	                "color": "#be2026"
+	            },
+	            {
+	                "lightness": "0"
+	            },
+	            {
+	                "visibility": "on"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.highway",
+	        "elementType": "geometry.stroke",
+	        "stylers": [
+	            {
+	                "visibility": "off"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.highway",
+	        "elementType": "labels.text.fill",
+	        "stylers": [
+	            {
+	                "visibility": "off"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.highway",
+	        "elementType": "labels.text.stroke",
+	        "stylers": [
+	            {
+	                "visibility": "off"
+	            },
+	            {
+	                "hue": "#ff000a"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.arterial",
+	        "elementType": "geometry",
+	        "stylers": [
+	            {
+	                "color": "#000000"
+	            },
+	            {
+	                "lightness": 18
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.arterial",
+	        "elementType": "geometry.fill",
+	        "stylers": [
+	            {
+	                "color": "#575757"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.arterial",
+	        "elementType": "labels.text.fill",
+	        "stylers": [
+	            {
+	                "color": "#ffffff"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.arterial",
+	        "elementType": "labels.text.stroke",
+	        "stylers": [
+	            {
+	                "color": "#2c2c2c"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.local",
+	        "elementType": "geometry",
+	        "stylers": [
+	            {
+	                "color": "#000000"
+	            },
+	            {
+	                "lightness": 16
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.local",
+	        "elementType": "labels.text.fill",
+	        "stylers": [
+	            {
+	                "color": "#999999"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.local",
+	        "elementType": "labels.text.stroke",
+	        "stylers": [
+	            {
+	                "saturation": "-52"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "transit",
+	        "elementType": "geometry",
+	        "stylers": [
+	            {
+	                "color": "#000000"
+	            },
+	            {
+	                "lightness": 19
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "water",
+	        "elementType": "geometry",
+	        "stylers": [
+	            {
+	                "color": "#000000"
+	            },
+	            {
+	                "lightness": 17
+	            }
+	        ]
+	    }
+	]
+
+	var mapOptions = {
+	    zoom: 11,
+	    center: new google.maps.LatLng(55.00835259999999, 82.93573270000002),
+	    styles: styleArray,
+	    disableDefaultUI: true,
+	    scrollwheel: false,
+  	};
+
+  	var map = new google.maps.Map(document.getElementById('geo_map'),
+    mapOptions);
+
+
+
+
+  	var images = ['http://localhost:8080/img/geo1.svg', 'http://localhost:8080/img/geo2.svg',
+  	'http://localhost:8080/img/geo3.svg', 'http://localhost:8080/img/geo4.svg'];
+    var marker = new google.maps.Marker({
+	    position: {lat: 54.98629588345607, lng: 82.69128689921877},
+	    map: map,
+	    icon: images[0]
+  	});
+  	var marker1 = new google.maps.Marker({
+	    position: {lat: 55.0166207429296, lng: 82.82037625468752},
+	    map: map,
+	    icon: images[1]
+  	});
+  	var marker2 = new google.maps.Marker({
+	    position: {lat: 54.942934881383266, lng: 82.97761807597658},
+	    map: map,
+	    icon: images[2]
+  	});
+  	var marker3 = new google.maps.Marker({
+	    position: {lat: 55.00402098759967, lng: 83.07031521953127},
+	    map: map,
+	    icon: images[3]
+  	});
+
+}
+function cutString(elem){
+	var string = elem.text(),
+		new_string;
+	if (string.length > 177){
+		new_string = string.slice(0, 177);
+		return new_string + '...';
+	} else {
+		return 0;
+	}
+	
+}
+
+
 var switch_slider_photos;
 function ready(){
 
@@ -453,6 +794,14 @@ function ready(){
 			$(window).scrollTop(0);
 		}, 200)
 	});
+
+	if ($('.full').length){
+		specialBlockPos();
+	}
+
+	if ($('#geo_map').length){
+		initMap();
+	}
 }
 
 
@@ -475,7 +824,18 @@ router.config(function($routeProvider, $locationProvider) {
     	  	},
     	  	controller: 'mainController'
     	})
+    	.when('/:name*/:id*', {
+    		templateUrl: function(id){
+    			console.log(id);
+    			return id + '.html'
+    		},
+    		controller: 'mainController'
+    	})
     	.when('/', {
+            templateUrl : 'main.html',
+            controller: 'mainController'
+        })
+        .otherwise('/', {
             templateUrl : 'main.html',
             controller: 'mainController'
         });
@@ -492,7 +852,7 @@ router.config(function($routeProvider, $locationProvider) {
         //event button to move backward  
         $rootScope.back = function() {  
             $rootScope.slide = 'slide-right';  
-            $window.history.back();
+            // $window.history.back();
         }  
         //event button item list to move forward  
         $rootScope.next = function() {  

@@ -1,7 +1,6 @@
 .page-control-line {
   position: relative;
   width: 100%;
-  padding: 0px 8%;
   margin-bottom: 155px;
 }
 .page-control-line:before {
@@ -15,12 +14,19 @@
   transform: translateY(-50%);
   z-index: -1;
 }
+.page-control-line .line-center {
+  display: inline-block;
+  vertical-align: middle;
+  width: 940px;
+}
 .page-control-line .back {
   padding: 14px 28px;
   background-color: #fff;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 120px;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-decoration: none;
 }
 .page-control-line .back .arrow-icon {
   fill: #E2112E;
@@ -33,6 +39,26 @@
   color: #E2112E;
   font-weight: 800;
   font-size: 20px;
+}
+.page-control-line .fowrard {
+  padding: 14px 28px;
+  background-color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.page-control-line .fowrard .arrow-icon {
+  fill: #E2112E;
+  vertical-align: middle;
+}
+.page-control-line .fowrard span {
+  vertical-align: middle;
+  display: inline-block;
+  color: #333;
+  font-weight: 800;
+  font-size: 36px;
+  margin-right: 30px;
+  text-transform: uppercase;
 }
 .page-control-line .title-block {
   padding: 14px 28px;
@@ -53,6 +79,7 @@
   color: #333;
   font-weight: 900;
   font-size: 52px;
+  margin: 0px;
 }
 .page-control-line .control-buttons {
   display: inline-block;
@@ -70,7 +97,7 @@
 .page-content {
   width: 920px;
   margin: 0 auto;
-  margin-bottom: 120px;
+  margin-bottom: 125px;
 }
 .page-content .clients-block {
   background-color: transparent;
@@ -239,6 +266,8 @@
   bottom: 50px;
 }
 .wave-tabs.anchors .wave-tabs-head ul {
+  display: flex;
+  justify-content: space-between;
   margin-top: 0px;
 }
 .wave-tabs.anchors .wave-tabs-head ul li {
@@ -281,6 +310,7 @@
   line-height: 170%;
   color: #4F4F4F;
   margin-bottom: 60px;
+  margin-top: 0px;
 }
 .text-container h3 {
   font-weight: 800;
@@ -289,14 +319,15 @@
 }
 .text-container ul {
   padding: 0px;
-  margin-bottom: 110px;
+  margin-top: 0px;
+  margin-bottom: 85px;
   list-style: none;
 }
 .text-container ul li {
   color: #4F4F4F;
   line-height: 170%;
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-left: 1.3em;
   text-indent: -1.3em;
 }
@@ -306,6 +337,9 @@
   font-size: 22px;
   font-weight: 800;
   padding-right: 12px;
+}
+.text-container img {
+  margin-bottom: 55px;
 }
 .text-container .special-block {
   padding-top: 18px;
