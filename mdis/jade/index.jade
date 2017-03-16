@@ -7,6 +7,7 @@ html
 		link(rel="stylesheet", href="css/style.css")
 		link(rel="stylesheet", href="css/owl.carousel.min.css")
 		link(rel="stylesheet", href="css/owl.theme.default.min.css")
+		link(rel="stylesheet", href="css/jquery.mCustomScrollbar.min.css")
 		//- base(href="/")
 	body(ng-app="route")
 		.svg-assets
@@ -38,68 +39,74 @@ html
 						.row-content
 							.section
 								a(href="") РЕШЕНИЯ
-							.subsections
-								a(href="") Электроэнергетика
-								a(href="") Финансовые организации
-								a(href="") Промышленные предприятия
-								a(href="") Госструктуры
-								a(href="") Атомная энергетика
-								a(href="") Авиация и транспорт
-								a(href="") Автосалоны
-								a(href="") Коммерческие предприятия
+							.subsections.mobile-scroll
+								.mobile-scroll-container
+									a(href="").mobile-scroll-elem Электроэнергетика
+									a(href="").mobile-scroll-elem Финансовые организации
+									a(href="").mobile-scroll-elem Промышленные предприятия
+									a(href="").mobile-scroll-elem Госструктуры
+									a(href="").mobile-scroll-elem Атомная энергетика
+									a(href="").mobile-scroll-elem Авиация и транспорт
+									a(href="").mobile-scroll-elem Автосалоны
+									a(href="").mobile-scroll-elem Коммерческие предприятия
 					.menu-row
 						.count 03
 						.line
 						.row-content
 							.section
 								a(href="") ПРОДУКТЫ
-							.subsections
-								a(href="") Запись телефонных переговоров
-								a(href="") Селективная запись переговоров
-								a(href="") Skype for business
-								a(href="") Запись LYNC
-								a(href="") Запись диспетчерских переговоров
+							.subsections.mobile-scroll
+								.mobile-scroll-container
+									a(href="").mobile-scroll-elem Запись телефонных переговоров
+									a(href="").mobile-scroll-elem Селективная запись переговоров
+									a(href="").mobile-scroll-elem Skype for business
+									a(href="").mobile-scroll-elem Запись LYNC
+									a(href="").mobile-scroll-elem Запись диспетчерских переговоров
 					.menu-row
-						.count 02
+						.count 04
 						.line
 						.row-content
 							.section
 								a(href="") УСЛУГИ
-							.subsections
-								a(href="") Персональные решения
-								a(href="") Комплексная модернизация
-								a(href="") Обучение
+							.subsections.mobile-scroll
+								.mobile-scroll-container
+									a(href="").mobile-scroll-elem Персональные решения
+									a(href="").mobile-scroll-elem Комплексная модернизация
+									a(href="").mobile-scroll-elem Обучение
 					.menu-row
-						.count 02
+						.count 05
 						.line
 						.row-content
 							.section
 								a(href="") НОВОСТИ И СТАТЬИ
-							.subsections
-								a(href="") Новости
-								a(href="") Статьи
+							.subsections.mobile-scroll
+								.mobile-scroll-container
+									a(href="").mobile-scroll-elem Новости
+									a(href="").mobile-scroll-elem Статьи
 					.menu-row
-						.count 02
+						.count 06
 						.line
 						.row-content
 							.section
 								a(href="") ПОДДЕРЖКА
-							.subsections
-								a(href="") По продуктам
-								a(href="") Статьи
+							.subsections.mobile-scroll
+								.mobile-scroll-container
+									a(href="").mobile-scroll-elem По продуктам
+									a(href="").mobile-scroll-elem Статьи
 					.menu-row
-						.count 02
+						.count 07
 						.line
 						.row-content
 							.section
 								a(href="") О КОМПАНИИ
-							.subsections
-								a(href="") Наши клиенты
-								a(href="") Сертификаты и лицензии
-								a(href="") Партнеры
-								a(href="") Награды
-								a(href="") Ассоциация
-								a(href="") История
+							.subsections.mobile-scroll
+								.mobile-scroll-container
+									a(href="").mobile-scroll-elem Наши клиенты
+									a(href="").mobile-scroll-elem Сертификаты и лицензии
+									a(href="").mobile-scroll-elem Партнеры
+									a(href="").mobile-scroll-elem Награды
+									a(href="").mobile-scroll-elem Ассоциация
+									a(href="").mobile-scroll-elem История
 					.menu-row
 						.count 08
 						.line
@@ -132,5 +139,6 @@ html
 		script(src="js/angular.min.js")
 		script(src="js/angular-route.min.js")
 		script(src="js/angular-animate.min.js")
+		script(src="js/jquery.mCustomScrollbar.min.js")
 		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAE8iqwKY6PeKvryHYgM_k7cbH9ZyKk5g")
 		script(src="js/app.js")

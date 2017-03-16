@@ -70,13 +70,24 @@ $(document).ready(function(){
 
 	doc.on('click', 'header .menu', function(e){
 		e.preventDefault();
+
+		$('#menu').mCustomScrollbar({
+			scrollInertia: 155,
+			theme: "dark-3",
+			contentTouchScroll: false
+		});
+
 		$(this).toggleClass('active');
 		if ($(this).hasClass('active')){
 			$('#menu').addClass('active');
-			$('header .search, header .question, header .callback, header .phone, header .menu p').addClass('invisible');
+			// $('header .search, header .question, header .callback, header .phone, header .menu p').addClass('invisible');
+			$('header').addClass('modal-active');
+			$('#menu').mCustomScrollbar("update");
 		} else {
 			$('#menu').removeClass('active');
-			$('header .search, header .question, header .callback, header .phone, header .menu p').removeClass('invisible');		
+			// $('header .search, header .question, header .callback, header .phone, header .menu p').removeClass('invisible');		
+			$('header').removeClass('modal-active');
+			$('#menu').mCustomScrollbar("destroy");
 		}
 	});
 
@@ -247,14 +258,21 @@ function anchorsBlock(){
 	    }),
 	    waveFixed = $('.wave-fixed'),
 	    wave_img = $('.wave-tabs.anchors .wave-line img');
+ 	var fixed_trigger = anchorMenu.offset().top - anchorMenuHeight+190;
+   	var fixed_stop_trigger = $('.spy-content').offset().top + $('.spy-content').height();
+   	var lastScrollTop = 0;
+	var new_step = 0;
 
 	anchorMenu.width(anchorMenu.parent().width());
 	waveFixed.height(anchorMenu.find('.wave-tabs-head').outerHeight(true));
 	$(window).resize(function(){
 		anchorMenu.width(anchorMenu.parent().width());
 		waveFixed.height(anchorMenu.find('.wave-tabs-head').outerHeight(true));
+		fixed_stop_trigger = $('.spy-content').offset().top + $('.spy-content').height();
 	});
 
+
+	// клик по элементу плавающего меню и переход к разделу 
 	doc.on('click', '.wave-tabs.anchors .wave-tabs-head a', function(e){
 		e.preventDefault();
 		var href = $(this).attr("href"),
@@ -264,14 +282,11 @@ function anchorsBlock(){
 		}, 300);
 	});
 
-   	var fixed_trigger = anchorMenu.offset().top - anchorMenuHeight+190;
-   	var fixed_stop_trigger = $('.spy-content').offset().top + $('.spy-content').height();
-   	var lastScrollTop = 0;
-	var new_step = 0;
+  
 	$(window).scroll(function(){
-	   // Get container scroll position
 	    var fromTop = $(this).scrollTop() + anchorMenuHeight+170;
 	    var window_width = $(this).width();
+	    // IF ставим к менюшке виксированную позицию.
 	    if(fromTop > fixed_trigger){
 	   		anchorMenu.addClass('fixed').removeClass('fixed_stop');
 	   		waveFixed.show();
@@ -284,15 +299,14 @@ function anchorsBlock(){
 		   	cur = cur[cur.length-1];
 		   	var id = cur && cur.length ? cur[0].id : "";
 
-		   	// ставим активный линк 
+		   	// IF ставим активный линк если заскролили на следующий раздел. 
 		   	if(lastId !== id){
 				lastId = id;
-				anchorItems
-				 .parent().removeClass("active")
-				 .end().filter("[href='#"+id+"']").parent().addClass("active");
-				if (id !== ''){
+				anchorItems.parent().removeClass("active").end().filter("[href='#"+id+"']").parent().addClass("active");
+				if (id !== ''){ // двигаем свгшку если айдишник не пустой
 					var new_left = anchorMenu.find("a[href='#"+id+"']").position().left;
 					wave_img.stop().animate({ left: new_left}, 250);
+					// Не на мобилках проверяем, если это последний элемент, то двигаем элемент в правый край, чтобы он не выходил за пределы блока
 					if (anchorMenu.find("a[href='#"+id+"']").position().left + anchorMenu.find("a[href='#"+id+"']").width() > anchorMenu.width() && $(window).width() > 500){
 						new_left = anchorMenu.width() -  wave_img.width();
 						console.log("new_left", new_left);
@@ -301,19 +315,22 @@ function anchorsBlock(){
 				}
 		   	}
 
-		   	// смотрим входит ли на мобилках
+		   	// смотрим входит ли на мобилках элементы меню и если что двигаем контейнер, чтобы активный элемент входил
 			if($('.mobile-scroll-elem.active').length && window_width < 500){
 				var rightEdge = anchorMenu.find("a[href='#"+id+"']").offset().left + anchorMenu.find("a[href='#"+id+"']").width();
 				var leftEdge = anchorMenu.find("a[href='#"+id+"']").offset().left - anchorMenu.find("a[href='#"+id+"']").width();
-				if (fromTop > lastScrollTop){
+				if (fromTop > lastScrollTop){ // если скролим вниз то проверяем границу справа
 				   if (rightEdge > $('.mobile-scroll').parent().width()){
 				   		new_step = new_step + anchorMenu.find("a[href='#"+id+"']").width()+parseInt(anchorMenu.find("a[href='#"+id+"']").css('marginRight'));
 						$('.mobile-scroll').css({transform: 'translateX(-'+new_step+'px)'}, 250);
 				   }
-				} else {
+				} else { // если двигаем вверх, то проверяем границу слева
 					if (leftEdge < 0){
 						new_step = new_step - anchorMenu.find("a[href='#"+id+"']").width()+parseInt(anchorMenu.find("a[href='#"+id+"']").css('marginRight'));
 						$('.mobile-scroll').css({transform: 'translateX(-'+new_step+'px)'}, 250);
+						if (id == cur[0].id){
+							$('.mobile-scroll').css({transform: 'translateX(-'+0+'px)'}, 250);
+						}
 					}
 				}
 				lastScrollTop = fromTop;  
@@ -338,36 +355,42 @@ function anchorsBlock(){
 }
 function mobileScroll(){
 	var container = $('.mobile-scroll');
-	var width = 0;
-
 	container.each(function(){
 		var elems = $(this).find('.mobile-scroll-elem');
+		var width = 0;
+		var stop_parametre = 0;
 		elems.each(function(){
-			width = width + $(this).outerWidth(true);
+			width = width + $(this).outerWidth(true)+5;
+			stop_parametre = stop_parametre + ($(this).outerWidth(true)+5);
+			console.log($(this).outerWidth(true));
 		});
-		$(this).width(width+270);
+		$(this).width(width);
+		console.log("width", width);
 		var move;
-		var stop = $(this).width()/2;
+		var stop = stop_parametre - $(this).parent().width();
+		console.log("stop", stop);
 		var move_start;
-		$(this).hammer().bind('panstart', function(e){
-			var matrix = $(this).css('transform');
-			matrix = matrix.split('(')[1];
-			matrix = matrix.split(')')[0];
-			matrix = matrix.split(',');
-			matrix = matrix[4];
-			move_start = parseInt(matrix, 10);
-			move_start = Math.abs(move_start);
-		})
 
-		$(this).hammer().bind("pan", function(ev){
-			var move_count = ev.gesture.deltaX * (-1);
-			move = move_start + move_count;
-			if (move > $(this).width()/2){
-				$(this).css({transform: 'translateX(-'+stop+'px)'});	
-			} else {
-				$(this).css({transform: 'translateX(-'+move+'px)'});
-			}
-		});
+		if ($(this).width() > $(window).width()){
+			$(this).hammer().bind('panstart', function(e){
+				var matrix = $(this).css('transform');
+				matrix = matrix.split('(')[1];
+				matrix = matrix.split(')')[0];
+				matrix = matrix.split(',');
+				matrix = matrix[4];
+				move_start = parseInt(matrix, 10);
+				move_start = Math.abs(move_start);
+			})
+			$(this).hammer().bind("pan", function(ev){
+				var move_count = ev.gesture.deltaX * (-1);
+				move = move_start + move_count;
+				if (move >= stop){
+					$(this).css({transform: 'translateX(-'+stop+'px)'});	
+				} else {
+					$(this).css({transform: 'translateX(-'+move+'px)'});
+				}
+			});
+		}
 	});
 }
 function mainHeroAnimation(){
@@ -773,6 +796,9 @@ function ready(){
 	}
 
 	if ($('.mobile-scroll-container').length && $(window).width() < 1024){
+		setTimeout(function(){
+			mobileScroll();
+		}, 500);
 		mobileScroll();
 	}
 
@@ -794,6 +820,8 @@ function ready(){
 			$(window).scrollTop(0);
 		}, 200)
 	});
+
+
 
 	if ($('.full').length){
 		setTimeout(function(){
