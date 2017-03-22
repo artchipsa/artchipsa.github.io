@@ -1,0 +1,18 @@
+<svg width="70" height="70" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Group</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-16481 -978)" figma:type="canvas">
+<g id="Group" figma:type="frame">
+<g id="Rectangle 11" figma:type="rounded-rectangle">
+<use xlink:href="#path0_fill" transform="translate(16481 978)" fill="#FFFFFF"/>
+</g>
+<g id="Vector 5" figma:type="vector">
+<use xlink:href="#path1_fill" transform="translate(16506.7 1003.08)" fill="#DA2727"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 35C 0 15.67 15.67 0 35 0C 54.33 0 70 15.67 70 35C 70 54.33 54.33 70 35 70C 15.67 70 0 54.33 0 35Z"/>
+<path id="path1_fill" d="M 0 19.25L 0 0L 22.1667 10.5L 0 19.25Z"/>
+</defs>
+</svg>

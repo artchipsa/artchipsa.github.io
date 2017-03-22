@@ -98,3 +98,272 @@
 		background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
 	} */
 }
+
+// Партнеры
+
+.card-single-block{
+	width: 100%;
+	padding: 42px;
+	border: 1px solid #E0E0E0;
+	img{
+		vertical-align: middle;
+		width: 30%;
+		margin-bottom: 0px;
+	}
+	.gallery{
+		display: inline-block;
+		width: 16%;
+		margin-right: 8%;
+		text-align: center;
+		position: relative;
+		.hover{
+			position: absolute;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: all .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+			background-color: fade(@black, 70%);
+			img{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+		&:hover .hover{
+			opacity: 1;
+		}
+		&:focus{
+			outline: none;
+		}
+		img{
+			width: auto;
+			max-height: 190px;
+		}
+	}
+	.partner-content{
+		width: 69%;
+		display: inline-block;
+		vertical-align: middle;
+		span{
+			font-size: 18px;
+			font-weight: 800;
+			color: @black;
+			margin-bottom: 26px;
+			display: inline-block;
+		}
+		p{
+			margin: 0px;
+		}
+	}
+}
+.partners-cards{
+    display: inline-flex;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+	.item{
+		padding: 40px;
+		padding-top: 0px;
+		width: 33.33%;
+		display: inline-block;
+		vertical-align: top;
+		border: 1px solid #E0E0E0;
+		.card-pic{
+			height: 150px;
+		    display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		img{
+    			margin-bottom: 0px;
+    		}
+		}
+		.name{
+			font-size: 18px;
+			font-weight: 800;
+			color: @black;
+			margin-bottom: 38px;
+		}
+		.adress{
+			margin-bottom: 36px;
+		}
+		a{
+			font-size: 18px;
+			color: @black;
+			display: block;
+			text-decoration: none;
+			line-height: 170%;
+		}
+	}
+}
+
+.license-section{
+	h2{
+		padding-left: 28px;
+	}
+	.item{
+		background-color: @white;
+		padding: 28px;
+		transition: all .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+		.item-pic{
+			width: 5%;
+			margin-right: 4.5%;
+			display: inline-block;
+			vertical-align: top;
+			img{
+				margin-bottom: 10px;
+			}
+			span{
+				color: @red;
+			}
+		}
+		.item-content{
+			display: inline-block;
+			width: 90%;
+			vertical-align: top;
+			p{
+				margin-bottom: 30px;
+			}
+			.link-block{		
+				height: 0px;
+				opacity: 0;
+				margin-bottom: 20px;
+				overflow: hidden;
+				display: inline-block;
+				transition: all .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+				a{
+					text-decoration: none;
+					font-size: 18px;
+					font-weight: 800;
+					color: @red;
+				}
+			}
+		}
+		&:hover{
+			background-color: #F9F9F9;
+			.item-content{
+				.link-block{
+					height: 20px;
+					opacity: 1;
+					margin-bottom: 0px;
+				}
+			}
+		}
+	}
+}
+
+
+// about history
+
+#history-custom-dots{
+	display: flex;
+	padding: 0px;
+    justify-content: space-between;
+	list-style: none;
+	width: 940px;
+	margin: 0 auto;
+	margin-bottom: 120px;
+	li{
+		position: relative;
+		&:hover{
+			a{
+				color: @black;
+			}
+			.line{
+				width: 100%;
+				left: 0;
+				right: auto;
+			}
+		}
+		&.active{
+			a{
+				color: @black;
+			}
+			.line{
+				width: 100%;
+				left: 0;
+				right: auto;
+			}
+		}
+		a{
+			text-decoration: none;
+			padding: 5px;
+			font-size: 16px;
+			font-weight: 800;
+			color: @BDgray;
+			transition: all .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+		}
+		.line{
+			position: absolute;
+			bottom: -8px;
+			right: 0;
+			left: auto;
+			width: 0%;
+			height: 2px;
+			background-color: @red;
+			transition: all .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+		}
+	}
+}
+.history-owl{
+	margin-bottom: 50px;
+	.item{
+		.wave-container{
+			position: relative;
+			margin-bottom: 100px;
+			.year{
+				font-weight: 800;
+				text-align: center;
+				color: #f2f2f2;
+			    font-size: 32vw;
+				line-height: 100%;
+			}
+			.wave-block{
+				height: 434px;
+			    transform: translateY(-50%);
+				.inner{
+					height: inherit;
+					&:before{
+						content: '';
+						position: absolute;
+						width: 100%;
+						height: 2px;
+						background-color: @red;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						z-index: 1;
+					}
+					.audio-block{
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						width: 960px;
+						z-index: 2;
+						opacity: 0;
+						transition: all .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+						&.active{
+							opacity: 1;
+						}
+
+					}
+					.play-button{
+						width: 70px;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						z-index: 3;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+		.text-container{
+			width: 940px;
+			margin: 0 auto;
+		}
+	}
+}

@@ -1,0 +1,187 @@
+.content-container
+	.page-control-line
+		a(href="#!products/index" ng-click="back()").page-link.back
+			svg(viewBox="0 0 76 76", class="svgico arrow-icon")
+				use(xlink:href="#left-arrow")
+			span Список продуктов
+		.title-block
+			span.top-tag ПРОДУКТ
+			span.name-span PHANTOM PRO
+		//- .control-buttons
+		//- 	a(href="").btn.primary.invert ЗАДАТЬ ВОПРОС
+		//- 	a(href="").btn.primary.invert ЗАКАЗАТЬ ЗВОНОК
+	.page-content
+		.square-links-services
+			a(href="#!clients" ng-click="next()").item.page
+				p Устанавливаем оборудование на пробный период  БЕСПЛАТНО
+				.bottom
+					.link подробнее
+					img(src="img/Icon/icon_product/icon_product_1.svg", alt="")
+			a(href="#!clients" ng-click="next()").item.page
+				p Проводим бесплатное обучение ваших сотрудников
+				.bottom
+					.link подробнее
+					img(src="img/Icon/icon_product/icon_product_2.svg", alt="")
+			a(href="#!clients" ng-click="next()").item.page
+				p Мы предлагаем клиентам удалённую техническую поддержку. Всегда на связи, всегда поможем
+				.bottom
+					.link подробнее
+					img(src="img/Icon/icon_product/icon_product_3.svg", alt="")
+	.switcher-block
+		ul
+			li.active
+				a(href="") Phantom Pro 1
+			li
+				a(href="") Phantom Pro 2
+		.switcher-content
+			.item.active
+				img(src="img/img_phantom_pro.png", alt="")
+				.switcher-modal-links
+					a(href="" data-id="video") смотреть видео
+					a(href="" data-id="photos") смотреть фото
+				.switch-modal-window.video
+					iframe(width="100%" height="500px" src="https://www.youtube.com/embed/9uKHX-QCxnE?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+				.switch-modal-window.photos
+					.owl-carousel.switch-photos
+						.owl-item
+							img(src="img/img_phantom_pro.png", alt="")
+						.owl-item
+							img(src="img/img_phantom_pro.png", alt="")
+						.owl-item
+							img(src="img/img_phantom_pro.png", alt="")
+						.owl-item
+							img(src="img/img_phantom_pro.png", alt="")
+						.owl-item
+							img(src="img/img_phantom_pro.png", alt="")
+						.owl-item
+							img(src="img/img_phantom_pro.png", alt="")
+
+					a(href="#").switch-arrow.switch-prev
+						svg(viewBox="0 0 76 76", class="svgico arrow-icon")
+							use(xlink:href="#left-arrow")
+
+					a(href="#").switch-arrow.switch-next
+						svg(viewBox="0 0 76 76", class="svgico arrow-icon")
+							use(xlink:href="#right-arrow")
+			.item
+				img(src="img/img_phantom_pro.png", alt="")
+				.switcher-modal-links
+					a(href="", data-id="video") смотреть видео
+					a(href="", data-id="photos") смотреть фото
+				.switch-modal-window.video 
+					iframe(width="100%" height="500px" src="https://www.youtube.com/embed/9uKHX-QCxnE?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+				.switch-modal-window.photos
+					.owl-carousel.switch-photos
+						.owl-item
+							img(src="img/img_phantom_pro.png", alt="")
+						.owl-item
+							img(src="img/img_phantom_pro.png", alt="")
+						.owl-item
+							img(src="img/img_phantom_pro.png", alt="")
+						.owl-item
+							img(src="img/img_phantom_pro.png", alt="")
+						.owl-item
+							img(src="img/img_phantom_pro.png", alt="")
+						.owl-item
+							img(src="img/img_phantom_pro.png", alt="")
+					a(href="#").switch-arrow.switch-prev
+						svg(viewBox="0 0 76 76", class="svgico arrow-icon")
+							use(xlink:href="#left-arrow")
+					a(href="#").switch-arrow.switch-next
+						svg(viewBox="0 0 76 76", class="svgico arrow-icon")
+							use(xlink:href="#right-arrow")
+	.page-content
+		.spy-content
+			.wave-fixed
+			.wave-tabs.anchors
+				.wave-tabs-head.mobile-scroll
+					ul.mobile-scroll-container
+						li.active.mobile-scroll-elem
+							a(href="#description" target="_self") Описание
+						li.mobile-scroll-elem
+							a(href="#benefits" target="_self") Преимущества
+						li.mobile-scroll-elem
+							a(href="#areas" target="_self") Сферы применения
+						li.mobile-scroll-elem
+							a(href="#specific" target="_self") Спецификация
+						li.mobile-scroll-elem
+							a(href="#cases" target="_self") Кейсы
+					.wave-line
+						img(src="img/tab_wave_red.svg", alt="")
+			.text-container
+				#description
+					h2 Описание
+					p 21 год сотрудничества с предприятиями различных отраслей и сфер деятельности позволили изучить специфику работы и получить бесценный опыт организации работ на основе продукции компании. Детальное изучение стоящих перед заказчиком задач позволяет грамотно сформулировать технико-экономическое задание, что, в свою очередь, является основой для успешного внедрения. Такой подход максимально приближает нас к реальным потребностям клиентов, что позволяет развивать нашу продукцию и решения в соответствии с тенденциями рынка.
+					h3 Основные функциональные устройства:
+					ul
+						li Лучшим аппаратным комплексом для записи речевой информации;
+						li Самым большим списком поддерживаемых АТС;
+						li Нацеленностью на решение задач, стоящих перед нашими клиентами;
+						li Всеми необходимыми лицензиями на оборудование и на право его установки: сертифицировано;
+						li Министерством по связи и информации, Госстандартом, Системой сертификации в электроэнергетике Энсертико, Межгосударственным Авиационным Комитетом (МАК), одобрено ВНИИАС, международный сертификат качества ГОСТ ISO 9001- 2011;
+						li Списком клиентов, которым можно гордиться, и который доказывает надёжность и универсальность нашего продукта.
+				#benefits
+					h2 Преимущества
+					p 21 год сотрудничества с предприятиями различных отраслей и сфер деятельности позволили изучить специфику работы и получить бесценный опыт организации работ на основе продукции компании. Детальное изучение стоящих перед заказчиком задач позволяет грамотно сформулировать технико-экономическое задание, что, в свою очередь, является основой для успешного внедрения. Такой подход максимально приближает нас к реальным потребностям клиентов, что позволяет развивать нашу продукцию и решения в соответствии с тенденциями рынка.
+					.special-block
+						.item
+							span Индивидуальный подход
+							p Детальное изучение стоящих перед заказчиком задач позволяет грамотно сформулировать технико-экономическое задание, что, в свою очередь, является основой для успешного внедрения. 
+						.item
+							span Качественная продукция
+							p Детальное изучение стоящих перед заказчиком задач позволяет грамотно сформулировать технико-экономическое задание, что, в свою очередь, является основой для успешного внедрения. 
+						.item
+							span Ответственные люди
+							p Детальное изучение стоящих перед заказчиком задач позволяет грамотно сформулировать технико-экономическое задание, что, в свою очередь, является основой для успешного внедрения. 
+						.item
+							span Индивидуальный подход
+							p Детальное изучение стоящих перед заказчиком задач позволяет грамотно сформулировать технико-экономическое задание, что, в свою очередь, является основой для успешного внедрения. 
+						.item
+							span Индивидуальный подход
+							p Детальное изучение стоящих перед заказчиком задач позволяет грамотно сформулировать технико-экономическое задание, что, в свою очередь, является основой для успешного внедрения.
+				#areas
+					h2 Сферы применения
+					p 21 год сотрудничества с предприятиями различных отраслей и сфер деятельности позволили изучить специфику работы и получить бесценный опыт организации работ на основе продукции компании. Детальное изучение стоящих перед заказчиком задач позволяет грамотно сформулировать технико-экономическое задание, что, в свою очередь, является основой для успешного внедрения. Такой подход максимально приближает нас к реальным потребностям клиентов, что позволяет развивать нашу продукцию и решения в соответствии с тенденциями рынка.
+					ul
+						li Лучшим аппаратным комплексом для записи речевой информации;
+						li Самым большим списком поддерживаемых АТС;
+						li Нацеленностью на решение задач, стоящих перед нашими клиентами;
+						li Всеми необходимыми лицензиями на оборудование и на право его установки: сертифицировано;
+						li Министерством по связи и информации, Госстандартом, Системой сертификации в электроэнергетике Энсертико, Межгосударственным Авиационным Комитетом (МАК), одобрено ВНИИАС, международный сертификат качества ГОСТ ISO 9001- 2011;
+						li Списком клиентов, которым можно гордиться, и который доказывает надёжность и универсальность нашего продукта.
+				#specific
+					h2 Спецификация
+					ul
+						li Лучшим аппаратным комплексом для записи речевой информации;
+						li Самым большим списком поддерживаемых АТС;
+						li Нацеленностью на решение задач, стоящих перед нашими клиентами;
+						li Всеми необходимыми лицензиями на оборудование и на право его установки: сертифицировано;
+						li Министерством по связи и информации, Госстандартом, Системой сертификации в электроэнергетике Энсертико, Межгосударственным Авиационным Комитетом (МАК), одобрено ВНИИАС, международный сертификат качества ГОСТ ISO 9001- 2011;
+						li Списком клиентов, которым можно гордиться, и который доказывает надёжность и универсальность нашего продукта.
+				#cases
+					h2 Кейсы
+					.clients-block
+						.case-item
+							img.client-logo(src="img/clients/c1.png", alt="")
+							.appear-content
+								.audio-block
+									audio#audio(src="sounds/sound1.mp3")
+									.line
+										a(href="#").controls.play
+											img(src="img/play.svg", alt="")
+									span Послушать
+								a.more(href="") подробнее
+						.case-item
+							img.client-logo(src="img/clients/c2.png", alt="")
+							.appear-content
+								.audio-block
+									audio#audio(src="sounds/sound1.mp3")
+									.line
+										a(href="#").controls.play
+											img(src="img/play.svg", alt="")
+									span Послушать
+								a.more(href="") подробнее
+
+
+
+

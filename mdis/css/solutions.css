@@ -1,0 +1,48 @@
+.usues-prods-cont .item {
+  width: 50%;
+  background-color: #fff;
+  border: 1px solid #E0E0E0;
+  position: relative;
+  padding: 30px 40px;
+  height: 295px;
+  display: inline-flex;
+  align-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: #333;
+}
+.usues-prods-cont .item .tag {
+  color: #BDBDBD;
+  font-weight: 800;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.usues-prods-cont .item .bottom-row {
+  width: 100%;
+  bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.usues-prods-cont .item .bottom-row img {
+  margin-bottom: 0px;
+}
+.usues-prods-cont .item .bottom-row span {
+  font-size: 20px;
+  font-weight: 700;
+}
+.usues-prods-cont .item .bottom-row .line {
+  margin-bottom: 27px;
+}
+.page-content .solutions-block {
+  margin-top: 100px;
+}
+.page-content .solutions-block .row .line-item {
+  width: 50%;
+  background-color: #fff !important;
+  border: 1px solid #e0e0e0;
+}
+.page-content .solutions-block .row .line-item:hover {
+  background-color: #E2112E !important;
+}

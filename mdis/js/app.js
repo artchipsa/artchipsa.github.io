@@ -3,6 +3,7 @@ var history_length = window.history.length;
 var state;
 var url;
 var urls = [];
+var audio;
 
 var doc = $(document);
 $(document).ready(function(){
@@ -71,12 +72,14 @@ $(document).ready(function(){
 	doc.on('click', 'header .menu', function(e){
 		e.preventDefault();
 
-		$('#menu').mCustomScrollbar({
-			scrollInertia: 155,
-			theme: "dark-3",
-			contentTouchScroll: false
-		});
-
+		if ($(window).width() < 1370){
+			$('#menu').mCustomScrollbar({
+				scrollInertia: 155,
+				theme: "dark-3",
+				contentTouchScroll: false
+			});
+		}
+		
 		$(this).toggleClass('active');
 		if ($(this).hasClass('active')){
 			$('#menu').addClass('active');
@@ -90,8 +93,6 @@ $(document).ready(function(){
 			$('#menu').mCustomScrollbar("destroy");
 		}
 	});
-
-
 
 	$('body').on('mousewheel', function(e){
 		if ($('.menu').hasClass('active')){
@@ -109,7 +110,6 @@ $(document).ready(function(){
 			} 
 		}
 	});
-
 
  	photoTabs();
 
@@ -233,8 +233,82 @@ $(document).ready(function(){
 		specialBlockPos();
 	});
 
+	doc.on('click', '#history-custom-dots a', function(){
+		var id = $(this).data('id');
+		var height;
+		if ($(window).width() > 500){
+			height = 434;
+		} else {
+			height = 185;
+		}
+
+		audio.empty();
+		audio.destroy();
+		$('.audio-block').removeClass('active');
+		audio = WaveSurfer.create({
+			container: '#audio' + id,
+			barWidth: 2,
+			height: height,
+			cursorColor: 'transparent',
+			maxCanvasWidth: 940,
+			normalize: true,
+			waveColor: "#ffa9b5",
+			progressColor: '#E2112E',
+			autoCenter: false
+		});
+	 	audio.load('sounds/history/'+id+'.mp3');
+	 	audio.on('ready', function(){
+	 		$('#audio'+id).addClass('active');
+	 	})
+	});
+
+
+	doc.on('click', '.history-owl .play-button', function(){
+		audio.playPause();
+	});
+
+	doc.on('click', '.hidden-toggle', function(e){
+		e.preventDefault();
+		$(this).find('span').text(function(i, text){
+			return text === "Читать дальше" ? "Свернуть" : "Читать дальше";
+		});
+		$(this).parents('.text-with-hidden-part').find('.hidden-part').stop().slideToggle(250);
+		$(this).toggleClass('active');
+		if ($(this).hasClass('active')){
+			$(this).find('svg').css('transform', 'rotate(180deg)');
+		} else {
+			$(this).find('svg').css('transform', 'rotate(0deg)');
+		}
+		
+	});
+
 });
 
+
+function audioWave(){
+	var active_elem = $('#history-custom-dots .owl-dot.active a');
+	var id = active_elem.data('id');
+	var height;
+	if ($(window).width() > 500){
+		height = 434;
+	} else {
+		height = 185;
+	}
+ 	audio = WaveSurfer.create({
+		container: '#audio' + id,
+		barWidth: 2,
+		height: height,
+		cursorColor: 'transparent',
+		maxCanvasWidth: 960,
+		normalize: true,
+		waveColor: "#ffa9b5",
+		progressColor: '#E2112E'
+	});
+ 	audio.load('sounds/history/'+id+'.mp3');
+ 	audio.on('ready', function(){
+ 		$('#audio'+id).addClass('active');
+ 	})
+}
 function oneByOneFade(elem, time){
 	setTimeout(function(){
 		elem.addClass('in');
@@ -258,7 +332,7 @@ function anchorsBlock(){
 	    }),
 	    waveFixed = $('.wave-fixed'),
 	    wave_img = $('.wave-tabs.anchors .wave-line img');
- 	var fixed_trigger = anchorMenu.offset().top - anchorMenuHeight+190;
+ 	var fixed_trigger = anchorMenu.offset().top + anchorMenuHeight+130;
    	var fixed_stop_trigger = $('.spy-content').offset().top + $('.spy-content').height();
    	var lastScrollTop = 0;
 	var new_step = 0;
@@ -286,7 +360,7 @@ function anchorsBlock(){
 	$(window).scroll(function(){
 	    var fromTop = $(this).scrollTop() + anchorMenuHeight+170;
 	    var window_width = $(this).width();
-	    // IF ставим к менюшке виксированную позицию.
+	    // IF ставим к менюшке фиксированную позицию.
 	    if(fromTop > fixed_trigger){
 	   		anchorMenu.addClass('fixed').removeClass('fixed_stop');
 	   		waveFixed.show();
@@ -360,8 +434,8 @@ function mobileScroll(){
 		var width = 0;
 		var stop_parametre = 0;
 		elems.each(function(){
-			width = width + $(this).outerWidth(true)+5;
-			stop_parametre = stop_parametre + ($(this).outerWidth(true)+5);
+			width = width + $(this).outerWidth(true)+10;
+			stop_parametre = stop_parametre + ($(this).outerWidth(true)+10);
 			console.log($(this).outerWidth(true));
 		});
 		$(this).width(width);
@@ -742,8 +816,6 @@ function cutString(elem){
 	}
 	
 }
-
-
 var switch_slider_photos;
 function ready(){
 
@@ -767,6 +839,21 @@ function ready(){
 		$('.loop-prev').click(function() {
 		    mainOwl.trigger('prev.owl.carousel');
 		    return false;
+		});
+	}
+
+	if ($('.history-owl').length){
+		var historyOwl = $('.history-owl');
+		historyOwl.owlCarousel({
+			center: true,
+		    items:1,
+		    dotsContainer: '#history-custom-dots',
+		    mouseDrag: false,
+		    touchDrag: false
+		});
+
+		$('.owl-dot').click(function () {
+		    historyOwl.trigger('to.owl.carousel', [$(this).index(), 300]);
 		});
 	}
 
@@ -795,10 +882,10 @@ function ready(){
 		});
 	}
 
-	if ($('.mobile-scroll-container').length && $(window).width() < 1024){
+	if ($('.mobile-scroll-container').length && $(window).width() < 724){
 		setTimeout(function(){
 			mobileScroll();
-		}, 500);
+		}, 550);
 		mobileScroll();
 	}
 
@@ -815,13 +902,10 @@ function ready(){
 	}
 
 	// Клик на ссылку которая вызывает новые страницы роутером 
-	$('.page').click(function(e){
-		setTimeout(function(){	
-			$(window).scrollTop(0);
-		}, 200)
+	$('a[ng-click]').click(function(e){
+		console.log(1);
+		$(window).scrollTop(0);
 	});
-
-
 
 	if ($('.full').length){
 		setTimeout(function(){
@@ -832,6 +916,10 @@ function ready(){
 
 	if ($('#geo_map').length){
 		initMap();
+	}
+
+	if ($('.history-owl').length){
+		audioWave();
 	}
 }
 

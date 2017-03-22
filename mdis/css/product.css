@@ -294,7 +294,7 @@
   color: #333;
   position: relative;
   margin-bottom: 70px;
-  margin-top: 0px;
+  margin-top: 110px;
 }
 .text-container h2:before {
   content: '';
@@ -372,4 +372,94 @@
 }
 .text-container .clients-block .case-item {
   width: 33%;
+}
+.text-with-hidden-part {
+  padding: 0px 28px 50px 28px;
+  border-bottom: 1px solid #E0E0E0;
+}
+.text-with-hidden-part p {
+  margin-bottom: 30px;
+}
+.text-with-hidden-part a {
+  font-size: 20px;
+  font-weight: 800;
+  color: #E2112E;
+  text-decoration: none;
+}
+.text-with-hidden-part a span {
+  margin-right: 5px;
+}
+.text-with-hidden-part .hidden-part {
+  display: none;
+}
+.product-row {
+  width: 1300px;
+  margin: 0 auto;
+  padding: 70px 150px;
+  margin-bottom: 24px;
+  background-position: top;
+  background-size: cover;
+  position: relative;
+}
+.product-row .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.product-row .text-container {
+  z-index: 2;
+  position: relative;
+}
+.product-row .product-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.product-row .product-head h3 {
+  color: #fff;
+  margin: 0px;
+  line-height: 100%;
+  font-size: 36px;
+}
+.product-row .product-head a {
+  padding: 5px;
+}
+.product-row .product-head .arrow-small-icon {
+  fill: #fff;
+  width: 20px;
+}
+.product-row .product-content {
+  margin-top: 30px;
+}
+.product-row .product-content p {
+  color: #fff;
+}
+.product-row .product-content .products-link .item {
+  color: #fff;
+  width: 28%;
+  margin-right: 5%;
+  display: inline-block;
+  vertical-align: top;
+}
+.product-row .product-content .products-link .item .line {
+  margin-bottom: 30px;
+}
+.product-row .product-content .products-link .item span {
+  margin-bottom: 24px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+.product-row .product-content .products-link .item p {
+  margin-bottom: 0px;
+}
+.line {
+  background-color: #E2112E;
+  width: 60px;
+  height: 2px;
 }

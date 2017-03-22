@@ -1,0 +1,38 @@
+<svg width="35" height="36" viewBox="0 0 35 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Hover_diplom</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-11727 -773)" figma:type="canvas">
+<g id="Hover_diplom" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Group" style="mix-blend-mode:normal;isolation:isolate;" figma:type="frame">
+<g id="Ellipse 4" style="mix-blend-mode:normal;isolation:isolate;" figma:type="frame">
+<mask id="mask0_alpha" mask-type="alpha">
+<g id="mask0 outline ins" style="mix-blend-mode:normal;isolation:isolate;" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:normal;isolation:isolate;" figma:type="vector">
+<use xlink:href="#path0_fill" transform="matrix(0.706153 -0.70806 0.706153 0.70806 11722 787.266)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;isolation:isolate;" mask="url(#mask0_alpha)" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:normal;isolation:isolate;" figma:type="vector">
+<use xlink:href="#path1_fill" transform="matrix(0.706153 -0.70806 0.706153 0.70806 11716.6 787.266)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<g id="Vector 20" style="mix-blend-mode:normal;isolation:isolate;" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:normal;isolation:isolate;" figma:type="vector">
+<use xlink:href="#path2_fill" transform="matrix(0.706153 -0.70806 0.706153 0.70806 11748.5 798.414)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<g id="+" style="mix-blend-mode:normal;" figma:type="text">
+<use xlink:href="#path3_fill" transform="translate(11731.5 781.306)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 27.2102 13.6051C 27.2102 21.119 21.119 27.2102 13.6051 27.2102C 6.09122 27.2102 0 21.119 0 13.6051C 0 6.09122 6.09122 0 13.6051 0C 21.119 0 27.2102 6.09122 27.2102 13.6051Z"/>
+<path id="path1_fill" d="M 27.2102 17.4017C 27.2102 22.8189 22.8189 27.2102 17.4017 27.2102L 17.4017 34.8034C 27.0124 34.8034 34.8034 27.0124 34.8034 17.4017L 27.2102 17.4017ZM 17.4017 27.2102C 11.9846 27.2102 7.59315 22.8189 7.59315 17.4017L 0 17.4017C 0 27.0124 7.79101 34.8034 17.4017 34.8034L 17.4017 27.2102ZM 7.59315 17.4017C 7.59315 11.9846 11.9846 7.59315 17.4017 7.59315L 17.4017 0C 7.79101 0 0 7.79101 0 17.4017L 7.59315 17.4017ZM 17.4017 7.59315C 22.8189 7.59315 27.2102 11.9846 27.2102 17.4017L 34.8034 17.4017C 34.8034 7.79101 27.0124 0 17.4017 0L 17.4017 7.59315Z"/>
+<path id="path2_fill" d="M 6.40055e-07 -6.40055e-07L 0.312799 14.9514L 4.10937 14.9514L 4.02688 -6.40052e-07L 6.40055e-07 -6.40055e-07Z"/>
+<path id="path3_fill" d="M 10.1739 4.89844L 13.3458 4.89844L 13.3458 6.26562L 10.1739 6.26562L 10.1739 9.85938L 8.72082 9.85938L 8.72082 6.26562L 5.54895 6.26562L 5.54895 4.89844L 8.72082 4.89844L 8.72082 1.57812L 10.1739 1.57812L 10.1739 4.89844Z"/>
+</defs>
+</svg>

@@ -1,0 +1,42 @@
+.content-container
+	.page-control-line
+		a(href="#!about/partners" ng-click="back()").page-link.back
+			svg(viewBox="0 0 76 76", class="svgico arrow-icon")
+				use(xlink:href="#left-arrow")
+			span Партнеры
+		.line-center
+			.title-block
+				span.top-tag О компании
+				h1.name-span Награды 
+		a(href="#!about/license" ng-click="next()").page-link.fowrard
+			span СЕРТИФИКАТЫ <br> И ЛИЦЕНЗИИ
+			svg(viewBox="0 0 76 76", class="svgico arrow-icon")
+				use(xlink:href="#right-arrow")
+	.page-content
+		.text-container
+			.card-single-block
+				a(href="img/r1.jpg", data-fancybox="gallery").gallery
+					img(src="img/r1.jpg", alt="")
+					.hover
+						img(src="img/hover_rewards.svg", alt="")
+				.partner-content
+					span Диплом
+					p За многолетние активное участие в работе Евро-Азиатской ассоциации производителей товаров и услуг в области безопасности
+			.card-single-block
+				a(href="img/r2.jpg", data-fancybox="gallery").gallery
+					img(src="img/r2.jpg", alt="")
+				.partner-content
+					span Сертификат
+					p За многолетние активное участие в работе Евро-Азиатской ассоциации производителей товаров и услуг в области безопасности
+			.card-single-block
+				a(href="img/r3.jpg", data-fancybox="gallery").gallery
+					img(src="img/r3.jpg", alt="")
+				.partner-content
+					span Свидетельство
+					p За многолетние активное участие в работе Евро-Азиатской ассоциации производителей товаров и услуг в области безопасности
+			.card-single-block
+				a(href="img/r4.jpg", data-fancybox="gallery").gallery
+					img(src="img/r4.jpg", alt="")
+				.partner-content
+					span Лицензия
+					p За многолетние активное участие в работе Евро-Азиатской ассоциации производителей товаров и услуг в области безопасности
