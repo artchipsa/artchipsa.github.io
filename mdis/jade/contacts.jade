@@ -1,0 +1,35 @@
+.content-container
+	.page-control-line
+		a(href="/" ng-click="back()").page-link.back
+			svg(viewBox="0 0 76 76", class="svgico arrow-icon")
+				use(xlink:href="#left-arrow")
+			span Главная страница
+		.line-center
+			.title-block
+				//- span.top-tag О компании
+				h1.name-span Контакты
+	.page-content
+		.text-container
+			table.contacts-table
+				tr
+					td
+						h4 Офис компании: 
+					td
+						span.phone 123022, Россия, г.Москва, ул.1905, д.7, строение 1
+				tr
+					td
+						h4 служба клиента: 
+					td
+						span.phone #[a(href="") + 7 (495) 783-34-56] (многоканальный)
+				tr
+					td
+						h4 отдел продаж: 
+					td
+						span.email #[a(href="") sales@mdis.ru]
+				tr
+					td
+						h4 отдел технической поддержки: 
+					td
+						span.email #[a(href="") support@mdis.ru]
+			.full
+				#geo_map

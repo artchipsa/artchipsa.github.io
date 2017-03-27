@@ -1,0 +1,76 @@
+.content-container
+	.page-control-line
+		a(href="/" ng-click="back()").page-link.back
+			svg(viewBox="0 0 76 76", class="svgico arrow-icon")
+				use(xlink:href="#left-arrow")
+			span Главная страница
+		.line-center
+			.title-block
+				//- span.top-tag О компании
+				h1.name-span Новости
+	.page-content
+		ul.news-filter-group.switcher-list
+			li.active
+				a(href="" data-filter="*") Все
+			li
+				a(href="" data-filter=".new") Новости
+			li
+				a(href="" data-filter=".article") Статьи
+		.news-block
+			a(href="").line-item.news.big.grid-item.article(style="background-image: url(img/img1_main_page_news.png)")
+				.tag Новости
+				.time #[span 28] СЕНТЯБРЯ
+				span.line-visible
+				span.line-invisible
+				.name Диспетчерские службы АЭС используют комплексы<br>регистрации разговоров – Фантом
+				.more подробнее
+			a(href="").line-item.news.grid-item.new(style="background-image: url(img/img2_main_page_news.png)")
+				.tag Новости
+				.time #[span 28] СЕНТЯБРЯ
+				span.line-visible
+				span.line-invisible
+				.name Диспетчерские службы АЭС<br> используют комплексы регистрац...
+				.more подробнее
+			a(href="").line-item.news.grid-item.new(style="background-image: url(img/img1_main_page_news.png)")
+				.tag Новости
+				.time #[span 28] СЕНТЯБРЯ
+				span.line-visible
+				span.line-invisible
+				.name Диспетчерские службы АЭС<br> используют комплексы регистрац...
+				.more подробнее
+			a(href="").line-item.news.grid-item.article(style="background-image: url(img/img2_main_page_news.png)")
+				.tag Новости
+				.time #[span 28] СЕНТЯБРЯ
+				span.line-visible
+				span.line-invisible
+				.name Диспетчерские службы АЭС<br> используют комплексы регистрац...
+				.more подробнее
+			a(href="").line-item.news.grid-item.new(style="background-image: url(img/img2_main_page_news.png)")
+				.tag Новости
+				.time #[span 28] СЕНТЯБРЯ
+				span.line-visible
+				span.line-invisible
+				.name Диспетчерские службы АЭС<br> используют комплексы регистрац...
+				.more подробнее
+			a(href="").line-item.news.big.grid-item.article(style="background-image: url(img/img1_main_page_news.png)")
+				.tag Новости
+				.time #[span 28] СЕНТЯБРЯ
+				span.line-visible
+				span.line-invisible
+				.name Диспетчерские службы АЭС используют комплексы<br>регистрации разговоров – Фантом
+				.more подробнее
+			a(href="").line-item.news.big.grid-item.article(style="background-image: url(img/img1_main_page_news.png)")
+				.tag Новости
+				.time #[span 28] СЕНТЯБРЯ
+				span.line-visible
+				span.line-invisible
+				.name Диспетчерские службы АЭС используют комплексы<br>регистрации разговоров – Фантом
+				.more подробнее
+			a(href="").line-item.news.grid-item.article(style="background-image: url(img/img2_main_page_news.png)")
+				.tag Новости
+				.time #[span 28] СЕНТЯБРЯ
+				span.line-visible
+				span.line-invisible
+				.name Диспетчерские службы АЭС<br> используют комплексы регистрац...
+				.more подробнее
+

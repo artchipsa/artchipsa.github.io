@@ -1,0 +1,100 @@
+.content-container
+	.page-control-line
+		a(href="/" ng-click="back()").page-link.back
+			svg(viewBox="0 0 76 76", class="svgico arrow-icon")
+				use(xlink:href="#left-arrow")
+			span Главная страница
+		.line-center
+			.title-block
+				//- span.top-tag О компании
+				h1.name-span Поддержка
+	.page-content
+		.text-container
+			h2.title Контакты службы технической пожддержки
+			table.contacts-table
+				tr
+					td
+						h4 ОТДЕЛ ПРОДАЖ: 
+					td
+						span.phone #[a(href="") + 7 (495) 783-34-56] (многокональный)
+						span.email #[a(href="") sales@mdis.ru]
+				tr
+					td
+						h4 служба технической поддержки: 
+					td
+						span.phone #[a(href="") + 7 (495) 783-34-56] (доб. #130)
+						span.email #[a(href="") sales@mdis.ru]
+				tr
+					td
+						h4 отдел разработки: 
+					td
+						span.phone #[a(href="") + 7 (495) 783-34-56] (доб. #130)
+				tr
+					td
+						h4 отдел производства: 
+					td
+						span.phone #[a(href="") + 7 (495) 783-34-56] (доб. #102)
+				tr
+					td
+						h4 служба контроля качества:
+					td
+						span.phone #[a(href="") + 7 (495) 783-34-56] (доб. #102)
+			h2.title Ознакомтесь с базой вопросов
+			.support-questions-block
+				a(href="").line-item
+					span.line-visible
+					span.line-invisible
+					.name Общие вопросы
+					.more подробнее
+				a(href="").line-item
+					span.line-visible
+					span.line-invisible
+					.name Установка системы «Фантом»
+					.more подробнее
+				a(href="").line-item
+					span.line-visible
+					span.line-invisible
+					.name Функции системы «Фантом»
+					.more подробнее
+				a(href="").line-item
+					span.line-visible
+					span.line-invisible
+					.name Коммерческие вопросы
+					.more подробнее
+			h2.title Поддержка по продуктам
+			.support-row.news-block
+				.half
+					ul
+						li
+							a(href="") Phantom 2.3
+						li
+							a(href="") Phantom 4.4 
+						li
+							a(href="") Phantom ECO 
+						li
+							a(href="") Phantom PC 
+						li
+							a(href="") Phantom 3.x 
+						li
+							a(href="") Phantom ULTRA
+						li
+							a(href="") Phantom PRO
+						li
+							a(href="") Phantom OSV
+						li
+							a(href="") Phantom ACTIVE
+					ul
+						li
+							a(href="") Авиатон
+						li
+							a(href="") Aoch bridge
+						li
+							a(href="") Phantom FAX DECODER
+						li
+							a(href="") Led-индикатор
+						li
+							a(href="") Трафик-дубликатор
+				.half
+					a(href="").line-item.news.all
+						.name Смотреть все новости
+						img.arrow(src="img/Icon/right-arrow.svg", alt="")

@@ -147,7 +147,7 @@
 }
 .switcher-block{
 	text-align: center;
-	ul{
+	ul.switcher-list{
 		padding: 0px;
 		border-bottom: 1px solid @red;
 		display: inline-block;
@@ -314,6 +314,9 @@
 			top: -22px
 		}
 	}
+	iframe{
+		margin-bottom: 60px;
+	}
 	p{
 		font-size: 18px;
 		font-weight: 400;
@@ -321,6 +324,9 @@
 		color: @text;
 		margin-bottom: 60px;
 		margin-top: 0px;
+		a{
+			color: @red;
+		}
 	}
 	h3{
 		font-weight: 800;
@@ -350,6 +356,8 @@
 	}
 	img{
 		margin-bottom: 55px;
+		// max-width: 100%;
+		// min-height: 250px;
 	}
 	.special-block{
 		padding-top: 18px;

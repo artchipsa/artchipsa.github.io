@@ -326,12 +326,28 @@
 }
 .history-owl .item .wave-container .wave-block .inner .play-button {
   width: 70px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
   cursor: pointer;
+}
+.history-owl .item .wave-container .wave-block .inner .play-button .play {
+  display: block;
+}
+.history-owl .item .wave-container .wave-block .inner .play-button .pause {
+  display: none;
+}
+.history-owl .item .wave-container .wave-block .inner .play-button img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  transform: translate(-50%, -50%);
 }
 .history-owl .item .text-container {
   width: 940px;

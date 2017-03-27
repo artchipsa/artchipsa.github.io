@@ -15,105 +15,141 @@ html
 			include ../img/assets.svg
 		header(ng-class="headerClass")
 			.half-header
-				a.menu(href="#", target="_self") #[span ] #[p меню]
-				a.search(href="#") #[img(src="img/Icon/SEARCH.svg", alt="")] #[p поиск]
+				a.menu(href="#", target="_self", data-modal="menu") #[span ] #[p меню]
+				a.search(href="#" target="_self", data-modal="search") #[img(src="img/Icon/SEARCH.svg", alt="")] #[p поиск]
 			.half-header
-				a.question(href="") 
+				a.question(href="#" target="_self" data-modal="ask") 
 					span задать вопрос
 					img(src="img/ask.svg", alt="")
-				a.callback(href="") 
+				a.callback(href="#" target="_self" data-modal="call") 
 					span перезвоните мне
 					img(src="img/phone.svg", alt="")
 				a.phone(href="tel:+7 924 242 45 64") +7 924 #[span 242 45 64]
 		.overflow
-			#menu
+			.modal#menu
 				.menu-container
 					.menu-row
 						.count 01
 						.line
 						.row-content
 							.section.no-sub
-								a(href="") ГЛАВНАЯ
+								a(href="/" ng-click="back()") ГЛАВНАЯ
 					.menu-row
 						.count 02
 						.line
 						.row-content
 							.section
-								a(href="") РЕШЕНИЯ
+								a(href="#!solutions/index" ng-click="next()") РЕШЕНИЯ
 							.subsections.mobile-scroll
 								.mobile-scroll-container
-									a(href="").mobile-scroll-elem Электроэнергетика
-									a(href="").mobile-scroll-elem Финансовые организации
-									a(href="").mobile-scroll-elem Промышленные предприятия
-									a(href="").mobile-scroll-elem Госструктуры
-									a(href="").mobile-scroll-elem Атомная энергетика
-									a(href="").mobile-scroll-elem Авиация и транспорт
-									a(href="").mobile-scroll-elem Автосалоны
-									a(href="").mobile-scroll-elem Коммерческие предприятия
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Электроэнергетика
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Финансовые организации
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Промышленные предприятия
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Госструктуры
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Атомная энергетика
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Авиация и транспорт
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Автосалоны
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Коммерческие предприятия
 					.menu-row
 						.count 03
 						.line
 						.row-content
 							.section
-								a(href="") ПРОДУКТЫ
+								a(href="#!products/index" ng-click="next()") ПРОДУКТЫ
 							.subsections.mobile-scroll
 								.mobile-scroll-container
-									a(href="").mobile-scroll-elem Запись телефонных переговоров
-									a(href="").mobile-scroll-elem Селективная запись переговоров
-									a(href="").mobile-scroll-elem Skype for business
-									a(href="").mobile-scroll-elem Запись LYNC
-									a(href="").mobile-scroll-elem Запись диспетчерских переговоров
+									a(href="#!products/product" ng-click="next()").mobile-scroll-elem Запись телефонных переговоров
+									a(href="#!products/product" ng-click="next()").mobile-scroll-elem Селективная запись переговоров
+									a(href="#!products/product" ng-click="next()").mobile-scroll-elem Skype for business
+									a(href="#!products/product" ng-click="next()").mobile-scroll-elem Запись LYNC
+									a(href="#!products/product" ng-click="next()").mobile-scroll-elem Запись диспетчерских переговоров
 					.menu-row
 						.count 04
 						.line
 						.row-content
 							.section
-								a(href="") УСЛУГИ
+								a(href="#!services/index" ng-click="next()") УСЛУГИ
 							.subsections.mobile-scroll
 								.mobile-scroll-container
-									a(href="").mobile-scroll-elem Персональные решения
-									a(href="").mobile-scroll-elem Комплексная модернизация
-									a(href="").mobile-scroll-elem Обучение
+									a(href="#!services/service" ng-click="next()").mobile-scroll-elem Персональные решения
+									a(href="#!services/service" ng-click="next()").mobile-scroll-elem Комплексная модернизация
+									a(href="#!services/service" ng-click="next()").mobile-scroll-elem Обучение
 					.menu-row
 						.count 05
 						.line
 						.row-content
 							.section
-								a(href="") НОВОСТИ И СТАТЬИ
+								a(href="#!news/index" ng-click="next()") НОВОСТИ И СТАТЬИ
 							.subsections.mobile-scroll
 								.mobile-scroll-container
-									a(href="").mobile-scroll-elem Новости
-									a(href="").mobile-scroll-elem Статьи
+									a(href="#!news/index" ng-click="next()").mobile-scroll-elem Новости
+									a(href="#!news/index" ng-click="next()").mobile-scroll-elem Статьи
 					.menu-row
 						.count 06
 						.line
 						.row-content
 							.section
-								a(href="") ПОДДЕРЖКА
+								a(href="#!support/index" ng-click="next()") ПОДДЕРЖКА
 							.subsections.mobile-scroll
 								.mobile-scroll-container
-									a(href="").mobile-scroll-elem По продуктам
-									a(href="").mobile-scroll-elem Статьи
+									a(href="#!support/index" ng-click="next()").mobile-scroll-elem По продуктам
+									a(href="#!support/index" ng-click="next()").mobile-scroll-elem Статьи
 					.menu-row
 						.count 07
 						.line
 						.row-content
 							.section
-								a(href="") О КОМПАНИИ
+								a(href="#!about/index" ng-click="next()") О КОМПАНИИ
 							.subsections.mobile-scroll
 								.mobile-scroll-container
-									a(href="").mobile-scroll-elem Наши клиенты
-									a(href="").mobile-scroll-elem Сертификаты и лицензии
-									a(href="").mobile-scroll-elem Партнеры
-									a(href="").mobile-scroll-elem Награды
-									a(href="").mobile-scroll-elem Ассоциация
-									a(href="").mobile-scroll-elem История
+									a(href="#!about/clients" ng-click="next()").mobile-scroll-elem Наши клиенты
+									a(href="#!about/license" ng-click="next()").mobile-scroll-elem Сертификаты и лицензии
+									a(href="#!about/partners" ng-click="next()").mobile-scroll-elem Партнеры
+									a(href="#!about/rewards" ng-click="next()").mobile-scroll-elem Награды
+									a(href="#!about/history" ng-click="next()").mobile-scroll-elem История
 					.menu-row
 						.count 08
 						.line
 						.row-content
 							.section.no-sub
-								a(href="") Контакты
+								a(href="#!contacts" ng-click="next()") Контакты
+			.modal#call
+				.menu-container
+					form
+						.form-row
+							label Ваше имя
+							input.input(type="text", name="")
+						.form-row
+							label контактный телефон
+							input.input(type="tel", name="")
+						.form-row
+							input.btn.primary(type="submit", value="Отправить")
+						.success
+							p Спасибо, мы свяжемся с вами!
+			.modal#ask
+				.menu-container
+					form
+						.form-row
+							label Ваше имя
+							input.input(type="text", name="")
+						.form-row
+							label Ваша почта
+							input.input(type="email", name="")
+						.form-row
+							label Ваш вопрос
+							textarea.input(name="")
+						.form-row
+							input.btn.primary(type="submit", value="Отправить")
+						.success
+							p Спасибо, мы свяжемся с вами!
+			.modal#search
+				.menu-container
+					form
+						h2 Поиск
+						.form-row
+							input.input(type="text", name="")
+						.form-row
+							input.btn.primary(type="submit", value="Найти")
 			#content-changer.transition-block(ng-view, ng-class="slide")
 		footer
 			.item
@@ -144,4 +180,8 @@ html
 		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAE8iqwKY6PeKvryHYgM_k7cbH9ZyKk5g")
 		script(src="js/jquery.fancybox.min.js")
 		script(src="js/wavesurfe.js")
+		script(src="js/isotope.js")
+		script(src="js/SocialShare.min.js")
+		script(src="https://use.fontawesome.com/856283dff2.js")
+		script(src="js/jquery.mask.min.js")
 		script(src="js/app.js")

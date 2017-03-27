@@ -1,0 +1,163 @@
+.contacts-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.contacts-table tr {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  table-layout: fixed;
+}
+.contacts-table td {
+  width: 50%;
+  padding: 26px 0px;
+}
+.contacts-table td h4 {
+  font-weight: 900;
+  letter-spacing: 1.1;
+  text-transform: uppercase;
+  position: relative;
+  margin: 0px;
+}
+.contacts-table td h4:before {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  top: 8px;
+  left: -30px;
+  background-color: #E2112E;
+}
+.contacts-table td .phone {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+.contacts-table td .phone a {
+  color: #333;
+  text-decoration: none;
+}
+.contacts-table td .email a {
+  color: #E2112E;
+  font-size: 13px;
+}
+.contacts-table td .email a:hover {
+  text-decoration: none;
+}
+.support-questions-block .line-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  width: calc(50% - 30px);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.support-questions-block .line-item:hover {
+  background-color: #E2112E;
+}
+.support-row ul {
+  display: inline-block;
+  width: calc(50% - 36px);
+  margin-right: 30px;
+  vertical-align: top;
+}
+.support-row ul li {
+  margin-bottom: 50px;
+  padding-left: 0px;
+  text-indent: 0px;
+}
+.support-row ul li:before {
+  content: none;
+}
+.support-row ul li:hover a {
+  color: #333;
+}
+.support-row ul li:hover a:after {
+  background-color: #E2112E;
+}
+.support-row ul li a {
+  font-size: 18px;
+  font-weight: 800;
+  position: relative;
+  color: #E2112E;
+  text-decoration: none;
+  transition: all .35s ease;
+}
+.support-row ul li a:after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: -12px;
+  width: 50px;
+  height: 2px;
+  background-color: #e0e0e0;
+  transition: all .35s ease;
+}
+.support-row img {
+  max-width: none;
+  min-height: 1px;
+  margin: 0px;
+}
+.support-row .line-item {
+  width: 90%!important;
+  margin: 5%;
+  margin-top: 0px;
+}
+.question-block .question-item {
+  margin-bottom: 80px;
+}
+.question-block .question-item a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+.question-block .question-item a .circle {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-color: #E2112E;
+  border-radius: 50%;
+  vertical-align: top;
+  position: relative;
+  margin-top: 2px;
+}
+.question-block .question-item a .circle.open:before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.question-block .question-item a .circle:after {
+  content: '';
+  width: 25px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  position: absolute;
+}
+.question-block .question-item a .circle:before {
+  content: '';
+  width: 2px;
+  height: 25px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.question-block .question-item a span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 36px;
+  line-height: 105%;
+  font-weight: 800;
+  width: 92%;
+  margin-left: 3%;
+}
+.question-block .question-item .answer {
+  display: none;
+  margin-top: 35px;
+}
+.question-block .question-item .answer ul {
+  padding-left: calc(3% + 40px);
+}
