@@ -344,7 +344,7 @@ header .callback img {
 .hero-img {
   width: 100%;
   height: 100%;
-  background-image: url(../img/Hero_image.png);
+  background-image: url(../img/main.jpg);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -359,7 +359,7 @@ header .callback img {
   transition-delay: 3s;
 }
 .hero-img .overlay.load {
-  opacity: 0;
+  opacity: 0.3;
 }
 .wave-block {
   position: absolute;
