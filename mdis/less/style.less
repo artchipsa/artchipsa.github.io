@@ -324,8 +324,8 @@ header{
 		opacity: 0;
 		text-align: center;
 		width: 28%;
-		transition: all 1.5s ease-in-out;
-		transition-delay: 3s;
+		transition: all 1.1s ease-in-out;
+		transition-delay: 1.9s;
 		&.load{
 			transform: translateX(-50%) translateY(0%);
 			opacity: 1;
@@ -347,8 +347,8 @@ header{
 		height: 100%;
 		background-color: #111;
 		opacity: .9;
-		transition: all 2.5s ease-in-out;
-		transition-delay: 3s;
+		transition: all 2s ease-in-out;
+		transition-delay: 1.8s;
 		&.load{
 			opacity: 0.3;
 		}
@@ -360,7 +360,7 @@ header{
 	transform: translateY(-56%);
 	overflow: hidden;
 	width: 0%;
-	transition: all 3.5s linear;
+	transition: all 2s linear;
 	&.load{
 		width: 100%;
 	}
@@ -370,19 +370,32 @@ header{
 	svg{
 		width: 100%;
 	}
-	h1{
-	    font-size: 130px;
-    	font-size: 6.8vw;
-		font-weight: 800;
-		color: @white;
+	.heading{
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
-		margin: 0px;
-		letter-spacing: 13px;
-		width: 100%;
 		text-align: center;
+		transform: translate(-50%, -50%);
+		h1{
+		    font-size: 130px;
+	    	font-size: 6.8vw;
+			font-weight: 800;
+			color: @white;
+			transform: scale(1.1, 1.1);
+			backface-visibility: hidden;
+			margin: 0px;
+			letter-spacing: 13px;
+			width: 100%;
+			text-align: center;
+			opacity: 0;
+			transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+			transition-delay: 1.1s;
+			&.load{
+				opacity: 1;
+				-webkit-backface-visibility: hidden;
+				transform: scale(1, 1);
+			}
+		}
 	}
 }
 
@@ -438,7 +451,7 @@ header{
 		top: -100%;
 		left: 50px;
 		text-transform: uppercase;
-		transition: top .25s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+		transition: top .15s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 	}
 	.line-visible{
 		display: block;
@@ -449,7 +462,7 @@ header{
 		left: auto;
 		right: calc(~'100% - 110px');
 		top: 171px;
-		transition: color .45s ease, width .15s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+		transition: color .45s ease, width .1s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 		&.back{
 			width: 110px;
 		}
@@ -467,7 +480,7 @@ header{
 		right: 4px;
 		top: 171px;
 		position: absolute;
-		transition: color .45s ease, width .15s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+		transition: color .45s ease, width .1s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 		&.back{
 			width: calc(~'100% - 50px');
 		}
@@ -490,7 +503,7 @@ header{
 		left: 50px;
 		bottom: 64px;
 		transform: translateY(0%);
-		transition: transform .25s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+		transition: transform .15s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 	}
 	.more{
 		font-size: 18px;
@@ -500,7 +513,7 @@ header{
 		bottom: 60px;
 		left: 50px;
 		opacity: 0;
-		transition: opacity .25s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+		transition: opacity .15s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 	}
 	&:hover .tag{
 		top: 35px;

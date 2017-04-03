@@ -12,26 +12,22 @@ $(document).ready(function(){
 	// hover icons
 
 	doc.on('mouseover', '.line-item', function(){
-
 		var first_line = $(this).find('.line-visible');
 		var second_line = $(this).find('.line-invisible');
 		var second_right = $(this).width() - 50;
-		
+		first_line.removeClass('back forward');
+		second_line.removeClass('back forward');
 		// first line anim
-
 		first_line.addClass('back');
-
 		setTimeout(function(){
 			first_line.addClass('forward');
-		}, 450);
-
-
+		}, 400);
 		setTimeout(function(){
 			second_line.addClass('back');
 			setTimeout(function(){
 				second_line.addClass('forward')
-			}, 450);
-		}, 850);
+			}, 400);
+		}, 400);
 
 	});
 
@@ -40,19 +36,16 @@ $(document).ready(function(){
 		var first_line = $(this).find('.line-visible');
 		var second_line = $(this).find('.line-invisible');
 		var first_right = $(this).width() - 110;
-
 		first_line.fadeOut(250);
 		second_line.fadeOut(250);
-
 		setTimeout(function(){
 			first_line.removeClass('back forward').fadeIn();
 			second_line.removeClass('back forward').fadeIn();
 		}, 450);
-
 		setTimeout(function(){
 			first_line.removeClass('back forward');
 			second_line.removeClass('back forward');
-		}, 1315);
+		}, 1115);
 
 	});
 
@@ -138,7 +131,7 @@ $(document).ready(function(){
 
 			if ($('.photo-tab-block').length){
 				var left = window.outerWidth * id;
-				$('.photo-tab-block').css({transform: 'translateX(-'+left+'px)'});
+				$('.photo-tab-block').css({transform: 'translate3d(-'+left+'px, 0, 0)'});
 			}
 
 
@@ -543,7 +536,6 @@ function mobileScroll(){
 function mainHeroAnimation(){
 	// Хак с шириной свг 
 	var window_width = $(window).width();
-
 	setTimeout(function(){
 		$('.wave-block .inner').css('width', window_width);
 	}, 100);
@@ -556,8 +548,13 @@ function mainHeroAnimation(){
 	// Анимация стартового экрана главной 
 
 	setTimeout(function(){
-		$('.wave-block, .hero-img .overlay, .hero-main p').addClass('load');
-	}, 250)
+		$('#mdis_word').trigger('play');
+	}, 800);
+
+	setTimeout(function(){
+		$('.wave-block, .hero-img .overlay, .hero-main p, .wave-block h1').addClass('load');
+	}, 250);
+
 }
 function photoTabs(){
 	var width = 0;
@@ -1038,7 +1035,6 @@ function ready(){
 
 
 var router = angular.module('route', ['ngRoute', 'ngAnimate']);
-var test;
 router.config(function($routeProvider, $locationProvider) {
 
     $routeProvider
