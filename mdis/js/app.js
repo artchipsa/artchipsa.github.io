@@ -15,38 +15,37 @@ $(document).ready(function(){
 		var first_line = $(this).find('.line-visible');
 		var second_line = $(this).find('.line-invisible');
 		var second_right = $(this).width() - 50;
-		first_line.removeClass('back forward');
-		second_line.removeClass('back forward');
-		// first line anim
-		first_line.addClass('back');
-		setTimeout(function(){
-			first_line.addClass('forward');
-		}, 400);
-		setTimeout(function(){
-			second_line.addClass('back');
+		if (first_line.hasClass('back forward') && second_line.hasClass('back forward')){
+			return false;
+		} else {
+			// first line anim
+			first_line.addClass('back');
 			setTimeout(function(){
-				second_line.addClass('forward')
+				first_line.addClass('forward');
 			}, 400);
-		}, 400);
-
+			setTimeout(function(){
+				second_line.addClass('back');
+				setTimeout(function(){
+					second_line.addClass('forward');
+				}, 400);
+			}, 400);
+		}
 	});
 
  	doc.on('mouseleave', '.line-item', function(){
-
 		var first_line = $(this).find('.line-visible');
 		var second_line = $(this).find('.line-invisible');
 		var first_right = $(this).width() - 110;
-		first_line.fadeOut(250);
-		second_line.fadeOut(250);
+		first_line.fadeOut(100);
+		second_line.fadeOut(100);
 		setTimeout(function(){
 			first_line.removeClass('back forward').fadeIn();
 			second_line.removeClass('back forward').fadeIn();
-		}, 450);
+		}, 400);
 		setTimeout(function(){
 			first_line.removeClass('back forward');
 			second_line.removeClass('back forward');
-		}, 1115);
-
+		}, 800);
 	});
 
 	// menu hover 
