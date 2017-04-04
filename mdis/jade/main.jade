@@ -91,7 +91,8 @@
 					li.mobile-scroll-elem
 						a(href="#record_skype" target="_self") Запись Skype<br>for business
 				.wave-line
-					img(src="img/tab_wave.svg", alt="")
+					#anim_line
+					//- img(src="img/tab_wave.svg", alt="")
 			.wave-tabs-content
 				.content-tab.active#record_phone
 					.tag.animation.in продукты
@@ -181,7 +182,9 @@
 				.more подробнее
 			a(href="").line-item.news.all
 				.name Смотреть все новости
-				img.arrow(src="img/Icon/right-arrow.svg", alt="")
+				.arrow
+					.arrow-line
+					img(src="img/Icon/right-arrow.svg", alt="")
 	.main-slider
 		h2.title #[span МДИС] – ЭТО
 		.owl-carousel.loop
@@ -210,8 +213,8 @@
 					use(xlink:href="#right-arrow")
 	.clients-block
 		.case-item.content
-			.tag Новости
-			a(href="").all смотреть все кейсы
+			.tag Компании
+			a(href="#!about/clients" ng-click="next()").all смотреть все кейсы
 			span.line-visible
 			.text
 				span Наши клиенты
@@ -233,7 +236,7 @@
 				.audio-block
 					audio#audio(src="sounds/sound1.mp3")
 					.line
-						a(href="#").controls.play
+						a(href="#" target="_self").controls.play
 							img(src="img/play.svg", alt="").play-pic
 							img(src="img/pause.svg").pause-pic
 					span Послушать
@@ -244,7 +247,7 @@
 				.audio-block
 					audio#audio(src="sounds/sound1.mp3")
 					.line
-						a(href="#").controls.play
+						a(href="#" target="_self").controls.play
 							img(src="img/play.svg", alt="").play-pic
 							img(src="img/pause.svg").pause-pic
 					span Послушать
@@ -255,7 +258,7 @@
 				.audio-block
 					audio#audio(src="sounds/sound1.mp3")
 					.line
-						a(href="#").controls.play
+						a(href="#" target="_self").controls.play
 							img(src="img/play.svg", alt="").play-pic
 							img(src="img/pause.svg").pause-pic
 					span Послушать
@@ -266,7 +269,7 @@
 				.audio-block
 					audio#audio(src="sounds/sound1.mp3")
 					.line
-						a(href="#").controls.play
+						a(href="#" target="_self").controls.play
 							img(src="img/play.svg", alt="").play-pic
 							img(src="img/pause.svg").pause-pic
 					span Послушать
@@ -277,7 +280,7 @@
 				.audio-block
 					audio#audio(src="sounds/sound1.mp3")
 					.line
-						a(href="#").controls.play
+						a(href="#" target="_self").controls.play
 							img(src="img/play.svg", alt="").play-pic
 							img(src="img/pause.svg").pause-pic
 					span Послушать

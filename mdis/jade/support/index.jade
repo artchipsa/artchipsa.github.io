@@ -41,22 +41,22 @@
 						span.phone #[a(href="") + 7 (495) 783-34-56] (доб. #102)
 			h2.title Ознакомтесь с базой вопросов
 			.support-questions-block
-				a(href="").line-item
+				a(href="#!support/quests_and_answers" ng-click="next()").line-item
 					span.line-visible
 					span.line-invisible
 					.name Общие вопросы
 					.more подробнее
-				a(href="").line-item
+				a(href="#!support/quests_and_answers" ng-click="next()").line-item
 					span.line-visible
 					span.line-invisible
 					.name Установка системы «Фантом»
 					.more подробнее
-				a(href="").line-item
+				a(href="#!support/quests_and_answers" ng-click="next()").line-item
 					span.line-visible
 					span.line-invisible
 					.name Функции системы «Фантом»
 					.more подробнее
-				a(href="").line-item
+				a(href="#!support/quests_and_answers" ng-click="next()").line-item
 					span.line-visible
 					span.line-invisible
 					.name Коммерческие вопросы
@@ -96,5 +96,7 @@
 							a(href="") Трафик-дубликатор
 				.half
 					a(href="").line-item.news.all
-						.name Смотреть все новости
-						img.arrow(src="img/Icon/right-arrow.svg", alt="")
+						.name Сертификаты и лицензии
+						.arrow
+							.arrow-line
+							img(src="img/Icon/right-arrow.svg", alt="")

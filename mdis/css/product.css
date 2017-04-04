@@ -130,6 +130,9 @@
   position: absolute;
   bottom: 25px;
   width: calc(100% - 72px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .square-links-services .item .bottom .link {
   display: inline-block;
@@ -219,6 +222,9 @@
   left: 0px;
   display: none;
 }
+.switch-modal-window iframe {
+  width: 700px;
+}
 .switch-modal-window.photos {
   background-color: #fff;
   min-height: 500px;
@@ -254,12 +260,14 @@
 }
 .wave-tabs.anchors.fixed {
   position: fixed;
-  z-index: 3;
-  top: 0px;
-  padding-top: 45px;
+  z-index: 1;
+  top: 84px;
+  left: 0px;
+  width: 100%!important;
+  padding-bottom: 30px;
 }
 .wave-tabs.anchors.fixed .wave-tabs-head {
-  margin-bottom: 0px;
+  margin: 0 auto;
 }
 .wave-tabs.anchors.fixed_stop {
   position: absolute;
@@ -267,11 +275,11 @@
 }
 .wave-tabs.anchors .wave-tabs-head ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 0px;
 }
 .wave-tabs.anchors .wave-tabs-head ul li {
-  margin-right: 9%;
+  margin-right: 10%;
 }
 .wave-tabs.anchors .wave-tabs-head ul li:last-child {
   margin-right: 0px;
@@ -287,6 +295,11 @@
 }
 .wave-tabs.anchors .wave-line {
   background-color: #E2112E;
+}
+.wave-tabs.anchors .wave-line img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .text-container h2 {
   font-size: 36px;
@@ -357,6 +370,9 @@
   margin-right: 5%;
   margin-bottom: 90px;
 }
+.text-container .special-block .item p {
+  margin-bottom: 0px;
+}
 .text-container .special-block .item span {
   font-size: 18px;
   font-weight: 800;
@@ -364,6 +380,17 @@
   position: relative;
   margin-bottom: 70px;
   display: inline-block;
+}
+.text-container .special-block .item span i {
+  font-weight: 800;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 144px;
+  color: #f5f5f5;
+  font-style: normal;
+  z-index: -1;
 }
 .text-container .special-block .item span:before {
   content: '';
@@ -378,6 +405,9 @@
 }
 .text-container .clients-block .case-item {
   width: 33%;
+}
+#cases .clients-block {
+  margin-bottom: 180px;
 }
 .text-with-hidden-part {
   padding: 0px 28px 50px 28px;

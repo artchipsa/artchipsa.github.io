@@ -173,7 +173,7 @@ header{
 	}
 	&.no-index{
 	    background-color: white;
-        padding: 42px 30px;
+        padding: 26px 30px;
 		a{
 			color: @black;
 		}
@@ -600,9 +600,12 @@ header{
 		height: 2px;
 		background-color: @white;
 		position: relative;
-		img{
+		#anim_line{
+			width: 158px;
+			height: 60px;
 			position: absolute;
-			top: -29px;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 }
@@ -724,6 +727,7 @@ header{
 			background-position: center;
 			margin-right: 0px;
 			vertical-align: top;
+			position: relative;
 			.name{
 				color: @white;
 			}
@@ -748,9 +752,20 @@ header{
 					color: @white;
 				}
 			}
+			&:before{
+				content: '';
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				background-color: transparent;
+				transition: all .35s ease-in-out;
+			}
 			&:hover{
-				background-color: @white;
-				background-image: none!important;
+				&:before{
+					background-color: @white;
+				}
 			}
 			&:hover .tag{
 				color: @black;
@@ -773,6 +788,9 @@ header{
 		}
 		.all{
 			background-color: @red;
+			&:before{
+				content: none;
+			}
 			&:hover{
 				background-color: @red;
 			}
@@ -782,12 +800,29 @@ header{
 			}
 			&:hover .arrow{
 				right: 46px;
+				.arrow-line{
+					width: 18.9px;
+				}
 			}
 			.arrow{
 				position: absolute;
 				bottom: 64px;
 				right: 65px;
-				transition: all .35s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+				transition: all .35s ease-in-out;
+				.arrow-line{
+					display: inline-block;
+					vertical-align: baseline;
+					width: 0px;
+					height: 2px;
+					margin-right: -1px;
+					position: relative;
+					background-color: @white;
+					transition: all .35s ease-in-out;
+				}
+				img{
+					display: inline-block;
+					vertical-align: text-top;
+				}
 			}
 		}
 		&:first-child{
@@ -891,12 +926,21 @@ header{
 		width: 25%;
 		display: inline-block;
 		vertical-align: top;
-		&:hover .client-logo, &:focus .client-logo{
+		outline: none!important;
+		&:hover .client-logo, &:focus .client-logo, &.active .client-logo{
 			top: 20%;
 		}
-		&:hover .appear-content, &:focus .appear-content{
+		&:hover .appear-content, &:focus .appear-content, &.active .appear-content{
 			bottom: 35px;
 			opacity: 1;
+		}
+		&.active{
+			.play-pic{
+				opacity: 0!important;
+			}
+			.pause-pic{
+				opacity: 1!important;
+			}
 		}
 		.client-logo{
 			position: absolute;
@@ -940,10 +984,14 @@ header{
 							transform: translate(-50%, -50%);
 						}
 						.play-pic{
-							display: block;
+							transition: all .25s ease-in-out;
+							opacity: 1;
+							left: 54%;
 						}
 						.pause-pic{
-							display: none;
+							transition: all .25s ease-in-out;
+							opacity: 0;
+							left: 51%;
 						}
 					}
 				}
@@ -954,10 +1002,14 @@ header{
 			}
 			.more{
 				color: @red;
-				opacity: 0.8;
+				opacity: 0.7;
 				font-weight: 800;
 				text-decoration: none;
 				font-size: 18px;
+				transition: all .25s ease;
+				&:hover{
+					opacity: 1;
+				}
 			}
 
 		}
@@ -978,11 +1030,15 @@ header{
 				font-weight: 800;
 				letter-spacing: 110%;
 				color: @red;
-				opacity: 0.8;
+				opacity: 0.7;
 				top: 35px;
 				right: 50px;
 				text-transform: uppercase;
+				transition: all .25s ease;
 				text-decoration: none;
+				&:hover{
+					opacity: 1;
+				}
 			}
 			.line-visible{
 				display: block;
@@ -1025,6 +1081,7 @@ header{
 footer{
 	background-color: @black;
 	padding: 22px 50px;
+	padding-bottom: 30px;
 	.item{
 		display: inline-block;
 		width: 25%;
@@ -1078,7 +1135,7 @@ footer{
 			font-weight: 800;
 			font-size: 16px;
 			position: absolute;
-			top: 16px;
+			top: 14px;
 			color: @white;
 		}
 	}
@@ -1376,7 +1433,19 @@ footer{
 			background-position: center;
 			margin-right: 0px;
 			vertical-align: top;
-			border: 1px solid #e0e0e0;
+			transition: none;
+			&.all{
+				background-color: @red;
+				&:hover{
+					background-color: @red!important;
+					.name{
+						color: @white;
+					}
+				}
+				&:before{
+					content: none;
+				}
+			}
 			.name{
 				color: @white;
 			}
@@ -1401,10 +1470,25 @@ footer{
 					color: @white;
 				}
 			}
+			&:before{
+				content: '';
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				background-color: transparent;
+				transition: all .35s ease-in-out;
+			}
 			&:hover{
+				&:before{
+					background-color: @white;
+				}
+			}
+			/* &:hover{
 				background-color: @white;
 				background-image: none!important;
-			}
+			} */
 			&:hover .tag{
 				color: @black;
 			}
@@ -1792,7 +1876,6 @@ footer{
 	}
 	.wave-tabs.anchors.fixed{
 	    z-index: 1;
-        padding-top: 120px;
 	}
 	.modal .menu-container .menu-row .row-content{
     	width: 75%;
@@ -1878,7 +1961,6 @@ footer{
 		right: 14%;
 	}
 	.wave-tabs.anchors.fixed{
-		padding-top: 114px;
 		z-index: 1;
 	}
 	.page-control-line .back span{
@@ -1931,7 +2013,6 @@ footer{
 		text-align: left;
 	}
 	.wave-tabs.anchors.fixed {
-	    padding-top: 114px;
 	    z-index: 1;
 	    width: 100%!important;
 	    left: 0px;
@@ -1992,6 +2073,9 @@ footer{
 	}
 }
 @media (max-width: 439px){
+	.switch-modal-window iframe{
+		width: 100%;
+	}
 	.fail-page .text .line img{
 		display: none;
 	}
