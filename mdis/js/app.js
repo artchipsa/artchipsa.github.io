@@ -75,6 +75,7 @@ $(document).ready(function(){
 			});
 		}
 
+		$('#search .input').focus();
 		$('header .menu').toggleClass('active');
 
 		if ($('header .menu').hasClass('active')){
