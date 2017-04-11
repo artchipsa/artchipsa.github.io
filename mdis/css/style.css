@@ -860,6 +860,7 @@ header .callback img {
 }
 .main-slider .loop:before {
   content: '';
+  display: none;
   width: 25%;
   height: 2px;
   top: 20%;
@@ -869,6 +870,7 @@ header .callback img {
 }
 .main-slider .loop:after {
   content: '';
+  display: none;
   width: 25%;
   height: 2px;
   top: 20%;
@@ -3454,4 +3456,22 @@ footer .item .top {
   .modal form .form-row label {
     font-size: 16px;
   }
+}
+
+.owl-carousel.owl-drag .owl-item:before,
+.owl-carousel.owl-drag .owl-item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  color: green;
+  width: 50%;
+  height: 2px;
+  background-color: #E2112E;
+  top: 20%;
+}
+.owl-carousel.owl-drag .owl-item:before {
+  right: 50%;
+}
+.owl-carousel.owl-drag .owl-item:after {
+  left: 50%;
 }
